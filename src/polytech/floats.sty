@@ -1,0 +1,54 @@
+\def\fileversion{1.0}
+\def\filedate{2001/9/10}
+\def\docdate{2001/9/10}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polytech/floats}[\filedate\space\fileversion\space Polytech document class sub package]
+\typeout{Package `polytech floats' \fileversion\space<\filedate>}
+
+% définit le format des légendes
+\DeclareCaptionLabelFormat{polytech}{#1~#2}
+
+\captionsetup{%
+  labelformat=polytech,
+  format=hang,
+  labelfont=bf,
+  font=small,
+  justification=centering,
+  font={small},
+  textfont=it,
+  labelfont={bf},
+  width=.9\textwidth,
+  figurename=Figure,
+  tablename=Table,
+  skip=5pt plus 1pt minus 1pt,
+  singlelinecheck=false,
+  figurewithin=chapter,
+  tablewithin=chapter
+}
+
+\newenvironment{Figure}[1]{
+    \gdef\mycaption{#1}
+    \begin{figure}[htb]
+    	\centering
+}
+{
+    	\caption{\mycaption}
+    \end{figure}
+}
+
+\newenvironment{Table}[1]{
+    \begin{table}[htb]
+	    \caption{#1}
+	    \centering
+}
+{
+	\end{table}
+}
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+

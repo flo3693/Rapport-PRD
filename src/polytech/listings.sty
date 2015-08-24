@@ -1,0 +1,180 @@
+\def\fileversion{1.0}
+\def\filedate{2001/9/10}
+\def\docdate{2001/9/10}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polytech/listings}[\filedate\space\fileversion\space Polytech document class sub package]
+\typeout{Package `polytech listings' \fileversion\space<\filedate>}
+
+
+\ifbool{polytech@english}{
+	\renewcommand{\lstlistingname}{Source code}%
+	\renewcommand{\lstlistlistingname}{List of source codes}%
+}%
+{%
+	\renewcommand{\lstlistingname}{Code source}%
+	\renewcommand{\lstlistlistingname}{Liste des codes sources}%
+}
+
+\colorlet{polytech@lst@basiccolor}{black}
+\colorlet{polytech@lst@keywordcolor}{black}
+\colorlet{polytech@lst@commentcolor}{black}
+\colorlet{polytech@lst@numberingcolor}{black}
+\colorlet{polytech@lst@backgroundcolor}{black!10}
+\colorlet{polytech@lst@framecolor}{black!30}
+\colorlet{polytech@lst@linebreakcolor}{black}
+\colorlet{polytech@lstinline@basiccolor}{black}
+\colorlet{polytech@lstinline@keywordcolor}{black}
+\colorlet{polytech@lstinline@commentcolor}{black}
+
+\newcommand{\polytech@lst@basicstyle}{\scriptsize\color{polytech@lst@basiccolor}}
+\newcommand{\polytech@lst@keywordstyle}{\color{polytech@lst@keywordcolor}\bf}
+\newcommand{\polytech@lst@commentstyle}{\color{polytech@lst@commentcolor}\it}
+\newcommand{\polytech@lst@stringstyle}{\upshape}
+\newcommand{\polytech@lst@numberingstyle}{\tiny\color{polytech@lst@numberingcolor}}
+\newcommand{\polytech@lst@prebreak}{\mbox{\hbox{\large\color{polytech@lst@linebreakcolor} \Leftscissors}}}
+\newcommand{\polytech@lst@postbreak}{\mbox{\hbox{\color{polytech@lst@linebreakcolor}$\hookrightarrow$ }}}
+\newcommand{\polytech@lstinline@basicstyle}{\color{polytech@lstinline@basiccolor}}
+\newcommand{\polytech@lstinline@keywordstyle}{\color{polytech@lstinline@keywordcolor}\bf}
+\newcommand{\polytech@lstinline@commentstyle}{\color{polytech@lstinline@commentcolor}\it}
+\newcommand{\polytech@lstinline@stringstyle}{\upshape}
+
+\lstset{%
+    literate={è}{{\`e}}1%
+             {é}{{\'e}}1%
+             {ë}{{\"e}}1%
+             {ê}{{\^e}}1%
+             {°}{{\textdegree}}1%
+             {à}{{\`a}}1%
+             {ù}{{\`u}}1%
+             {ù}{{\`u}}1%
+             {î}{{\^i}}1%
+}
+
+\newcommand{\polytech@lst@configure}[1]{%
+	\lstset{%
+		showspaces=false,%
+		showstringspaces=false,%
+		tabsize=2,%
+		showlines=false,%
+		emptylines=1,%
+		basicstyle=\polytech@lst@basicstyle,%
+		keywordstyle=\polytech@lst@keywordstyle,%
+		commentstyle=\polytech@lst@commentstyle,%
+		stringstyle=\polytech@lst@stringstyle,%
+		numbers=left,%
+		numberstyle=\polytech@lst@numberingstyle,%
+		xleftmargin=4pt,%
+		xrightmargin=4pt,%
+		lineskip=2pt,%
+		numbersep=8pt,%
+		frame=single,%
+		backgroundcolor=\color{polytech@lst@backgroundcolor},%
+		rulecolor=\color{polytech@lst@framecolor},%
+		breaklines=true,%
+		breakatwhitespace,
+		breakautoindent,%
+		breakindent=40pt,%
+		prebreak=\polytech@lst@prebreak,%
+		postbreak=\polytech@lst@postbreak,%
+		escapeinside={µ}{µ},%
+		inputencoding=utf8,%
+		extendedchars=true,%
+		numberbychapter=true,%
+		captionpos=t,%
+		resetmargins=true,%
+		#1}%
+}
+
+\lstloadlanguages{[ANSI]c,[ISO]c++,java,bash,make,xml,sql,php,python,html,scilab,matlab}
+
+\lstdefinelanguage{javascript}{
+  keywords={break,case,catch,continue,debugger,default,delete,do,else,finally,for,function,if,in,instanceof,new,return,switch,this,throw,try,typeof,var,void,while,with},
+  ndkeywords={class,export,boolean,throw,implements,import,this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\newcommand{\polytech@lst@defaultlanguage}{c}
+\polytech@lst@configure{language=\polytech@lst@defaultlanguage}
+
+\lstnewenvironment{source}[1][\polytech@lst@defaultlanguage]{\polytech@lst@configure{language=#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{csource}[1][]{\polytech@lst@configure{language=c,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{cppsource}[1][]{\polytech@lst@configure{language=c++,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{javasource}[1][]{\polytech@lst@configure{language=java,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{bashsource}[1][]{\polytech@lst@configure{language=bash,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{makesource}[1][]{\polytech@lst@configure{language=make,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{javascriptsource}[1][]{\polytech@lst@configure{language=javascript,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{xmlsource}[1][]{\polytech@lst@configure{language=xml,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{sqlsource}[1][]{\polytech@lst@configure{language=sql,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{phpsource}[1][]{\polytech@lst@configure{language=php,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{pythonsource}[1][]{\polytech@lst@configure{language=python,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{htmlsource}[1][]{\polytech@lst@configure{language=html,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{scilabsource}[1][]{\polytech@lst@configure{language=scilab,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{matlabsource}[1][]{\polytech@lst@configure{language=matlab,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+
+\newcommand{\sourcefile}[2][]{\polytech@lst@configure{language=\polytech@lst@defaultlanguage}\lstinputlisting[#1]{#2}}
+\newcommand{\csourcefile}[2][]{\polytech@lst@configure{language=c}\lstinputlisting[#1]{#2}}
+\newcommand{\cppsourcefile}[2][]{\polytech@lst@configure{language=c++}\lstinputlisting[#1]{#2}}
+\newcommand{\javasourcefile}[2][]{\polytech@lst@configure{language=java}\lstinputlisting[#1]{#2}}
+\newcommand{\bashsourcefile}[2][]{\polytech@lst@configure{language=bash}\lstinputlisting[#1]{#2}}
+\newcommand{\makesourcefile}[2][]{\polytech@lst@configure{language=make}\lstinputlisting[#1]{#2}}
+\newcommand{\javascriptsourcefile}[2][]{\polytech@lst@configure{language=javascript}\lstinputlisting[#1]{#2}}
+\newcommand{\xmlsourcefile}[2][]{\polytech@lst@configure{language=xml}\lstinputlisting[#1]{#2}}
+\newcommand{\sqlsourcefile}[2][]{\polytech@lst@configure{language=sql}\lstinputlisting[#1]{#2}}
+\newcommand{\phpsourcefile}[2][]{\polytech@lst@configure{language=php}\lstinputlisting[#1]{#2}}
+\newcommand{\pythonsourcefile}[2][]{\polytech@lst@configure{language=pyhton}\lstinputlisting[#1]{#2}}
+\newcommand{\htmlsourcefile}[2][]{\polytech@lst@configure{language=html}\lstinputlisting[#1]{#2}}
+\newcommand{\scilabsourcefile}[2][]{\polytech@lst@configure{language=scilab}\lstinputlisting[#1]{#2}}
+\newcommand{\matlabsourcefile}[2][]{\polytech@lst@configure{language=matlab}\lstinputlisting[#1]{#2}}
+
+
+\lstdefinestyle{polytech@lst@base}{basicstyle=\polytech@lstinline@basicstyle,%
+            keywordstyle=\polytech@lstinline@keywordstyle,%
+            commentstyle=\polytech@lstinline@commentstyle,%
+            stringstyle=\polytech@lstinline@stringstyle,%
+            inputencoding=utf8,%
+            extendedchars=true,%
+            showspaces=false,%
+            showstringspaces=false,%
+            escapeinside={§}{§}}% marque paragraphe (majuscule de ! sur un clavier français)
+
+\def\ccode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=c]{#1}}{#1}}
+\def\cppcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=c++]{#1}}{#1}}
+\def\javacode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=java]{#1}}{#1}}
+\def\bashcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=bash]{#1}}{#1}}
+\def\makecode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=make]{#1}}{#1}}
+\def\javascriptcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=javascript]{#1}}{#1}}
+\def\xmlcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=xml]{#1}}{#1}}
+\def\sqlcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=sql]{#1}}{#1}}
+\def\phpcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=php]{#1}}{#1}}
+\def\pythoncode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=python]{#1}}{#1}}
+\def\htmlcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=html]{#1}}{#1}}
+\def\scilabcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=scilab]{#1}}{#1}}
+\def\matlabcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=matlab]{#1}}{#1}}
+
+% make commands robust to be usable in other command like block or sectionning
+\MakeRobustCommand\ccode
+\MakeRobustCommand\cppcode
+\MakeRobustCommand\javacode
+\MakeRobustCommand\bashcode
+\MakeRobustCommand\makecode
+\MakeRobustCommand\javascriptcode
+\MakeRobustCommand\xmlcode
+\MakeRobustCommand\sqlcode
+\MakeRobustCommand\phpcode
+\MakeRobustCommand\pythoncode
+\MakeRobustCommand\htmlcode
+\MakeRobustCommand\scilabcode
+\MakeRobustCommand\matlabcode
+
+
+
+
+
+
+
+
+

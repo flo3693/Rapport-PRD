@@ -1,0 +1,130 @@
+\documentclass[]{polytech}
+
+\usepackage{lipsum}
+
+\makeatletter
+
+
+\makeatother
+
+\schooldepartment{di}
+\typereport{prd}
+\reportyear{2015-2016}
+
+\title{Le titre principal}
+\subtitle{Un eventuel sous titre}
+\reportlogo{polytech/polytech}
+
+
+\author[DI5]{Pierre}{Premier}{pierre.premier@univ-tours.fr}
+\author[DI4]{Paul}{Deuxième}{paul2@univ-tours.fr}
+\author{Jacques}{Un peu plus Long}{j.unpeupluslong@example.com}
+\academicsupervisor[Département infomatique]{Sébastien}{Aupetit}{aupetit@univ-tours.fr}
+\academicsupervisor{Machin}{Chose}{machin.chose@univ-tours.fr}
+\companysupervisor[Fonction très importante]{Un}{Gars}{un.gars@example.com}
+\companysupervisor{Un deuxième}{Gars}{undeuxieme.gars@example.com}
+\company[polytech/polytech]{Laboratoire Informatique}{64 avenue Jean Portalis, 37200 Tours}{li.univ-tours.fr}
+%\company{Laboratoire Informatique}{64 avenue Jean Portalis, 37200 Tours}{li.univ-tours.fr}
+
+\motcle{mot}
+\motcle{clé}
+\motcle{deux mots}
+\resume{\lipsum[1]}
+\abstract{\lipsum[1]}
+
+\keyword{mot}
+\keyword{clé}
+\keyword{deux mots}
+
+\begin{document}
+
+
+
+
+\maketitle
+
+\unnumberedchapter[intro]{Introduction}
+
+\today
+
+
+\lipsum[1-10]
+
+\chapter{Avec numéro}
+
+\part{essai}
+
+\chapter{truc}
+\lipsum[1-20]
+
+\section{Ma section}
+\lipsum[1-5]
+
+\section{Ma section}
+\lipsum[1-5]
+
+\subsection{Ma section}
+\lipsum[1-5]
+\subsection{Ma section}
+\lipsum[1-5]
+\subsubsection{Ma section}
+\lipsum[1-5]
+\subsubsection{Ma section}
+\lipsum[1-5]
+\paragraph{Ma section}
+\lipsum[1-5]
+\paragraph{Ma section}
+\lipsum[1-5]
+\subparagraph{Ma section}
+\lipsum[1-5]
+\subparagraph{Ma section}
+\lipsum[1-5]
+
+\unnumberedchapter{Conclusion}
+
+
+\makeatletter
+
+
+
+
+\makeatother
+
+
+\begin{weeklyreports}
+	\weeklyreport{XX/XX/XXXX}
+		\lipsum[1-2]
+	\weeklyreport{XX/XX/YYYY}
+		\lipsum[3]
+\end{weeklyreports}
+
+\csname polytech@output@weeklyreports\endcsname
+
+%--------------------------------------------------------------------------------
+%si on donne des annexes :
+\appendix
+\addcontentsline{toc}{part}{\numberline{}Annexes}
+
+\cite{key1,key2}
+
+
+\bibliographystyle{polytech}
+\bibliography{modele}
+
+\makelastpage
+
+\end{document}
+
+
+
+%\mode<article>{
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{bibliographie}
+%}
+
+\backmatter
+
+m
+
+\end{document}
