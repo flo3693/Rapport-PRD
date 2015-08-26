@@ -26,19 +26,24 @@
   tablewithin=chapter
 }
 
-\newenvironment{Figure}[1]{
-    \gdef\mycaption{#1}
+% label, caption
+\newenvironment{Figure}[2]{
+		\gdef\mylabel{#1}
+		\gdef\mycaption{#2}
     \begin{figure}[htb]
     	\centering
 }
 {
     	\caption{\mycaption}
+    	\label{\mylabel}% must be after caption
     \end{figure}
 }
 
-\newenvironment{Table}[1]{
+% label, caption
+\newenvironment{Table}[2]{
     \begin{table}[htb]
-	    \caption{#1}
+	    \caption{#2}
+	    \label{#1}% must be after caption
 	    \centering
 }
 {

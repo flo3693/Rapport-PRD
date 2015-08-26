@@ -76,7 +76,7 @@
 		breakindent=40pt,%
 		prebreak=\polytech@lst@prebreak,%
 		postbreak=\polytech@lst@postbreak,%
-		escapeinside={µ}{µ},%
+		escapeinside={§}{§},%
 		inputencoding=utf8,%
 		extendedchars=true,%
 		numberbychapter=true,%
@@ -97,8 +97,13 @@
   morestring=[b]"
 }
 
-\newcommand{\polytech@lst@defaultlanguage}{c}
+\def\polytech@lst@defaultlanguage{c}
 \polytech@lst@configure{language=\polytech@lst@defaultlanguage}
+
+\newcommand{\setsourcedefaultlanguage}[1]{%
+	\def\polytech@lst@defaultlanguage{c}%
+	\polytech@lst@configure{language=\polytech@lst@defaultlanguage}%
+}
 
 \lstnewenvironment{source}[1][\polytech@lst@defaultlanguage]{\polytech@lst@configure{language=#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
 \lstnewenvironment{csource}[1][]{\polytech@lst@configure{language=c,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}

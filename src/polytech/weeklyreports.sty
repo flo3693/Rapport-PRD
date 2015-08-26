@@ -1,30 +1,7 @@
 \def\fileversion{1.0}
-\def\filedate{2001/9/10}
-\def\docdate{2001/9/10}
+\def\filedate{2015/8/25}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{polytech/weeklyreports}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech weeklyreports' \fileversion\space<\filedate>}
 
-
-
-\newcounter{polytech@weeklyreport@counter}
-
-\newboolean{polytech@weeklyreport@enabled}
-\setboolean{polytech@weeklyreport@enabled}{true}
-
-
-
-% disable the weekly reports
-\ifthenelse{\boolean{polytech@weeklyreport@enabled}}{
-	\newenvironment{weeklyreports}{%
-		\chapter*{Comptes rendus hebdomadaires}
-		\begin{description}
-	}{%
-		\end{description}
-	}
-	\newcommand{\weeklyreport}[1]{%
-		\refstepcounter{polytech@weeklyreport@counter}%
-		\item[\textbf{Compte rendu n°\thepolytech@weeklyreport@counter\xspace du #1}]\mbox{ }\\
-	}
-}{\excludecomment{weeklyreports}}
 

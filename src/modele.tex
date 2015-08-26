@@ -1,11 +1,7 @@
-\documentclass[]{polytech}
+%\documentclass[overfullbox,english,blackandwhite,openan0,hideweeklyreports,expandedcontributors,noseparatecontributorspage,nodate]{polytech}
+\documentclass[overfullbox]{polytech}
 
 \usepackage{lipsum}
-
-\makeatletter
-
-
-\makeatother
 
 \schooldepartment{di}
 \typereport{prd}
@@ -16,9 +12,10 @@
 \reportlogo{polytech/polytech}
 
 
-\author[DI5]{Pierre}{Premier}{pierre.premier@univ-tours.fr}
-\author[DI4]{Paul}{Deuxième}{paul2@univ-tours.fr}
-\author{Jacques}{Un peu plus Long}{j.unpeupluslong@example.com}
+
+\student[DI5]{Pierre}{Premier}{pierre.premier@univ-tours.fr}
+\student[DI4]{Paul}{Deuxième}{paul2@univ-tours.fr}
+\student{Jacques}{Un peu plus Long}{j.unpeupluslong@example.com}
 \academicsupervisor[Département infomatique]{Sébastien}{Aupetit}{aupetit@univ-tours.fr}
 \academicsupervisor{Machin}{Chose}{machin.chose@univ-tours.fr}
 \companysupervisor[Fonction très importante]{Un}{Gars}{un.gars@example.com}
@@ -38,9 +35,6 @@
 
 \begin{document}
 
-
-
-
 \maketitle
 
 \unnumberedchapter[intro]{Introduction}
@@ -53,9 +47,12 @@
 \chapter{Avec numéro}
 
 \part{essai}
+\label{part:essai}
 
 \chapter{truc}
 \lipsum[1-20]
+
+\partref{part:essai}
 
 \section{Ma section}
 \lipsum[1-5]
@@ -85,10 +82,37 @@
 
 \makeatletter
 
+% lost in translations :)
+\def\polytech@weeklyreports@title@en{Weekly reports}
+\def\polytech@weeklyreports@title@fr{Comptes rendus hebdomadaires}
+\newcommand{\polytech@weeklyreports@reporttitle@en}[2]{Report ###1 (#2)}
+\newcommand{\polytech@weeklyreports@reporttitle@fr}[2]{Compte rendu n°#1\xspace du #2}
 
 
+% the weekly report counter
+\newcounter{polytech@weeklyreport@counter}
+
+\notbool{polytech@hideweeklyreports}{%
+	% weekly reports enabled
+	\newenvironment{weeklyreports}{%
+		\chapter*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
+		\begin{description}
+	}{%
+		\end{description}
+	}
+	\newcommand{\weeklyreport}[1]{%
+		\refstepcounter{polytech@weeklyreport@counter}%
+		\item[\textbf{\csuse{polytech@weeklyreports@reporttitle\csuse{polytech@lang}}{\thepolytech@weeklyreport@counter}{#1}}]\mbox{ }\\%
+	}
+}{%
+	% weekly reports are disabled
+	\excludecomment{weeklyreports}%
+}
 
 \makeatother
+
+
+
 
 
 \begin{weeklyreports}
@@ -98,7 +122,6 @@
 		\lipsum[3]
 \end{weeklyreports}
 
-\csname polytech@output@weeklyreports\endcsname
 
 %--------------------------------------------------------------------------------
 %si on donne des annexes :
@@ -106,25 +129,21 @@
 \addcontentsline{toc}{part}{\numberline{}Annexes}
 
 \cite{key1,key2}
-
+\nocite{*}
 
 \bibliographystyle{polytech}
 \bibliography{modele}
 
+
+
+
+
+
+
 \makelastpage
 
+
+
 \end{document}
 
 
-
-%\mode<article>{
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{bibliographie}
-%}
-
-\backmatter
-
-m
-
-\end{document}

@@ -2,12 +2,11 @@
 \ProvidesClass{polytech}[2015/07/15 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
 
 % -----------------------------------------------------------------------------
-% Include generic package to extend LaTeX memory and add utility commands
+% Include generic packages to extend LaTeX memory and add common utility commands
 % -----------------------------------------------------------------------------
 \RequirePackage{etex}
 \RequirePackage{etoolbox}
 \RequirePackage{calc}
-\RequirePackage{ifthen}
 
 % -----------------------------------------------------------------------------
 % Declare documentclass options
@@ -15,7 +14,11 @@
 
 % Prepare document in english
 \newbool{polytech@english}
-\DeclareOption{english}{\setbool{polytech@english}{true}}
+\def\polytech@lang{fr}
+\DeclareOption{english}{
+	\setbool{polytech@english}{true}
+	\gdef\polytech@lang{en}
+}
 
 % Display overfullbox marks
 \newbool{polytech@overfullbox}
@@ -25,12 +28,28 @@
 \newbool{polytech@blackandwhite}
 \DeclareOption{blackandwhite}{\setbool{polytech@blackandwhite}{true}}
 
+% Open chapter on any page
 \newbool{polytech@openany}
 \DeclareOption{openany}{\setbool{polytech@openany}{true}}
+
+\newbool{polytech@hideweeklyreports}
+\DeclareOption{hideweeklyreports}{\setbool{polytech@hideweeklyreports}{true}}
+
+% define if contributors details (mail and addresses) are included
+\newbool{polytech@contributors@expanded}
+\DeclareOption{expandedcontributors}{\setbool{polytech@contributors@expanded}{true}}
+
+\newbool{polytech@contributors@noseparatepage}
+\DeclareOption{noseparatecontributorspage}{\setbool{polytech@contributors@noseparatepage}{true}}
+
+\newbool{polytech@nodate}
+\DeclareOption{nodate}{\setbool{polytech@nodate}{true}}
+
 
 \DeclareOption*{\PackageWarning{polytech}{Unknown option `\CurrentOption'}}
 
 \ProcessOptions\relax
+
 
 
 %------------- global lrbox (use \begin{lrbox*} instead of \begin{lrbox} to save the box globally instead of locally ----------------
@@ -40,7 +59,11 @@
 \cslet{endlrbox*}\endlrbox
 
 
+
 %-------------- Configuration ----------------
+
+% upgrade PDF version of the document
+\pdfoptionpdfminorversion=6
 
 % Enable colors
 \PassOptionsToPackage{svgnames,table,override}{xcolor}
@@ -61,7 +84,7 @@
 
 
     \ifbool{polytech@openany}{\PassOptionsToClass{openany}{book}}{}
-    \PassOptionsToClass{final}{book}
+    \PassOptionsToClass{final,twoside}{book}
     \LoadClass[11pt,twoside]{book}
 
     \RequirePackage[rigidchapters,explicit]{titlesec}
@@ -131,6 +154,8 @@
 \RequirePackage{algorithm2e}
 \RequirePackage[figure,table,lstlisting]{totalcount}
 \RequirePackage{cite}
+\RequirePackage{pageslts} % to have total page count of the document
+\RequirePackage{titletoc} % TODO how to improve TOC ?
 
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
 
@@ -156,6 +181,7 @@
                 pdftoolbar=true,
                 pdfmenubar=true,
                 bookmarks=true]{hyperref}
+
 
 \RequirePackage{polytech/firstlastpage}
 \RequirePackage{polytech/headings}
@@ -200,11 +226,11 @@
 {}{}
 
 
-
+% unnumbered chapter but in toc
 \newcommand{\unnumberedchapter}[2][]{
 	\chapter*{#2}
 	\addcontentsline{toc}{chapter}{\numberline{}#2}
-	\ifthenelse{\equal{#1}{}}{
+	\ifstrequal{#1}{}{
 		\markboth{#2}{}
 	}{
 		\markboth{#1}{}

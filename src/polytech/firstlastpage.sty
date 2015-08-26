@@ -5,177 +5,342 @@
 \ProvidesPackage{polytech/firstlastpage}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech firstlastpage' \fileversion\space<\filedate>}
 
-% configure output
-% define if contributors details (mail and addresses) are included
-\newboolean{polytech@firstlastpage@compact}
-\setboolean{polytech@firstlastpage@compact}{true}
-
-\newboolean{polytech@firstlastpage@contributorspage}
-\setboolean{polytech@firstlastpage@contributorspage}{true}
-
-
 
 % variables used to store contents to be used latter
-\def\polytech@schooldepartment{undefined}
-
-\def\polytech@typereport{undefined}
-
-\def\polytech@reportyear{undefined}
-
-\def\polytech@title{Undefined title}
-\def\polytech@shorttitle{Undefined title}
-\def\polytech@subtitle{}
-\def\polytech@output@titlewithsubtitle{}
-
-\def\polytech@date{\today}
-
-
-\def\polytech@output@authors@compact{}
-\def\polytech@output@authors@expanded{}
-\def\polytech@output@authors@split{}
-\def\polytech@output@authors@simple{}
-\def\polytech@output@authors@title{}
-
-\def\polytech@output@academicsupervisors@compact{}
-\def\polytech@output@academicsupervisors@expanded{}
-\def\polytech@output@academicsupervisors@split{}
-\def\polytech@output@academicsupervisors@title{}
-
-\def\polytech@output@companysupervisors@compact{}
-\def\polytech@output@companysupervisors@expanded{}
-\def\polytech@output@companysupervisors@split{}
-\def\polytech@output@companysupervisors@title{}
-
 \def\polytech@output@company@compact{}
 \def\polytech@output@company@expanded{}
 \def\polytech@output@company@split{}
-
-
-
 \def\polytech@output@motcles{}
 \def\polytech@output@keywords{}
-
 \def\polytech@resume{}
 \def\polytech@abstract{}
-
-
 
 \pgfdeclareimage[height=2cm]{polytech@schoollogo}{polytech/polytech}
 \pgfdeclareimage[height=2cm]{polytech@univlogo}{polytech/univ}
 
 
-% Define title page and last page contents
-\newcommand{\schooldepartment}[1]{\renewcommand{\polytech@schooldepartment}{#1}}
-\newcommand{\typereport}[1]{\renewcommand{\polytech@typereport}{#1}}
-\newcommand{\reportyear}[1]{\renewcommand{\polytech@reportyear}{#1}}
-\newcommand{\reportlogo}[1]{\pgfdeclareimage[height=3cm]{polytech@reportlogo}{#1}}
 
-\renewcommand{\title}[2][\polytech@title]{\renewcommand{\polytech@title}{#2}\renewcommand{\polytech@shorttitle}{#1}\renewcommand{\polytech@output@titlewithsubtitle}{#1}}
-\newcommand{\subtitle}[1]{\renewcommand{\polytech@subtitle}{#1}\appto\polytech@output@titlewithsubtitle{#1}}
-\renewcommand{\date}[1]{\renewcommand{\polytech@date}{#1}}
+%%%%%%%%%%% SCHOOL DEPARTMENT %%%%%%%%%%%%%%%%%
 
+%\csdef{polytech@schooldepartment}{}
+\newcommand{\schooldepartment}[1]{\gdef\polytech@schooldepartment{#1}}
 
-% prenom, nom, mail, fonction/promo
-\renewcommand{\author}[4][]{
-	\ifthenelse{\equal{\polytech@output@authors@title}{}}{
-		\renewcommand{\polytech@output@authors@title}{\'Etudiant}
-	}{
-		\renewcommand{\polytech@output@authors@title}{\'Etudiants}
-	}
-	\appto\polytech@output@authors@compact{%
-		\href{mailto:#4}{#2 \textsc{#3}}%
-		\ifthenelse{\equal{#1}{}}{}{ (#1)}\\%
+% Database
+\csdef{polytech@schooldepartment@name@di}{Département Informatique}
+\csdef{polytech@schooldepartment@address@di}{64 avenue Jean Portalis\\37200 Tours, France}
+\csdef{polytech@schooldepartment@phone@di}{+33 (0)2 47 36 14 14}
+
+\csdef{polytech@output@schooldepartment}{%
+	\ifcsdef{polytech@schooldepartment@name@\polytech@schooldepartment}{%
+		\csname polytech@schooldepartment@name@\polytech@schooldepartment\endcsname%
+	}{%
+		\textbackslash{}schooldepartment not defined%
 	}%
-	\appto\polytech@output@authors@expanded{%
-		#2 \textsc{#3}%
-		\ifthenelse{\equal{#1}{}}{}{ (#1)}\\%
-		\href{mailto:#4}{#4}\\
-	}%
-	\appto\polytech@output@authors@split{%
-		#2 \textsc{#3}&\href{mailto:#4}{#4}&\'Etudiant\ifthenelse{\equal{#1}{}}{}{ #1}\\%
-	}%
-	\ifthenelse{\equal{\polytech@output@authors@simple}{}}{}{\appto\polytech@output@authors@simple{, }}
-	\appto\polytech@output@authors@simple{#2 #3}%
 }
 
-\newcommand{\academicsupervisor}[4][]{%
-	\ifthenelse{\equal{\polytech@output@academicsupervisors@title}{}}{
-		\renewcommand{\polytech@output@academicsupervisors@title}{Tuteur académique}
-	}{
-		\renewcommand{\polytech@output@academicsupervisors@title}{Tuteurs académiques}
-	}
-	\appto\polytech@output@academicsupervisors@compact{%
-		\href{mailto:#4}{#2 \textsc{#3}}\\%
-	}%
-	\appto\polytech@output@academicsupervisors@expanded{%
-		#2 \textsc{#3}\\%
-		\href{mailto:#4}{#4}\\
-		\ifthenelse{\equal{#1}{}}{}{#1\\}
-	}%
-	\appto\polytech@output@academicsupervisors@split{%
-		#2 \textsc{#3}&\href{mailto:#4}{#4}&Tuteur académique%
-		\ifthenelse{\equal{#1}{}}{}{, #1}\\
+\csdef{polytech@output@schooladdress}{%
+	\ifcsdef{polytech@schooldepartment@address@\polytech@schooldepartment}{%
+		\csname polytech@schooldepartment@address@\polytech@schooldepartment\endcsname%
+	}{%
+		\textbackslash{}schooldepartment not defined%
 	}%
 }
+
+\csdef{polytech@output@schoolphone}{%
+	\ifcsdef{polytech@schooldepartment@phone@\polytech@schooldepartment}{%
+		\csname polytech@schooldepartment@phone@\polytech@schooldepartment\endcsname%
+	}{%
+		\textbackslash{}schooldepartment not defined%
+	}%
+}
+
+\newcommand{\polytech@output@school}{%
+	\parskip0pt%
+	\textbf{\textsc{Ecole Polytechnique de l'Université François Rabelais de Tours}}\par%
+	\polytech@output@schooldepartment\par%
+	\polytech@output@schooladdress\par%
+	Tél. \polytech@output@schoolphone\par%
+	\href{http://www.polytech.univ-tours.fr}{www.polytech.univ-tours.fr}%
+}
+
+%%%%%%%%%%% TYPE OF REPORT %%%%%%%%%%%%%%%%%
+
+\newcommand{\typereport}[1]{\gdef\polytech@typereport{#1}}
+
+\csdef{polytech@typereport@name@prd}{Projet Recherche \& Développement}
+
+\csdef{polytech@output@typereport}{%
+	\ifcsdef{polytech@typereport@name@\polytech@typereport}{%
+		\csname polytech@typereport@name@\polytech@typereport\endcsname%
+	}{%
+		\textbackslash{}typereport not defined%
+	}%
+}
+
+%%%%%%%%%%% REPORT YEAR %%%%%%%%%%%%%%%%%
+
+\newcommand{\reportyear}[1]{\gdef\polytech@reportyear{#1}}
+
+\csdef{polytech@output@reportyear}{
+	\ifcsdef{polytech@reportyear}{
+		\polytech@reportyear
+	}{
+		\textbackslash{}reportyear undefined
+	}
+}
+
+%%%%%%%%%%% REPORT TITLE AND SUBTITLE %%%%%%%%%%%%%%%%%
+
+\renewcommand{\title}[1]{\gdef\polytech@title{#1}}
+
+\csdef{polytech@output@title}{
+	\ifcsdef{polytech@title}{%
+		\polytech@title
+	}{
+		\textbackslash{}title not defined
+	}
+}
+
+
+\newcommand{\subtitle}[1]{\gdef\polytech@subtitle{#1}}
+
+\csdef{polytech@output@subtitle}{
+	\ifcsdef{polytech@subtitle}{%
+		\polytech@subtitle
+	}{
+		\textbackslash{}subtitle not defined
+	}
+}
+
+% used for PDF metadata
+\csdef{polytech@output@titlewithsubtitle}{%
+	\ifcsdef{polytech@subtitle}{%
+		\polytech@title: \polytech@subtitle%
+	}{%
+		\polytech@title%
+	}%
+}
+
+%%%%%%%%%%% REPORT LOGO %%%%%%%%%%%%%%%%%
+\newcommand{\reportlogo}[1]{%
+	\csdef{polytech@reportlogo}{#1}%
+	\pgfdeclareimage[height=3cm]{polytech@reportlogo}{#1}%
+}
+
+\csdef{polytech@output@reportlogo}{
+	\ifcsdef{polytech@reportlogo}{
+		\pgfuseimage{polytech@reportlogo}
+	}{}
+}
+
+%%%%%%%%%%% REPORT DATE %%%%%%%%%%%%%%%%%
+
+\renewcommand{\date}[1]{\def\polytech@date{#1}}
+
+\csdef{polytech@output@date}{%
+	\ifcsdef{polytech@date}{%
+		\polytech@date%
+	}{%
+		\today%
+	}%
+}
+
+
+
+%%%%%%%%%%% STUDENTS %%%%%%%%%%%%%%%%%
+
+\csundef{author}
+
+% students genre (singular or plural)
+\csdef{polytech@students@title@genre}{singular}
+\csdef{polytech@output@students@title}{\csname polytech@students@title@\csuse{polytech@students@title@genre}@\csuse{polytech@lang}\endcsname}
+
+% string replacement (lost in translation :))
+\csdef{polytech@students@title@singular@en}{Student}
+\csdef{polytech@students@title@singular@fr}{\'Etudiant}
+\csdef{polytech@students@title@plural@en}{Students}
+\csdef{polytech@students@title@plural@fr}{\'Etudiants}
+
+% sub output functions
+% prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
+\newcommand{\polytech@output@student@compact}[4]{\href{mailto:#4}{#2 \textsc{#3}}\ifstrequal{#1}{}{}{ (#1)}\\}
+\newcommand{\polytech@output@student@expanded}[4]{#2 \textsc{#3}\ifstrequal{#1}{}{}{ (#1)}\\\href{mailto:#4}{#4}\\}
+\newcommand{\polytech@output@student@split}[4]{%
+	#2 \textsc{#3}&\href{mailto:#4}{#4}%
+	&\csname polytech@students@title@singular@\csuse{polytech@lang}\endcsname\ifstrequal{#1}{}{}{ #1}\\%
+}%
+\newcommand{\polytech@output@student@simple}[4]{\ifcsstring{polytech@students@title@genre}{singular}{#2 #3}{, #2 #3}}
+
+% prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
+\newcommand{\student}[4][]{
+	\ifcsstring{polytech@students@title@genre}{singular}{\csdef{polytech@students@title@genre}{plural}}{}
+	\appto\polytech@output@students@compact{\polytech@output@student@compact{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@students@expanded{\polytech@output@student@expanded{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@students@split{\polytech@output@student@split{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@students@simple{\polytech@output@student@simple{#1}{#2}{#3}{#4}}
+}
+
+%%%%%%%%%%% ACADEMIC SUPERVISORS %%%%%%%%%%%%%%%%%
+
+% academicsupervisors genre (singular or plural)
+\csdef{polytech@academicsupervisors@title@genre}{singular}
+\csdef{polytech@output@academicsupervisors@title}{\csname polytech@academicsupervisors@title@\csuse{polytech@academicsupervisors@title@genre}@\csuse{polytech@lang}\endcsname}
+
+% strign replacement (lost in translation :))
+\csdef{polytech@academicsupervisors@title@singular@en}{Academic supervisor}
+\csdef{polytech@academicsupervisors@title@singular@fr}{Tuteur académique}
+\csdef{polytech@academicsupervisors@title@plural@en}{Academic supervisors}
+\csdef{polytech@academicsupervisors@title@plural@fr}{Tuteurs académiques}
+
+% sub output functions
+% prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
+\newcommand{\polytech@output@academicsupervisor@compact}[4]{\href{mailto:#4}{#2 \textsc{#3}}\\}
+\newcommand{\polytech@output@academicsupervisor@expanded}[4]{#2 \textsc{#3}\\\href{mailto:#4}{#4}\\\ifstrequal{#1}{}{}{#1\\}}
+\newcommand{\polytech@output@academicsupervisor@split}[4]{%
+	#2 \textsc{#3}
+	&\href{mailto:#4}{#4}
+	&\csname polytech@academicsupervisors@title@singular@\polytech@lang\endcsname\ifstrequal{#1}{}{}{, #1}\\%
+}%
+
+\newcommand{\academicsupervisor}[4][]{
+	\ifcsstring{polytech@academicsupervisors@title@genre}{singular}{\csdef{polytech@academicsupervisors@title@genre}{plural}}{}
+	\appto\polytech@output@academicsupervisors@compact{\polytech@output@academicsupervisor@compact{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@academicsupervisors@expanded{\polytech@output@academicsupervisor@expanded{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@academicsupervisors@split{\polytech@output@academicsupervisor@split{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@academicsupervisors@simple{\polytech@output@academicsupervisor@simple{#1}{#2}{#3}{#4}}
+}
+
+%%%%%%%%%%% COMPANY SUPERVISORS %%%%%%%%%%%%%%%%%
+
+% companysupervisor genre (singular or plural)
+\csdef{polytech@companysupervisors@title@genre}{singular}
+\csdef{polytech@output@companysupervisors@title}{\csname polytech@companysupervisors@title@\csuse{polytech@companysupervisors@title@genre}@\csuse{polytech@lang}\endcsname}
+
+% strign replacement (lost in translation :))
+\csdef{polytech@companysupervisors@title@singular@en}{Industrial supervisor}
+\csdef{polytech@companysupervisors@title@singular@fr}{Tuteur entreprise}
+\csdef{polytech@companysupervisors@title@plural@en}{Industrial supervisors}
+\csdef{polytech@companysupervisors@title@plural@fr}{Tuteurs entreprise}
+
+% sub output functions
+% prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
+\newcommand{\polytech@output@companysupervisor@compact}[4]{\href{mailto:#4}{#2 \textsc{#3}}\ifstrequal{#1}{}{}{ (#1)}\\}
+\newcommand{\polytech@output@companysupervisor@expanded}[4]{#2 \textsc{#3}\ifstrequal{#1}{}{}{ (#1)}\\\href{mailto:#4}{#4}\\}
+\newcommand{\polytech@output@companysupervisor@split}[4]{%
+	#2 \textsc{#3}
+	&\href{mailto:#4}{#4}
+	&\csname polytech@companysupervisors@title@singular@\csuse{polytech@lang}\endcsname\ifstrequal{#1}{}{}{ #1}\\%
+}%
+
+% prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\companysupervisor}[4][]{
-	\ifthenelse{\equal{\polytech@output@companysupervisors@title}{}}{
-		\renewcommand{\polytech@output@companysupervisors@title}{Tuteur entreprise}
-	}{
-		\renewcommand{\polytech@output@companysupervisors@title}{Tuteurs entreprise}
-	}
-	\appto\polytech@output@companysupervisors@compact{%
-		\href{mailto:#4}{#2 \textsc{#3}}%
-		\ifthenelse{\equal{#1}{}}{}{ (#1)}\\%
-	}%
-	\appto\polytech@output@companysupervisors@expanded{%
-		#2 \textsc{#3}%
-		\ifthenelse{\equal{#1}{}}{}{ (#1)}\\%
-		\href{mailto:#4}{#4}\\
-	}%
-	\appto\polytech@output@companysupervisors@split{%
-		#2 \textsc{#3}&\href{mailto:#4}{#4}&Tuteur entreprise%
-		\ifthenelse{\equal{#1}{}}{}{, #1}\\
-	}%
+	\ifcsstring{polytech@companysupervisors@title@genre}{singular}{\csdef{polytech@companysupervisors@title@genre}{plural}}{}
+	\appto\polytech@output@companysupervisors@compact{\polytech@output@companysupervisor@compact{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@companysupervisors@expanded{\polytech@output@companysupervisor@expanded{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@companysupervisors@split{\polytech@output@companysupervisor@split{#1}{#2}{#3}{#4}}
+	\appto\polytech@output@companysupervisors@simple{\polytech@output@companysupervisor@simple{#1}{#2}{#3}{#4}}
 }
 
-\newboolean{polytech@output@company@defined}
-\setboolean{polytech@output@company@defined}{false}
+%%%%%%%%%%% COMPANY %%%%%%%%%%%%%%%%%
+
+
+
+\csdef{polytech@output@company@title}{\csname polytech@company@title@\csuse{polytech@lang}\endcsname}
+
+% strign replacement (lost in translation :))
+\csdef{polytech@company@title@en}{Company}
+\csdef{polytech@company@title@fr}{Entreprise}
+
 \newcommand{\company}[4][]{
-	\setboolean{polytech@output@company@defined}{true}
-	\appto\polytech@output@company@compact{%
+	\csdef{polytech@output@company@compact}{%
 		\href{#4}{#2}%
-		\ifthenelse{\equal{#1}{}}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
+		\ifstrequal{#1}{}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
 	}%
-	\appto\polytech@output@company@expanded{%
+	\csdef{polytech@output@company@expanded}{%
 		#2\\#3\\\href{#4}{#4}%
-		\ifthenelse{\equal{#1}{}}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
+		\ifstrequal{#1}{}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
 	}%
-	\appto\polytech@output@company@split{%
+	\csdef{polytech@output@company@split}{%
 		\begin{tikzpicture}
 		    \node[color=black,align=left,anchor=west] at (0,0) {
 		    	#2\\#3\\\href{#4}{#4}
 		    };
-		    \node[color=black,align=right,anchor=east] at (\columnwidth,0) {
-		    	\ifthenelse{\equal{#1}{}}{ }{\\\pgfimage[height=1cm]{#1}}
+		    \node[color=black,align=right,anchor=east] at (\textwidth - 0.2cm - \fboxrule - \fboxrule,0) {
+		    	\ifstrequal{#1}{}{ }{\\\pgfimage[height=1cm]{#1}}
 		    };
 		\end{tikzpicture}%
 	}
 }
 
-\newcommand{\motcle}[1]{
-	\ifthenelse{\equal{\polytech@output@motcles}{}}{}{\appto\polytech@output@motcles{, }}
-	\appto\polytech@output@motcles{#1}
+
+%%%%%%%%%%% CONTRIBUTORS BLOCK %%%%%%%%%%%%%%%%%
+
+\csdef{polytech@output@contributors}{
+	\ifcsdef{polytech@output@company@compact}{
+		% company defined
+		\begin{tikzpicture}
+		    \node[color=black,align=left,anchor=north west] at (0,0) {
+		    	\textbf{\polytech@output@company@title}\\
+		    	\notbool{polytech@contributors@expanded}{\polytech@output@company@compact}{\polytech@output@company@expanded}\\
+		    	\textbf{\polytech@output@companysupervisors@title}\\
+		    	\notbool{polytech@contributors@expanded}{\polytech@output@companysupervisors@compact}{\polytech@output@companysupervisors@expanded}
+		    };
+		    \node[color=black,align=right,anchor=north east] at (\textwidth - 0.2cm,0) {
+		    	\textbf{\polytech@output@students@title}\\
+		    	\notbool{polytech@contributors@expanded}{\polytech@output@students@compact}{\polytech@output@students@expanded}\\
+		    	\textbf{\polytech@output@academicsupervisors@title}\\
+		    	\notbool{polytech@contributors@expanded}{\polytech@output@academicsupervisors@compact}{\polytech@output@academicsupervisors@expanded}
+		    };
+		\end{tikzpicture}
+	}{  % no company deined
+		\begin{tikzpicture}
+		    \node[color=black,align=left,anchor=north west] at (0,0) {
+		    	\textbf{\polytech@output@contributors@title}\\
+		    	\notbool{polytech@contributors@expanded}{\polytech@output@academicsupervisors@compact}{\polytech@output@academicsupervisors@expanded}
+		    };
+		    \node[color=black,align=right,anchor=north east] at (\textwidth,0) {
+		    	\textbf{\polytech@output@students@title}\\
+		    	\notbool{polytech@contributors@expanded}{\polytech@output@students@compact}{\polytech@output@students@expanded}
+		    };
+		\end{tikzpicture}
+	}
 }
-\newcommand{\keyword}[1]{
-\ifthenelse{\equal{\polytech@output@keywords}{}}{}{\appto\polytech@output@keywords{, }}
-	\appto\polytech@output@keywords{#1}
+
+%%%%%%%%%%% LIST OF CONTRIBUTORS %%%%%%%%%%%%%%%%%
+
+\csdef{polytech@contributors@name@en}{List of contributors}
+\csdef{polytech@contributors@name@fr}{Liste des intervenants}
+
+\csdef{polytech@output@contributorspage}{
+	\thispagestyle{empty}
+	\begin{center}
+		\polytech@chapter@titlefont
+		\csuse{polytech@contributors@name@\csuse{polytech@lang}}
+	\end{center}
+	%
+	\ifcsdef{polytech@output@company@compact}{
+		\vspace{2cm}
+		\begin{center}
+			\textbf{\polytech@output@company@title}\\[0.2cm]
+			\fbox{\polytech@output@company@split}
+		\end{center}
+	}{}
+	\vspace{2cm}
+	\begin{tabu}{|X[c]X[c]X[c]|}
+		\hline
+		\ifbool{polytech@english}{
+			\textbf{Name}&\textbf{Mail}&\textbf{Quality}\\\hline
+		}{
+			\textbf{Nom}&\textbf{Mail}&\textbf{Qualité}\\\hline
+		}
+		\csuse{polytech@output@students@split}\hline
+		\csuse{polytech@output@academicsupervisors@split}\hline
+		\csuse{polytech@output@companysupervisors@split}\hline
+	\end{tabu}
+	\newpage
 }
 
-
-\newcommand{\resume}[1]{\renewcommand{\polytech@resume}{#1}}
-\newcommand{\abstract}[1]{\renewcommand{\polytech@abstract}{#1}}
-
-
+%%%%%%%%%%% TITLE PAGE / MAKETITLE %%%%%%%%%%%%%%%%%
 
 \DeclareFixedFont{\polytech@font@titlepage@typereport}{\encodingdefault}{cmr}{bx}{n}{24pt}
 \DeclareFixedFont{\polytech@font@titlepage@reportyear}{\encodingdefault}{cmr}{bx}{n}{18pt}
@@ -184,36 +349,34 @@
 \DeclareFixedFont{\polytech@font@titlepage@date}{\encodingdefault}{cmr}{n}{n}{12pt}
 
 \renewcommand{\maketitle}{
-	\frontmatter
-	\begin{titlepage}
+ 	\frontmatter
+ 	\begin{titlepage}
 		\begin{tikzpicture}
 		    \node[right,color=black,align=center] at (0,0) {\pgfuseimage{polytech@schoollogo}};
-		    \node[left,color=black,align=center] at (\columnwidth,0) {\pgfuseimage{polytech@univlogo}};
+		    \node[left,color=black,align=center] at (\textwidth,0) {\pgfuseimage{polytech@univlogo}};
 		\end{tikzpicture}\\
-		\polytech@output@schooladdress\\
+		\polytech@output@school\\
 		\vfill
-		\begin{center}
-			{\polytech@font@titlepage@typereport\polytech@output@typereport}\\[0.2cm]
-			{\polytech@font@titlepage@reportyear\polytech@reportyear}\\[1cm]
-			{\polytech@font@titlepage@title\polytech@title}\\[0.5cm]
-			{\polytech@font@titlepage@subtitle\polytech@subtitle}\\
-			\vspace{1cm}
-			\polytech@output@reportlogo
-		\end{center}
-		\vfill
-		\polytech@output@contributors
-
-		\center{\polytech@font@titlepage@date\polytech@date}
-	\end{titlepage}
-	\polytech@output@contributorspage
-%
+ 		\begin{center}
+ 			{\polytech@font@titlepage@typereport\polytech@output@typereport}\\[0.2cm]
+ 			{\polytech@font@titlepage@reportyear\polytech@output@reportyear}\\[1cm]
+ 			{\polytech@font@titlepage@title\polytech@output@title}\\[0.5cm]
+ 			{\polytech@font@titlepage@subtitle\polytech@output@subtitle}\\
+ 			\vspace{1cm}
+ 			\polytech@output@reportlogo
+ 		\end{center}
+ 		\vfill
+ 		\polytech@output@contributors
+ 		\ifbool{polytech@nodate}{}{\center{\polytech@font@titlepage@date\polytech@output@date}}
+ 	\end{titlepage}
+	\ifbool{polytech@contributors@noseparatepage}{}{\polytech@output@contributorspage}
 	\hypersetup{%
-		pdfauthor={\polytech@output@authors@simple},
-        pdftitle={\polytech@output@titlewithsubtitle},
-        pdfsubject={\polytech@output@titlewithsubtitle},
-        pdfkeywords={\polytech@output@keywords,\polytech@output@motcles},
-        pdfproducer={\polytech@output@authors@simple},
-        pdfcreator={pdflatex, \LaTeX}}%
+		pdfauthor={\polytech@output@students@simple},
+      pdftitle={\polytech@output@titlewithsubtitle},
+      pdfsubject={\polytech@output@titlewithsubtitle},
+      pdfkeywords={\polytech@output@keywords,\polytech@output@motcles},
+      pdfproducer={\polytech@output@students@simple},
+      pdfcreator={pdflatex, \LaTeX}}%
 
 	\pagenumbering{roman}
 	\setcounter{page}{0}
@@ -223,7 +386,7 @@
 
 	\tableofcontents
 
-	% automagically add lists of figures, tables and listings if needed
+	% automagically add lists of figures, tables and listings if needed (i.e not empty)
 	\iftotalfigures\listoffigures\fi
 	\iftotaltables\listoftables\fi
 	\iftotallstlistings\lstlistoflistings\fi
@@ -236,23 +399,54 @@
 	\mainmatter
 }
 
+%%%%%%%%%%% KEYWORDS %%%%%%%%%%%%%%%%%
+
+\newcommand{\motcle}[1]{
+	\ifcsdef{polytech@output@motscles}{
+		\appto\polytech@output@motcles{, #1}
+	}{
+		\appto\polytech@output@motcles{#1}
+	}
+}
+\newcommand{\keyword}[1]{
+	\ifcsdef{polytech@output@keywords}{
+		\appto\polytech@output@keywords{, #1}
+	}{
+		\appto\polytech@output@keywords{#1}
+	}
+}
+
+%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%
+
+\newcommand{\resume}[1]{\csdef{polytech@output@resume}{#1}}
+\newcommand{\abstract}[1]{\csdef{polytech@output@abstract}{#1}}
+
+%%%%%%%%%%% LASTPAGE %%%%%%%%%%%%%%%%%
 
 \newcommand{\makelastpage}{
-	\polytech@output@weeklyreports
+	% add up to 3 pages to round total page count to *4
+	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{0}{}{}
+	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{1}{\newpage\mbox{ }}{}
+	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{2}{\newpage\mbox{ }\newpage\mbox{ }}{}
+	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{3}{\newpage\mbox{ }\newpage\mbox{ }\newpage\mbox{ }}{}
+	\backmatter
+	%\polytech@output@weeklyreports
 	\newpage
 	\thispagestyle{empty}
 	\begin{center}
-		{\polytech@font@titlepage@title\polytech@title}\\[0.5cm]
-		{\polytech@font@titlepage@subtitle\polytech@subtitle}\\
+		{\polytech@font@titlepage@title\polytech@output@title}
+		\ifcsdef{polytech@output@subtitle}{
+			\\[0.5cm]{\polytech@font@titlepage@subtitle\polytech@output@subtitle}
+		}\\
 	\end{center}
 	\vfill
 	\textbf{Résumé}\\
-	\polytech@resume
+	\polytech@output@resume
 	\textbf{Mots-clés}\\
 	\polytech@output@motcles
 	\vfill
 	\textbf{Abstract}\\
-	\polytech@abstract
+	\polytech@output@abstract
 	\textbf{Keywords}\\
 	\polytech@output@keywords
 	\vfill
@@ -260,111 +454,6 @@
 }
 
 
-
-
-% commands used only for outputting contents
-\newcommand{\polytech@output@department}{%
-	\ifthenelse{\equal{\polytech@schooldepartment}{di}}{%
-Département Informatique%
-	}{ % else di
-		\verb|\schooldepartment| not defined.%
-	}%
-}
-\newcommand{\polytech@output@address}{%
-	\ifthenelse{\equal{\polytech@schooldepartment}{di}}{%
-64 avenue Jean Portalis\\
-37200 Tours, France%
-	}{ % else di
-		\verb|\schooldepartment| not defined.%
-	}%
-}
-\newcommand{\polytech@output@phone}{%
-	\ifthenelse{\equal{\polytech@schooldepartment}{di}}{%
-+33 (0)2 47 36 14 14%
-	}{ % else di
-		\verb|\schooldepartment| not defined.%
-	}%
-}
-\newcommand{\polytech@output@schooladdress}{%
-\textbf{\textsc{Ecole Polytechnique de l'Université François Rabelais de Tours}}\\%
-\polytech@output@department\\%
-\polytech@output@address\\%
-Tél. \polytech@output@phone\\%
-\href{http://www.polytech.univ-tours.fr}{www.polytech.univ-tours.fr}%
-}
-
-
-\newcommand{\polytech@output@typereport}{%
-	\ifthenelse{\equal{\polytech@typereport}{prd}}{%
-Projet Recherche \& Développement
-	}{ % else di
-		\verb|\typereport| not defined.%
-	}%
-}
-
-\newcommand{\polytech@output@reportlogo}{\pgfuseimage{polytech@reportlogo}}
-
-
-
-
-\newcommand{\polytech@output@contributors}{
-	\ifthenelse{\boolean{polytech@output@company@defined}}{
-		% company defined
-		\begin{tikzpicture}
-		    \node[color=black,align=left,anchor=north west] at (0,0) {
-		    	\textbf{Entreprise}\\
-		    	\ifthenelse{\boolean{polytech@firstlastpage@compact}}{\polytech@output@company@compact}{\polytech@output@company@expanded}\\
-		    	\textbf{\polytech@output@companysupervisors@title}\\
-		    	\ifthenelse{\boolean{polytech@firstlastpage@compact}}{\polytech@output@companysupervisors@compact}{\polytech@output@companysupervisors@expanded}
-		    };
-		    \node[color=black,align=right,anchor=north east] at (\columnwidth,0) {
-		    	\textbf{\polytech@output@authors@title}\\
-		    	\ifthenelse{\boolean{polytech@firstlastpage@compact}}{\polytech@output@authors@compact}{\polytech@output@authors@expanded}\\
-		    	\textbf{\polytech@output@academicsupervisors@title}\\
-		    	\ifthenelse{\boolean{polytech@firstlastpage@compact}}{\polytech@output@academicsupervisors@compact}{\polytech@output@academicsupervisors@expanded}
-		    };
-		\end{tikzpicture}
-	}{  % no company deined
-		\begin{tikzpicture}
-		    \node[color=black,align=left,anchor=north west] at (0,0) {
-		    	\textbf{\polytech@output@academicsupervisors@title}\\
-		    	\ifthenelse{\boolean{polytech@firstlastpage@compact}}{\polytech@output@academicsupervisors@compact}{\polytech@output@academicsupervisors@expanded}
-		    };
-		    \node[color=black,align=right,anchor=north east] at (\columnwidth,0) {
-		    	\textbf{\polytech@output@authors@title}\\
-		    	\ifthenelse{\boolean{polytech@firstlastpage@compact}}{\polytech@output@authors@compact}{\polytech@output@authors@expanded}
-		    };
-		\end{tikzpicture}
-	}
-}
-
-\newcommand{\polytech@output@contributorspage}{
-	\ifthenelse{\boolean{polytech@firstlastpage@contributorspage}}{
-		\thispagestyle{empty}
-		\polytech@chapter@titlefont
-		\begin{center}Liste des intervenants\end{center}
-		\normalfont
-		%
-		\ifthenelse{\boolean{polytech@output@company@defined}}{
-			\vspace{2cm}
-			\begin{center}
-				\textbf{Entreprise}\\[0.2cm]
-				\fbox{\polytech@output@company@split}
-			\end{center}
-		}{}
-		\vspace{2cm}
-
-		\begin{tabu}{|X[c]X[c]X[c]|}
-			\hline
-			\textbf{Nom}&\textbf{Mail}&\textbf{Qualité}\\\hline
-			\csname polytech@output@authors@split\endcsname\hline
-			\csname polytech@output@academicsupervisors@split\endcsname\hline
-			\csname polytech@output@companysupervisors@split\endcsname\hline
-		\end{tabu}
-		\newpage
-	}{ % do nothing
-	}%
-}
 
 
 
