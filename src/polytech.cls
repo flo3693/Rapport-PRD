@@ -129,6 +129,7 @@
 \RequirePackage{layout}
 
 %-------------- lot of packages -------------
+\RequirePackage{nameref}
 \RequirePackage{multicol}
 \RequirePackage{fancyhdr}
 \RequirePackage{caption}
@@ -156,6 +157,8 @@
 \RequirePackage{cite}
 \RequirePackage{pageslts} % to have total page count of the document
 \RequirePackage{titletoc} % TODO how to improve TOC ?
+\RequirePackage{eurosym} % symbol euro
+\RequirePackage[user]{zref} % allow for better \ref and  \label
 
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
 
@@ -188,6 +191,9 @@
 \RequirePackage{polytech/sectionning}
 \RequirePackage{polytech/floats}
 \RequirePackage{polytech/weeklyreports}
+\RequirePackage{polytech/listings}
+\RequirePackage{polytech/references}
+
 
 
    \frenchspacing
@@ -207,9 +213,6 @@
 \renewcommand{\@dotsep}{0.1}
 \setcounter{secnumdepth}{3}
 
-\RequirePackage{polytech/references}
-\RequirePackage{polytech/listings}
-
 
 
 
@@ -226,10 +229,14 @@
 {}{}
 
 
+% allow proper handling of unnumbered chapters in \ref
+\newbool{polytech@ref@unnumberedchapter}
+
 % unnumbered chapter but in toc
 \newcommand{\unnumberedchapter}[2][]{
 	\chapter*{#2}
 	\addcontentsline{toc}{chapter}{\numberline{}#2}
+	\booltrue{polytech@ref@unnumberedchapter}
 	\ifstrequal{#1}{}{
 		\markboth{#2}{}
 	}{
@@ -237,7 +244,8 @@
 	}
 }
 
-
+% reset unnumbered chapter boolean
+\preto{\chapter}{\boolfalse{polytech@ref@unnumberedchapter}}
 
 
 

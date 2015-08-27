@@ -17,7 +17,7 @@
   font={small},
   textfont=it,
   labelfont={bf},
-  width=.9\textwidth,
+  width=\textwidth-2cm,
   figurename=Figure,
   tablename=Table,
   skip=5pt plus 1pt minus 1pt,
@@ -28,14 +28,14 @@
 
 % label, caption
 \newenvironment{Figure}[2]{
-		\gdef\mylabel{#1}
-		\gdef\mycaption{#2}
+		\csdef{polytech@output@label}{#1}
+		\csdef{polytech@output@caption}{#2}
     \begin{figure}[htb]
     	\centering
 }
 {
-    	\caption{\mycaption}
-    	\label{\mylabel}% must be after caption
+    	\caption{\csuse{polytech@output@caption}}
+    	\label{\csuse{polytech@output@label}}% must be after caption
     \end{figure}
 }
 

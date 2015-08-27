@@ -5,84 +5,90 @@
 \ProvidesPackage{polytech/references}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech references' \fileversion\space<\filedate>}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% REFERENCES INTERNES (partie 1 : extension de ref et label)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\RequirePackage[user]{zref}
+\newcommand{\polytech@ref@from@chapter@en}[1]{\xspace(Chapter~#1)}
+\newcommand{\polytech@ref@from@chapter@fr}[1]{\xspace(Chapitre~#1)}
+\newcommand{\polytech@ref@from@appendix@en}[1]{\xspace(Appendix~#1)}
+\newcommand{\polytech@ref@from@appendix@fr}[1]{\xspace(Annexe~#1)}
 
 % ATTENTION : le code suivant doit s'executer avant le chargement du package typedref
-\zref@newprop{chapter}{}
+\zref@newprop{chapter}[-1]{}
 \zref@newprop{isappendix}{}
 \zref@addprop{main}{chapter}
 \zref@addprop{main}{isappendix}
 
-\let\oldref=\ref
-\renewcommand{\ref}[1]{%
-  \zrefused{#1}%
-  \gdef\refchapternumber{\zref@extract{#1}{chapter}}%
-  \gdef\refchapterisappendix{\zref@extract{#1}{isappendix}}
-  \oldref{#1}%
-}
+% remove chapter from section, subsection...
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\theHequation}{\arabic{equation}}
 
-\let\oldlabel=\label
-\renewcommand{\label}[1]{%
-  \zref@setcurrent{chapter}{\thechapter}%
-  \ifnumequal{\thechapter}{\arabic{chapter}}%
-  {%
-    \zref@setcurrent{isappendix}{0}%
+% get the reference without the chapter part
+\newcommand{\shortref}[1]{\polytech@oldref{#1}}
+
+% get the chapter part of the reference
+\newcommand{\refchapter}[1]{%
+	\zref@def@extract{\polytech@ref@chapter}{#1}{chapter}%
+	\zref@def@extract{\polytech@ref@isappendix}{#1}{isappendix}%
+	\ifnumequal{\polytech@ref@chapter}{-1}%
+  {% no number defined
   }%
   {%
-    \zref@setcurrent{isappendix}{1}%
-  }%
-  \oldlabel{#1}%
-  \zlabel{#1}%
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% REFERENCES INTERNES (partie 2 : redefinition de ref et de ses variantes)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\RequirePackage{polytech/typedref}
-
-\sr@refname{appendix}{Annexe}{Annexes}
-\sr@refname{chapter}{Chapitre}{Chapitres}
-\sr@refname{figure}{Figure}{Figures}
-\sr@refname{footnote}{Note de bas de page}{Notes de bas de pages}
-\sr@refname{item}{Item}{Items}
-\sr@refname{paragraph}{Paragraphe}{Paragraphes}
-\sr@refname{part}{Partie}{Parties}
-\sr@refname{section}{Section}{Sections}
-\sr@refname{table}{Table}{Tables}
-\sr@refname{equation}{Equation}{Equations}
-\sr@refname{algo}{Algorithme}{Algorithmes}
-\sr@refname{exercice}{Exercice}{Exercices}
-\sr@refname{theorem}{Théorème}{Théorèšmes}
-
-\def\thesection{\arabic{section}}
-
-\let\oldsectionref=\sectionref
-\renewcommand{\sectionref}[1]{%
-  \gdef\refchapternumber{-1}
-  \gdef\refchapterisappendix{0}
-  \oldsectionref{#1}%
-  \ifnumequal{\refchapternumber}{-1}%
-  {%
-  }%
-  {%
-    \ifnumequal{\refchapternumber}{\thechapter}%
-    {}%
+    \ifnumequal{\polytech@ref@chapter}{\thechapter}%
+    {% same chapter, keep short numbering
+    }%
     {%
-      \ifnumequal{\refchapterisappendix}{0}%
+      \ifnumequal{\polytech@ref@isappendix}{0}%
       {%
-        \space{}du chapitre~\refchapternumber%
+      	\csuse{polytech@ref@from@chapter@\polytech@lang}{\polytech@ref@chapter}%
       }%
       {%
-        \space{}de l'annexe~\refchapternumber%
+        \csuse{polytech@ref@from@appendix@\polytech@lang}{\polytech@ref@chapter}%
       }%
     }%
     \xspace%
   }%
 }
 
+% redefine label to store additional data with zref
+\newcommand{\polytech@label}[1]{%
+	\ifbool{polytech@ref@unnumberedchapter}{%
+		\zref@setcurrent{chapter}{-1}%
+	}{%
+  	\zref@setcurrent{chapter}{\thechapter}%
+	  \ifnumequal{\thechapter}{\arabic{chapter}}%
+	  {%
+	    \zref@setcurrent{isappendix}{0}%
+	  }%
+	  {%
+	    \zref@setcurrent{isappendix}{1}%
+	  }%
+	}%
+	\polytech@oldlabel{#1}%
+  \zlabel{#1}%
+}
+
+
+\AtBeginDocument{
+	\let\polytech@oldref\ref
+	\let\polytech@oldautoref\autoref
+	\let\polytech@oldlabel\label
+	\let\polytech@oldlabel@in@display\label@in@display
+
+	% replace Tableau by Table in caption
+	\renewcommand{\tableautorefname}{Table}
+
+	% replace standard \ref command
+	\renewcommand{\ref}[1]{\shortref{#1}\refchapter{#1}}
+	% complete autoref with the chapter part
+	\renewcommand{\autoref}[1]{\polytech@oldautoref{#1}\relax\refchapter{#1}}
+	% replace standard \label command
+	\renewcommand{\label}[1]{\polytech@label{#1}}
+
+	% amsmath replace label in equation, so we patch the replacement :)
+	\renewcommand{\label@in@display}[1]{\polytech@oldlabel@in@display{#1}\relax\polytech@label{#1}}
+
+	% patch \eqref to move the chapter part outside the parenthesis
+	\renewcommand{\eqref}[1]{\textup{\tagform@{\polytech@oldref{#1}}}\refchapter{#1}}
+}
 

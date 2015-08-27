@@ -6,15 +6,6 @@
 \typeout{Package `polytech firstlastpage' \fileversion\space<\filedate>}
 
 
-% variables used to store contents to be used latter
-\def\polytech@output@company@compact{}
-\def\polytech@output@company@expanded{}
-\def\polytech@output@company@split{}
-\def\polytech@output@motcles{}
-\def\polytech@output@keywords{}
-\def\polytech@resume{}
-\def\polytech@abstract{}
-
 \pgfdeclareimage[height=2cm]{polytech@schoollogo}{polytech/polytech}
 \pgfdeclareimage[height=2cm]{polytech@univlogo}{polytech/univ}
 
@@ -124,7 +115,7 @@
 %%%%%%%%%%% REPORT LOGO %%%%%%%%%%%%%%%%%
 \newcommand{\reportlogo}[1]{%
 	\csdef{polytech@reportlogo}{#1}%
-	\pgfdeclareimage[height=3cm]{polytech@reportlogo}{#1}%
+	\pgfdeclareimage[height=4cm]{polytech@reportlogo}{#1}%
 }
 
 \csdef{polytech@output@reportlogo}{
@@ -168,8 +159,7 @@
 \newcommand{\polytech@output@student@split}[4]{%
 	#2 \textsc{#3}&\href{mailto:#4}{#4}%
 	&\csname polytech@students@title@singular@\csuse{polytech@lang}\endcsname\ifstrequal{#1}{}{}{ #1}\\%
-}%
-\newcommand{\polytech@output@student@simple}[4]{\ifcsstring{polytech@students@title@genre}{singular}{#2 #3}{, #2 #3}}
+}
 
 % prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\student}[4][]{
@@ -177,7 +167,11 @@
 	\appto\polytech@output@students@compact{\polytech@output@student@compact{#1}{#2}{#3}{#4}}
 	\appto\polytech@output@students@expanded{\polytech@output@student@expanded{#1}{#2}{#3}{#4}}
 	\appto\polytech@output@students@split{\polytech@output@student@split{#1}{#2}{#3}{#4}}
-	\appto\polytech@output@students@simple{\polytech@output@student@simple{#1}{#2}{#3}{#4}}
+	\ifcsstring{polytech@students@title@genre}{singular}{
+		\appto\polytech@output@students@simple{#2 #3}
+	}{
+		\appto\polytech@output@students@simple{, #2 #3}
+	}
 }
 
 %%%%%%%%%%% ACADEMIC SUPERVISORS %%%%%%%%%%%%%%%%%
@@ -262,10 +256,10 @@
 	}%
 	\csdef{polytech@output@company@split}{%
 		\begin{tikzpicture}
-		    \node[color=black,align=left,anchor=west] at (0,0) {
+		    \node[color=black,align=left,anchor=west,inner sep=0cm] at (0,0) {
 		    	#2\\#3\\\href{#4}{#4}
 		    };
-		    \node[color=black,align=right,anchor=east] at (\textwidth - 0.2cm - \fboxrule - \fboxrule,0) {
+		    \node[color=black,align=right,anchor=east,inner sep=0.1cm] at (\textwidth - 0.2cm - \fboxrule - \fboxrule,0) {
 		    	\ifstrequal{#1}{}{ }{\\\pgfimage[height=1cm]{#1}}
 		    };
 		\end{tikzpicture}%
@@ -279,13 +273,13 @@
 	\ifcsdef{polytech@output@company@compact}{
 		% company defined
 		\begin{tikzpicture}
-		    \node[color=black,align=left,anchor=north west] at (0,0) {
+		    \node[color=black,align=left,anchor=north west,inner sep=0cm] at (0,0) {
 		    	\textbf{\polytech@output@company@title}\\
 		    	\notbool{polytech@contributors@expanded}{\polytech@output@company@compact}{\polytech@output@company@expanded}\\
 		    	\textbf{\polytech@output@companysupervisors@title}\\
 		    	\notbool{polytech@contributors@expanded}{\polytech@output@companysupervisors@compact}{\polytech@output@companysupervisors@expanded}
 		    };
-		    \node[color=black,align=right,anchor=north east] at (\textwidth - 0.2cm,0) {
+		    \node[color=black,align=right,anchor=north east,inner sep=0cm] at (\textwidth-2pt,0) {
 		    	\textbf{\polytech@output@students@title}\\
 		    	\notbool{polytech@contributors@expanded}{\polytech@output@students@compact}{\polytech@output@students@expanded}\\
 		    	\textbf{\polytech@output@academicsupervisors@title}\\
@@ -294,11 +288,11 @@
 		\end{tikzpicture}
 	}{  % no company deined
 		\begin{tikzpicture}
-		    \node[color=black,align=left,anchor=north west] at (0,0) {
+		    \node[color=black,align=left,anchor=north west,inner sep=0cm,outter sep=0cm] at (0,0) {
 		    	\textbf{\polytech@output@contributors@title}\\
 		    	\notbool{polytech@contributors@expanded}{\polytech@output@academicsupervisors@compact}{\polytech@output@academicsupervisors@expanded}
 		    };
-		    \node[color=black,align=right,anchor=north east] at (\textwidth,0) {
+		    \node[color=black,align=right,anchor=north east,inner sep=0cm,outter sep=0cm] at (\textwidth-2pt,0) {
 		    	\textbf{\polytech@output@students@title}\\
 		    	\notbool{polytech@contributors@expanded}{\polytech@output@students@compact}{\polytech@output@students@expanded}
 		    };
@@ -349,7 +343,7 @@
 \DeclareFixedFont{\polytech@font@titlepage@date}{\encodingdefault}{cmr}{n}{n}{12pt}
 
 \renewcommand{\maketitle}{
- 	\frontmatter
+	\pagenumbering{alph}
  	\begin{titlepage}
 		\begin{tikzpicture}
 		    \node[right,color=black,align=center] at (0,0) {\pgfuseimage{polytech@schoollogo}};
@@ -377,12 +371,7 @@
       pdfkeywords={\polytech@output@keywords,\polytech@output@motcles},
       pdfproducer={\polytech@output@students@simple},
       pdfcreator={pdflatex, \LaTeX}}%
-
-	\pagenumbering{roman}
-	\setcounter{page}{0}
-
-	%on réduit momentanément l'écart entre paragraphes pour ne pas trop aérer la table des matières
-	\setlength{\parskip}{0em}
+ 	\frontmatter
 
 	\tableofcontents
 
@@ -391,18 +380,13 @@
 	\iftotaltables\listoftables\fi
 	\iftotallstlistings\lstlistoflistings\fi
 
-	% reset page counter
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
-
-	\cleardoublepage
 	\mainmatter
 }
 
 %%%%%%%%%%% KEYWORDS %%%%%%%%%%%%%%%%%
 
 \newcommand{\motcle}[1]{
-	\ifcsdef{polytech@output@motscles}{
+	\ifcsdef{polytech@output@motcles}{
 		\appto\polytech@output@motcles{, #1}
 	}{
 		\appto\polytech@output@motcles{#1}
@@ -436,19 +420,19 @@
 	\begin{center}
 		{\polytech@font@titlepage@title\polytech@output@title}
 		\ifcsdef{polytech@output@subtitle}{
-			\\[0.5cm]{\polytech@font@titlepage@subtitle\polytech@output@subtitle}
-		}\\
+			\par\vspace{0.5cm}{\polytech@font@titlepage@subtitle\polytech@output@subtitle}\vspace{0.5cm}
+		}\par
 	\end{center}
 	\vfill
-	\textbf{Résumé}\\
-	\polytech@output@resume
-	\textbf{Mots-clés}\\
-	\polytech@output@motcles
+	\textbf{Résumé}\par
+	\polytech@output@resume\par
+	\textbf{Mots-clés}\par
+	\polytech@output@motcles\par
 	\vfill
-	\textbf{Abstract}\\
-	\polytech@output@abstract
-	\textbf{Keywords}\\
-	\polytech@output@keywords
+	\textbf{Abstract}\par
+	\polytech@output@abstract\par
+	\textbf{Keywords}\par
+	\polytech@output@keywords\par\vspace{0.5cm}
 	\vfill
 	\polytech@output@contributors
 }
