@@ -22,18 +22,24 @@
 \colorlet{polytech@lst@backgroundcolor}{black!10}
 \colorlet{polytech@lst@framecolor}{black!30}
 \colorlet{polytech@lst@linebreakcolor}{black}
-\colorlet{polytech@lstinline@basiccolor}{black}
-\colorlet{polytech@lstinline@keywordcolor}{black}
-\colorlet{polytech@lstinline@commentcolor}{black}
+\ifbool{polytech@blackandwhite}{
+	\colorlet{polytech@lstinline@basiccolor}{black}
+	\colorlet{polytech@lstinline@keywordcolor}{black}
+	\colorlet{polytech@lstinline@commentcolor}{black}
+}{
+	\colorlet{polytech@lstinline@basiccolor}{blue}
+	\colorlet{polytech@lstinline@keywordcolor}{blue}
+	\colorlet{polytech@lstinline@commentcolor}{blue}
+}
 
-\newcommand{\polytech@lst@basicstyle}{\scriptsize\color{polytech@lst@basiccolor}}
+\newcommand{\polytech@lst@basicstyle}{\scriptsize\tt\color{polytech@lst@basiccolor}}
 \newcommand{\polytech@lst@keywordstyle}{\color{polytech@lst@keywordcolor}\bf}
 \newcommand{\polytech@lst@commentstyle}{\color{polytech@lst@commentcolor}\it}
 \newcommand{\polytech@lst@stringstyle}{\upshape}
 \newcommand{\polytech@lst@numberingstyle}{\tiny\color{polytech@lst@numberingcolor}}
 \newcommand{\polytech@lst@prebreak}{\mbox{\hbox{\large\color{polytech@lst@linebreakcolor} \Leftscissors}}}
 \newcommand{\polytech@lst@postbreak}{\mbox{\hbox{\color{polytech@lst@linebreakcolor}$\hookrightarrow$ }}}
-\newcommand{\polytech@lstinline@basicstyle}{\color{polytech@lstinline@basiccolor}}
+\newcommand{\polytech@lstinline@basicstyle}{\tt\color{polytech@lstinline@basiccolor}}
 \newcommand{\polytech@lstinline@keywordstyle}{\color{polytech@lstinline@keywordcolor}\bf}
 \newcommand{\polytech@lstinline@commentstyle}{\color{polytech@lstinline@commentcolor}\it}
 \newcommand{\polytech@lstinline@stringstyle}{\upshape}
@@ -85,7 +91,7 @@
 		#1}%
 }
 
-\lstloadlanguages{[ANSI]c,[ISO]c++,java,bash,make,xml,sql,php,python,html,scilab,matlab}
+\lstloadlanguages{[ANSI]c,[ISO]c++,java,bash,make,xml,sql,php,python,html,scilab,matlab,[LaTeX]TeX}
 
 \lstdefinelanguage{javascript}{
   keywords={break,case,catch,continue,debugger,default,delete,do,else,finally,for,function,if,in,instanceof,new,return,switch,this,throw,try,typeof,var,void,while,with},
@@ -97,13 +103,18 @@
   morestring=[b]"
 }
 
-\def\polytech@lst@defaultlanguage{c}
-\polytech@lst@configure{language=\polytech@lst@defaultlanguage}
+%
+% \def\polytech@lst@defaultlanguage{c}
+% \polytech@lst@configure{language=\csuse{polytech@lst@defaultlanguage}}
+%
+% \newcommand{\setsourcedefaultlanguage}[1]{%
+% 	\def\polytech@lst@defaultlanguage{c}%
+% 	\polytech@lst@configure{language=\csuse{polytech@lst@defaultlanguage}}%
+% }
 
-\newcommand{\setsourcedefaultlanguage}[1]{%
-	\def\polytech@lst@defaultlanguage{c}%
-	\polytech@lst@configure{language=\polytech@lst@defaultlanguage}%
-}
+
+% set LaTeX as default for TeX
+%\lstset{defaultdialect=[LaTeX]TeX}
 
 \lstnewenvironment{source}[1][\polytech@lst@defaultlanguage]{\polytech@lst@configure{language=#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
 \lstnewenvironment{csource}[1][]{\polytech@lst@configure{language=c,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
@@ -119,6 +130,9 @@
 \lstnewenvironment{htmlsource}[1][]{\polytech@lst@configure{language=html,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
 \lstnewenvironment{scilabsource}[1][]{\polytech@lst@configure{language=scilab,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
 \lstnewenvironment{matlabsource}[1][]{\polytech@lst@configure{language=matlab,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+\lstnewenvironment{latexsource}[1][]{\polytech@lst@configure{language=TeX,#1}\csname\@lst @SetFirstNumber\endcsname}{\csname\@lst @SaveFirstNumber\endcsname}
+
+
 
 \newcommand{\sourcefile}[2][]{\polytech@lst@configure{language=\polytech@lst@defaultlanguage}\lstinputlisting[#1]{#2}}
 \newcommand{\csourcefile}[2][]{\polytech@lst@configure{language=c}\lstinputlisting[#1]{#2}}
@@ -130,10 +144,11 @@
 \newcommand{\xmlsourcefile}[2][]{\polytech@lst@configure{language=xml}\lstinputlisting[#1]{#2}}
 \newcommand{\sqlsourcefile}[2][]{\polytech@lst@configure{language=sql}\lstinputlisting[#1]{#2}}
 \newcommand{\phpsourcefile}[2][]{\polytech@lst@configure{language=php}\lstinputlisting[#1]{#2}}
-\newcommand{\pythonsourcefile}[2][]{\polytech@lst@configure{language=pyhton}\lstinputlisting[#1]{#2}}
+\newcommand{\pythonsourcefile}[2][]{\polytech@lst@configure{language=python}\lstinputlisting[#1]{#2}}
 \newcommand{\htmlsourcefile}[2][]{\polytech@lst@configure{language=html}\lstinputlisting[#1]{#2}}
 \newcommand{\scilabsourcefile}[2][]{\polytech@lst@configure{language=scilab}\lstinputlisting[#1]{#2}}
 \newcommand{\matlabsourcefile}[2][]{\polytech@lst@configure{language=matlab}\lstinputlisting[#1]{#2}}
+\newcommand{\latexsourcefile}[2][]{\polytech@lst@configure{language=TeX}\lstinputlisting[#1]{#2}}
 
 
 \lstdefinestyle{polytech@lst@base}{basicstyle=\polytech@lstinline@basicstyle,%
@@ -159,6 +174,7 @@
 \def\htmlcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=html]{#1}}{#1}}
 \def\scilabcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=scilab]{#1}}{#1}}
 \def\matlabcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=matlab]{#1}}{#1}}
+\def\latexcode#1{\texorpdfstring{\lstinline[style=polytech@lst@base,language=TeX]{#1}}{#1}}
 
 % make commands robust to be usable in other command like block or sectionning
 \MakeRobustCommand\ccode
@@ -174,6 +190,7 @@
 \MakeRobustCommand\htmlcode
 \MakeRobustCommand\scilabcode
 \MakeRobustCommand\matlabcode
+\MakeRobustCommand\latexcode
 
 
 

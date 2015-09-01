@@ -68,6 +68,8 @@
   \zlabel{#1}%
 }
 
+% boolean used to not include chapter in autoref
+\newbool{polytech@ref@nochapter}
 
 \AtBeginDocument{
 	\let\polytech@oldref\ref
@@ -75,13 +77,34 @@
 	\let\polytech@oldlabel\label
 	\let\polytech@oldlabel@in@display\label@in@display
 
-	% replace Tableau by Table in caption
-	\renewcommand{\tableautorefname}{Table}
+
+
+	% replace Tableau by Table in caption, correct case
+	\def\tableautorefname{Table}
+	\def\sectionautorefname{Section}
+	\def\appendixautorefname{Appendix}
+	\ifbool{polytech@english}{
+		\def\chapterautorefname{Chapter}
+		\def\appendixautorefname{Appendix}
+	}{
+		\def\chapterautorefname{Chapitre}
+		\def\appendixautorefname{Annexe}
+	}
+
+	% hide chapter from part and chapter
+	\appto\partautorefname{\global\booltrue{polytech@ref@nochapter}}
+	\appto\chapterautorefname{\global\booltrue{polytech@ref@nochapter}}
+	\appto\appendixautorefname{\global\booltrue{polytech@ref@nochapter}}
+
 
 	% replace standard \ref command
 	\renewcommand{\ref}[1]{\shortref{#1}\refchapter{#1}}
 	% complete autoref with the chapter part
-	\renewcommand{\autoref}[1]{\polytech@oldautoref{#1}\relax\refchapter{#1}}
+	\renewcommand{\autoref}[1]{%
+		\boolfalse{polytech@ref@nochapter}%
+		\polytech@oldautoref{#1}\relax%
+		\ifbool{polytech@ref@nochapter}{}{\refchapter{#1}}%
+	}
 	% replace standard \label command
 	\renewcommand{\label}[1]{\polytech@label{#1}}
 

@@ -5,6 +5,8 @@
 \ProvidesPackage{polytech/floats}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech floats' \fileversion\space<\filedate>}
 
+\csdef{polytech@floats@position}{b}
+
 % définit le format des légendes
 \DeclareCaptionLabelFormat{polytech}{#1~#2}
 
@@ -27,27 +29,27 @@
 }
 
 % label, caption
-\newenvironment{Figure}[2]{
-		\csdef{polytech@output@label}{#1}
-		\csdef{polytech@output@caption}{#2}
-    \begin{figure}[htb]
-    	\centering
-}
-{
-    	\caption{\csuse{polytech@output@caption}}
+\newenvironment{Figure}[2]{%
+		\csdef{polytech@output@label}{#1}%
+		\csdef{polytech@output@caption}{#2}%
+    \polytech@oldfigure[\csuse{polytech@floats@position}]%
+    	\centering%
+}%
+{%
+    	\caption{\csuse{polytech@output@caption}}%
     	\label{\csuse{polytech@output@label}}% must be after caption
-    \end{figure}
+    \polytech@endoldfigure%
 }
 
 % label, caption
-\newenvironment{Table}[2]{
-    \begin{table}[htb]
-	    \caption{#2}
+\newenvironment{Table}[2]{%
+    \polytech@oldtable[\csuse{polytech@floats@position}]%
+	    \caption{#2}%
 	    \label{#1}% must be after caption
-	    \centering
-}
-{
-	\end{table}
+	    \centering%
+}%
+{%
+	\polytech@endoldtable%
 }
 \renewcommand\floatpagefraction{.9}
 \renewcommand\topfraction{.9}
@@ -56,4 +58,27 @@
 \setcounter{totalnumber}{50}
 \setcounter{topnumber}{50}
 \setcounter{bottomnumber}{50}
+
+% add a warning to standard figure and table environments
+
+\let\polytech@oldfigure\figure
+\let\polytech@endoldfigure\endfigure
+
+\renewenvironment{figure}[1][]{%
+\textbf{\color{red}L'utilisation de l'environnement \latexcode{figure} est interdit. Utilisez l'environnement \latexcode{Figure} (cf. mode d'emploi).}%
+\polytech@oldfigure%
+}{%
+\polytech@endoldfigure%
+}
+
+\let\polytech@oldtable\table
+\let\polytech@endoldtable\endtable
+
+\renewenvironment{table}[1][]{%
+\textbf{\color{red}L'utilisation de l'environnement \latexcode{table} est interdit. Utilisez l'environnement \latexcode{Table} (cf. mode d'emploi).}%
+\polytech@oldtable%
+}{%
+\polytech@endoldtable%
+}
+
 

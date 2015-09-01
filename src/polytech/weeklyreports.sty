@@ -5,3 +5,30 @@
 \typeout{Package `polytech weeklyreports' \fileversion\space<\filedate>}
 
 
+
+% lost in translations :)
+\def\polytech@weeklyreports@title@en{Weekly reports}
+\def\polytech@weeklyreports@title@fr{Comptes rendus hebdomadaires}
+\newcommand{\polytech@weeklyreports@reporttitle@en}[2]{Report ###1 (#2)}
+\newcommand{\polytech@weeklyreports@reporttitle@fr}[2]{Compte rendu n°#1\xspace du #2}
+
+
+% the weekly report counter
+\newcounter{polytech@weeklyreport@counter}
+
+\notbool{polytech@hideweeklyreports}{%
+	% weekly reports enabled
+	\newenvironment{weeklyreports}{%
+		\chapter*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
+		\begin{description}
+	}{%
+		\end{description}
+	}
+	\newcommand{\weeklyreport}[1]{%
+		\refstepcounter{polytech@weeklyreport@counter}%
+		\item[\textbf{\csuse{polytech@weeklyreports@reporttitle\csuse{polytech@lang}}{\thepolytech@weeklyreport@counter}{#1}}]\mbox{ }\\%
+	}
+}{%
+	% weekly reports are disabled
+	\excludecomment{weeklyreports}%
+}

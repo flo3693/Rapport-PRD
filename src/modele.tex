@@ -51,31 +51,27 @@
 % On indique les mots clés avec \motcle{mot clé} en français et \keyword{keyword} en anglais
 % Le résumé significatif et descriptif du contenu du rapport en 5 à 10 lignes se spécifie par \resume{...} en français et \abstract{...} en anglais
 % Attention : tout doit tenir sur la dernière page
-% Exemple :
-
 \resume{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sit amet sapien sed sodales. Pellentesque faucibus lacus mauris, id semper odio viverra eu. Aliquam erat volutpat. Proin ultricies velit et tortor consequat cursus. Curabitur ac elit suscipit ligula iaculis auctor. Sed tristique nulla libero, non tempor nibh laoreet vel. Cras id congue diam. Vestibulum tellus felis, egestas non diam a, rhoncus eleifend metus. Aliquam ligula mauris, pharetra sit amet erat a, luctus rhoncus arcu. Vivamus ac metus mauris.
 
 Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapibus ante malesuada eget. Phasellus mauris augue, convallis eu nulla ac, ornare luctus augue. Praesent fringilla urna sed lacus viverra placerat. Nunc pulvinar facilisis ultrices. Nulla neque justo, suscipit sit amet dignissim at, facilisis eget metus. Curabitur venenatis, ante bibendum volutpat accumsan, eros diam faucibus neque, at mattis augue massa ut nisl. Integer enim leo, sodales at euismod vel, efficitur vel magna. Etiam congue, augue in aliquet rutrum, magna elit sodales metus, quis hendrerit purus urna hendrerit purus. Quisque euismod leo at felis efficitur, vel posuere tortor accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eget vestibulum augue.}
-
+% chaque mot clé ou groupe de mots clés est défini via la commande \motcle en français
 \motcle{mot}
 \motcle{clé}
 \motcle{deux mots}
 
-
+% résumé en anglais
 \abstract{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sit amet sapien sed sodales. Pellentesque faucibus lacus mauris, id semper odio viverra eu. Aliquam erat volutpat. Proin ultricies velit et tortor consequat cursus. Curabitur ac elit suscipit ligula iaculis auctor. Sed tristique nulla libero, non tempor nibh laoreet vel. Aliquam ligula mauris, pharetra sit amet erat a, luctus rhoncus arcu. Vivamus ac metus mauris.
 
 Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapibus ante malesuada eget. Phasellus mauris augue, convallis eu nulla ac, ornare luctus augue. Praesent fringilla urna sed lacus viverra placerat. Nunc pulvinar facilisis ultrices. Nulla neque justo, suscipit sit amet dignissim at, facilisis eget metus. Sed rhoncus in dolor a facilisis. Mauris in consectetur nisl. Curabitur venenatis, ante bibendum volutpat accumsan, eros diam faucibus neque, at mattis augue massa ut nisl. Integer enim leo, sodales at euismod vel, efficitur vel magna. Etiam congue, augue in aliquet rutrum, magna elit sodales metus, quis hendrerit purus urna hendrerit purus. Quisque euismod leo at felis efficitur, vel posuere tortor accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eget vestibulum augue.}
 
+% chaque mot clé ou groupe de mots clés est défini via la commande \motcle en anglais
+% Attention : il n'y a pas forcément une traduction directe entre les mots clés et les keywords
 \keyword{word}
 \keyword{key}
 \keyword{two words}
 \keyword{fourth word}
 
 
-\csshow{thepart}
-\csshow{thechapter}
-\csshow{thesection}
-\csshow{ref}
 
 % le document commence ici
 \begin{document}
@@ -83,30 +79,13 @@ Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapi
 % on commence par générer la page de titre, la liste des intervenants, les tables des matières, figures, tables, listings
 \maketitle
 
-Intro : \ref{chap:intro}, \ref{chap:intro} blah
-
-
-Casse tête : \autoref{sec:cassetete}, \ref{sec:cassetete}. blah
-
-es: \autoref{truc}
-
-\eqref{truc}
-
-table : \autoref{tab:deficits}
-
-figure : \autoref{fig:modeemploi}, \autoref{fig:modeemploi2}
-
-\csshow{eqref}
-
 
 % Le chapitre d'introduction générale n'est souvent pas numéroté
-% La commande \unnumberedchapter fonctionne de façon identique à \chapter
-% Attention : un chapitre sans numéro ne peut pas être référencé dans le document
+% La commande \unnumberedchapter fonctionne de façon identique à \chapter mais produit un chapitre non numéroté présent dans la table des matières (à la différence de \chapter*)
+% Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
 \unnumberedchapter[Titre court pour l'entête]{Introduction générale du rapport avec un titre un peu long}
 
-\label{chap:intro}
-
-\lipsum[1]
+\lipsum[1] % on ajoute du texte automatique
 
 % un chapitre non numéroté peut avoir des sections, sous sections... mais c'est rare
 \section{Ma section}
@@ -151,6 +130,10 @@ Pour ne pas se casser la tête à rédiger mon rapport, je lis le mode d'emploi 
 Toute figure ou table doit avoir un titre et être référencée dans le texte (sinon ça ne sert à rien).
 Pour cela, vous devez utiliser deux environnements \texttt{Figure} et \texttt{Table}. Chacun de ces environments admet deux paramètres : le label et le titre de la figure/table. Le positionnement de la figure/table étant contrôlé par la classe de document, il est très important que ces figures/tables soient référencées dans le texte. Pour référencer les figures, la commande \texttt{\textbackslash{}figureref\{label\}} doit être utilisée (\ref{fig:modeemploi}).
 Pour référencer les tables, la commande \texttt{\textbackslash{}tableref\{label\}} doit être utilisée (\ref{tab:deficits}). Le mot Figure/Table est inséré automatiquement et les éventuels pluriels sont gérées (\ref{fig:modeemploi,fig:modeemploi2})
+
+\begin{figure}
+mm
+\end{figure}
 
 \begin{Figure}{fig:modeemploi}{Ma superbe image}
 \pgfimage{polytech/modeemploi}
@@ -204,32 +187,6 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 
 \makeatletter
 
-% lost in translations :)
-\def\polytech@weeklyreports@title@en{Weekly reports}
-\def\polytech@weeklyreports@title@fr{Comptes rendus hebdomadaires}
-\newcommand{\polytech@weeklyreports@reporttitle@en}[2]{Report ###1 (#2)}
-\newcommand{\polytech@weeklyreports@reporttitle@fr}[2]{Compte rendu n°#1\xspace du #2}
-
-
-% the weekly report counter
-\newcounter{polytech@weeklyreport@counter}
-
-\notbool{polytech@hideweeklyreports}{%
-	% weekly reports enabled
-	\newenvironment{weeklyreports}{%
-		\chapter*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
-		\begin{description}
-	}{%
-		\end{description}
-	}
-	\newcommand{\weeklyreport}[1]{%
-		\refstepcounter{polytech@weeklyreport@counter}%
-		\item[\textbf{\csuse{polytech@weeklyreports@reporttitle\csuse{polytech@lang}}{\thepolytech@weeklyreport@counter}{#1}}]\mbox{ }\\%
-	}
-}{%
-	% weekly reports are disabled
-	\excludecomment{weeklyreports}%
-}
 
 \makeatother
 
@@ -253,13 +210,7 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 \cite{key1,key2}
 \nocite{*}
 
-\bibliographystyle{polytech}
 \bibliography{modele}
-
-
-
-
-
 
 
 \makelastpage

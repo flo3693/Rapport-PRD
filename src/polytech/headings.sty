@@ -125,22 +125,22 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
 
 
-%Make empty page really empty
-\def\cleardoublepage{%
-  \clearpage%
-  \if@twoside%
-    \ifodd\c@page%
-    \else%
-      \hbox{}%
-      \thispagestyle{empty}%
-      \newpage%
-      \if@twocolumn%
-        \hbox{}%
-        \newpage%
-      \fi%
-    \fi%
-  \fi%
-}
+% %Make empty page really empty
+% \def\cleardoublepage{%
+%   \clearpage%
+%   \if@twoside%
+%     \ifodd\c@page%
+%     \else%
+%       \hbox{}%
+%       \thispagestyle{empty}%
+%       \newpage%
+%       \if@twocolumn%
+%         \hbox{}%
+%         \newpage%
+%       \fi%
+%     \fi%
+%   \fi%
+% }
 
 
 

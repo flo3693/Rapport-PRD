@@ -1,0 +1,321 @@
+\documentclass[overfullbox,hideweeklyreports,noseparatecontributorspage,nodate]{polytech}
+
+\schooldepartment{di}
+\typereport{none}
+\reportyear{Version du \today}
+\title{Mode d'emploi de la classe de document \texttt{polytech}}
+\subtitle{Descriptif des commandes}
+\reportlogo{polytech/modeemploi}
+
+\makeatother
+\csdef{polytech@output@contributors}{
+\center\href{mailto:aupetit@univ-tours.fr}{Sébastien Aupetit}\par
+}
+\csdef{polytech@output@contributorspage}{}
+\csdef{polytech@output@students@simple}{}
+\makeatletter
+%
+%
+% % on indique les contributeurs à ce rapport
+%
+% % Le(s) étudiant(s) aux formats suivants :
+% % \student{Prénom}{Nom}{Mail}
+% % \student[Année d'études]{Prénom}{Nom}{Mail}
+% \student[DI5]{Pierre}{Premier}{pierre.premier@univ-tours.fr}
+% \student[DI4]{Paul}{Deuxième}{paul2@univ-tours.fr}
+% \student{Jacques}{Un peu plus Long}{j.unpeupluslong@example.com}
+% % Le(s) superviseur(s) académique (ou encadrant(s)) aux format suivants :
+% % \academicsupervisor{Prénom}{Nom}{mail}
+% % \academicsupervisor[Affiliation]{Prénom}{Nom}{mail}
+% \academicsupervisor[Département informatique]{Sébastien}{Aupetit}{aupetit@univ-tours.fr}
+% % Le(s) tuteur(s) entreprise aux formats suivants :
+% % \companysupervisor{Prénom}{Nom}{Mail}
+% % \companysupervisor[Fonction]{Prénom}{Nom}{Mail}
+% \companysupervisor[Fonction très importante]{Un}{Gars}{un.gars@example.com}
+% \companysupervisor{Un deuxième}{Gars}{undeuxieme.gars@example.com}
+% % L'entreprise aux formats suivants :
+% %	\company{Nom de l'entreprise}{Adresse}{URL du site web}
+% % \company[logo entreprise]{Nom de l'entreprise}{Adresse}{URL du site web}
+% % S'il est indiqué le logo de l'entreprise s'affichera sur une hauteur de 1cm
+% % Attention : pour que les tuteurs entreprise s'affichent, l'entreprise doit être définie
+% \company[polytech/polytech]{Laboratoire Informatique}{64 avenue Jean Portalis\\37200 Tours}{li.univ-tours.fr}
+% %\company{Laboratoire Informatique}{64 avenue Jean Portalis, 37200 Tours}{li.univ-tours.fr}
+
+
+% On indique les mots clés avec \motcle{mot clé} en français et \keyword{keyword} en anglais
+% Le résumé significatif et descriptif du contenu du rapport en 5 à 10 lignes se spécifie par \resume{...} en français et \abstract{...} en anglais
+% Attention : tout doit tenir sur la dernière page
+\resume{Ce document est le mode d'emploi des commandes principales de la classe de document \texttt{polytech}.}
+% chaque mot clé ou groupe de mots clés est défini via la commande \motcle en français
+\motcle{Mode d'emploi}
+
+% résumé en anglais
+\abstract{This document is a how-to on commandes of the \texttt{polytech} document class.}
+
+% chaque mot clé ou groupe de mots clés est défini via la commande \motcle en anglais
+% Attention : il n'y a pas forcément une traduction directe entre les mots clés et les keywords
+\keyword{How-to}
+
+\begin{document}
+\maketitle
+
+\chapter{Les options de la classe de document}
+
+La classe de document a été prévue de manière à permettre la génération de plusieurs documents dérivés à partir de vos sources LaTeX. Les options de \texttt{\textbackslash{}documentclass} sont donnés par la \autoref{tab:documentclassoptions}. La plupart des options sont réservés pour un usage ultérieur. Lors de la rédaction de votre rapport, il vous suffit de débuter votre document avec l'une des deux commandes suivantes. L'utilisation de l'option \latexcode{overfullbox} est recommander pour vous aider à identifier les débordements de texte.
+\begin{latexsource}
+\documentclass{polytech}
+\end{latexsource}
+ou
+\begin{latexsource}
+\documentclass[overfullbox]{polytech}
+\end{latexsource}
+
+\begin{Table}{tab:documentclassoptions}{Liste des options de la classe de document}
+\begin{tabu}{|c|X[m]|}
+\hline
+english&Indique que le document est anglais\\\hline
+overfullbox&Provoque l'affichage des débordements (overfull box)\\\hline
+blackandwhite&Préparer une version pour impression (sans couleur, sans lien hypertexte, active l'option expandedcontributors)\\\hline
+openany&Permet de commencer un chapitre au verso d'une page\\\hline
+hideweeklyreports&Desactive l'affichage des comptes rendus hebdomadaires\\\hline
+expandedcontributors&Les détails des contributeurs sont inclus\\\hline
+noseparatecontributorspage&Desactive la génération de la page listant les contributeurs\\\hline
+nodate&Desactive l'affichage de la date de compilation\\\hline
+\end{tabu}
+\end{Table}
+
+\chapter{Première et quatrième de couverture}
+
+La première et quatrième de couverture sont générées automatiquement à partir des informations que vous fournissez. Pour cela, plusieurs commandes à utiliser \textbf{dans le préambule} ont été définies.
+
+\section{Le département de l'école}
+
+Le département de l'école dont dépend le projet est spécifié grâce à la commande \linebreak\latexcode{\\schooldepartment\{dep\}}\footnote{Remarques: le texte déborde dans la marge, on a donc ajouté la commande \latexcode{\\linebreak} pour inciter \LaTeX à passer à la ligne.}
+
+\begin{latexsource}
+\schooldepartment{di}
+\end{latexsource}
+
+Les départements actuellement reconnus sont :
+\begin{itemize}
+  \item \latexcode{di} : Département Informatique
+\end{itemize}
+
+\section{Le type de projet}
+
+Le type de projet est défini par la commande \latexcode{\\typereport\{type\}}.
+\begin{latexsource}
+\typereport{prd}
+\end{latexsource}
+
+Les types de projet actuellement reconnus sont :
+\begin{itemize}
+  \item \latexcode{prd} : Projet Recherche \& Développement
+\end{itemize}
+
+\section{L'année du projet}
+
+L'année du projet est définie par la commande \latexcode{\\reportyear\{date\}}. Sauf consigne contraire, la date doit être au format \latexcode{année-année+1}.
+\begin{latexsource}
+\reportyear{2015-2016}
+\end{latexsource}
+
+\section{Le titre}
+
+La commande \latexcode{\\title\{titre\}} permet de spécifier le titre. Pour une mise en page correcte, votre titre ne doit pas dépasser deux lignes sur la page. Si vous souhaitez définir un sous titre, vous pouvez utiliser la commande \latexcode{\\subtitle\{sous titre\}}. Pour une mise en page correcte, votre sous titre ne doit pas dépasser deux lignes sur la page.
+
+\begin{latexsource}
+\title{Exemple d'utilisation de la classe de document polytech}
+\subtitle{Il peut y avoir un sous titre mais ce n'est pas obligatoire}
+\end{latexsource}
+
+\section{Le logo du rapport}
+
+Vous pouvez définir une image illustrant votre travail sur la première de couverture. Pour cela, il vous suffit d'indiquer le chemin relatif d'une image au format JPEG, PNG ou PDF via la commande \latexcode{\\reportlogo\{chemin\}}. Le chemin est relatif au répertoire où se trouve votre fichier principal \LaTeX. Les sous répertoires s'indiquent via le séparateur \latexcode{/}. L'image indiquée par cette commande sera insérée sous le titre et le sous titre sur une hauteur de 4cm.
+
+\begin{latexsource}
+\reportlogo{polytech/modeemploi}
+\end{latexsource}
+
+\section{Les intervenants}
+
+\subsection{Les étudiants}
+
+Pour indiquer les étudiants rédigeant le rapport, on utilise la commande \latexcode{\\student}. La commande possède trois arguments obligatoires et un argument optionel. L'argument optionel permet d'indiquer la promo de l'étudiant. Les trois paramètres obligatoires indiquent dans l'ordre le prénom, le nom et l'adresse mail de l'étudiant\footnote{On prendra soin d'utiliser les majuscules correctement en début de mot.}. La commande  \latexcode{\\student} peut être utilisée autant de fois que nécessaire.
+
+\begin{latexsource}
+\student[DI5]{Pierre}{Premier}{pierre.premier@univ-tours.fr}
+\student[DI4]{Paul}{Deuxième}{paul2@univ-tours.fr}
+\student{Jacques}{Un peu plus Long}{j.unpeupluslong@example.com}
+\end{latexsource}
+
+\subsection{Les tuteurs pédagogique}
+
+Pour indiquer les tuteurs pédagogiques (enseignants, encadrants\ldots), on utilise la commande\linebreak \latexcode{\\academicsupervisor}. La commande possède trois arguments obligatoires et un argument optionel. L'argument optionel permet d'indiquer le département de rattachement du tuteur pédagogique. Le département de rattachement des tuteurs ne doit être indiqué que si les tuteurs n'ont pas tous le même ou si la commande \latexcode{\\schooldepartment} en spécifie un différent. Les trois paramètres obligatoires indiquent dans l'ordre le prénom, le nom et l'adresse mail. La commande \linebreak \latexcode{\\academicsupervisor} peut être utilisée autant de fois que nécessaire.
+
+\begin{latexsource}
+\academicsupervisor[Département infomatique]{Jean Noël}{Dupond}{dupond@univ-tours.fr}
+\academicsupervisor{Machin}{Chose}{machin.chose@univ-tours.fr}
+\end{latexsource}
+
+\subsection{Les tuteurs entreprise}
+
+Pour indiquer les tuteurs entreprise, on utilise la commande\linebreak \latexcode{\\companysupervisor}. La commande possède trois arguments obligatoires et un argument optionel. L'argument optionel permet d'indiquer la fonction du tuteur. La fonction du tuteur ne doit être précisé que si celle-ci est pertinente et significative. Les trois paramètres obligatoires indiquent dans l'ordre le prénom, le nom et l'adresse mail. La commande  \latexcode{\\companysupervisor} peut être utilisée autant de fois que nécessaire.
+
+\begin{center}
+\bf Attention : les tuteurs entreprise ne s'afficheront que si l'entreprise est définie avec la commande \latexcode{\\company}.
+\end{center}
+
+\begin{latexsource}
+\companysupervisor[Fonction très importante]{Un}{Gars}{un.gars@example.com}
+\companysupervisor{Un deuxième}{Gars}{undeuxieme.gars@example.com}
+\end{latexsource}
+
+\subsection{L'entreprise}
+
+Pour indiquer l'entreprise, on utilise la commande \latexcode{\\company}. La commande possède trois arguments obligatoires et un argument optionel. L'argument optionel permet d'indiquer un logo. Celui-ci doit être au format JPEG, PNG ou PDF et sera dessiné sur une hauteur de 1cm. Les trois paramètres obligatoires indiquent dans l'ordre le nom, l'adresse et l'URL du site web de l'entreprise. La commande  \latexcode{\\company} ne peut être utilisée qu'une seule fois.
+
+\begin{latexsource}
+\company[polytech/polytech]{Laboratoire Informatique}{64 avenue Jean Portalis\\37200 Tours}{li.univ-tours.fr}
+\company{Laboratoire Informatique}{64 avenue Jean Portalis, 37200 Tours}{li.univ-tours.fr}
+\end{latexsource}
+
+\section{Les mots clés}
+
+Les mots clés en français et en anglais sont spécifiés par les commandes \latexcode{\\motcle} et \latexcode{\\keyword} utilisées autant de fois que nécessaire. D'une manière générale, vous devez choisir soigneusement vos mots clés pour refléter le contenu du rapport. Les versions française ou anglaise des mots clés ne sont pas forcément une traduction de l'un en l'autre et n'apparaissent pas forcément en même nombre.
+
+\begin{latexsource}
+\motcle{mot}
+\motcle{clé}
+\motcle{deux mots}
+\keyword{word}
+\keyword{key}
+\keyword{two words}
+\keyword{fourth word}
+\end{latexsource}
+
+\section{Les résumés}
+
+Les résumés français et anglais sont spécifiés par les commandes \latexcode{\\resume} et \latexcode{\\abstract}. Vous pouvez avoir des paragraphes au sein de vos résumés en laissant une ligne vide. Dans tous les cas, vous devez dimensionner vos résumés de manière à ce que la dernière de couverture tienne sur une seule page. Vous devez apporter le même soin à la rédaction de vos résumés qu'au choix de vos mots clés : c'est la première image global de votre rapport. Ils doivent donc en résumer l'essentiel.
+
+\begin{latexsource}
+\resume{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus
+sit amet sapien sed sodales. Pellentesque faucibus lacus mauris, id semper odio viverra
+eu. Aliquam erat volutpat. Proin ultricies velit et tortor consequat cursus. Curabitur
+ac elit suscipit ligula iaculis auctor. Sed tristique nulla libero, non tempor nibh
+laoreet vel. Cras id congue diam. Vestibulum tellus felis, egestas non diam a,
+rhoncus eleifend metus. Aliquam ligula mauris, pharetra sit amet erat a, luctus
+rhoncus arcu. Vivamus ac metus mauris.
+
+Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapibus
+ante malesuada eget. Phasellus mauris augue, convallis eu nulla ac, ornare luctus
+augue. Praesent fringilla urna sed lacus viverra placerat. Nunc pulvinar facilisis
+ultrices. Nulla neque justo, suscipit sit amet dignissim at, facilisis eget metus.
+Curabitur venenatis, ante bibendum volutpat accumsan, eros diam faucibus neque, at
+mattis augue massa ut nisl. Integer enim leo, sodales at euismod vel, efficitur vel
+magna. Etiam congue, augue in aliquet rutrum, magna elit sodales metus, quis
+hendrerit purus urna hendrerit purus. Quisque euismod leo at felis efficitur, vel
+posuere tortor accumsan. Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Quisque eget vestibulum augue.}
+\abstract{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+dapibus sit amet sapien sed sodales. Pellentesque faucibus lacus mauris, id semper
+odio viverra eu. Aliquam erat volutpat. Proin ultricies velit et tortor consequat
+cursus. Curabitur ac elit suscipit ligula iaculis auctor. Sed tristique nulla libero,
+non tempor nibh laoreet vel. Aliquam ligula mauris, pharetra sit amet erat a, luctus
+rhoncus arcu. Vivamus ac metus mauris.
+
+Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapibus
+ante malesuada eget. Phasellus mauris augue, convallis eu nulla ac, ornare luctus
+augue. Praesent fringilla urna sed lacus viverra placerat. Nunc pulvinar facilisis
+ultrices. Nulla neque justo, suscipit sit amet dignissim at, facilisis eget metus.
+Sed rhoncus in dolor a facilisis. Mauris in consectetur nisl. Curabitur venenatis,
+ante bibendum volutpat accumsan, eros diam faucibus neque, at mattis augue massa
+ut nisl. Integer enim leo, sodales at euismod vel, efficitur vel magna. Etiam
+congue, augue in aliquet rutrum, magna elit sodales metus, quis hendrerit purus
+urna hendrerit purus. Quisque euismod leo at felis efficitur, vel posuere tortor
+accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada
+fames ac turpis egestas. Quisque eget vestibulum augue.}
+\end{latexsource}
+
+\section{Structure minimale de votre document}
+
+\begin{latexsource}
+\documentclass[overfullbox]{polytech}
+
+% ajout d'éventuels packages et commandes
+% \usepackage{...}
+
+% renseignement de la première et dernière de couverture (\student...)
+
+\begin{document}
+\maketitle
+
+% contenu du rapport
+
+\makelastpage
+\end{document}
+\end{latexsource}
+
+\chapter{Tables et figures}
+
+Pour insérer des tables et des figures, vous ne devez pas utiliser les environnements standards \latexcode{table} et \latexcode{figure}. en lieu et place, vous devez utiliser les environnements \latexcode{Table} et \latexcode{Figure}. Ces environnements admettent deux paramètres : l'identifiant de référence (label) et le titre de la table/figure. Le positionnement dans le document se fait de façon automatique en haut de page. Vous ne pouvez pas modifier ce placement automatique. Il est donc très important que l'ensemble de vos tables et figures soient référencées dans le texte (cf. \autoref{chap:ref}).
+
+\begin{latexsource}
+Pendant que j'y pense, j'ai une belle image qui illustre ma pensée
+(cf. \autoref{fig:modeemploi}) que je peux compléter par la \autoref{tab:deficits}
+
+\begin{Figure}{fig:modeemploi}{Ma superbe image}
+	\pgfimage{polytech/modeemploi}
+\end{Figure}
+
+\begin{Table}{tab:deficits}{Déficit public de la France : on est mal barré !}
+	\begin{tabu}{cccccccc}
+			&2007	&2008	&2009	&2010	&2011	&2012	&2013\\\hline
+		Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
+		\% PIB	&64.4\%	&68.5\%	&79.5\%	&82.7\%	&86.2\%	&90.6\%	&93.5\%\\\hline
+	\end{tabu}
+\end{Table}
+\end{latexsource}
+
+Ce qui donne :
+
+Pendant que j'y pense, j'ai une belle image qui illustre ma pensée
+(cf. \autoref{fig:modeemploi}) que je peux compléter par la \autoref{tab:deficits}
+
+\begin{Figure}{fig:modeemploi}{Ma superbe image}
+	\pgfimage{polytech/modeemploi}
+\end{Figure}
+
+\begin{Table}{tab:deficits}{Déficit public de la France : on est mal barré !}
+	\begin{tabu}{cccccccc}
+			&2007	&2008	&2009	&2010	&2011	&2012	&2013\\\hline
+		Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
+		\% PIB	&64.4\%	&68.5\%	&79.5\%	&82.7\%	&86.2\%	&90.6\%	&93.5\%\\\hline
+	\end{tabu}
+\end{Table}
+
+\chapter{Références}
+
+\label{chap:ref}
+
+\eqref{1}
+
+\chapter{listings et commandes pré-réglées}
+
+\chapter{Rapports hebdomadaires}
+
+\chapter{Bibliographie}
+
+\chapter{Les images}
+
+\chapter{Gestion des overfull box}
+
+linebreak
+hypen
+
+\chapter{Les packages}
+
+algo
+tikz/pgf
+
+\end{document}

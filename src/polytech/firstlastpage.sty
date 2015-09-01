@@ -51,13 +51,14 @@
 	\polytech@output@schooldepartment\par%
 	\polytech@output@schooladdress\par%
 	Tél. \polytech@output@schoolphone\par%
-	\href{http://www.polytech.univ-tours.fr}{www.polytech.univ-tours.fr}%
+	\href{http://www.polytech.univ-tours.fr}{\url{www.polytech.univ-tours.fr}}%
 }
 
 %%%%%%%%%%% TYPE OF REPORT %%%%%%%%%%%%%%%%%
 
 \newcommand{\typereport}[1]{\gdef\polytech@typereport{#1}}
 
+\csdef{polytech@typereport@name@none}{}
 \csdef{polytech@typereport@name@prd}{Projet Recherche \& Développement}
 
 \csdef{polytech@output@typereport}{%
@@ -155,9 +156,9 @@
 % sub output functions
 % prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\polytech@output@student@compact}[4]{\href{mailto:#4}{#2 \textsc{#3}}\ifstrequal{#1}{}{}{ (#1)}\\}
-\newcommand{\polytech@output@student@expanded}[4]{#2 \textsc{#3}\ifstrequal{#1}{}{}{ (#1)}\\\href{mailto:#4}{#4}\\}
+\newcommand{\polytech@output@student@expanded}[4]{#2 \textsc{#3}\ifstrequal{#1}{}{}{ (#1)}\\\href{mailto:#4}{\url{#4}}\\}
 \newcommand{\polytech@output@student@split}[4]{%
-	#2 \textsc{#3}&\href{mailto:#4}{#4}%
+	#2 \textsc{#3}&\href{mailto:#4}{\url{#4}}%
 	&\csname polytech@students@title@singular@\csuse{polytech@lang}\endcsname\ifstrequal{#1}{}{}{ #1}\\%
 }
 
@@ -189,10 +190,10 @@
 % sub output functions
 % prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\polytech@output@academicsupervisor@compact}[4]{\href{mailto:#4}{#2 \textsc{#3}}\\}
-\newcommand{\polytech@output@academicsupervisor@expanded}[4]{#2 \textsc{#3}\\\href{mailto:#4}{#4}\\\ifstrequal{#1}{}{}{#1\\}}
+\newcommand{\polytech@output@academicsupervisor@expanded}[4]{#2 \textsc{#3}\\\href{mailto:#4}{\url{#4}}\\\ifstrequal{#1}{}{}{#1\\}}
 \newcommand{\polytech@output@academicsupervisor@split}[4]{%
 	#2 \textsc{#3}
-	&\href{mailto:#4}{#4}
+	&\href{mailto:#4}{\url{#4}}
 	&\csname polytech@academicsupervisors@title@singular@\polytech@lang\endcsname\ifstrequal{#1}{}{}{, #1}\\%
 }%
 
@@ -219,10 +220,10 @@
 % sub output functions
 % prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\polytech@output@companysupervisor@compact}[4]{\href{mailto:#4}{#2 \textsc{#3}}\ifstrequal{#1}{}{}{ (#1)}\\}
-\newcommand{\polytech@output@companysupervisor@expanded}[4]{#2 \textsc{#3}\ifstrequal{#1}{}{}{ (#1)}\\\href{mailto:#4}{#4}\\}
+\newcommand{\polytech@output@companysupervisor@expanded}[4]{#2 \textsc{#3}\ifstrequal{#1}{}{}{ (#1)}\\\href{mailto:#4}{\url{#4}}\\}
 \newcommand{\polytech@output@companysupervisor@split}[4]{%
 	#2 \textsc{#3}
-	&\href{mailto:#4}{#4}
+	&\href{mailto:#4}{\url{#4}}
 	&\csname polytech@companysupervisors@title@singular@\csuse{polytech@lang}\endcsname\ifstrequal{#1}{}{}{ #1}\\%
 }%
 
@@ -247,17 +248,17 @@
 
 \newcommand{\company}[4][]{
 	\csdef{polytech@output@company@compact}{%
-		\href{#4}{#2}%
+		\href{#4}{\url{#2}}%
 		\ifstrequal{#1}{}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
 	}%
 	\csdef{polytech@output@company@expanded}{%
-		#2\\#3\\\href{#4}{#4}%
+		#2\\#3\\\href{#4}{\url{#4}}%
 		\ifstrequal{#1}{}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
 	}%
 	\csdef{polytech@output@company@split}{%
 		\begin{tikzpicture}
 		    \node[color=black,align=left,anchor=west,inner sep=0cm] at (0,0) {
-		    	#2\\#3\\\href{#4}{#4}
+		    	#2\\#3\\\href{#4}{\url{#4}}
 		    };
 		    \node[color=black,align=right,anchor=east,inner sep=0.1cm] at (\textwidth - 0.2cm - \fboxrule - \fboxrule,0) {
 		    	\ifstrequal{#1}{}{ }{\\\pgfimage[height=1cm]{#1}}
@@ -289,7 +290,7 @@
 	}{  % no company deined
 		\begin{tikzpicture}
 		    \node[color=black,align=left,anchor=north west,inner sep=0cm,outter sep=0cm] at (0,0) {
-		    	\textbf{\polytech@output@contributors@title}\\
+		    	\textbf{\polytech@output@academicsupervisors@title}\\
 		    	\notbool{polytech@contributors@expanded}{\polytech@output@academicsupervisors@compact}{\polytech@output@academicsupervisors@expanded}
 		    };
 		    \node[color=black,align=right,anchor=north east,inner sep=0cm,outter sep=0cm] at (\textwidth-2pt,0) {
@@ -320,6 +321,7 @@
 		\end{center}
 	}{}
 	\vspace{2cm}
+	\small
 	\begin{tabu}{|X[c]X[c]X[c]|}
 		\hline
 		\ifbool{polytech@english}{
@@ -336,11 +338,11 @@
 
 %%%%%%%%%%% TITLE PAGE / MAKETITLE %%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@font@titlepage@typereport}{\encodingdefault}{cmr}{bx}{n}{24pt}
-\DeclareFixedFont{\polytech@font@titlepage@reportyear}{\encodingdefault}{cmr}{bx}{n}{18pt}
-\DeclareFixedFont{\polytech@font@titlepage@title}{\encodingdefault}{cmr}{bx}{n}{32pt}
-\DeclareFixedFont{\polytech@font@titlepage@subtitle}{\encodingdefault}{cmr}{bx}{n}{18pt}
-\DeclareFixedFont{\polytech@font@titlepage@date}{\encodingdefault}{cmr}{n}{n}{12pt}
+\DeclareFixedFont{\polytech@font@titlepage@typereport}{\encodingdefault}{cmr}{bx}{n}{24.88pt}
+\DeclareFixedFont{\polytech@font@titlepage@reportyear}{\encodingdefault}{cmr}{bx}{n}{17.28pt}
+\DeclareFixedFont{\polytech@font@titlepage@title}{\encodingdefault}{lmr}{bx}{n}{32pt}
+\DeclareFixedFont{\polytech@font@titlepage@subtitle}{\encodingdefault}{cmr}{bx}{n}{17.28pt}
+\DeclareFixedFont{\polytech@font@titlepage@date}{\encodingdefault}{cmr}{m}{n}{12pt}
 
 \renewcommand{\maketitle}{
 	\pagenumbering{alph}
@@ -348,14 +350,14 @@
 		\begin{tikzpicture}
 		    \node[right,color=black,align=center] at (0,0) {\pgfuseimage{polytech@schoollogo}};
 		    \node[left,color=black,align=center] at (\textwidth,0) {\pgfuseimage{polytech@univlogo}};
-		\end{tikzpicture}\\
-		\polytech@output@school\\
+		\end{tikzpicture}\par
+		\polytech@output@school\par
 		\vfill
  		\begin{center}
- 			{\polytech@font@titlepage@typereport\polytech@output@typereport}\\[0.2cm]
- 			{\polytech@font@titlepage@reportyear\polytech@output@reportyear}\\[1cm]
- 			{\polytech@font@titlepage@title\polytech@output@title}\\[0.5cm]
- 			{\polytech@font@titlepage@subtitle\polytech@output@subtitle}\\
+ 			{\polytech@font@titlepage@typereport\polytech@output@typereport}\par\vspace{0.2cm}
+ 			{\polytech@font@titlepage@reportyear\polytech@output@reportyear}\par\vspace{1cm}
+ 			{\polytech@font@titlepage@title\polytech@output@title}\par\vspace{0.5cm}
+ 			{\polytech@font@titlepage@subtitle\polytech@output@subtitle}\par
  			\vspace{1cm}
  			\polytech@output@reportlogo
  		\end{center}

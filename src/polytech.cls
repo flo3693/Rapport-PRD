@@ -27,6 +27,9 @@
 % Force black and white colors
 \newbool{polytech@blackandwhite}
 \DeclareOption{blackandwhite}{\setbool{polytech@blackandwhite}{true}}
+\ifbool{polytech@blackandwhite}{
+	\PassOptionsToPackage{light}{kpfonts}	% better printing in light
+}{}
 
 % Open chapter on any page
 \newbool{polytech@openany}
@@ -38,6 +41,10 @@
 % define if contributors details (mail and addresses) are included
 \newbool{polytech@contributors@expanded}
 \DeclareOption{expandedcontributors}{\setbool{polytech@contributors@expanded}{true}}
+\ifbool{polytech@blackandwhite}{%
+	\setbool{polytech@contributors@expanded}{true}%
+}{}
+
 
 \newbool{polytech@contributors@noseparatepage}
 \DeclareOption{noseparatecontributorspage}{\setbool{polytech@contributors@noseparatepage}{true}}
@@ -65,10 +72,13 @@
 % upgrade PDF version of the document
 \pdfoptionpdfminorversion=6
 
+% allow url to break on multiple lines
+\PassOptionsToPackage{hyphens}{url}
+
 % Enable colors
 \PassOptionsToPackage{svgnames,table,override}{xcolor}
 
-
+% babel
 \ifbool{polytech@english}{
     \PassOptionsToPackage{english}{babel} % english document
     \RequirePackage{babel}
@@ -76,61 +86,51 @@
     \PassOptionsToPackage{french}{babel}  % french document
     \RequirePackage{babel}
     \frenchbsetup{StandardEnumerateEnv=true}
+    \frenchspacing
+    \PassOptionsToPackage{frenchstyle}{kpfonts}
 }
 
+\ifbool{polytech@openany}{\PassOptionsToClass{openany}{book}}{}
 
+\PassOptionsToClass{final,twoside,11pt}{book}
+\LoadClass{book}
 
+\RequirePackage[rigidchapters,explicit,toctitles,clearempty]{titlesec}
 
+\setlength\paperheight{29.7cm}%
+\setlength\paperwidth{21cm}%
 
-
-    \ifbool{polytech@openany}{\PassOptionsToClass{openany}{book}}{}
-    \PassOptionsToClass{final,twoside}{book}
-    \LoadClass[11pt,twoside]{book}
-
-    \RequirePackage[rigidchapters,explicit]{titlesec}
-
-    \setlength\paperheight{29.7cm}%
-    \setlength\paperwidth{21cm}%
-
-    \RequirePackage[
-            verbose,
-            papersize={\paperwidth,\paperheight},
-            twoside,
-            bindingoffset=0cm,
-            heightrounded,
-            includeall,
-            nomarginpar,
-            headheight=14pt,
-            headsep=12pt,
-            footskip=30pt,
-            vmargin=1.5cm,
-            hmargin=2cm]{geometry}
-
-
+\RequirePackage[
+        verbose,
+        papersize={\paperwidth,\paperheight},
+        twoside,
+        bindingoffset=0cm,
+        heightrounded,
+        includeall,
+        nomarginpar,
+        headheight=14pt,
+        headsep=12pt,
+        footskip=30pt,
+        vmargin=1.5cm,
+        hmargin=2cm]{geometry}
 
 % enable overbox display as black box. must be after class loading
 \ifbool{polytech@overfullbox}{
     \setlength{\overfullrule}{5pt}
 }{}
 
+\RequirePackage[nofligatures,nointlimits,sumlimits]{kpfonts} % switch to richer and more scallable fonts
 \RequirePackage[T1]{fontenc}    % OT1 font encoding (must be before inputenc)
 \RequirePackage[utf8]{inputenc} % encoding is set to utf8
-\RequirePackage{textcomp}
+%\RequirePackage[full]{textcomp}
 \DeclareUnicodeCharacter{B0}{\textdegree}
-
-\ifbool{polytech@english}{
-	\RequirePackage[english]{babel} % english document
-
-}{
-    \RequirePackage[french]{babel}  % french document
-}
 
 \RequirePackage[frame]{crop}
 \RequirePackage{layout}
 
 %-------------- lot of packages -------------
+
 \RequirePackage{nameref}
-\RequirePackage{multicol}
 \RequirePackage{fancyhdr}
 \RequirePackage{caption}
 \RequirePackage{makeidx}
@@ -159,6 +159,7 @@
 \RequirePackage{titletoc} % TODO how to improve TOC ?
 \RequirePackage{eurosym} % symbol euro
 \RequirePackage[user]{zref} % allow for better \ref and  \label
+
 
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
 
@@ -196,38 +197,32 @@
 
 
 
-   \frenchspacing
+
 \setlength{\parskip}{1ex plus 0.5ex minus 0.5ex}
 \setlength{\topsep}{1pt plus 1pt minus 1pt}
 \setlength{\parsep}{\parskip}
 \setlength{\itemsep}{1pt plus 1pt minus 1pt}
 \setlength{\partopsep}{1pt plus 1pt minus 1pt}
+\setlength{\parindent}{0in}
 
 \widowpenalty=300
 \clubpenalty=300
-
-\setlength{\parindent}{0in}
 
 
 \setcounter{tocdepth}{3}
 \renewcommand{\@dotsep}{0.1}
 \setcounter{secnumdepth}{3}
 
-
-
-
 \renewcommand{\baselinestretch}{1}
 
 \arrayrulecolor{black}
 \renewcommand{\arraystretch}{1.2}
 
-
-
+% tableofcontents need patching
 \patchcmd{\tableofcontents}
 {\@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}}
 {\markboth{\contentsname}{}}
 {}{}
-
 
 % allow proper handling of unnumbered chapters in \ref
 \newbool{polytech@ref@unnumberedchapter}
@@ -244,9 +239,18 @@
 	}
 }
 
+% force long title in TOC but keep short title for headings
+\patchcmd{\@chapter}%
+{\addcontentsline {toc}{chapter}{\protect\numberline {\thechapter }#1}}
+{\addcontentsline {toc}{chapter}{\protect\numberline {\thechapter }#2}}
+{}{}
+
 % reset unnumbered chapter boolean
 \preto{\chapter}{\boolfalse{polytech@ref@unnumberedchapter}}
 
+
+% format de la bibliographie
+\bibliographystyle{polytech}
 
 
 
