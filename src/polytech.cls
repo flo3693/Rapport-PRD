@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{polytech}[2015/07/15 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
 
+%###
+
 % -----------------------------------------------------------------------------
 % Include generic packages to extend LaTeX memory and add common utility commands
 % -----------------------------------------------------------------------------
@@ -204,8 +206,6 @@
 \RequirePackage{polytech/references}
 
 
-
-
 \setlength{\parskip}{1ex plus 0.5ex minus 0.5ex}
 \setlength{\topsep}{1pt plus 1pt minus 1pt}
 \setlength{\parsep}{\parskip}
@@ -318,3 +318,5 @@
 	\booltrue{polytech@ref@unnumberedchapter}
 }
 
+
+%###
