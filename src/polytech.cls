@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{polytech}[2015/07/15 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
+\ProvidesClass{polytech}[2015/09/01 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
 
 %###
 
@@ -24,39 +24,45 @@
 
 % Display overfullbox marks
 \newbool{polytech@overfullbox}
-\DeclareOption{overfullbox}{\setbool{polytech@overfullbox}{true}}
+\DeclareOption{overfullbox}{\booltrue{polytech@overfullbox}}
 
 % Force black and white colors
 \newbool{polytech@blackandwhite}
-\DeclareOption{blackandwhite}{\setbool{polytech@blackandwhite}{true}}
+\DeclareOption{blackandwhite}{\booltrue{polytech@blackandwhite}}
 \ifbool{polytech@blackandwhite}{
 	\PassOptionsToPackage{light}{kpfonts}	% better printing in light
 }{}
 
 % Open chapter on any page
 \newbool{polytech@openany}
-\DeclareOption{openany}{\setbool{polytech@openany}{true}}
+\DeclareOption{openany}{\booltrue{polytech@openany}}
 
 \newbool{polytech@hideweeklyreports}
-\DeclareOption{hideweeklyreports}{\setbool{polytech@hideweeklyreports}{true}}
+\DeclareOption{hideweeklyreports}{\booltrue{polytech@hideweeklyreports}}
 
 % define if contributors details (mail and addresses) are included
 \newbool{polytech@contributors@expanded}
-\DeclareOption{expandedcontributors}{\setbool{polytech@contributors@expanded}{true}}
+\DeclareOption{expandedcontributors}{\booltrue{polytech@contributors@expanded}}
 \ifbool{polytech@blackandwhite}{%
-	\setbool{polytech@contributors@expanded}{true}%
+	\booltrue{polytech@contributors@expanded}
 }{}
 
-
 \newbool{polytech@contributors@noseparatepage}
-\DeclareOption{noseparatecontributorspage}{\setbool{polytech@contributors@noseparatepage}{true}}
+\DeclareOption{noseparatecontributorspage}{\booltrue{polytech@contributors@noseparatepage}}
 
 \newbool{polytech@nodate}
-\DeclareOption{nodate}{\setbool{polytech@nodate}{true}}
+\DeclareOption{nodate}{\booltrue{polytech@nodate}}
 
 
 \newbool{polytech@nobibannotations}
-\DeclareOption{nobibannotations}{\setbool{polytech@nobibannotations}{true}}
+\DeclareOption{nobibannotations}{\booltrue{polytech@nobibannotations}}
+
+\newbool{polytech@roundtofour}
+\DeclareOption{roundtofour}{\booltrue{polytech@roundtofour}}
+
+\newbool{polytech@twoside}
+\DeclareOption{twoside}{\booltrue{polytech@twoside}}
+
 
 \DeclareOption*{\PackageWarning{polytech}{Unknown option `\CurrentOption'}}
 
@@ -97,7 +103,13 @@
 
 \ifbool{polytech@openany}{\PassOptionsToClass{openany}{book}}{}
 
-\PassOptionsToClass{final,twoside,11pt}{book}
+\ifbool{polytech@twoside}{
+	\PassOptionsToClass{twoside}{book}
+}{
+	\PassOptionsToClass{openany}{book}
+}
+
+\PassOptionsToClass{final,11pt}{book}
 \LoadClass{book}
 
 \RequirePackage[rigidchapters,explicit,toctitles,clearempty]{titlesec}
@@ -165,7 +177,6 @@
 \RequirePackage{eurosym} % symbol euro
 \RequirePackage[user]{zref} % allow for better \ref and  \label
 \RequirePackage{environ}
-\RequirePackage{fancyvrb}
 
 
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
@@ -191,6 +202,7 @@
                 pdfstartview={FitH},
                 pdftoolbar=true,
                 pdfmenubar=true,
+                linktocpage=true,
                 bookmarks=true]{hyperref}
 
 \RequirePackage{bookmark}
@@ -317,6 +329,9 @@
 	% do not store chapter number for part until new chapter is defined
 	\booltrue{polytech@ref@unnumberedchapter}
 }
+
+% replace \cleardoublepage by \clearpage on oneside printing
+\ifbool{polytech@twoside}{}{\renewcommand{\cleardoublepage}{\clearpage}}
 
 
 %###

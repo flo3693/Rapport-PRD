@@ -1,6 +1,5 @@
 \def\fileversion{1.0}
-\def\filedate{2001/9/10}
-\def\docdate{2001/9/10}
+\def\filedate{2015/09/01}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{polytech/headings}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech headings' \fileversion\space<\filedate>}
@@ -122,7 +121,7 @@
   \fancyfoot[F]{}
 }
 
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\xspace#1}{}}
 
 
 % %Make empty page really empty

@@ -1,4 +1,11 @@
+\def\fileversion{1.0}
+\def\filedate{2015/09/01}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polytech/sectionning}[\filedate\space\fileversion\space Polytech document class sub package]
+\typeout{Package `polytech sectionning' \fileversion\space<\filedate>}
+
 %###
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -235,7 +242,6 @@
 \titlespacing{\subparagraph}{0pt}{1ex plus 1ex minus 0.5ex}{1ex plus 0.1ex minus 0.1ex}
 
 \titleformat{\subparagraph}[hang]{\color{black}\csname polytech@subparagraph@titlefont\endcsname}{\thesubparagraph}{0pt}{#1}
-
 
 
 

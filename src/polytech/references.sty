@@ -1,9 +1,10 @@
 \def\fileversion{1.0}
-\def\filedate{2001/9/10}
-\def\docdate{2001/9/10}
+\def\filedate{2015/09/01}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{polytech/references}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech references' \fileversion\space<\filedate>}
+
+%###
 
 \newcommand{\polytech@ref@from@chapter@en}[1]{\xspace(Chapter~#1)}
 \newcommand{\polytech@ref@from@chapter@fr}[1]{\xspace(Chapitre~#1)}
@@ -167,7 +168,6 @@
 \csdef{polytech@ref@isequation@equation}{}
 
 \AtBeginDocument{
-	\csshow{theHequation}
 
 	\let\polytech@oldref\ref
 	\let\polytech@oldautoref\autoref
@@ -217,4 +217,8 @@
 	\renewcommand{\eqref}[1]{\polytech@ref@eqref{#1}}
 	\robustify{\eqref}
 }
+
+%###
+
+
 

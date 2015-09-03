@@ -1,6 +1,5 @@
 \def\fileversion{1.0}
-\def\filedate{2001/9/10}
-\def\docdate{2001/9/10}
+\def\filedate{2015/09/01}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{polytech/firstlastpage}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech firstlastpage' \fileversion\space<\filedate>}
@@ -248,7 +247,7 @@
 
 \newcommand{\company}[4][]{
 	\csdef{polytech@output@company@compact}{%
-		\href{#4}{\url{#2}}%
+		\href{#4}{#2}%
 		\ifstrequal{#1}{}{}{\\[0.1cm]\pgfimage[height=1cm]{#1}}\\%
 	}%
 	\csdef{polytech@output@company@expanded}{%
@@ -370,7 +369,7 @@
  		\polytech@output@contributors
  		\ifbool{polytech@nodate}{}{\center{\polytech@font@titlepage@date\polytech@output@date}}
  	\end{titlepage}
-	\ifbool{polytech@contributors@noseparatepage}{}{\polytech@output@contributorspage}
+	\ifbool{polytech@contributors@noseparatepage}{}{\cleardoublepage\polytech@output@contributorspage}
 	\hypersetup{%
 		pdfauthor={\polytech@output@students@simple},
       pdftitle={\polytech@output@titlewithsubtitle},
@@ -402,8 +401,6 @@
 	\fi
 	\mainmatter
 }
-
-\csshow{lstlistoflistings}
 
 %%%%%%%%%%% KEYWORDS %%%%%%%%%%%%%%%%%
 
@@ -451,10 +448,17 @@
 	\bibliography{biblio}
 	\backmatter
 	\pagestyle{empty}
-	% add up to 3 pages to round total page count to *4
-	\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{0}{\mbox{ }\newpage}{}
-	\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{1}{\mbox{ }\newpage}{}
-	\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{2}{\mbox{ }\newpage}{}
+	\ifbool{polytech@twoside}{
+		\ifbool{polytech@roundtofour}{
+			% add up to 3 pages to round total page count to *4
+			\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{0}{\mbox{ }\newpage}{}
+			\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{1}{\mbox{ }\newpage}{}
+			\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{2}{\mbox{ }\newpage}{}
+		}{
+			% add up to 1 pages to round total page count to *2
+			\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{0}{\mbox{ }\newpage}{}
+		}
+	}{}
 	\newpage
 	\thispagestyle{empty}
 	\begin{center}
@@ -463,7 +467,7 @@
 			\par\vspace{0.5cm}{\polytech@font@titlepage@subtitle\polytech@output@subtitle}\vspace{0.5cm}
 		}\par
 	\end{center}
-	\vfill \theCurrentPage
+	\vfill
 	\textbf{Résumé}\par
 	\polytech@output@resume\par
 	\textbf{Mots-clés}\par
