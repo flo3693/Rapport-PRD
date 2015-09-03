@@ -338,15 +338,20 @@
 
 %%%%%%%%%%% TITLE PAGE / MAKETITLE %%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@font@titlepage@typereport}{\encodingdefault}{cmr}{bx}{n}{24.88pt}
-\DeclareFixedFont{\polytech@font@titlepage@reportyear}{\encodingdefault}{cmr}{bx}{n}{17.28pt}
-\DeclareFixedFont{\polytech@font@titlepage@title}{\encodingdefault}{lmr}{bx}{n}{32pt}
-\DeclareFixedFont{\polytech@font@titlepage@subtitle}{\encodingdefault}{cmr}{bx}{n}{17.28pt}
-\DeclareFixedFont{\polytech@font@titlepage@date}{\encodingdefault}{cmr}{m}{n}{12pt}
+\csdef{polytech@font@titlepage@typereport}{\bfseries\Huge}
+\csdef{polytech@font@titlepage@reportyear}{\bfseries\LARGE}
+\csdef{polytech@font@titlepage@title}{\bfseries\Huge}
+\csdef{polytech@font@titlepage@subtitle}{\bfseries\LARGE}
+\csdef{polytech@font@titlepage@date}{\small}
 
 \renewcommand{\maketitle}{
 	\pagenumbering{alph}
  	\begin{titlepage}
+ 		\ifbool{polytech@english}{
+ 			\pdfbookmark{Title page}{titlepage}
+ 		}{
+ 			\pdfbookmark{Page de titre}{titlepage}
+ 		}
 		\begin{tikzpicture}
 		    \node[right,color=black,align=center] at (0,0) {\pgfuseimage{polytech@schoollogo}};
 		    \node[left,color=black,align=center] at (\textwidth,0) {\pgfuseimage{polytech@univlogo}};
@@ -374,16 +379,31 @@
       pdfproducer={\polytech@output@students@simple},
       pdfcreator={pdflatex, \LaTeX}}%
  	\frontmatter
-
+	%
+	\cleardoublepage
+	\pdfbookmark[0]{\contentsname}{toc}
 	\tableofcontents
-
+	%
 	% automagically add lists of figures, tables and listings if needed (i.e not empty)
-	\iftotalfigures\listoffigures\fi
-	\iftotaltables\listoftables\fi
-	\iftotallstlistings\lstlistoflistings\fi
-
+	\iftotalfigures
+		\cleardoublepage
+		\pdfbookmark[0]{\listfigurename}{lof}
+		\listoffigures
+	\fi
+	\iftotaltables
+		\cleardoublepage
+		\pdfbookmark[0]{\listtablename}{lot}
+		\listoftables
+	\fi
+	\iftotallstlistings
+		\cleardoublepage
+		\pdfbookmark[0]{\lstlistlistingname}{lol}
+		\lstlistoflistings
+	\fi
 	\mainmatter
 }
+
+\csshow{lstlistoflistings}
 
 %%%%%%%%%%% KEYWORDS %%%%%%%%%%%%%%%%%
 
@@ -407,16 +427,34 @@
 \newcommand{\resume}[1]{\csdef{polytech@output@resume}{#1}}
 \newcommand{\abstract}[1]{\csdef{polytech@output@abstract}{#1}}
 
-%%%%%%%%%%% LASTPAGE %%%%%%%%%%%%%%%%%
+%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%
 
-\newcommand{\makelastpage}{
-	% add up to 3 pages to round total page count to *4
-	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{0}{}{}
-	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{1}{\newpage\mbox{ }}{}
-	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{2}{\newpage\mbox{ }\newpage\mbox{ }}{}
-	\ifnumcomp{\theCurrentPage - (\theCurrentPage / 4 ) * 4}{=}{3}{\newpage\mbox{ }\newpage\mbox{ }\newpage\mbox{ }}{}
+% format de la bibliographie
+\bibliographystyle{polytech}
+
+\ifbool{polytech@nobibannotations}{
+	\newcommand{\bibAnnoteFile}[1]{}
+	\newcommand{\bibAnnote}[2]{}
+}{}
+
+\patchcmd{\thebibliography}%
+{\chapter*{\bibname}}%
+{\part*{\bibname}\vspace{2cm}}%
+{}
+{}
+
+%%%%%%%%%%% LAST PAGES %%%%%%%%%%%%%%%%%
+
+\newcommand{\makelastpages}{
+	% weeklyreports
+	\csuse{polytech@output@weeklyreportspart}
+	\bibliography{biblio}
 	\backmatter
-	%\polytech@output@weeklyreports
+	\pagestyle{empty}
+	% add up to 3 pages to round total page count to *4
+	\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{0}{\mbox{ }\newpage}{}
+	\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{1}{\mbox{ }\newpage}{}
+	\ifnumcomp{ 3 - (\value{CurrentPage} - (\value{CurrentPage} /4 ) * 4)}{>}{2}{\mbox{ }\newpage}{}
 	\newpage
 	\thispagestyle{empty}
 	\begin{center}
@@ -425,7 +463,7 @@
 			\par\vspace{0.5cm}{\polytech@font@titlepage@subtitle\polytech@output@subtitle}\vspace{0.5cm}
 		}\par
 	\end{center}
-	\vfill
+	\vfill \theCurrentPage
 	\textbf{Résumé}\par
 	\polytech@output@resume\par
 	\textbf{Mots-clés}\par

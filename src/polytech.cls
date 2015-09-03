@@ -53,6 +53,9 @@
 \DeclareOption{nodate}{\setbool{polytech@nodate}{true}}
 
 
+\newbool{polytech@nobibannotations}
+\DeclareOption{nobibannotations}{\setbool{polytech@nobibannotations}{true}}
+
 \DeclareOption*{\PackageWarning{polytech}{Unknown option `\CurrentOption'}}
 
 \ProcessOptions\relax
@@ -139,26 +142,28 @@
 \RequirePackage{marvosym}
 \RequirePackage{stmaryrd}
 \RequirePackage[final]{listings}
+
+\lst@RequireAspects{writefile}
+
 \RequirePackage{fancybox}
 \RequirePackage{tabu}
 \RequirePackage{lscape}
 \RequirePackage{comment}
 \RequirePackage{pgf}
 \RequirePackage{tikz}
-\RequirePackage{comment}
 \RequirePackage{url}
 \RequirePackage{framed}
-\RequirePackage{fancybox}
 \RequirePackage{fancyvrb}
-\RequirePackage{tabu}
 \RequirePackage{makerobust}
 \RequirePackage{algorithm2e}
 \RequirePackage[figure,table,lstlisting]{totalcount}
 \RequirePackage{cite}
-\RequirePackage{pageslts} % to have total page count of the document
+
 \RequirePackage{titletoc} % TODO how to improve TOC ?
 \RequirePackage{eurosym} % symbol euro
 \RequirePackage[user]{zref} % allow for better \ref and  \label
+\RequirePackage{environ}
+\RequirePackage{fancyvrb}
 
 
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
@@ -173,7 +178,7 @@
 \RequirePackage[plainpages=false,
                 pdfpagelabels=true,
                 final,
-                verbose=true,
+                verbose=false,
                 breaklinks=true,
                 colorlinks=true,
                 bookmarksopen=true,
@@ -185,6 +190,9 @@
                 pdftoolbar=true,
                 pdfmenubar=true,
                 bookmarks=true]{hyperref}
+
+\RequirePackage{bookmark}
+\RequirePackage{pageslts} % to have total page count of the document. Must be at the end for proper functionning
 
 
 \RequirePackage{polytech/firstlastpage}
@@ -242,17 +250,71 @@
 % force long title in TOC but keep short title for headings
 \patchcmd{\@chapter}%
 {\addcontentsline {toc}{chapter}{\protect\numberline {\thechapter }#1}}
-{\addcontentsline {toc}{chapter}{\protect\numberline {\thechapter }#2}}
+{\addcontentsline {toc}{chapter}{\protect\numberline {\thechapter }#2}%
+}
 {}{}
 
-% reset unnumbered chapter boolean
-\preto{\chapter}{\boolfalse{polytech@ref@unnumberedchapter}}
+
+\newbool{polytech@contentsline@lof@written}
+\newbool{polytech@contentsline@lot@written}
+
+\let\polytech@contentsline@oldaddcontentsline\addcontentsline
 
 
-% format de la bibliographie
-\bibliographystyle{polytech}
+\renewcommand{\addcontentsline}[3]{
+	\ifcsdef{polytech@contentsline@add@#1@#2}{
+		\csuse{polytech@contentsline@add@#1@#2}{#1}{#2}{#3}
+	}{}
+	\polytech@contentsline@oldaddcontentsline{#1}{#2}{#3}
+}
 
 
+\newcommand{\polytech@contentsline@add@toc@chapter}[3]{%
+	\boolfalse{polytech@contentsline@lot@written}%
+	\boolfalse{polytech@contentsline@lof@written}%
+	\global\csdef{polytech@contentsline@current@content}{#3}
+	%\csxdef{polytech@contentsline@current@page}{\thepage}
+	\csxdef{polytech@contentsline@current@href}{\@currentHref}%
+}
 
+\newcommand{\polytech@contentsline@add@lof@figure}[3]{
+	\ifbool{polytech@contentsline@lof@written}{%
+	}%
+	{%
+		\addtocontents{lof}{\protect \contentsline {chapter}{\csuse{polytech@contentsline@current@content}}{\csuse{polytech@contentsline@current@page}}{\csuse{polytech@contentsline@current@href}}}%
+		\global\booltrue{polytech@contentsline@lof@written}%
+	}%
+}
+\newcommand{\polytech@contentsline@add@lot@table}[3]{%
+	\ifbool{polytech@contentsline@lot@written}{%
+	}%
+	{%
+		\addtocontents{lot}{\protect \contentsline {chapter}{\csuse{polytech@contentsline@current@content}}{\csuse{polytech@contentsline@current@page}}{\csuse{polytech@contentsline@current@href}}}%
+		\global\booltrue{polytech@contentsline@lot@written}%
+	}%
+}
 
+% \appendix called ?
+\newbool{polytech@ref@appendix}
+% is an appendix chapter ?
+\newbool{polytech@ref@appendixchapter}
+
+\preto{\appendix}{\booltrue{polytech@ref@appendix}}
+\ifbool{polytech@english}{
+	\appto{\appendix}{\part*{Appendices}}
+}{
+	\appto{\appendix}{\part*{Annexes}}
+}
+
+\preto{\chapter}{
+	% reset unnumbered chapter boolean
+	\boolfalse{polytech@ref@unnumberedchapter}%
+	% handle appendix chapter detection
+	\ifbool{polytech@ref@appendix}{\booltrue{polytech@ref@appendixchapter}}{}%
+}
+
+\preto{\part}{
+	% do not store chapter number for part until new chapter is defined
+	\booltrue{polytech@ref@unnumberedchapter}
+}
 

@@ -1,11 +1,11 @@
-%\documentclass[overfullbox,english,blackandwhite,openan0,hideweeklyreports,expandedcontributors,noseparatecontributorspage,nodate]{polytech}
 \documentclass[overfullbox]{polytech}
+
+% LISEZ LE MODE D'EMPLOI POUR L'INTEGRALITE DES CONSIGNES
 
 % on ajoute ici des packages supplémentaires
 % Attention : il peut y avoir des incompatibilités avec la classe de document
 
 \usepackage{lipsum} %permet de générer du texte
-
 
 % on indique le département concerné (di)
 \schooldepartment{di}
@@ -101,7 +101,6 @@ Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapi
 
 \lipsum[1-3]
 
-
 % Je peux diviser le rapport en partie
 \part{Les premiers trucs dont je vais parler}
 \label{part:premierstrucs}
@@ -111,29 +110,13 @@ Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapi
 
 \lipsum[1]
 
-
 \section{Pour ne pas se casser la tête}
 
 \label{sec:cassetete}
 
-
-\begin{equation}
-\label{truc}
-x
-\end{equation}
-
-\autoref{truc}\\
-\ref{truc}
-\eqref{truc}
-
 Pour ne pas se casser la tête à rédiger mon rapport, je lis le mode d'emploi (cf. \ref{fig:modeemploi})
 Toute figure ou table doit avoir un titre et être référencée dans le texte (sinon ça ne sert à rien).
-Pour cela, vous devez utiliser deux environnements \texttt{Figure} et \texttt{Table}. Chacun de ces environments admet deux paramètres : le label et le titre de la figure/table. Le positionnement de la figure/table étant contrôlé par la classe de document, il est très important que ces figures/tables soient référencées dans le texte. Pour référencer les figures, la commande \texttt{\textbackslash{}figureref\{label\}} doit être utilisée (\ref{fig:modeemploi}).
-Pour référencer les tables, la commande \texttt{\textbackslash{}tableref\{label\}} doit être utilisée (\ref{tab:deficits}). Le mot Figure/Table est inséré automatiquement et les éventuels pluriels sont gérées (\ref{fig:modeemploi,fig:modeemploi2})
-
-\begin{figure}
-mm
-\end{figure}
+Pour cela, vous devez utiliser deux environnements \texttt{Figure} et \texttt{Table}. Chacun de ces environments admet deux paramètres : le label et le titre de la figure/table. Le positionnement de la figure/table étant contrôlé par la classe de document, il est très important que ces figures/tables soient référencées dans le texte (ex: \autoref{fig:modeemploi}, \autoref{fig:modeemploi2}, \autoref{tab:deficits}).
 
 \begin{Figure}{fig:modeemploi}{Ma superbe image}
 \pgfimage{polytech/modeemploi}
@@ -184,38 +167,57 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 
 \unnumberedchapter{Conclusion}
 
+\appendix
+
+\chapter{Ma première annexe}
+
+\lipsum[1-4]
+
+\chapter{Ma deuxième annexe}
+
+\lipsum[1-4]
 
 \makeatletter
 
 
 \makeatother
 
+\weeklyreport{XX/XX/XXXX}{
+	\lipsum[1-2]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/XXXX}{
+	\lipsum[1-2]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
 
-
-
-
-\begin{weeklyreports}
-	\weeklyreport{XX/XX/XXXX}
-		\lipsum[1-2]
-	\weeklyreport{XX/XX/YYYY}
-		\lipsum[3]
-\end{weeklyreports}
-
-
-%--------------------------------------------------------------------------------
-%si on donne des annexes :
-\appendix
-\addcontentsline{toc}{part}{\numberline{}Annexes}
-
-\cite{key1,key2}
+% petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
 \nocite{*}
 
-\bibliography{modele}
 
-
-\makelastpage
-
-
+\makelastpages
 
 \end{document}
 

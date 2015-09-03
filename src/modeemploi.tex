@@ -9,37 +9,12 @@
 
 \makeatother
 \csdef{polytech@output@contributors}{
-\center\href{mailto:aupetit@univ-tours.fr}{Sébastien Aupetit}\par
+\textbf{Auteur(s):}
+\href{mailto:aupetit@univ-tours.fr}{Sébastien Aupetit}\par
 }
 \csdef{polytech@output@contributorspage}{}
 \csdef{polytech@output@students@simple}{}
 \makeatletter
-%
-%
-% % on indique les contributeurs à ce rapport
-%
-% % Le(s) étudiant(s) aux formats suivants :
-% % \student{Prénom}{Nom}{Mail}
-% % \student[Année d'études]{Prénom}{Nom}{Mail}
-% \student[DI5]{Pierre}{Premier}{pierre.premier@univ-tours.fr}
-% \student[DI4]{Paul}{Deuxième}{paul2@univ-tours.fr}
-% \student{Jacques}{Un peu plus Long}{j.unpeupluslong@example.com}
-% % Le(s) superviseur(s) académique (ou encadrant(s)) aux format suivants :
-% % \academicsupervisor{Prénom}{Nom}{mail}
-% % \academicsupervisor[Affiliation]{Prénom}{Nom}{mail}
-% \academicsupervisor[Département informatique]{Sébastien}{Aupetit}{aupetit@univ-tours.fr}
-% % Le(s) tuteur(s) entreprise aux formats suivants :
-% % \companysupervisor{Prénom}{Nom}{Mail}
-% % \companysupervisor[Fonction]{Prénom}{Nom}{Mail}
-% \companysupervisor[Fonction très importante]{Un}{Gars}{un.gars@example.com}
-% \companysupervisor{Un deuxième}{Gars}{undeuxieme.gars@example.com}
-% % L'entreprise aux formats suivants :
-% %	\company{Nom de l'entreprise}{Adresse}{URL du site web}
-% % \company[logo entreprise]{Nom de l'entreprise}{Adresse}{URL du site web}
-% % S'il est indiqué le logo de l'entreprise s'affichera sur une hauteur de 1cm
-% % Attention : pour que les tuteurs entreprise s'affichent, l'entreprise doit être définie
-% \company[polytech/polytech]{Laboratoire Informatique}{64 avenue Jean Portalis\\37200 Tours}{li.univ-tours.fr}
-% %\company{Laboratoire Informatique}{64 avenue Jean Portalis, 37200 Tours}{li.univ-tours.fr}
 
 
 % On indique les mots clés avec \motcle{mot clé} en français et \keyword{keyword} en anglais
@@ -59,7 +34,11 @@
 \begin{document}
 \maketitle
 
-\chapter{Les options de la classe de document}
+\chapter{La classe de document}
+
+\begin{center}
+\textbf{La classe de document a été prévue pour être utilisée avec \latexcode{pdflatex} au lieu de \latexcode{latex}. Prenez donc soin de configurer correctement votre éditeur.}
+\end{center}
 
 La classe de document a été prévue de manière à permettre la génération de plusieurs documents dérivés à partir de vos sources LaTeX. Les options de \texttt{\textbackslash{}documentclass} sont donnés par la \autoref{tab:documentclassoptions}. La plupart des options sont réservés pour un usage ultérieur. Lors de la rédaction de votre rapport, il vous suffit de débuter votre document avec l'une des deux commandes suivantes. L'utilisation de l'option \latexcode{overfullbox} est recommander pour vous aider à identifier les débordements de texte.
 \begin{latexsource}
@@ -81,10 +60,13 @@ hideweeklyreports&Desactive l'affichage des comptes rendus hebdomadaires\\\hline
 expandedcontributors&Les détails des contributeurs sont inclus\\\hline
 noseparatecontributorspage&Desactive la génération de la page listant les contributeurs\\\hline
 nodate&Desactive l'affichage de la date de compilation\\\hline
+nobibannotations&Desactive l'affichage des annotations dans la bibliographie\\\hline
 \end{tabu}
 \end{Table}
 
 \chapter{Première et quatrième de couverture}
+
+\label{chap:premierequatrieme}
 
 La première et quatrième de couverture sont générées automatiquement à partir des informations que vous fournissez. Pour cela, plusieurs commandes à utiliser \textbf{dans le préambule} ont été définies.
 
@@ -138,6 +120,8 @@ Vous pouvez définir une image illustrant votre travail sur la première de couv
 \end{latexsource}
 
 \section{Les intervenants}
+
+\label{sec:intervenants}
 
 \subsection{Les étudiants}
 
@@ -258,6 +242,8 @@ fames ac turpis egestas. Quisque eget vestibulum augue.}
 
 \chapter{Tables et figures}
 
+\label{chap:tablesetfigures}
+
 Pour insérer des tables et des figures, vous ne devez pas utiliser les environnements standards \latexcode{table} et \latexcode{figure}. en lieu et place, vous devez utiliser les environnements \latexcode{Table} et \latexcode{Figure}. Ces environnements admettent deux paramètres : l'identifiant de référence (label) et le titre de la table/figure. Le positionnement dans le document se fait de façon automatique en haut de page. Vous ne pouvez pas modifier ce placement automatique. Il est donc très important que l'ensemble de vos tables et figures soient référencées dans le texte (cf. \autoref{chap:ref}).
 
 \begin{latexsource}
@@ -294,28 +280,269 @@ Pendant que j'y pense, j'ai une belle image qui illustre ma pensée
 	\end{tabu}
 \end{Table}
 
+
 \chapter{Références}
 
 \label{chap:ref}
 
-\eqref{1}
+\section{Nommer des emplacements avec \latexcode{\\label}}
 
-\chapter{listings et commandes pré-réglées}
+Comme vous le savez, \LaTeX est particulièrement pratique lorsqu'il s'agit de définir des références croisées ou non dans un document. Pour nommer un emplacement, il suffit d'utiliser la commande \latexcode{\\label} en lui donnant en paramètre un nom symbolique représentant l'emplacement. Tous les caractères ne sont pas utilisables pour le nom (cf. référence \LaTeX). Classiquement, on utilise les lettres non accentuées (a-z, A-Z), les chiffres (0-9) et les symboles \latexcode{.-+_:}. Lorsque le nombre d'emplacement à utiiliser devient important, il est nécessaire de s'organiser. Pour cela, vous pouvez adopter les règles simples suivantes :
+\begin{itemize}
+  \item Le nom de l'emplacement doit être sous la forme \latexcode{type:nom}. \latexcode{type} représente le type d'emplacement tel que \latexcode{part}, \latexcode{chap}, \latexcode{sec}, \latexcode{eq}\ldots
+  \item Le nom doit être descriptif de l'emplacement. Ainsi, \latexcode{chap1} et \latexcode{sec2.1} doivent absoluement être évités et remplacés par \latexcode{chap:trousnoirs} et \latexcode{sec:bigbang_theory}.
+  \item
+\end{itemize}
+
+\section{Référencer un emplacement}
+\label{sec:ref}
+
+Pour référencer un emplacement, plusieurs commandes sont à votre disposition. Les commandes les plus utiles sont :
+\begin{itemize}
+  \item \latexcode{\\ref} : insère le numéro identifiant l'emplacement (partie, chapitre, section, equation\ldots).
+  \item \latexcode{\\autoref} (recommandé) : identique à \latexcode{\\ref} mais préfixe le numéro du type de référence.
+  \item \latexcode{\\eqref} : insère le numéro de l'équation entre parenthèses
+  \item \latexcode{\\pageref} : insère le numéro de page
+  \item \latexcode{\\refchapterof} : insère le type de chapitre/annexe suivi de numéro correspondant au label donné
+\end{itemize}
+
+Dans les styles du document, le numéro de chapitre a été retiré des différents identifiants. Ainsi un chapitre peut avoir la Figure 1 et un autre la Figure 1. Les numérotations sont donc locales au chapitre. Lorsque l'on référence un emplacement, si cet emplacement est dans le même chapitre alors le numéro du chapitre est omis. Dans le cas contraire, le numéro du chapitre est automatiquement ajouté.
+
+Pour mieux comprendre l'utilisation et l'effet de ces commandes, voici quelques exemples.
+
+%  label, remarque
+\newcommand{\showreferences}[2]{
+	\begin{tabu}{|c|X[c]|c|X[c]|}
+		\hline
+		\multicolumn{2}{|c}{\latexcodeintab!\\label\{#1\}!}&\multicolumn{2}{c|}{#2}\\\hline
+		\latexcodeintab!\\refchapterof!& \refchapterof{#1}&
+		\latexcodeintab!\\pageref! & \pageref{#1}\\\hline
+		\latexcodeintab!\\ref! & \ref{#1} & \latexcodeintab!\\autoref! & \autoref{#1}\\\hline
+	  \latexcodeintab!\\eqref! & \multicolumn{3}{c|}{\eqref{#1}}\\
+	  \hline
+	\end{tabu}\par
+}
+
+\showreferences{inconnue}{référence inconnue}
+\showreferences{chap:ref}{ce chapitre}
+\showreferences{sec:ref}{section de ce chapitre}
+\showreferences{eq:energie}{équation de ce chapitre}
+\showreferences{fig:modeemploi2}{figure de ce chapitre}
+\showreferences{chap:tablesetfigures}{un autre chapitre}
+\showreferences{sec:intervenants}{section d'un autre chapitre}
+\showreferences{eq:energie2}{équation d'un autre chapitre}
+\showreferences{fig:modeemploi}{figure d'un autre chapitre}
+\showreferences{chap:ref3}{une annexe}
+\showreferences{sec:sertarien}{section d'une annexe}
+\showreferences{eq:energie3}{équation d'une annexe}
+\showreferences{fig:modeemploi3}{figure d'une annexe}
+
+\vspace{1cm}
+\par
+\hrule\vspace{0.1cm}\hrule
+\vspace{1cm}
+
+La suite de ce chapitre ne contient pas d'instructions utiles mais uniquement des exemples permettant d'illustrer ce chapitre. Vous pouvez donc passer directement à la suite.
+
+\begin{equation}
+E=mc^2
+\label{eq:energie}
+\end{equation}
+
+\begin{Figure}{fig:modeemploi2}{Ma superbe image : une deuxième fois car je l'aime bien\ldots}
+	\pgfimage{polytech/modeemploi}
+\end{Figure}
+
+
+\chapter{Références \textit{I'll be back !}}
+
+\label{chap:ref2}
+
+Ce chapitre ne contient pas d'instructions utiles mais uniquement des exemples permettant d'illustrer le chapitre précédent. Vous pouvez donc passer directement au chapitre suivant.
+
+\begin{equation}
+E=mc^2
+\label{eq:energie2}
+\end{equation}
+
+
+\begin{Figure}{fig:modeemploix}{Ma superbe image encore !}
+	\pgfimage{polytech/modeemploi}
+\end{Figure}
+
+\begin{Figure}{fig:modeemploiy}{Ma superbe image encore une fois !}
+	\pgfimage{polytech/modeemploi}
+\end{Figure}
+
+\chapter{Insérer du code}
+
+\label{chap:codesource}
+
+Pour insérer du code dans votre document, vous avez à disposition le package \latexcode{listings}. Ce package est très riche en possibilités, il vous est fortement recommendé de consulter sa documentation si vous souhaitez l'exploiter en profondeur.
+
+\section{Commandes simplifiées}
+
+Pour simplifier son utilisation, plusieurs commandes et environnements supplémentaires ont été défini. Pour chacun des languages supportés, trois commandes et un environnements sont disponibles. En notant \latexcode{XXX} le nom du language, on a :
+\begin{itemize}
+  \item La commande \latexcode{\\XXXcode} :\par
+  	\begin{itemize}
+		  \item Commande identique à la commande \latexcode{\\lstinline\{ \}} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Son argument est le code source à afficher.
+		  \item Elle s'utilise dans le corps d'un texte (ex: un phrase).
+		  \item Les caractères spéciaux tels que \textbackslash, \{ et \} doivent être préfixés d'un \textbackslash.
+		  \item \textbf{Cette commande est fragile et ne fonctionne pas dans les tableaux.} Il faut utiliser le commande \latexcode{\\XXXcodeintab} dans ce cas là.
+		  \item Example : \latexcode{\\latexcode\{\\color\{red\}mise en couleur rouge\}}
+		\end{itemize}
+  \item La commande \latexcode{\\XXXcodeintab} :\par
+   	\begin{itemize}
+		  \item Commande identique à la commande \latexcode{\\lstinline! !} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Les parenthèses sont remplacés par un caractère de début et un caractère de fin (choix arbitraire mais identique).
+		  \item Tout ce qui est entre ces deux caractères est le code source à afficher.
+		  \item Elle s'utilise dans le corps d'un texte (ex: un phrase).
+		  \item Les caractères spéciaux tels que \textbackslash, \{ et \} doivent être préfixés d'un \textbackslash.
+		  \item Cette commande fonctionne également dans les tableaux.
+		  \item Example : \latexcode{\\latexcodeintab!\\color\{red\}mise en couleur rouge!}\\ ou \latexcode{\\latexcodeintab+\\color\{red\}mise en couleur rouge+}
+		\end{itemize}
+	\item La commande \latexcode{\\XXXsourcefile} :\par
+		\begin{itemize}
+		  \item Commande identique à \latexcode{\\lstinputlisting} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Le paramètre est le chemin relatif du fichier dont le code doit être affiché.
+		  \item Exemple : \latexcode{\\latexsourcefile\{main.tex\}}
+		\end{itemize}
+	\item L'environnement \latexcode{\\begin\{XXXsource\} \\end\{XXXsource\}} :
+		\begin{itemize}
+		  \item Environnement identique à \latexcode{\\begin\{lstlisting\} \\end\{lstlisting\}} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Tout ce qui est défini entre le début et la fin de l'environnement est le code à afficher.
+		  \item Par défaut, les lignes sont numérotés
+		  \item Exemple :
+\begin{lstlisting}[style=polytech@lst@base,language=TeX]
+\begin{latexsource}
+\textbf{text mis en gras}
+\end{latexsource}
+\end{lstlisting}
+		\end{itemize}
+\end{itemize}
+
+\section{Paramètres supplémentaires}
+
+Toutes ces commandes et environnements admettent un paramètre optionel permettant de changer leur comportement. Pour le détail de ce que vous pouvez faire, consultez la documentation de \href{https://www.ctan.org/pkg/listings}{listings} sur le CTAN.
+
+\begin{lstlisting}[style=polytech@lst@base,language=TeX]
+\latexcode[basicstyle=\color{red}]{\\color\{red\}mise en couleur rouge}
+\latexcodeintab[basicstyle=\color{red}]{\\color\{red\}mise en couleur rouge}
+\latexsourcefile[basicstyle=\color{red}]{main.tex}
+\begin{latexsource}[basicstyle=\color{red}]
+\textbf{text mis en gras}
+\end{latexsource}
+\end{lstlisting}
+
+\section{Styles prédéfinies}
+
+Si pour une raison ou une autre vous étiez obligé de revenir à l'utilisation des commandes originales de listings, vous pouvez obtenir le même aspect du résultat en spécifiant l'option :
+\begin{itemize}
+  \item \latexcode{style=polytech@lst@inline} pour le code \textit{inline} (\latexcode{\\lstinline}) et
+  \item \latexcode{style=polytech@lst@base} pour les autres.
+\end{itemize}
+
+
+\section{Langages supportés}
+
+Les languages pour lesquels les commandes simplifiées ont été définis sont donnés par la \autoref{tab:lstlang}.
+
+\begin{Table}{tab:lstlang}{Liste des languages avec commandes simplifiés pour le code source}
+\begin{tabu}{|c|c|}
+\hline
+\bf Langage&\bf Préfix des commandes\\\hline
+C&c\\\hline
+C++&cpp\\\hline
+Java&java\\\hline
+Bash&bash\\\hline
+Make&make\\\hline
+Javascript&javascript\\\hline
+XML&xml\\\hline
+SQL&sql\\\hline
+PHP&php\\\hline
+Python&python\\\hline
+HTML&html\\\hline
+Scilab&scilab\\\hline
+Matlab&matlab\\\hline
+\LaTeX&latex\\\hline
+\end{tabu}
+\end{Table}
+
+Le package listings supporte de nombreux languages et vous pouvez même définir les règles de mise en forme pour votre propre language (cf. manuel de listings).
+Pour créer les commandes simplifiées pour un langage, il suffit d'utiliser la commande \latexcode{\\newsourceformat\{cpp\}\{C++\}}. Dans cet exemple, \latexcode{cpp} est le préfix utilisé pourles commandes et \latexcode{C++} est le nom du language tel qu'il est connu par la package listings.
+
 
 \chapter{Rapports hebdomadaires}
 
+Pour votre projet, vous devez inclure en fin de document, avant la commande \latexcode{\\makelastpage}, vos comptes rendus hebdomadaires.
+Chaque compte rendus est défini avec la commande \latexcode{\\weeklyreport} en indiquant la date puis le texte du compte rendu. Vous pouvez y inclure quasiment n'importe quel code \LaTeX.
+
+\begin{latexsource}
+\weeklyreport{XX/XX/XXXX}{
+	\lipsum[1-2]
+}
+
+\weeklyreport{XX/XX/YYYY}{
+	\lipsum[3]
+}
+\end{latexsource}
+
+
 \chapter{Bibliographie}
 
-\chapter{Les images}
+La bibliographie est géré via bibtex. Il vous suffit de spécifier le ou les fichiers de bibliographie (fichier d'extension \latexcode{.bib}) avec la commande
+\latexcode{\\bibliography\{nomdufichiersansextension\}}. Cette commande est à insérer juste avant la commande \latexcode{\\makelastpage}
+
+Si vous renseignez le champs bibtex \latexcode{annote} alors la clé de citation et le contenu de ce champs apparaitront dans la bibliographie.
+
+Pour gérer votre bibliographie, vous pouvez utiliser n'importe quel logiciel de gestion de bibliographie bibtex tel que JabRef.
+Sous JabRef, pour avoir accès au champs \latexcode{annote} lors de l'édition d'une entrée bibliographique, il vous suffit d'aller dans le menu \textit{Options}, sous menu \textit{Set up general fields} et d'ajouter la ligne \latexcode{Annote:annote}.
 
 \chapter{Gestion des overfull box}
 
-linebreak
-hypen
+Lorsque vous avez un débordement de boite (typiquement dans la marge), l'option du document \latexcode{overfullbox} vous aide à les repérer en les affichant. Pour les éliminer, il existe de nombreux moyens. en voici quelques exemples :
+\begin{itemize}
+  \item \LaTeX n'arrive pas à couper le mot \latexcode{abcdefghi} pour en passer une partie à la ligne : il vous suffit d'ajouter dans le préambule la commande \latexcode{\\hyphenation\{abcd-ef-ghi\}} pour informer \LaTeX que le mot peut être coupé après le 4\ieme et le 6\ieme caractères. L'information est applicable à tout le document. Une alternative ponctuelle consiste à utiliser \latexcode{abcd\\-ef\\-ghi} directement dans le texte.
+  \item \LaTeX n'arrive pas à couper un mot et  \latexcode{\\hyphenation} n'est pas utilisable. Il suffit d'ajouter la commande \latexcode{\\linebreak} pour indiquer à \LaTeX qu'il \textbf{serait} bien de passer à la ligne à cet endroit.
+  \item Pour indiquer à \LaTeX qu'il \textbf{serait} bien de passer à la page suivante, vous pouvez utiliser \latexcode{\\pagebeak}. La commande \latexcode{\\newpage} impose un changement de page inconditionnel.
+\end{itemize}
 
 \chapter{Les packages}
 
-algo
-tikz/pgf
+La classe de document importe automatiquement plusieurs packages que vous pouvez donc utiliser dans votre document :
+\begin{itemize}
+  \item \latexcode{url} : gestion des urls avec \latexcode{\\url}
+  \item \latexcode{amsmath}, \latexcode{amsfonts} : plein de commandes et de symboles pour les maths
+  \item \latexcode{kpfonts}, \latexcode{marvosym}, \latexcode{stmaryrd} : pleins de caractères en plus
+  \item \latexcode{listings} : mise en forme de code source (cf. \autoref{chap:codesource})
+  \item \latexcode{tabu} : une alternative à \latexcode{tabular} plus flexible
+  \item \latexcode{lscape} : mode paysage
+  \item \latexcode{comment} : pour commenter de grosse portion de code via l'environnement \latexcode{comment}
+  \item \latexcode{pgf}, \latexcode{tikz} : pour gérer les images (au format JPEG, PNG, PDF) et faire des dessins
+  \item \latexcode{algorithm2e} : pour écrire des algorithmes
+  \item \latexcode{eurosym} : pour le symbole \euro
+  \item \latexcode{hyperref} : pour faire des liens
+\end{itemize}
+
+\appendix
+\chapter{Références \textit{I'll be back ! Again !}}
+
+\label{chap:ref3}
+
+Cette annexe ne contient pas d'instructions utiles mais uniquement des exemples permettant d'illustrer le chapitre sur les références. Vous pouvez donc passer directement à la suite.
+
+\section{Une section qui ne sert à rien}
+\label{sec:sertarien}
+
+\begin{equation}
+E=mc^2
+\label{eq:energie3}
+\end{equation}
+
+\begin{Figure}{fig:modeemploi3}{Ma superbe image une troisième fois !}
+	\pgfimage{polytech/modeemploi}
+\end{Figure}
 
 \end{document}

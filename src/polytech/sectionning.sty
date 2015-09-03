@@ -3,8 +3,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % part page
-\DeclareFixedFont{\polytech@part@numberfont}{\encodingdefault}{phv}{bx}{n}{0.7cm}
-\DeclareFixedFont{\polytech@part@titlefont}{\encodingdefault}{phv}{bx}{n}{0.7cm}
+\csdef{polytech@part@numberfont}{\bfseries\Huge}
+\csdef{polytech@part@titlefont}{\bfseries\Huge}
 
 % override titlesec command to remove superflous blank pages
 \def\ttl@page@ii#1#2#3#4#5#6#7{%
@@ -17,12 +17,6 @@
   \@ifundefined{ttl@ps@#6}%
     {\thispagestyle{plain}}%
     {\thispagestyle{\@nameuse{ttl@ps@#6}}}%
-%   \if@twocolumn
-%     \onecolumn
-%     \@tempswatrue
-%   \else
-%     \@tempswafalse
-%   \fi
   \vspace*{\@tempskipa}%
   \@afterindenttrue
   \ifcase#5 \@afterindentfalse\fi
@@ -31,31 +25,23 @@
   \ttl@finmarks
   \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}%
   \vspace{\@tempskipb}%
-%   \newpage
-%   \if@twoside
-%     \if@openright
-%       \null
-%       \@ifundefined{ttl@ps@#6}%
-%         {\thispagestyle{empty}}%
-%         {\thispagestyle{\@nameuse{ttl@ps@#6}}}%
-%       \newpage
-%     \fi
-%   \fi
-%   \if@tempswa
-%     \twocolumn
-%   \fi
   \ignorespaces}
 
 %\titlespacing{\part}{0pt}{3cm}{3cm}
 
-\titleformat{\part}[display]{}{}{0cm}%
+\titleformat{\part}[display]
+{\global\setbool{polytech@titlesec@hasnumber}{false}}%
+{\global\setbool{polytech@titlesec@hasnumber}{true}}%
+{0cm}%
 {%
 	\thispagestyle{empty}
     \begin{tikzpicture}
-       \draw[color=black!50,fill=black!70] (0,0) rectangle (\columnwidth-0.4pt,2.5);
+       \draw[color=black!50,fill=black!70] (0,0) rectangle (\textwidth-0.4pt,2.5);
        \draw[color=black!50,fill=black!50] (0.25,0.25) rectangle (3.25,3.25);
-       \node[right,color=black!70,text width=\columnwidth-4cm-0.4pt,align=center] at (3.5,3.5) {\csname polytech@part@numberfont\endcsname\partname};
-       \node[right,white,text width=\columnwidth-4cm-0.4pt,align=center] at (3.5,1.25) {\csname polytech@part@titlefont\endcsname#1};
+       \ifbool{polytech@titlesec@hasnumber}{%
+       		\node[right,color=black!70,text width=\textwidth-4cm-0.4pt,align=center] at (3.5,3.5) {\csname polytech@part@numberfont\endcsname\partname};
+       }{}
+       \node[right,white,text width=\textwidth-4cm-0.4pt,align=center] at (3.5,1.25) {\csname polytech@part@titlefont\endcsname#1};
      \end{tikzpicture}%
 }
 
@@ -68,8 +54,8 @@
 
 % chapter page
 
-\DeclareFixedFont{\polytech@chapter@numberfont}{\encodingdefault}{phv}{bx}{n}{2cm}
-\DeclareFixedFont{\polytech@chapter@titlefont}{\encodingdefault}{phv}{bx}{n}{16pt}
+\csdef{polytech@chapter@numberfont}{\bfseries\fontsize{2cm}{1em}\selectfont}
+\csdef{polytech@chapter@titlefont}{\bfseries\Huge}
 
 %    \renewcommand{\chaptername}{Chapitre}
 %    \renewcommand{\appendixname}{Annexe}
@@ -78,29 +64,29 @@
 \newlength{\polytech@chapter@numwidth}
 
 % Override standard definition of \chapter,\chapter* to remove \@topnewpage if twocolumns
-\def\@chapter[#1]#2{%
-  \ifnum \c@secnumdepth >\m@ne
-     \if@mainmatter
-       \refstepcounter{chapter}%
-       \typeout{\@chapapp\space\thechapter.}%
-       \addcontentsline{toc}{chapter}%
-                 {\protect\numberline{\thechapter}#1}%
-     \else
-       \addcontentsline{toc}{chapter}{#1}%
-     \fi
-  \else
-    \addcontentsline{toc}{chapter}{#1}%
-  \fi
-  \chaptermark{#1}%
-  \addtocontents{lof}{\protect\addvspace{10\p@}}%
-  \addtocontents{lot}{\protect\addvspace{10\p@}}%
-    \@makechapterhead{#2}%
-    \@afterheading%
-              }
-\def\@schapter#1{%
-              \@makeschapterhead{#1}%
-              \@afterheading%
-            }
+% \def\@chapter[#1]#2{%
+%   \ifnum \c@secnumdepth >\m@ne
+%      \if@mainmatter
+%        \refstepcounter{chapter}%
+%        \typeout{\@chapapp\space\thechapter.}%
+%        \addcontentsline{toc}{chapter}%
+%                  {\protect\numberline{\thechapter}#1}%
+%      \else
+%        \addcontentsline{toc}{chapter}{#1}%
+%      \fi
+%   \else
+%     \addcontentsline{toc}{chapter}{#1}%
+%   \fi
+%   \chaptermark{#1}%
+%   \addtocontents{lof}{\protect\addvspace{10\p@}}%
+%   \addtocontents{lot}{\protect\addvspace{10\p@}}%
+%     \@makechapterhead{#2}%
+%     \@afterheading%
+%               }
+% \def\@schapter#1{%
+%               \@makeschapterhead{#1}%
+%               \@afterheading%
+%             }
 
 \titlespacing{\chapter}{0pt}{2cm}{6cm}
 
@@ -109,13 +95,13 @@
    {\global\setbool{polytech@titlesec@hasnumber}{true}}%
    {0pt}%
    {%
-     \begin{tikzpicture}
-       \draw[color=black!50,fill=black!70] (0,0) rectangle (\columnwidth-0.4pt,2.5);
-       \draw[color=black!50,fill=black!50] (0.25,0.25) rectangle (3.25,3.25);
+     \begin{tikzpicture}%
+       \draw[color=black!50,fill=black!70] (0,0) rectangle (\textwidth-1pt,2.5);%
+       \draw[color=black!50,fill=black!50] (0.25,0.25) rectangle (3.25,3.25);%
        \ifbool{polytech@titlesec@hasnumber}{%
-         \node[inner sep=2em,color=white] at (1.75,1.75) {\csname polytech@chapter@numberfont\endcsname\thechapter};
-       }{}
-       \node[right,white,text width=\columnwidth-4cm-0.4pt] at (3.5,1.25) {\csname polytech@chapter@titlefont\endcsname#1} ;
+         \node[inner sep=2em,color=white] at (1.75,1.75) {\csname polytech@chapter@numberfont\endcsname\thechapter};%
+       }{}%
+       \node[right,white,text width=\textwidth-4cm] at (3.5,1.25) {\csname polytech@chapter@titlefont\endcsname#1};%
      \end{tikzpicture}%
    }
 
@@ -123,8 +109,8 @@
 % SECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@section@numberfont}{T1}{phv}{b}{n}{14pt}
-\DeclareFixedFont{\polytech@section@titlefont}{T1}{phv}{b}{n}{14pt}
+\csdef{polytech@section@numberfont}{\bfseries\Large}
+\csdef{polytech@section@titlefont}{\bfseries\Large}
 
 \titlespacing{\section}{0pt}{2ex plus 1ex minus 0.5ex}{2ex plus 1ex minus 0.5ex}
 
@@ -133,11 +119,11 @@
     \begin{tikzpicture}[color=white]
     %
       \node[
-        text width=\columnwidth-0.4cm-0.4pt,
+        text width=\textwidth-0.4cm-0.4pt,
         fill=black!70,
         draw=black!50,
         inner sep=0.2cm,
-        inner ysep=0.3cm] (title)
+        inner ysep=0.2cm] (title)
         at (0,0) {\polytech@section@titlefont#1} ;
       \path (title.south); \pgfgetlastxy{\titlexS}{\titleyS}
       \path (title.north); \pgfgetlastxy{\titlexN}{\titleyN}
@@ -159,8 +145,8 @@
 % SUBSECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@subsection@numberfont}{T1}{phv}{b}{n}{11pt}
-\DeclareFixedFont{\polytech@subsection@titlefont}{T1}{phv}{m}{n}{11pt}
+\csdef{polytech@subsection@numberfont}{\bfseries\large}
+\csdef{polytech@subsection@titlefont}{\bfseries\large}
 
 \titlespacing{\subsection}{0pt}{2ex plus 1ex minus 0.5ex}{2ex plus 1ex minus 0.5ex}
 
@@ -169,11 +155,11 @@
     \begin{tikzpicture}[color=white]
     %
       \node[
-        text width=\columnwidth-0.4cm-0.4pt,
+        text width=\textwidth-0.4cm-0.4pt,
         fill=black!70,
         draw=black!50,
         inner sep=0.2cm,
-        inner ysep=0.3cm] (title)
+        inner ysep=0.2cm] (title)
         at (0,0) {\polytech@subsection@titlefont#1} ;
       \path (title.south); \pgfgetlastxy{\titlexS}{\titleyS}
       \path (title.north); \pgfgetlastxy{\titlexN}{\titleyN}
@@ -196,8 +182,8 @@
 % SUBSUBSECTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@subsubsection@numberfont}{T1}{phv}{b}{n}{10pt}
-\DeclareFixedFont{\polytech@subsubsection@titlefont}{T1}{phv}{m}{n}{10pt}
+\csdef{polytech@subsubsection@numberfont}{\large}
+\csdef{polytech@subsubsection@titlefont}{\large}
 
 \titlespacing{\subsubsection}{0pt}{2ex plus 1ex minus 0.5ex}{2ex plus 1ex minus 0.5ex}
 
@@ -206,11 +192,11 @@
     \begin{tikzpicture}[color=white]
     %
       \node[
-        text width=\columnwidth-0.4cm-0.4pt,
+        text width=\textwidth-0.4cm-0.4pt,
         fill=black!70,
         draw=black!50,
         inner sep=0.2cm,
-        inner ysep=0.3cm] (title)
+        inner ysep=0.2cm] (title)
         at (0,0) {\polytech@subsubsection@titlefont#1} ;
       \path (title.south); \pgfgetlastxy{\titlexS}{\titleyS}
       \path (title.north); \pgfgetlastxy{\titlexN}{\titleyN}
@@ -233,7 +219,7 @@
 % PARAGRAPH
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@paragraph@titlefont}{T1}{phv}{b}{n}{10pt}
+\csdef{polytech@paragraph@titlefont}{\bfseries\normalsize}
 
 \titlespacing{\paragraph}{0pt}{1ex plus 1ex minus 0.5ex}{1ex plus 0.1ex minus 0.1ex}
 
@@ -243,7 +229,7 @@
 % SUBPARAGRAPH
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareFixedFont{\polytech@subparagraph@titlefont}{T1}{phv}{m}{n}{10pt}
+\csdef{polytech@subparagraph@titlefont}{\bfseries\itshape\normalsize}
 
 \titlespacing{\subparagraph}{0pt}{1ex plus 1ex minus 0.5ex}{1ex plus 0.1ex minus 0.1ex}
 

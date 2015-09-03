@@ -18,17 +18,35 @@
 
 \notbool{polytech@hideweeklyreports}{%
 	% weekly reports enabled
-	\newenvironment{weeklyreports}{%
-		\chapter*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
-		\begin{description}
-	}{%
-		\end{description}
+	\csdef{polytech@output@weeklyreports}{}
+
+	\newcommand{\weeklyreport}[2]{%
+		\global\appto{\polytech@output@weeklyreports}{
+			\begingroup
+				\setlength{\FrameSep}{0.1cm}
+				\begin{oframed}
+				\setlength{\linewidth}{\textwidth-40pt}
+				\refstepcounter{polytech@weeklyreport@counter}%
+				\textbf{%
+					\csuse{polytech@weeklyreports@reporttitle@\csuse{polytech@lang}}{\thepolytech@weeklyreport@counter}{#1}\nopagebreak[4]
+				}\nopagebreak[4]\par\nopagebreak[4]
+				\hrule\nopagebreak[4]
+				\widowpenalty=10000 % change linebreaking penalty to reduce isolated body lines
+				\clubpenalty=10000
+				#2
+				\end{oframed}
+			\endgroup
+		}
 	}
-	\newcommand{\weeklyreport}[1]{%
-		\refstepcounter{polytech@weeklyreport@counter}%
-		\item[\textbf{\csuse{polytech@weeklyreports@reporttitle\csuse{polytech@lang}}{\thepolytech@weeklyreport@counter}{#1}}]\mbox{ }\\%
+
+	\csdef{polytech@output@weeklyreportspart}{
+		\part*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
+		\@mkboth{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
+		\vspace{2cm}
+		\csuse{polytech@output@weeklyreports}
 	}
 }{%
 	% weekly reports are disabled
-	\excludecomment{weeklyreports}%
+	\newcommand{\weeklyreport}[2]{}%
+	\csdef{polytech@output@weeklyreportspart}{}
 }

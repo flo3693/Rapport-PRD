@@ -6,10 +6,10 @@
 \typeout{Package `polytech headings' \fileversion\space<\filedate>}
 
 % header/footer
-\DeclareFixedFont{\marvel@header@font}{\encodingdefault}{phv}{b}{n}{12pt}
-\DeclareFixedFont{\marvel@footer@font}{\encodingdefault}{phv}{b}{n}{12pt}
+\csdef{polytech@header@font}{\bfseries\scshape\large}
+\csdef{polytech@footer@font}{\bfseries\scshape\large}
 
-\newcommand{\marvel@fancyheadodd}[1]{%
+\newcommand{\polytech@fancyheadodd}[1]{%
   \begin{tikzpicture}
     \node[
       color=black!50,
@@ -30,11 +30,11 @@
       align=right,
       overlay,
       yshift=0.35cm,
-     ] (0,0) {\marvel@header@font\MakeUppercase#1};
+     ] (0,0) {\polytech@header@font#1};
  \end{tikzpicture}%
 }
 
-\newcommand{\marvel@fancyheadeven}[1]{%
+\newcommand{\polytech@fancyheadeven}[1]{%
   \begin{tikzpicture}
     \node[
 				color=black!50,
@@ -55,11 +55,11 @@
 	      align=left,
 	      overlay,
 	      yshift=0.35cm,
- 		] (0,0) {\marvel@header@font\MakeUppercase#1};
+ 		] (0,0) {\polytech@header@font#1};
  \end{tikzpicture}%
 }
 
-\newcommand{\marvel@fancyfootodd}{%
+\newcommand{\polytech@fancyfootodd}{%
   \begin{tikzpicture}
     \node[
       text width=\textwidth,
@@ -74,11 +74,11 @@
       inner ysep=0.3cm,
       xshift=0.5cm,
       text width=5cm
-    ] at (mark.east) {\marvel@footer@font\thepage{}} ;
+    ] at (mark.east) {\polytech@footer@font\thepage{}} ;
  \end{tikzpicture}%
 }
 
-\newcommand{\marvel@fancyfooteven}{%
+\newcommand{\polytech@fancyfooteven}{%
 	\begin{tikzpicture}
     \node[
       text width=\textwidth,
@@ -95,7 +95,7 @@
       xshift=-0.5cm,
       text width=5cm,
       align=right
-    ] at (mark.west) {\marvel@footer@font\thepage{}} ;
+    ] at (mark.west) {\polytech@footer@font\thepage{}} ;
  	\end{tikzpicture}%
 }
 
@@ -103,18 +103,18 @@
 
 %% common settings
 \fancyhf{} % clear all header and footer fields
-\fancyhead[CO]{\marvel@fancyheadodd{\leftmark}}
-\fancyhead[CE]{\marvel@fancyheadeven{\leftmark}}
-\fancyfoot[CO]{\marvel@fancyfootodd}
-\fancyfoot[CE]{\marvel@fancyfooteven}
+\fancyhead[CO]{\polytech@fancyheadodd{\leftmark}}
+\fancyhead[CE]{\polytech@fancyheadeven{\leftmark}}
+\fancyfoot[CO]{\polytech@fancyfootodd}
+\fancyfoot[CE]{\polytech@fancyfooteven}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 \fancypagestyle{plain}{
   \fancyhead[H]{}
-	\fancyfoot[CO]{\marvel@fancyfootodd}
-	\fancyfoot[CE]{\marvel@fancyfooteven}
+	\fancyfoot[CO]{\polytech@fancyfootodd}
+	\fancyfoot[CE]{\polytech@fancyfooteven}
 }
 
 \fancypagestyle{empty}{
@@ -144,6 +144,38 @@
 
 
 
+\patchcmd{\thebibliography}%
+{\MakeUppercase}%
+{}%
+{}
+{}
 
+
+\patchcmd{\tableofcontents}%
+{\MakeUppercase}%
+{}%
+{}
+{}
+
+
+\patchcmd{\listoftables}%
+{\MakeUppercase}%
+{}%
+{}
+{}
+
+
+\patchcmd{\listoffigures}%
+{\MakeUppercase}%
+{}%
+{}
+{}
+
+
+\patchcmd{\lstlistoflistings}%
+{\MakeUppercase}%
+{}%
+{}
+{}
 
 
