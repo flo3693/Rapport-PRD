@@ -427,7 +427,13 @@
 %%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%
 
 % format de la bibliographie
-\bibliographystyle{polytech}
+\let\polytech@bibliographystyle\bibliographystyle
+
+\renewcommand{\bibliographystyle}[1]{
+	{\Huge\center\color{red}\textbf{L'utilisation de \latexcode{\\bibliographystyle} est interdite.}}
+}
+
+\polytech@bibliographystyle{polytech/polytech}
 
 \ifbool{polytech@nobibannotations}{
 	\newcommand{\bibAnnoteFile}[1]{}
@@ -440,12 +446,25 @@
 {}
 {}
 
+
+% redefine the \bibliography command to separate registration and output of contents (make IDE happy :))
+\let\polytech@oldbibliography\bibliography
+
+\renewcommand{\bibliography}[1]{
+	\if@filesw \immediate \write \@auxout {\string \bibdata {#1}}\fi
+}
+
+\csdef{polytech@output@bibliography}{
+	\@input@ {\jobname.bbl}
+}
+
+
 %%%%%%%%%%% LAST PAGES %%%%%%%%%%%%%%%%%
 
 \newcommand{\makelastpages}{
 	% weeklyreports
 	\csuse{polytech@output@weeklyreportspart}
-	\bibliography{biblio}
+	\csuse{polytech@output@bibliography}
 	\backmatter
 	\pagestyle{empty}
 	\ifbool{polytech@twoside}{
@@ -461,6 +480,11 @@
 	}{}
 	\newpage
 	\thispagestyle{empty}
+	\ifbool{polytech@english}{
+		\pdfbookmark[0]{Last page}{lastpage}
+	}{
+		\pdfbookmark[0]{Dernière page}{lastpage}
+	}
 	\begin{center}
 		{\polytech@font@titlepage@title\polytech@output@title}
 		\ifcsdef{polytech@output@subtitle}{

@@ -1,4 +1,4 @@
-\documentclass[overfullbox,twoside]{polytech}
+\documentclass[overfullbox]{polytech}
 
 % LISEZ LE MODE D'EMPLOI POUR L'INTEGRALITE DES CONSIGNES
 
@@ -140,8 +140,6 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 \chapter{truc}
 \lipsum[1-20]
 
-\ref{part:essai}
-
 \section{Ma section}
 \lipsum[1-5]
 
@@ -175,12 +173,9 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 
 \chapter{Ma deuxième annexe}
 
+\cite{article}
+
 \lipsum[1-4]
-
-\makeatletter
-
-
-\makeatother
 
 \weeklyreport{XX/XX/XXXX}{
 	\lipsum[1-2]
@@ -216,6 +211,8 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 % petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
 \nocite{*}
 
+\bibliographystyle{truc}
+\bibliography{biblio}
 
 \makelastpages
 

@@ -289,10 +289,10 @@ Pendant que j'y pense, j'ai une belle image qui illustre ma pensée
 
 \section{Nommer des emplacements avec \texorpdfstring{\latexcode{\\label}}{\textbackslash{}label}}
 
-Comme vous le savez, \LaTeX est particulièrement pratique lorsqu'il s'agit de définir des références croisées ou non dans un document. Pour nommer un emplacement, il suffit d'utiliser la commande \latexcode{\\label} en lui donnant en paramètre un nom symbolique représentant l'emplacement. Tous les caractères ne sont pas utilisables pour le nom (cf. référence \LaTeX). Classiquement, on utilise les lettres non accentuées (a-z, A-Z), les chiffres (0-9) et les symboles \latexcode{.-+_:}. Lorsque le nombre d'emplacement à utiiliser devient important, il est nécessaire de s'organiser. Pour cela, vous pouvez adopter les règles simples suivantes :
+Comme vous le savez, \LaTeX est particulièrement pratique lorsqu'il s'agit de définir des références croisées ou non dans un document. Pour nommer un emplacement, il suffit d'utiliser la commande \latexcode{\\label} en lui donnant en paramètre un nom symbolique représentant l'emplacement. Tous les caractères ne sont pas utilisables pour le nom (cf. référence \LaTeX). Classiquement, on utilise les lettres non accentuées (a-z, A-Z), les chiffres (0-9) et les symboles \latexcode{.-+_:}. Lorsque le nombre d'emplacement à utiliser devient important, il est nécessaire de s'organiser. Pour cela, vous pouvez adopter les règles simples suivantes :
 \begin{itemize}
   \item Le nom de l'emplacement doit être sous la forme \latexcode{type:nom}. \latexcode{type} représente le type d'emplacement tel que \latexcode{part}, \latexcode{chap}, \latexcode{sec}, \latexcode{eq}\ldots
-  \item Le nom doit être descriptif de l'emplacement. Ainsi, \latexcode{chap1} et \latexcode{sec2.1} doivent absoluement être évités et remplacés par \latexcode{chap:trousnoirs} et \latexcode{sec:bigbang_theory}.
+  \item Le nom doit être descriptif de l'emplacement. Ainsi, \latexcode{chap1} et \latexcode{sec2.1} doivent absolument être évités et remplacés par \latexcode{chap:trousnoirs} et \latexcode{sec:bigbang_theory}.
   \item
 \end{itemize}
 
@@ -301,7 +301,7 @@ Comme vous le savez, \LaTeX est particulièrement pratique lorsqu'il s'agit de d
 
 Pour référencer un emplacement, plusieurs commandes sont à votre disposition. Les commandes les plus utiles sont :
 \begin{itemize}
-  \item \latexcode{\\ref} : insère le numéro identifiant l'emplacement (partie, chapitre, section, equation\ldots).
+  \item \latexcode{\\ref} : insère le numéro identifiant l'emplacement (partie, chapitre, section, équation\ldots).
   \item \latexcode{\\autoref} (recommandé) : identique à \latexcode{\\ref} mais préfixe le numéro du type de référence.
   \item \latexcode{\\eqref} : insère le numéro de l'équation entre parenthèses
   \item \latexcode{\\pageref} : insère le numéro de page
@@ -380,15 +380,15 @@ E=mc^2
 
 \label{chap:codesource}
 
-Pour insérer du code dans votre document, vous avez à disposition le package \latexcode{listings}. Ce package est très riche en possibilités, il vous est fortement recommendé de consulter sa documentation si vous souhaitez l'exploiter en profondeur.
+Pour insérer du code dans votre document, vous avez à disposition le package \latexcode{listings}. Ce package est très riche en possibilités, il vous est fortement recommandé de consulter sa documentation si vous souhaitez l'exploiter en profondeur.
 
 \section{Commandes simplifiées}
 
-Pour simplifier son utilisation, plusieurs commandes et environnements supplémentaires ont été défini. Pour chacun des languages supportés, trois commandes et un environnements sont disponibles. En notant \latexcode{XXX} le nom du language, on a :
+Pour simplifier son utilisation, plusieurs commandes et environnements supplémentaires ont été défini. Pour chacun des langages supportés, trois commandes et un environnements sont disponibles. En notant \latexcode{XXX} le nom du langage, on a :
 \begin{itemize}
   \item La commande \latexcode{\\XXXcode} :\par
   	\begin{itemize}
-		  \item Commande identique à la commande \latexcode{\\lstinline\{ \}} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Commande identique à la commande \latexcode{\\lstinline\{ \}} mais pré-configurée pour le langage \latexcode{XXX}.
 		  \item Son argument est le code source à afficher.
 		  \item Elle s'utilise dans le corps d'un texte (ex: un phrase).
 		  \item Les caractères spéciaux tels que \textbackslash, \{ et \} doivent être préfixés d'un \textbackslash.
@@ -397,7 +397,7 @@ Pour simplifier son utilisation, plusieurs commandes et environnements suppléme
 		\end{itemize}
   \item La commande \latexcode{\\XXXcodeintab} :\par
    	\begin{itemize}
-		  \item Commande identique à la commande \latexcode{\\lstinline! !} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Commande identique à la commande \latexcode{\\lstinline! !} mais pré-configurée pour le langage \latexcode{XXX}.
 		  \item Les parenthèses sont remplacés par un caractère de début et un caractère de fin (choix arbitraire mais identique).
 		  \item Tout ce qui est entre ces deux caractères est le code source à afficher.
 		  \item Elle s'utilise dans le corps d'un texte (ex: un phrase).
@@ -407,13 +407,13 @@ Pour simplifier son utilisation, plusieurs commandes et environnements suppléme
 		\end{itemize}
 	\item La commande \latexcode{\\XXXsourcefile} :\par
 		\begin{itemize}
-		  \item Commande identique à \latexcode{\\lstinputlisting} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Commande identique à \latexcode{\\lstinputlisting} mais pré-configurée pour le langage \latexcode{XXX}.
 		  \item Le paramètre est le chemin relatif du fichier dont le code doit être affiché.
 		  \item Exemple : \latexcode{\\latexsourcefile\{main.tex\}}
 		\end{itemize}
 	\item L'environnement \latexcode{\\begin\{XXXsource\} \\end\{XXXsource\}} :
 		\begin{itemize}
-		  \item Environnement identique à \latexcode{\\begin\{lstlisting\} \\end\{lstlisting\}} mais préconfigurée pour le language \latexcode{XXX}.
+		  \item Environnement identique à \latexcode{\\begin\{lstlisting\} \\end\{lstlisting\}} mais pré-configurée pour le langage \latexcode{XXX}.
 		  \item Tout ce qui est défini entre le début et la fin de l'environnement est le code à afficher.
 		  \item Par défaut, les lignes sont numérotés
 		  \item Exemple :
@@ -427,7 +427,7 @@ Pour simplifier son utilisation, plusieurs commandes et environnements suppléme
 
 \section{Paramètres supplémentaires}
 
-Toutes ces commandes et environnements admettent un paramètre optionel permettant de changer leur comportement. Pour le détail de ce que vous pouvez faire, consultez la documentation de \href{https://www.ctan.org/pkg/listings}{listings} sur le CTAN.
+Toutes ces commandes et environnements admettent un paramètre optionnel permettant de changer leur comportement. Pour le détail de ce que vous pouvez faire, consultez la documentation de \href{https://www.ctan.org/pkg/listings}{listings} sur le CTAN.
 
 \begin{lstlisting}[style=polytech@lst@base,language=TeX]
 \latexcode[basicstyle=\color{red}]{\\color\{red\}mise en couleur rouge}
@@ -449,9 +449,9 @@ Si pour une raison ou une autre vous étiez obligé de revenir à l'utilisation 
 
 \section{Langages supportés}
 
-Les languages pour lesquels les commandes simplifiées ont été définis sont donnés par la \autoref{tab:lstlang}.
+Les langages pour lesquels les commandes simplifiées ont été définis sont donnés par la \autoref{tab:lstlang}.
 
-\begin{Table}{tab:lstlang}{Liste des languages avec commandes simplifiés pour le code source}
+\begin{Table}{tab:lstlang}{Liste des langages avec commandes simplifiés pour le code source}
 \begin{tabu}{|c|c|}
 \hline
 \bf Langage&\bf Préfix des commandes\\\hline
@@ -472,8 +472,8 @@ Matlab&matlab\\\hline
 \end{tabu}
 \end{Table}
 
-Le package listings supporte de nombreux languages et vous pouvez même définir les règles de mise en forme pour votre propre language (cf. manuel de listings).
-Pour créer les commandes simplifiées pour un langage, il suffit d'utiliser la commande \latexcode{\\newsourceformat\{cpp\}\{C++\}}. Dans cet exemple, \latexcode{cpp} est le préfix utilisé pourles commandes et \latexcode{C++} est le nom du language tel qu'il est connu par la package listings.
+Le package listings supporte de nombreux langages et vous pouvez même définir les règles de mise en forme pour votre propre langage (cf. manuel de listings).
+Pour créer les commandes simplifiées pour un langage, il suffit d'utiliser la commande \latexcode{\\newsourceformat\{cpp\}\{C++\}}. Dans cet exemple, \latexcode{cpp} est le préfixe utilisé pour les commandes et \latexcode{C++} est le nom du langage tel qu'il est connu par la package listings.
 
 
 \chapter{Rapports hebdomadaires}
@@ -494,10 +494,11 @@ Chaque compte rendus est défini avec la commande \latexcode{\\weeklyreport} en 
 
 \chapter{Bibliographie}
 
-La bibliographie est géré via bibtex. Il vous suffit de spécifier le ou les fichiers de bibliographie (fichier d'extension \latexcode{.bib}) avec la commande
-\latexcode{\\bibliography\{nomdufichiersansextension\}}. Cette commande est à insérer juste avant la commande \latexcode{\\makelastpage}
+La bibliographie est géré via bibtex. Pour inclure un fichier de bibliographie, il vous suffit d'utiliser la commande
+\latexcode{\\bibliography\{biblio\}} avant la commande \latexcode{\\makelastpages}.
 
-Si vous renseignez le champs bibtex \latexcode{annote} alors la clé de citation et le contenu de ce champs apparaitront dans la bibliographie.
+
+Si vous renseignez le champs bibtex \latexcode{annote} alors la clé de citation et le contenu de ce champs apparaîtront dans la bibliographie.
 
 Pour gérer votre bibliographie, vous pouvez utiliser n'importe quel logiciel de gestion de bibliographie bibtex tel que JabRef.
 Sous JabRef, pour avoir accès au champs \latexcode{annote} lors de l'édition d'une entrée bibliographique, il vous suffit d'aller dans le menu \textit{Options}, sous menu \textit{Set up general fields} et d'ajouter la ligne \latexcode{Annote:annote}.
