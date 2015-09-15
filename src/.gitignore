@@ -1,1 +1,10 @@
 /modele.log
+*.log
+*.aux
+*.dvi
+*.toc
+*.lof
+*.lot
+*.lol
+*.bbl
+*.pdf
