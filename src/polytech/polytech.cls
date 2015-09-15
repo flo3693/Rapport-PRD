@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{polytech}[2015/09/01 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
+\ProvidesClass{polytech/polytech}[2015/09/15 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
 
 %###
 

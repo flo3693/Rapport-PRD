@@ -4,6 +4,7 @@
 \ProvidesPackage{polytech/firstlastpage}[\filedate\space\fileversion\space Polytech document class sub package]
 \typeout{Package `polytech firstlastpage' \fileversion\space<\filedate>}
 
+%###
 
 \pgfdeclareimage[height=2cm]{polytech@schoollogo}{polytech/polytech}
 \pgfdeclareimage[height=2cm]{polytech@univlogo}{polytech/univ}
@@ -458,6 +459,20 @@
 	\@input@ {\jobname.bbl}
 }
 
+%%%%%%%%%%% COPYRIGHT %%%%%%%%%%%%%%%
+\csdef{polytech@output@copyright}{
+	\thispagestyle{empty}
+	\par
+	\hbox{}
+	\vfill
+	\begin{center}
+		\small
+		Document mis en forme sous \LaTeX\par
+		gr\^ace \`a la classe de document \texttt{polytech.cls}
+	\end{center}
+	\newpage
+}
+
 
 %%%%%%%%%%% LAST PAGES %%%%%%%%%%%%%%%%%
 
@@ -467,6 +482,7 @@
 	\csuse{polytech@output@bibliography}
 	\backmatter
 	\pagestyle{empty}
+	\polytech@output@copyright%
 	\ifbool{polytech@twoside}{
 		\ifbool{polytech@roundtofour}{
 			% add up to 3 pages to round total page count to *4
@@ -507,6 +523,7 @@
 
 
 
+%###
 
 
 

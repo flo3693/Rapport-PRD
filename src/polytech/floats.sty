@@ -48,23 +48,23 @@
 
 % label, caption
 \NewEnviron{Figure}[2]{%
-%  	\polytech@floats@oldfigure{\csuse{polytech@floats@position}}{%
-% 		\centering%
-% 		\BODY%
-% 		\caption{#2}%
-% 		\label{#1}%
-% 	}%
+ 	\polytech@floats@oldfigure{\csuse{polytech@floats@position}}{%
+		\centering%
+		\BODY%
+		\caption{#2}%
+		\label{#1}%
+	}%
 }
 
 
 % label, caption
 \NewEnviron{Table}[2]{
-%  	\polytech@floats@oldtable{\csuse{polytech@floats@position}}{
-%  	  \caption{#2}%
-%     \label{#1}% must be after caption
-% 		\centering%
-% 		\BODY
-% 	}%
+ 	\polytech@floats@oldtable{\csuse{polytech@floats@position}}{
+ 	  \caption{#2}%
+    \label{#1}% must be after caption
+		\centering%
+		\BODY
+	}%
 }
 
 \renewcommand\floatpagefraction{.9}
