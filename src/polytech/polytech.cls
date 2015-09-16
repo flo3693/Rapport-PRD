@@ -155,7 +155,7 @@
 \RequirePackage{amsfonts}
 \RequirePackage{marvosym}
 \RequirePackage{stmaryrd}
-\RequirePackage[final]{listings}
+\RequirePackage[final]{listings}[2015/06/04]
 
 \lst@RequireAspects{writefile}
 

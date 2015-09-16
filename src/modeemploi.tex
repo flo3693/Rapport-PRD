@@ -380,7 +380,13 @@ E=mc^2
 
 \label{chap:codesource}
 
-Pour insérer du code dans votre document, vous avez à disposition le package \latexcode{listings}. Ce package est très riche en possibilités, il vous est fortement recommandé de consulter sa documentation si vous souhaitez l'exploiter en profondeur.
+Pour insérer du code dans votre document, vous avez à disposition le package \latexcode{listings}. Ce package est très riche en possibilités, il vous est fortement recommandé de consulter sa documentation si vous souhaitez l'exploiter en profondeur. Cette classe de document nécessaite la version 1.6 minimum du package. Vous devez faire en sorte que celle-ci soit disponible.
+
+Sur une distribution TexLive, vous pouvez utiliser les instructions suivantes en ligne de commande pour effectuer la mise à jours :
+\begin{bashsource}
+tlmgr init-usertree
+tlmgr install listings
+\end{bashsource}
 
 \section{Commandes simplifiées}
 
