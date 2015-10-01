@@ -1,5 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{polytech/polytech}[2015/09/15 Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V1.0]
+\def\polytechfileversion{1.0}
+\def\polytechfiledate{2015/10/01}
+\ProvidesClass{polytech/polytech}[\polytechfiledate\space Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V\polytechfileversion]
 
 %###
 
@@ -7,6 +9,7 @@
 % Include generic packages to extend LaTeX memory and add common utility commands
 % -----------------------------------------------------------------------------
 \RequirePackage{etex}
+\RequirePackage{atveryend}
 \RequirePackage{etoolbox}
 \RequirePackage{calc}
 
@@ -29,9 +32,6 @@
 % Force black and white colors
 \newbool{polytech@blackandwhite}
 \DeclareOption{blackandwhite}{\booltrue{polytech@blackandwhite}}
-\ifbool{polytech@blackandwhite}{
-	\PassOptionsToPackage{light}{kpfonts}	% better printing in light
-}{}
 
 % Open chapter on any page
 \newbool{polytech@openany}
@@ -43,16 +43,12 @@
 % define if contributors details (mail and addresses) are included
 \newbool{polytech@contributors@expanded}
 \DeclareOption{expandedcontributors}{\booltrue{polytech@contributors@expanded}}
-\ifbool{polytech@blackandwhite}{%
-	\booltrue{polytech@contributors@expanded}
-}{}
 
 \newbool{polytech@contributors@noseparatepage}
 \DeclareOption{noseparatecontributorspage}{\booltrue{polytech@contributors@noseparatepage}}
 
 \newbool{polytech@nodate}
 \DeclareOption{nodate}{\booltrue{polytech@nodate}}
-
 
 \newbool{polytech@nobibannotations}
 \DeclareOption{nobibannotations}{\booltrue{polytech@nobibannotations}}
@@ -63,12 +59,12 @@
 \newbool{polytech@twoside}
 \DeclareOption{twoside}{\booltrue{polytech@twoside}}
 
+\newbool{polytech@firstlastonly}
+\DeclareOption{firstlastonly}{\booltrue{polytech@firstlastonly}}
 
 \DeclareOption*{\PackageWarning{polytech}{Unknown option `\CurrentOption'}}
 
 \ProcessOptions\relax
-
-
 
 %------------- global lrbox (use \begin{lrbox*} instead of \begin{lrbox} to save the box globally instead of locally ----------------
 \cslet{lrbox*}\lrbox
@@ -91,10 +87,10 @@
 
 % babel
 \ifbool{polytech@english}{
-    \PassOptionsToPackage{english}{babel} % english document
+    \PassOptionsToPackage{french,main=english}{babel} % english document
     \RequirePackage{babel}
 }{
-    \PassOptionsToPackage{french}{babel}  % french document
+    \PassOptionsToPackage{english,main=french}{babel}  % french document
     \RequirePackage{babel}
     \frenchbsetup{StandardEnumerateEnv=true}
     \frenchspacing
@@ -112,13 +108,10 @@
 \PassOptionsToClass{final,11pt}{book}
 \LoadClass{book}
 
-\RequirePackage[rigidchapters,explicit,toctitles,clearempty]{titlesec}
-
 \setlength\paperheight{29.7cm}%
 \setlength\paperwidth{21cm}%
 
 \RequirePackage[
-        verbose,
         papersize={\paperwidth,\paperheight},
         twoside,
         bindingoffset=0cm,
@@ -129,27 +122,45 @@
         headsep=12pt,
         footskip=30pt,
         vmargin=1.5cm,
-        hmargin=2cm]{geometry}
+        hmargin=2.5cm]{geometry}
 
 % enable overbox display as black box. must be after class loading
 \ifbool{polytech@overfullbox}{
     \setlength{\overfullrule}{5pt}
 }{}
 
-\RequirePackage[nofligatures,nointlimits,sumlimits]{kpfonts} % switch to richer and more scallable fonts
 \RequirePackage[T1]{fontenc}    % OT1 font encoding (must be before inputenc)
 \RequirePackage[utf8]{inputenc} % encoding is set to utf8
-%\RequirePackage[full]{textcomp}
+\RequirePackage[full]{textcomp}
 \DeclareUnicodeCharacter{B0}{\textdegree}
 
-\RequirePackage[frame]{crop}
-\RequirePackage{layout}
+\RequirePackage{csquotes}
+\RequirePackage[%
+	backend=biber,
+	style=numeric-comp,
+	sorting=nyt,
+	sortcase=false,
+	sortcites=true,
+	maxnames=10,
+	minnames=10,
+	autocite=plain,
+	defernumbers,
+	]{biblatex}
+
+
+% options are processed then we do some update
+\ifbool{polytech@blackandwhite}{
+	\PassOptionsToPackage{light}{kpfonts}	% better printing in light
+}{}
+
+\RequirePackage[nofligatures,nointlimits,sumlimits]{kpfonts} % switch to richer and more scallable fonts
+
+\RequirePackage[rigidchapters,explicit,toctitles,clearempty]{titlesec}
 
 %-------------- lot of packages -------------
 
 \RequirePackage{nameref}
 \RequirePackage{fancyhdr}
-\RequirePackage{caption}
 \RequirePackage{makeidx}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -157,7 +168,7 @@
 \RequirePackage{stmaryrd}
 \RequirePackage[final]{listings}[2015/06/04]
 
-\lst@RequireAspects{writefile}
+%\lst@RequireAspects{writefile}
 
 \RequirePackage{fancybox}
 \RequirePackage{tabu}
@@ -171,9 +182,7 @@
 \RequirePackage{makerobust}
 \RequirePackage{algorithm2e}
 \RequirePackage[figure,table,lstlisting]{totalcount}
-\RequirePackage{cite}
 
-\RequirePackage{titletoc} % TODO how to improve TOC ?
 \RequirePackage{eurosym} % symbol euro
 \RequirePackage[user]{zref} % allow for better \ref and  \label
 \RequirePackage{environ}
@@ -182,15 +191,15 @@
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
 
 \ifbool{polytech@blackandwhite}{
-	\PassOptionsToPackage{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black}{hyperref}
+	% disable hyperlinks
+	\PassOptionsToPackage{draft,linkcolor=black,citecolor=black,filecolor=black,urlcolor=black}{hyperref}
 }
 {
-	\PassOptionsToPackage{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}{hyperref}
+	\PassOptionsToPackage{final,linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}{hyperref}
 }
 
 \RequirePackage[plainpages=false,
                 pdfpagelabels=true,
-                final,
                 verbose=false,
                 breaklinks=true,
                 colorlinks=true,
@@ -208,8 +217,16 @@
 \RequirePackage{bookmark}
 \RequirePackage{pageslts} % to have total page count of the document. Must be at the end for proper functionning
 
+\RequirePackage[planb=false]{newfloat}
+\RequirePackage{caption}
 
+% colors
+\definecolor{polytechdarkblue}{RGB}{0,74,117}
+\definecolor{polytechlightblue}{RGB}{0,156,221}
+
+% sub packages
 \RequirePackage{polytech/firstlastpage}
+\RequirePackage{polytech/copyright}
 \RequirePackage{polytech/headings}
 \RequirePackage{polytech/sectionning}
 \RequirePackage{polytech/floats}
@@ -235,7 +252,12 @@
 
 \renewcommand{\baselinestretch}{1}
 
-\arrayrulecolor{black}
+\ifbool{polytech@blackandwhite}{
+	\arrayrulecolor{black}
+}{
+	\arrayrulecolor{polytechdarkblue}
+}
+
 \renewcommand{\arraystretch}{1.2}
 
 % tableofcontents need patching

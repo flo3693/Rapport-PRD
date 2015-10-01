@@ -1,8 +1,6 @@
-\def\fileversion{1.0}
-\def\filedate{2015/09/01}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{polytech/references}[\filedate\space\fileversion\space Polytech document class sub package]
-\typeout{Package `polytech references' \fileversion\space<\filedate>}
+\ProvidesPackage{polytech/references}[\polytechfiledate\space\polytechfileversion\space Polytech document class sub package]
+\typeout{Package `polytech references' \polytechfileversion\space<\polytechfiledate>}
 
 %###
 
@@ -38,7 +36,7 @@
 	  {% no number defined
 	  }%
 	  {%
-	  	\edef\polytech@ref@currentchapter{\thechapter}
+	  	\edef\polytech@ref@currentchapter{\thechapter}%
 	    \ifcsequal{polytech@ref@chapter}{polytech@ref@currentchapter}%
 	    {% same chapter, keep short numbering
 	    }%
@@ -50,8 +48,8 @@
 	      {%
 	        \csuse{polytech@ref@from@appendix@\polytech@lang}{\polytech@ref@chapter}%
 	      }%
+	      \xspace%
 	    }%
-	    \xspace%
 	  }%
 }
 
@@ -59,10 +57,10 @@
 \newcommand{\refchapterof}[1]{
 	\zref@def@extract{\polytech@ref@chapter}{#1}{chapter}%
 	\zref@def@extract{\polytech@ref@isappendix}{#1}{isappendix}%
-	\ifcsdef{r@#1}{
+	\ifcsdef{r@#1}{%
 		\ifcsempty{polytech@ref@chapter}%
 	  {% no number defined
-	  	\textbf{\string\refchapterof of #1 undefined}
+	  	\textbf{\string\refchapterof of #1 undefined}%
 	  }%
 	  {%
 	    \ifcsempty{polytech@ref@isappendix}%
@@ -74,13 +72,13 @@
 	    }%
 	    \xspace%
 	  }%
-	}{
-		\protect\G@refundefinedtrue
+	}{%
+		\protect\G@refundefinedtrue%
     \nfss@text{\reset@font\bfseries ??}%
     \@latex@warning{%
       Reference `#1' on page \thepage\space undefined%
-    }
-	}
+    }%
+	}%
 }
 
 % redefine label to store additional data with zref
@@ -118,9 +116,9 @@
 
 \def\polytech@ref@type#1.#2\\{#1}
 
-\DeclareRobustCommand{\polytech@ref@newref}{
-	\leavevmode
-	\polytech@ref@newrefx
+\DeclareRobustCommand{\polytech@ref@newref}{%
+	\leavevmode%
+	\polytech@ref@newrefx%
 }
 
 \def\polytech@ref@newrefx#1{%
@@ -137,7 +135,7 @@
 	      \expandafter\@fourthoffive#1\@empty\@empty\@empty%
 	  }%
 	  \edef\polytech@ref@thistype{\expandafter\polytech@ref@type \polytech@ref@thisref\\}%
-	  \Hy@safe@activesfalse
+	  \Hy@safe@activesfalse%
 		\ifcsdef{polytech@ref@nochapter@\polytech@ref@thistype}{}{\polytech@ref@refchapter{#2}}%
   \fi%
 }
@@ -155,7 +153,7 @@
 	      \expandafter\@fourthoffive#1\@empty\@empty\@empty%
 	  }%
 	  \edef\polytech@ref@thistype{\expandafter\polytech@ref@type \polytech@ref@thisref\\}%
-	  \Hy@safe@activesfalse
+	  \Hy@safe@activesfalse%
 		\ifcsdef{polytech@ref@isequation@\polytech@ref@thistype}{%
 			\textup{\tagform@{\polytech@oldref{#2}}}\polytech@ref@refchapter{#2}%
 		}{%
@@ -174,8 +172,6 @@
 	\let\polytech@oldlabel\label
 	\let\polytech@oldlabel@in@display\label@in@display
 
-
-
 	% replace Tableau by Table in caption, correct case
 	\def\tableautorefname{Table}
 	\def\sectionautorefname{Section}
@@ -192,7 +188,6 @@
 	\appto\partautorefname{\global\booltrue{polytech@ref@nochapter}}
 	\appto\chapterautorefname{\global\booltrue{polytech@ref@nochapter}}
 	\appto\appendixautorefname{\global\booltrue{polytech@ref@nochapter}}
-
 
 	% replace standard \ref command
 	\renewcommand{\ref}[1]{\polytech@ref@newref{#1}}

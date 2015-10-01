@@ -1,10 +1,6 @@
-\def\fileversion{1.0}
-\def\filedate{2015/09/01}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{polytech/floats}[\filedate\space\fileversion\space Polytech document class sub package]
-\typeout{Package `polytech floats' \fileversion\space<\filedate>}
-
-\csdef{polytech@floats@position}{htb}
+\ProvidesPackage{polytech/floats}[\polytechfiledate\space\polytechfileversion\space Polytech document class sub package]
+\typeout{Package `polytech floats' \polytechfileversion\space<\polytechfiledate>}
 
 % définit le format des légendes
 \DeclareCaptionLabelFormat{polytech}{#1~#2}
@@ -48,9 +44,10 @@
 
 % label, caption
 \NewEnviron{Figure}[2]{%
- 	\polytech@floats@oldfigure{\csuse{polytech@floats@position}}{%
-		\centering%
+ 	\polytech@floats@oldfigure{htb}{%
+		\begin{center}%
 		\BODY%
+		\end{center}%
 		\caption{#2}%
 		\label{#1}%
 	}%
@@ -59,11 +56,12 @@
 
 % label, caption
 \NewEnviron{Table}[2]{
- 	\polytech@floats@oldtable{\csuse{polytech@floats@position}}{
+ 	\polytech@floats@oldtable{htb}{
  	  \caption{#2}%
     \label{#1}% must be after caption
-		\centering%
-		\BODY
+		\begin{center}%
+		\BODY%
+		\end{center}%
 	}%
 }
 

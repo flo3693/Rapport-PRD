@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polytech/copyright}[\polytechfiledate\space\polytechfileversion\space Polytech document class sub package]
+\typeout{Package `polytech copyright' \polytechfileversion\space<\polytechfiledate>}
+
+%###
+
+\csdef{polytech@copyrightnotice@name@fr}{Avertissement}
+\csdef{polytech@copyrightnotice@name@en}{Notice}
+
+\csdef{polytech@output@copyrightnotice}{
+\cleardoublepage
+\thispagestyle{empty}%
+\pdfbookmark[0]{Copyright}{copyright}
+\begin{center}
+	\polytech@chapter@titlefont
+	\csuse{polytech@copyrightnotice@name@\csuse{polytech@lang}}
+	\vspace{1cm}
+\end{center}
+
+
+
+\vfill
+\begin{center}
+	\small
+	Document mis en forme sous \LaTeX\par
+	gr\^ace \`a la classe de document \texttt{polytech.cls} V\polytechfileversion\xspace(\polytechfiledate)
+\end{center}
+\cleardoublepage
+}
+%###

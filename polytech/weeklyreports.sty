@@ -1,8 +1,6 @@
-\def\fileversion{1.0}
-\def\filedate{2015/09/01}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{polytech/weeklyreports}[\filedate\space\fileversion\space Polytech document class sub package]
-\typeout{Package `polytech weeklyreports' \fileversion\space<\filedate>}
+\ProvidesPackage{polytech/weeklyreports}[\polytechfiledate\space\polytechfileversion\space Polytech document class sub package]
+\typeout{Package `polytech weeklyreports' \polytechfileversion\space<\polytechfiledate>}
 
 
 
@@ -40,7 +38,9 @@
 	}
 
 	\csdef{polytech@output@weeklyreportspart}{
-		\part*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
+		\bookmarksetupnext{level=part}
+		\chapter*{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
+		\pdfbookmark[0]{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}{weeklyreports}
 		\@mkboth{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}{\csuse{polytech@weeklyreports@title@\csuse{polytech@lang}}}
 		\vspace{2cm}
 		\csuse{polytech@output@weeklyreports}
