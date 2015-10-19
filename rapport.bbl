@@ -1,0 +1,435 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{nyt}{nyt}
+    \entry{article}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dd086e74be93272cf08edc6ba7a82653}{Adams}{A\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{dd086e74be93272cf08edc6ba7a82653}
+      \strng{fullhash}{dd086e74be93272cf08edc6ba7a82653}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The name of the journal}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{number}{2}
+      \field{title}{The title of the work}
+      \field{volume}{4}
+      \field{year}{1993}
+      \field{pages}{201\bibrangedash 213}
+      \range{pages}{13}
+    \endentry
+    \entry{key2}{inbook}{}
+      \name{author}{4}{}{%
+        {{hash=caa0841a2248b6c3c61cfe2e92644799}{Aupetit}{A\bibinitperiod}{Sébastien}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=6d0b298b876930c54b49e5fa656eeb33}{Monmarché}{M\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=d95303b1bab517bd8409a5613f141cef}{Liardet}{L\bibinitperiod}{Pierre}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=cfefcf45e4beb66ee688f289e24ef496}{Slimane}{S\bibinitperiod}{Mohamed}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=18f40c8fab1c01a9d97d55eadead4445}{Hassanien}{H\bibinitperiod}{Aboul-Ella}{A\bibinithyphendelim E\bibinitperiod}{}{}{}{}}%
+        {{hash=504ef9be34aef151081b41093b347caa}{Abraham}{A\bibinitperiod}{Ajith}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=3e30a52b1c43490025eb62fecbe8007a}{Vasilakos}{V\bibinitperiod}{AthanasiosV.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=39780bf561ecea3f3fd53ead57031446}{Pedrycz}{P\bibinitperiod}{Witold}{W\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{53c77d5b8904873d218ac62333b16387}
+      \strng{fullhash}{53c77d5b8904873d218ac62333b16387}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{blah blah}
+      \field{booktitle}{Foundations of Computational, Intelligence Volume 1}
+      \field{isbn}{978-3-642-01081-1, 978-3-642-01082-8}
+      \field{series}{Studies in Computational Intelligence}
+      \field{title}{Dissimilarity Analysis and Application to Visual Comparisons of Hidden Markov Models}
+      \field{volume}{201}
+      \field{year}{2009}
+      \field{pages}{333\bibrangedash 361}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1007/978-3-642-01082-8_13
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/978-3-642-01082-8_13
+      \endverb
+    \endentry
+    \entry{key1}{inbook}{}
+      \name{author}{3}{}{%
+        {{hash=caa0841a2248b6c3c61cfe2e92644799}{Aupetit}{A\bibinitperiod}{Sébastien}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=6d0b298b876930c54b49e5fa656eeb33}{Monmarché}{M\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=cfefcf45e4beb66ee688f289e24ef496}{Slimane}{S\bibinitperiod}{Mohamed}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=02eab16c948bd154b50cf2ee54e2f9cf}{Siarry}{S\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=4a8cba6efa3afc65630aa05f0cbd9b66}{Michalewicz}{M\bibinitperiod}{Zbigniew}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{organization}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{0f7a660bcb3c6d55a9206d9da3e90664}
+      \strng{fullhash}{0f7a660bcb3c6d55a9206d9da3e90664}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Metaheuristics for Hard Optimization}
+      \field{isbn}{978-3-540-72959-4}
+      \field{series}{Natural Computing Series}
+      \field{title}{Hidden Markov Models Training Using Population-based Metaheuristics}
+      \field{year}{2008}
+      \field{pages}{415\bibrangedash 438}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/978-3-540-72960-0_20
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/978-3-540-72960-0_20
+      \endverb
+    \endentry
+    \entry{book}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c903f1435ec07d8f88559a7b190d066f}{Babington}{B\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address}%
+      }
+      \list{publisher}{1}{%
+        {The name of the publisher}%
+      }
+      \strng{namehash}{c903f1435ec07d8f88559a7b190d066f}
+      \strng{fullhash}{c903f1435ec07d8f88559a7b190d066f}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{3257227892}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{series}{10}
+      \field{title}{The title of the work}
+      \field{volume}{4}
+      \field{year}{1993}
+    \endentry
+    \entry{booklet}{booklet}{}
+      \name{author}{1}{}{%
+        {{hash=5db854700cfbfbf21bd9302a8a128bc4}{Caxton}{C\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \strng{namehash}{5db854700cfbfbf21bd9302a8a128bc4}
+      \strng{fullhash}{5db854700cfbfbf21bd9302a8a128bc4}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{How it was published}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{title}{The title of the work}
+      \field{year}{1993}
+    \endentry
+    \entry{online2}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeltitlesource}{title}
+      \field{title}{CTAN}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb https://www.ctan.org/
+      \endverb
+    \endentry
+    \entry{conference}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=be0619a2ce36e910a659c155965280f1}{Draper}{D\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=30887b93fb89eba22f6ed9b4ed9f8fa0}{editor}{e\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \list{organization}{1}{%
+        {The organization}%
+      }
+      \list{publisher}{1}{%
+        {The publisher}%
+      }
+      \strng{namehash}{be0619a2ce36e910a659c155965280f1}
+      \strng{fullhash}{be0619a2ce36e910a659c155965280f1}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The title of the book}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{series}{5}
+      \field{title}{The title of the work}
+      \field{volume}{4}
+      \field{year}{1993}
+      \field{pages}{213}
+      \range{pages}{1}
+    \endentry
+    \entry{inbook}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=de1e95b2c0f3bb0e4d8610d36401fecd}{Eston}{E\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \list{publisher}{1}{%
+        {The name of the publisher}%
+      }
+      \strng{namehash}{de1e95b2c0f3bb0e4d8610d36401fecd}
+      \strng{fullhash}{de1e95b2c0f3bb0e4d8610d36401fecd}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{8}
+      \field{edition}{3}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{series}{5}
+      \field{title}{The title of the work}
+      \field{volume}{4}
+      \field{year}{1993}
+      \field{pages}{201\bibrangedash 213}
+      \range{pages}{13}
+    \endentry
+    \entry{incollection}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=f0d590104139f103ade7f0e381c16374}{Farindon}{F\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=30887b93fb89eba22f6ed9b4ed9f8fa0}{editor}{e\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \list{publisher}{1}{%
+        {The name of the publisher}%
+      }
+      \strng{namehash}{f0d590104139f103ade7f0e381c16374}
+      \strng{fullhash}{f0d590104139f103ade7f0e381c16374}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The title of the book}
+      \field{chapter}{8}
+      \field{edition}{3}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{series}{5}
+      \field{title}{The title of the work}
+      \field{volume}{4}
+      \field{year}{1993}
+      \field{pages}{201\bibrangedash 213}
+      \range{pages}{13}
+    \endentry
+    \entry{manual}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=e9b5e182bfaf4cee0f27ef67d2ce9817}{Gainsford}{G\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \list{organization}{1}{%
+        {The organization}%
+      }
+      \strng{namehash}{e9b5e182bfaf4cee0f27ef67d2ce9817}
+      \strng{fullhash}{e9b5e182bfaf4cee0f27ef67d2ce9817}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{title}{The title of the work}
+      \field{year}{1993}
+    \endentry
+    \entry{online1}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Search Engine}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://google.fr
+      \endverb
+    \endentry
+    \entry{mastersthesis}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=cdc7717c68b6161cee2995950006a077}{Harwood}{H\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {The school where the thesis was written}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \strng{namehash}{cdc7717c68b6161cee2995950006a077}
+      \strng{fullhash}{cdc7717c68b6161cee2995950006a077}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{title}{The title of the work}
+      \field{type}{mathesis}
+      \field{year}{1993}
+    \endentry
+    \entry{misc}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0df71d4c388c98e86ca575893d2dc84b}{Isley}{I\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0df71d4c388c98e86ca575893d2dc84b}
+      \strng{fullhash}{0df71d4c388c98e86ca575893d2dc84b}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{How it was published}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{title}{The title of the work}
+      \field{year}{1993}
+    \endentry
+    \entry{phdthesis}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=da64d86449dd718132faabded1403d9a}{Joslin}{J\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {The school where the thesis was written}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \strng{namehash}{da64d86449dd718132faabded1403d9a}
+      \strng{fullhash}{da64d86449dd718132faabded1403d9a}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{title}{The title of the work}
+      \field{type}{phdthesis}
+      \field{year}{1993}
+    \endentry
+    \entry{proceedings}{proceedings}{}
+      \name{editor}{1}{}{%
+        {{hash=18c29b9ace78576f9bb6ac4e067d4232}{Kidwelly}{K\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \list{organization}{1}{%
+        {The organization}%
+      }
+      \list{publisher}{1}{%
+        {The name of the publisher}%
+      }
+      \strng{namehash}{18c29b9ace78576f9bb6ac4e067d4232}
+      \strng{fullhash}{18c29b9ace78576f9bb6ac4e067d4232}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{series}{5}
+      \field{title}{The title of the work}
+      \field{volume}{4}
+      \field{year}{1993}
+    \endentry
+    \entry{techreport}{report}{}
+      \name{author}{1}{}{%
+        {{hash=a1903e7feca009723d9d4539e706ace0}{Lambert}{L\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {The institution that published}%
+      }
+      \list{location}{1}{%
+        {The address of the publisher}%
+      }
+      \strng{namehash}{a1903e7feca009723d9d4539e706ace0}
+      \strng{fullhash}{a1903e7feca009723d9d4539e706ace0}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{number}{2}
+      \field{title}{The title of the work}
+      \field{type}{techreport}
+      \field{year}{1993}
+    \endentry
+    \entry{unpublished}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=eb89ebe5a95ee2ea9968469e5553fdfc}{Marcheford}{M\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{eb89ebe5a95ee2ea9968469e5553fdfc}
+      \strng{fullhash}{eb89ebe5a95ee2ea9968469e5553fdfc}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{An optional note}
+      \field{title}{The title of the work}
+      \field{year}{1993}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

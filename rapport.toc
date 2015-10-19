@@ -1,26 +1,51 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \select@language {french}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Introduction g\IeC {\'e}n\IeC {\'e}rale du rapport avec un titre un peu long}{1}{chapter*.4}
-\contentsline {section}{\numberline {1}Ma section}{1}{section.0.1}
-\contentsline {section}{\numberline {2}Une section n'est jamais seule, donc j'en ajoute au moins une autre et le titre peut \IeC {\^e}tre long si n\IeC {\'e}cessaire}{2}{section.0.2}
-\contentsline {section}{\numberline {3}Le dicton dit \FB@og {}Jamais deux sans trois\FB@fg {}, donc j'en ajoute au moins une autre et le titre peut \IeC {\^e}tre long si n\IeC {\'e}cessaire mais il ne faut pas abuser car \IeC {\c c}a devient moche et peu explicite sinon}{2}{section.0.3}
-\contentsline {part}{I\hspace {1em}Les premiers trucs dont je vais parler}{3}{part.1}
-\contentsline {chapter}{\numberline {1}Le tout premier truc}{4}{chapter.1}
-\contentsline {section}{\numberline {1}Pour ne pas se casser la t\IeC {\^e}te}{4}{section.1.1}
-\contentsline {part}{II\hspace {1em}essai}{6}{part.2}
-\contentsline {chapter}{\numberline {2}truc}{7}{chapter.2}
-\contentsline {section}{\numberline {1}Ma section}{9}{section.2.1}
-\contentsline {section}{\numberline {2}Ma section}{10}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Introduction et pr\IeC {\'e}sentation du projet}{1}{chapter*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{I\hspace {1em}Recherche}{2}{part.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Le tout premier truc}{3}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Pour ne pas se casser la t\IeC {\^e}te}{3}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{II\hspace {1em}essai}{5}{part.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}truc}{6}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Ma section}{8}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Ma section}{9}{section.2.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Ma section}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2}Ma section}{11}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Ma section}{12}{subsubsection.2.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Ma section}{10}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1}Ma section}{11}{subsubsection.2.2.2.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.2}Ma section}{12}{subsubsection.2.2.2.2}
-\contentsline {paragraph}{Ma section}{13}{paragraph*.8}
-\contentsline {paragraph}{Ma section}{14}{paragraph*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ma section}{12}{paragraph*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ma section}{13}{paragraph*.9}
+\defcounter {refsection}{0}\relax 
 \contentsline {subparagraph}{Ma section}{14}{subparagraph*.10}
-\contentsline {subparagraph}{Ma section}{15}{subparagraph*.11}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{17}{chapter*.12}
-\contentsline {part}{Annexes}{18}{part*.13}
-\contentsline {chapter}{\numberline {A}Ma premi\IeC {\`e}re annexe}{19}{appendix.A}
-\contentsline {chapter}{\numberline {B}Ma deuxi\IeC {\`e}me annexe}{20}{appendix.B}
-\contentsline {part}{Comptes rendus hebdomadaires}{21}{part*.14}
-\contentsfinish 
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Ma section}{14}{subparagraph*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{16}{chapter*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{17}{part*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Ma premi\IeC {\`e}re annexe}{18}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Ma deuxi\IeC {\`e}me annexe}{19}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\select@language {french}
+\defcounter {refsection}{0}\relax 
+\select@language {french}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {french}

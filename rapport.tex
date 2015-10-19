@@ -15,11 +15,11 @@
 \reportyear{2015-2016}
 
 % on donne un titre au travail (sans dépasser 2 lignes à l'affichage)
-\title{Exemple d'utilisation de la classe de document polytech}
+\title{Application d'aide à l'interaction homme/machine pour les personnes handicapées}
 % on peut donner un sous titre (sans dépasser 2 lignes à l'affichage) mais ce n'est pas nécessaire
-\subtitle{Il peut y avoir un sous titre mais ce n'est pas obligatoire}
+%\subtitle{Il peut y avoir un sous titre mais ce n'est pas obligatoire}
 % on peut donner un logo illustrant le projet (hauteur d'affichage 4cm) mais ce n'est pas nécessaire
-\reportlogo{polytech/modeemploi}
+%\reportlogo{polytech/modeemploi}
 
 % on indique les contributeurs à ce rapport
 
@@ -31,7 +31,7 @@
 % \academicsupervisor{Prénom}{Nom}{mail}
 % \academicsupervisor[Affiliation]{Prénom}{Nom}{mail}
 \academicsupervisor[Département infomatique]{Mohamed}{Slimane}{mohamed.slimane@univ-tours.fr}
-\academicsupervisor{Donatello}{Conte}{donetello.conte@univ-tours.fr}
+\academicsupervisor[Département infomatique]{Donatello}{Conte}{donetello.conte@univ-tours.fr}
 % Le(s) tuteur(s) entreprise aux formats suivants :
 % \companysupervisor{Prénom}{Nom}{Mail}
 % \companysupervisor[Fonction]{Prénom}{Nom}{Mail}
@@ -69,6 +69,7 @@ Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapi
 
 
 
+\bibliography{biblio}
 % le document commence ici
 \begin{document}
 
@@ -79,27 +80,25 @@ Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapi
 % Le chapitre d'introduction générale n'est souvent pas numéroté
 % La commande \unnumberedchapter fonctionne de façon identique à \chapter mais produit un chapitre non numéroté présent dans la table des matières (à la différence de \chapter*)
 % Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
-\unnumberedchapter[Titre court pour l'entête]{Introduction générale du rapport avec un titre un peu long}
+\unnumberedchapter[Introduction]{Introduction et présentation du projet}
 
-\lipsum[1] % on ajoute du texte automatique
+Monsieur Slimane étant membre d'une association s'occupant de personnes handicapées, il souhaitait pouvoir aider et faciliter la vie de ces derniers via un projet réalisé au sein de l'école.\\
+Dans ce projet de recherche et développement, mon but est de construire un système permettant, à partir d'un flux vidéo, de détecter l'émotion actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.\\
+\\
+Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir toutes les recherches que j'ai pu réalisées ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
+\\
+Dans la partie Recherche de ce rapport, je vais tout d'abord vous présenter les deux façons majeures permettant de définir les mouvements du visages qui composent une émotion.\\
+Je vous présenterai ensuite les différentes techniques permettant de capturer un visage, que ce soit en 2D ou en 3D, ainsi que les avantages et inconvénient de chacune de ces techniques.\\
+Je continuerai ensuite en présentant les différentes étapes nécessaires à la construction d'un système de reconnaissance faciale d'émotions performant et efficace. Je décrirai également l'état de l'art de chacune de ces étapes.\\
+Je ferai ensuite une présentation des bases de données publiques les plus connues utilisées pour la reconnaissance d'émotions.\\
+Je finirai ensuite par définir concrètement de quoi se compose chaque partie de l'application que j'ai développé, ainsi que les choix qui ont permit cette définition.\\
+\\
+Dans la partie Développement, ....
 
-% un chapitre non numéroté peut avoir des sections, sous sections... mais c'est rare
-\section{Ma section}
-
-\lipsum[1-3]
-
-\section{Une section n'est jamais seule, donc j'en ajoute au moins une autre et le titre peut être long si nécessaire}
-
-\lipsum[1-3]
-
-
-\section{Le dicton dit \og{}Jamais deux sans trois\fg{}, donc j'en ajoute au moins une autre et le titre peut être long si nécessaire mais il ne faut pas abuser car ça devient moche et peu explicite sinon}
-
-\lipsum[1-3]
 
 % Je peux diviser le rapport en partie
-\part{Les premiers trucs dont je vais parler}
-\label{part:premierstrucs}
+\part{Recherche}
+\label{part:part_recherche}
 
 \chapter{Le tout premier truc}
 \label{chap:toutpremier}
@@ -173,41 +172,44 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 
 \lipsum[1-4]
 
-\weeklyreport{XX/XX/XXXX}{
-	\lipsum[1-2]
+\weeklyreport{17/09/2015}{
+	Découverte de 2 grandes méthodes de description des mouvements du visage existent : le FACS (Facial Action Coding System) mis en place par P. Ekman et w. Friesen en 1978 et le FAPU (Facial Animation Parameter Units) introduit par la norme de codage vidéo MPEG-4.\\
+	Recherche sur les types d'acquisitions d'images en 2D ou en 3D avec le matériel nécessaires à chaque fois ainsi que les algorithmes disponibles.
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{24/09/2015}{
+	Recherche sur comment se décompose un bon système de reconnaissance facial d'émotions.\\
+	Décomposition en 4 parties (récupération du visage, normalisation, extraction des points clés, classification) et recherche plus poussée sur les 2 premières parties.
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{01/10/2015}{
+	Continuation des recherches sur les 2 dernières parties du système.\\
+	Recherche également sur les différentes bases de données 2D publics disponibles à l'utilisation.
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{08/10/2015}{
+	Recherche plus approfondies sur les filtres de Gabor. Présentation de mes recherches à Messieurs Conte et Slimane.\\
+	Commencement de l'écriture du rapport.
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{15/10/2015}{
+
 }
-\weeklyreport{XX/XX/XXXX}{
-	\lipsum[1-2]
+\weeklyreport{22/10/2015}{
+	
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{05/11/2015}{
+	
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{12/11/2015}{
+	
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{19/11/2015}{
+	
 }
-\weeklyreport{XX/XX/YYYY}{
-	\lipsum[3]
+\weeklyreport{26/11/2015}{
+	
 }
 
 % petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
 \nocite{*}
 
-\bibliography{biblio}
 
 \makelastpages
 
