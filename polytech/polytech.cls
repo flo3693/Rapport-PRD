@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \def\polytechfileversion{1.0}
-\def\polytechfiledate{2015/10/01}
+\def\polytechfiledate{2015/11/18}
 \ProvidesClass{polytech/polytech}[\polytechfiledate\space Polytech document class by Sebastien Aupetit <aupetit@univ-tours.fr>, V\polytechfileversion]
 
 %###
@@ -62,6 +62,16 @@
 \newbool{polytech@firstlastonly}
 \DeclareOption{firstlastonly}{\booltrue{polytech@firstlastonly}}
 
+\newbool{polytech@poster}
+\DeclareOption{poster}{\booltrue{polytech@poster}}
+
+\newbool{polytech@onlyposter}
+\DeclareOption{onlyposter}{\booltrue{polytech@onlyposter}\booltrue{polytech@poster}}
+
+\newbool{polytech@aiiiposter}
+\DeclareOption{a3poster}{\booltrue{polytech@aiiiposter}\booltrue{polytech@onlyposter}\booltrue{polytech@poster}}
+
+
 \DeclareOption*{\PackageWarning{polytech}{Unknown option `\CurrentOption'}}
 
 \ProcessOptions\relax
@@ -89,12 +99,14 @@
 \ifbool{polytech@english}{
     \PassOptionsToPackage{french,main=english}{babel} % english document
     \RequirePackage{babel}
+    \PassOptionsToPackage{english}{algorithm2e}
 }{
     \PassOptionsToPackage{english,main=french}{babel}  % french document
     \RequirePackage{babel}
     \frenchbsetup{StandardEnumerateEnv=true}
     \frenchspacing
     \PassOptionsToPackage{frenchstyle}{kpfonts}
+    \PassOptionsToPackage{french}{algorithm2e}
 }
 
 \ifbool{polytech@openany}{\PassOptionsToClass{openany}{book}}{}
@@ -108,8 +120,13 @@
 \PassOptionsToClass{final,11pt}{book}
 \LoadClass{book}
 
-\setlength\paperheight{29.7cm}%
-\setlength\paperwidth{21cm}%
+\ifbool{polytech@aiiiposter}{%
+	\setlength\paperheight{42cm}%
+	\setlength\paperwidth{29.7cm}%
+}{%
+	\setlength\paperheight{29.7cm}%
+	\setlength\paperwidth{21cm}%
+}
 
 \RequirePackage[
         papersize={\paperwidth,\paperheight},
@@ -123,6 +140,21 @@
         footskip=30pt,
         vmargin=1.5cm,
         hmargin=2.5cm]{geometry}
+
+\csdef{polytech@output@setupfirstlastpagegeometry}{%
+	\newgeometry{%
+    twoside,
+    bindingoffset=0cm,
+    heightrounded,
+    includeall,
+    nomarginpar,
+    headheight=0pt,
+    headsep=0pt,
+    footskip=0pt,
+    vmargin=1.5cm,
+    hmargin=2.5cm
+  }%
+}
 
 % enable overbox display as black box. must be after class loading
 \ifbool{polytech@overfullbox}{
@@ -145,6 +177,7 @@
 	minnames=10,
 	autocite=plain,
 	defernumbers,
+	bibencoding=utf8
 	]{biblatex}
 
 
@@ -154,6 +187,7 @@
 }{}
 
 \RequirePackage[nofligatures,nointlimits,sumlimits]{kpfonts} % switch to richer and more scallable fonts
+\RequirePackage[final,babel]{microtype}
 
 \RequirePackage[rigidchapters,explicit,toctitles,clearempty]{titlesec}
 
@@ -167,9 +201,6 @@
 \RequirePackage{marvosym}
 \RequirePackage{stmaryrd}
 \RequirePackage[final]{listings}[2015/06/04]
-
-%\lst@RequireAspects{writefile}
-
 \RequirePackage{fancybox}
 \RequirePackage{tabu}
 \RequirePackage{lscape}
@@ -180,13 +211,13 @@
 \RequirePackage{framed}
 \RequirePackage{fancyvrb}
 \RequirePackage{makerobust}
-\RequirePackage{algorithm2e}
+\RequirePackage[lined,boxed]{algorithm2e}
 \RequirePackage[figure,table,lstlisting]{totalcount}
 
 \RequirePackage{eurosym} % symbol euro
 \RequirePackage[user]{zref} % allow for better \ref and  \label
 \RequirePackage{environ}
-
+\RequirePackage[calc]{adjustbox} % box sizing utilities
 
 \usetikzlibrary{decorations.pathmorphing,calc,patterns,positioning,fit}
 
@@ -223,6 +254,7 @@
 % colors
 \definecolor{polytechdarkblue}{RGB}{0,74,117}
 \definecolor{polytechlightblue}{RGB}{0,156,221}
+\definecolor{polytechorange}{RGB}{221,56,0}
 
 % sub packages
 \RequirePackage{polytech/firstlastpage}
@@ -233,7 +265,7 @@
 \RequirePackage{polytech/weeklyreports}
 \RequirePackage{polytech/listings}
 \RequirePackage{polytech/references}
-
+\RequirePackage{polytech/poster}
 
 \setlength{\parskip}{1ex plus 0.5ex minus 0.5ex}
 \setlength{\topsep}{1pt plus 1pt minus 1pt}
@@ -259,6 +291,8 @@
 }
 
 \renewcommand{\arraystretch}{1.2}
+\extrarowsep=1mm
+\tabulinesep=1mm
 
 % tableofcontents need patching
 \patchcmd{\tableofcontents}

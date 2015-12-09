@@ -19,415 +19,280 @@
 
 \refsection{0}
   \sortlist{nyt}{nyt}
-    \entry{article}{article}{}
+    \entry{affectiva}{online}{}
       \name{author}{1}{}{%
-        {{hash=dd086e74be93272cf08edc6ba7a82653}{Adams}{A\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=7356a17e458c4668a0ed2ee2c24f1255}{Affectiva}{A\bibinitperiod}{}{}{}{}{}{}}%
       }
-      \strng{namehash}{dd086e74be93272cf08edc6ba7a82653}
-      \strng{fullhash}{dd086e74be93272cf08edc6ba7a82653}
+      \strng{namehash}{7356a17e458c4668a0ed2ee2c24f1255}
+      \strng{fullhash}{7356a17e458c4668a0ed2ee2c24f1255}
       \field{sortinit}{A}
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{The name of the journal}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{number}{2}
-      \field{title}{The title of the work}
-      \field{volume}{4}
-      \field{year}{1993}
-      \field{pages}{201\bibrangedash 213}
-      \range{pages}{13}
-    \endentry
-    \entry{key2}{inbook}{}
-      \name{author}{4}{}{%
-        {{hash=caa0841a2248b6c3c61cfe2e92644799}{Aupetit}{A\bibinitperiod}{Sébastien}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=6d0b298b876930c54b49e5fa656eeb33}{Monmarché}{M\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=d95303b1bab517bd8409a5613f141cef}{Liardet}{L\bibinitperiod}{Pierre}{P\bibinitperiod}{}{}{}{}}%
-        {{hash=cfefcf45e4beb66ee688f289e24ef496}{Slimane}{S\bibinitperiod}{Mohamed}{M\bibinitperiod}{}{}{}{}}%
-      }
-      \name{editor}{4}{}{%
-        {{hash=18f40c8fab1c01a9d97d55eadead4445}{Hassanien}{H\bibinitperiod}{Aboul-Ella}{A\bibinithyphendelim E\bibinitperiod}{}{}{}{}}%
-        {{hash=504ef9be34aef151081b41093b347caa}{Abraham}{A\bibinitperiod}{Ajith}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=3e30a52b1c43490025eb62fecbe8007a}{Vasilakos}{V\bibinitperiod}{AthanasiosV.}{A\bibinitperiod}{}{}{}{}}%
-        {{hash=39780bf561ecea3f3fd53ead57031446}{Pedrycz}{P\bibinitperiod}{Witold}{W\bibinitperiod}{}{}{}{}}%
-      }
-      \list{organization}{1}{%
-        {Springer Berlin Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer Berlin Heidelberg}%
-      }
-      \strng{namehash}{53c77d5b8904873d218ac62333b16387}
-      \strng{fullhash}{53c77d5b8904873d218ac62333b16387}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{annotation}{blah blah}
-      \field{booktitle}{Foundations of Computational, Intelligence Volume 1}
-      \field{isbn}{978-3-642-01081-1, 978-3-642-01082-8}
-      \field{series}{Studies in Computational Intelligence}
-      \field{title}{Dissimilarity Analysis and Application to Visual Comparisons of Hidden Markov Models}
-      \field{volume}{201}
-      \field{year}{2009}
-      \field{pages}{333\bibrangedash 361}
-      \range{pages}{29}
-      \verb{doi}
-      \verb 10.1007/978-3-642-01082-8_13
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1007/978-3-642-01082-8_13
-      \endverb
-    \endentry
-    \entry{key1}{inbook}{}
-      \name{author}{3}{}{%
-        {{hash=caa0841a2248b6c3c61cfe2e92644799}{Aupetit}{A\bibinitperiod}{Sébastien}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=6d0b298b876930c54b49e5fa656eeb33}{Monmarché}{M\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=cfefcf45e4beb66ee688f289e24ef496}{Slimane}{S\bibinitperiod}{Mohamed}{M\bibinitperiod}{}{}{}{}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=02eab16c948bd154b50cf2ee54e2f9cf}{Siarry}{S\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
-        {{hash=4a8cba6efa3afc65630aa05f0cbd9b66}{Michalewicz}{M\bibinitperiod}{Zbigniew}{Z\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {Berlin, Heidelberg}%
-      }
-      \list{organization}{1}{%
-        {Springer Berlin Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer Berlin Heidelberg}%
-      }
-      \strng{namehash}{0f7a660bcb3c6d55a9206d9da3e90664}
-      \strng{fullhash}{0f7a660bcb3c6d55a9206d9da3e90664}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Advances in Metaheuristics for Hard Optimization}
-      \field{isbn}{978-3-540-72959-4}
-      \field{series}{Natural Computing Series}
-      \field{title}{Hidden Markov Models Training Using Population-based Metaheuristics}
-      \field{year}{2008}
-      \field{pages}{415\bibrangedash 438}
-      \range{pages}{24}
-      \verb{doi}
-      \verb 10.1007/978-3-540-72960-0_20
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1007/978-3-540-72960-0_20
-      \endverb
-    \endentry
-    \entry{book}{book}{}
-      \name{author}{1}{}{%
-        {{hash=c903f1435ec07d8f88559a7b190d066f}{Babington}{B\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {The address}%
-      }
-      \list{publisher}{1}{%
-        {The name of the publisher}%
-      }
-      \strng{namehash}{c903f1435ec07d8f88559a7b190d066f}
-      \strng{fullhash}{c903f1435ec07d8f88559a7b190d066f}
-      \field{sortinit}{B}
-      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{3}
-      \field{isbn}{3257227892}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{series}{10}
-      \field{title}{The title of the work}
-      \field{volume}{4}
-      \field{year}{1993}
-    \endentry
-    \entry{booklet}{booklet}{}
-      \name{author}{1}{}{%
-        {{hash=5db854700cfbfbf21bd9302a8a128bc4}{Caxton}{C\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \strng{namehash}{5db854700cfbfbf21bd9302a8a128bc4}
-      \strng{fullhash}{5db854700cfbfbf21bd9302a8a128bc4}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{How it was published}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{title}{The title of the work}
-      \field{year}{1993}
-    \endentry
-    \entry{online2}{online}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
-      \field{labeltitlesource}{title}
-      \field{title}{CTAN}
-      \field{urlday}{23}
-      \field{urlmonth}{10}
+      \field{title}{Demonstration de la reconnaissance d'emotion via la webcam par la societe Affectiva}
+      \field{urlday}{03}
+      \field{urlmonth}{12}
       \field{urlyear}{2015}
       \verb{url}
-      \verb https://www.ctan.org/
+      \verb https://labs.affectiva.com/superbowl/affdexweb.html
       \endverb
     \endentry
-    \entry{conference}{inproceedings}{}
+    \entry{d3dfacs}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c26c4f8bc69b593cb2e2fd7148043acf}{Cosker}{C\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=218a92262140d1128cfcbb5baab31e1a}{Krumhuber}{K\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=97ff5f230d6463d5f3211c7edaff0e27}{Hilton}{H\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f9cc4d65da6b814a5f9f9a8fdb1af9d6}
+      \strng{fullhash}{f9cc4d65da6b814a5f9f9a8fdb1af9d6}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE InternationalConference on Computer Vision (ICCV)}
+      \field{title}{A FACS valid 3D dynamic action unit database with applications to 3D dynamic morphable facial modeling}
+      \field{year}{2011}
+    \endentry
+    \entry{darwin}{book}{}
       \name{author}{1}{}{%
-        {{hash=be0619a2ce36e910a659c155965280f1}{Draper}{D\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=d0e4f38206db228a7b870a49f6f52db2}{Darwin}{D\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
       }
-      \name{editor}{1}{}{%
-        {{hash=30887b93fb89eba22f6ed9b4ed9f8fa0}{editor}{e\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \list{organization}{1}{%
-        {The organization}%
-      }
-      \list{publisher}{1}{%
-        {The publisher}%
-      }
-      \strng{namehash}{be0619a2ce36e910a659c155965280f1}
-      \strng{fullhash}{be0619a2ce36e910a659c155965280f1}
+      \strng{namehash}{d0e4f38206db228a7b870a49f6f52db2}
+      \strng{fullhash}{d0e4f38206db228a7b870a49f6f52db2}
       \field{sortinit}{D}
       \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{The title of the book}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{series}{5}
-      \field{title}{The title of the work}
-      \field{volume}{4}
-      \field{year}{1993}
-      \field{pages}{213}
-      \range{pages}{1}
+      \field{title}{L'Expression des émotions chez l'homme et les animaux}
+      \field{year}{1872}
     \endentry
-    \entry{inbook}{inbook}{}
+    \entry{ekman2}{article}{}
       \name{author}{1}{}{%
-        {{hash=de1e95b2c0f3bb0e4d8610d36401fecd}{Eston}{E\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=f57fd5f1b9feec71b7d8f0ce35b57dbc}{Ekman}{E\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
       }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \list{publisher}{1}{%
-        {The name of the publisher}%
-      }
-      \strng{namehash}{de1e95b2c0f3bb0e4d8610d36401fecd}
-      \strng{fullhash}{de1e95b2c0f3bb0e4d8610d36401fecd}
+      \strng{namehash}{f57fd5f1b9feec71b7d8f0ce35b57dbc}
+      \strng{fullhash}{f57fd5f1b9feec71b7d8f0ce35b57dbc}
       \field{sortinit}{E}
       \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{chapter}{8}
-      \field{edition}{3}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{series}{5}
-      \field{title}{The title of the work}
-      \field{volume}{4}
-      \field{year}{1993}
-      \field{pages}{201\bibrangedash 213}
-      \range{pages}{13}
+      \field{journaltitle}{Palo Alto : Consulting Psychologists Press}
+      \field{title}{Facial Action Coding System (FACS) : Manual}
+      \field{year}{1978}
     \endentry
-    \entry{incollection}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=f0d590104139f103ade7f0e381c16374}{Farindon}{F\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+    \entry{ekman}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f57fd5f1b9feec71b7d8f0ce35b57dbc}{Ekman}{E\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=3c349bf86804089756de85450f8edae2}{Friesen}{F\bibinitperiod}{Wallace\bibnamedelima V.}{W\bibinitperiod\bibinitdelim V\bibinitperiod}{}{}{}{}}%
       }
-      \name{editor}{1}{}{%
-        {{hash=30887b93fb89eba22f6ed9b4ed9f8fa0}{editor}{e\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \list{publisher}{1}{%
-        {The name of the publisher}%
-      }
-      \strng{namehash}{f0d590104139f103ade7f0e381c16374}
-      \strng{fullhash}{f0d590104139f103ade7f0e381c16374}
-      \field{sortinit}{F}
-      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \strng{namehash}{a70785dbf1b05e77c9bdb441e7ae760a}
+      \strng{fullhash}{a70785dbf1b05e77c9bdb441e7ae760a}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{The title of the book}
-      \field{chapter}{8}
-      \field{edition}{3}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{series}{5}
-      \field{title}{The title of the work}
-      \field{volume}{4}
-      \field{year}{1993}
-      \field{pages}{201\bibrangedash 213}
-      \range{pages}{13}
+      \field{journaltitle}{Journal of Personality and Social Psychology}
+      \field{title}{Constants across culture in the face and emotion.}
+      \field{year}{1971}
     \endentry
-    \entry{manual}{manual}{}
+    \entry{emotient}{online}{}
       \name{author}{1}{}{%
-        {{hash=e9b5e182bfaf4cee0f27ef67d2ce9817}{Gainsford}{G\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=811a3c65a8e5121664439b2ad1138200}{Emotient}{E\bibinitperiod}{}{}{}{}{}{}}%
       }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \list{organization}{1}{%
-        {The organization}%
-      }
-      \strng{namehash}{e9b5e182bfaf4cee0f27ef67d2ce9817}
-      \strng{fullhash}{e9b5e182bfaf4cee0f27ef67d2ce9817}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \strng{namehash}{811a3c65a8e5121664439b2ad1138200}
+      \strng{fullhash}{811a3c65a8e5121664439b2ad1138200}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{3}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{title}{The title of the work}
-      \field{year}{1993}
-    \endentry
-    \entry{online1}{online}{}
-      \name{author}{1}{}{%
-        {{hash=8b36e9207c24c76e6719268e49201d94}{Google}{G\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
-      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{sortinit}{G}
-      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Google Search Engine}
-      \field{urlday}{23}
-      \field{urlmonth}{10}
+      \field{title}{Demonstration de la reconnaissance d'emotion via la webcam par la societe Emotient}
+      \field{urlday}{03}
+      \field{urlmonth}{12}
       \field{urlyear}{2015}
       \verb{url}
-      \verb http://google.fr
+      \verb http://emotient.com/livecam-demo/
       \endverb
     \endentry
-    \entry{mastersthesis}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=cdc7717c68b6161cee2995950006a077}{Harwood}{H\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+    \entry{gavabdb}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f28088ac9132e4b0bccfbdd9d5af699d}{Moreno}{M\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=a8cc11ca158ad849d29e3bcec5c9bed0}{Sanchez}{S\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
       }
-      \list{institution}{1}{%
-        {The school where the thesis was written}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \strng{namehash}{cdc7717c68b6161cee2995950006a077}
-      \strng{fullhash}{cdc7717c68b6161cee2995950006a077}
-      \field{sortinit}{H}
-      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{title}{The title of the work}
-      \field{type}{mathesis}
-      \field{year}{1993}
-    \endentry
-    \entry{misc}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=0df71d4c388c98e86ca575893d2dc84b}{Isley}{I\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{0df71d4c388c98e86ca575893d2dc84b}
-      \strng{fullhash}{0df71d4c388c98e86ca575893d2dc84b}
-      \field{sortinit}{I}
-      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{How it was published}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{title}{The title of the work}
-      \field{year}{1993}
-    \endentry
-    \entry{phdthesis}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=da64d86449dd718132faabded1403d9a}{Joslin}{J\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \list{institution}{1}{%
-        {The school where the thesis was written}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \strng{namehash}{da64d86449dd718132faabded1403d9a}
-      \strng{fullhash}{da64d86449dd718132faabded1403d9a}
-      \field{sortinit}{J}
-      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{title}{The title of the work}
-      \field{type}{phdthesis}
-      \field{year}{1993}
-    \endentry
-    \entry{proceedings}{proceedings}{}
-      \name{editor}{1}{}{%
-        {{hash=18c29b9ace78576f9bb6ac4e067d4232}{Kidwelly}{K\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \list{organization}{1}{%
-        {The organization}%
-      }
-      \list{publisher}{1}{%
-        {The name of the publisher}%
-      }
-      \strng{namehash}{18c29b9ace78576f9bb6ac4e067d4232}
-      \strng{fullhash}{18c29b9ace78576f9bb6ac4e067d4232}
-      \field{sortinit}{K}
-      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
-      \field{labelnamesource}{editor}
-      \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{series}{5}
-      \field{title}{The title of the work}
-      \field{volume}{4}
-      \field{year}{1993}
-    \endentry
-    \entry{techreport}{report}{}
-      \name{author}{1}{}{%
-        {{hash=a1903e7feca009723d9d4539e706ace0}{Lambert}{L\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \list{institution}{1}{%
-        {The institution that published}%
-      }
-      \list{location}{1}{%
-        {The address of the publisher}%
-      }
-      \strng{namehash}{a1903e7feca009723d9d4539e706ace0}
-      \strng{fullhash}{a1903e7feca009723d9d4539e706ace0}
-      \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{number}{2}
-      \field{title}{The title of the work}
-      \field{type}{techreport}
-      \field{year}{1993}
-    \endentry
-    \entry{unpublished}{unpublished}{}
-      \name{author}{1}{}{%
-        {{hash=eb89ebe5a95ee2ea9968469e5553fdfc}{Marcheford}{M\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{eb89ebe5a95ee2ea9968469e5553fdfc}
-      \strng{fullhash}{eb89ebe5a95ee2ea9968469e5553fdfc}
+      \strng{namehash}{25986e852f68732b95b8d622a376f594}
+      \strng{fullhash}{25986e852f68732b95b8d622a376f594}
       \field{sortinit}{M}
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{note}{An optional note}
-      \field{title}{The title of the work}
-      \field{year}{1993}
+      \field{title}{Gavabdb: a 3D face database}
+      \field{year}{2004}
+    \endentry
+    \entry{instr_simu_gabor}{online}{}
+      \name{author}{1}{}{%
+        {{hash=291c7ceaccff96d5f4f3ead596643a3d}{N.Petkov}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=39ce2ccf73ad3ac677466c9f0a432d30}{Groningen}{G\bibinitperiod}{University}{U\bibinitperiod}{of}{o\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{291c7ceaccff96d5f4f3ead596643a3d}
+      \strng{fullhash}{291c7ceaccff96d5f4f3ead596643a3d}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Instructions pour le simulateur de filtres de Gabor}
+      \verb{url}
+      \verb http://matlabserver.cs.rug.nl/edgedetectionweb/web/edgedetection_params.html
+      \endverb
+    \endentry
+    \entry{simu_gabor}{online}{}
+      \name{author}{1}{}{%
+        {{hash=291c7ceaccff96d5f4f3ead596643a3d}{N.Petkov}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=39ce2ccf73ad3ac677466c9f0a432d30}{Groningen}{G\bibinitperiod}{University}{U\bibinitperiod}{of}{o\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{291c7ceaccff96d5f4f3ead596643a3d}
+      \strng{fullhash}{291c7ceaccff96d5f4f3ead596643a3d}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Simulateur de filtres de Gabor}
+      \verb{url}
+      \verb http://matlabserver.cs.rug.nl/edgedetectionweb/web/index.html
+      \endverb
+    \endentry
+    \entry{sota3d}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5242ecc7b56695d1c555c03371c63339}{Sandbach}{S\bibinitperiod}{Georgia}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=2ac8d8aacb76b57beadc21f996305b69}{Zafeiriou}{Z\bibinitperiod}{Stefanos}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=7d77a4a946b3870f08da2f8d89435f1e}{Yin}{Y\bibinitperiod}{Lijun}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7f4b8dcc16f31b685f2ec33f4dfc9a29}
+      \strng{fullhash}{7f4b8dcc16f31b685f2ec33f4dfc9a29}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IMAGE AND VISION COMPUTING}
+      \field{title}{Static and dynamic 3D facial expression recognition: A comprehensive survey}
+      \field{year}{2012}
+    \endentry
+    \entry{bosphorus_article}{article}{}
+      \name{author}{7}{}{%
+        {{hash=b8e46014a7b9001e8eafa53836313e0a}{Savran}{S\bibinitperiod}{Arman}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=1eda2c5f2c6ba8502016115fba9d38cc}{Alyuz}{A\bibinitperiod}{Nese}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=7ac4a7626997cbdf7a20aecf3cdf6b70}{Dibeklioglu}{D\bibinitperiod}{Hamdi}{H\bibinitperiod}{}{}{}{}}%
+        {{hash=8a45ff352299302b7e2c09deec788862}{Celiktutan}{C\bibinitperiod}{Oya}{O\bibinitperiod}{}{}{}{}}%
+        {{hash=4a9080e2f68984a8d5740d7db684d8ff}{Gokberk}{G\bibinitperiod}{Berk}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=2b60872b6557cdb90572d2f3614b4f9f}{Sankur}{S\bibinitperiod}{Bulent}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=49c47e554ffb4db260e0aa2ff42727c5}{Akarun}{A\bibinitperiod}{Lale}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bbdb7fd1f07268e2a9349ac9437421b6}
+      \strng{fullhash}{bbdb7fd1f07268e2a9349ac9437421b6}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{09}
+      \field{journaltitle}{The First COST 2101 Workshop on Biometrics and Identity Management}
+      \field{month}{05}
+      \field{title}{Bosphorus database for 3D face analysis}
+      \field{year}{2008}
+    \endentry
+    \entry{ict_3drfe}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4587e873eac96496837ae0746e073417}{Stratou}{S\bibinitperiod}{Giota}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=7bd46e3ea3424f00d54adc3848698657}{Ghosh}{G\bibinitperiod}{Abhijeet}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=4aae50ca585b8b048183a76ff6e98dd8}{Debevec}{D\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=2b23af9d24a98a5912d3b7c941b08ed7}{Morency}{M\bibinitperiod}{Louis-Philippe}{L\bibinithyphendelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{05d92f4f9a509cf7a38edefde3577fc3}
+      \strng{fullhash}{05d92f4f9a509cf7a38edefde3577fc3}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{9th International Conference on Automatic Face and Gesture Recognition}
+      \field{title}{Effect of Illumination on Automatic Expression Recognition: A Novel 3D Relightable Facial Database}
+      \field{year}{2011}
+    \endentry
+    \entry{urlfaps}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9ceb90a7a33df50431d33767991ee0c1}{Technologies}{T\bibinitperiod}{Visage}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9ceb90a7a33df50431d33767991ee0c1}
+      \strng{fullhash}{9ceb90a7a33df50431d33767991ee0c1}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MPEG-4 Face and Body Animation (MPEG-4 FBA) : An overview}
+      \field{urlday}{01}
+      \field{urlmonth}{11}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://www.visagetechnologies.com/uploads/2012/08/MPEG-4FBAOverview.pdf
+      \endverb
+    \endentry
+    \entry{italiens}{article}{}
+      \name{author}{4}{}{%
+        {{hash=8f43fa4b8c9156595183cfeaba2f4090}{Vitale}{V\bibinitperiod}{Jonathan}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=718412727362b14660ad3ff796a02a19}{Williams}{W\bibinitperiod}{Mary-Anne}{M\bibinithyphendelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=14cf93a9a2ccb8c8e3c56060d302aaa5}{Johnston}{J\bibinitperiod}{Benjamin}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=6ada31508b1bb96d1f781333b99d9862}{Boccignone}{B\bibinitperiod}{Giuseppe}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{cc4f9422e1646d8ce1ff3811d8c3490f}
+      \strng{fullhash}{cc4f9422e1646d8ce1ff3811d8c3490f}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biologically Inspired Cognitive Architectures}
+      \field{title}{Affective facial expression processing via simulation: A probabilistic model}
+      \field{year}{2014}
+    \endentry
+    \entry{bu4dfe_article}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7d77a4a946b3870f08da2f8d89435f1e}{Yin}{Y\bibinitperiod}{Lijun}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=aecbad176c60d359475bbcd0edc0f73b}{Chen}{C\bibinitperiod}{Xiaochen}{X\bibinitperiod}{}{}{}{}}%
+        {{hash=4ecf6f19fcc21ef32abbea3a7f2a885c}{Sun}{S\bibinitperiod}{Yi}{Y\bibinitperiod}{}{}{}{}}%
+        {{hash=3ffe4af4a37956b46eb640c651293b45}{Worm}{W\bibinitperiod}{Tony}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=1823ee1bed9303ad98b0baf53453825f}{Reale}{R\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4388535820c054165a0d8e862187179a}
+      \strng{fullhash}{4388535820c054165a0d8e862187179a}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{journaltitle}{The 8th International Conference on Automatic Face and Gesture Recognition}
+      \field{month}{09}
+      \field{title}{A High-Resolution 3D Dynamic Facial Expression Database}
+      \field{year}{2008}
+    \endentry
+    \entry{bu3dfe_article}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7d77a4a946b3870f08da2f8d89435f1e}{Yin}{Y\bibinitperiod}{Lijun}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=b59b9c1d6cd251221e4a355862595311}{Wei}{W\bibinitperiod}{Xiaozhou}{X\bibinitperiod}{}{}{}{}}%
+        {{hash=4ecf6f19fcc21ef32abbea3a7f2a885c}{Sun}{S\bibinitperiod}{Yi}{Y\bibinitperiod}{}{}{}{}}%
+        {{hash=2f3ea981fa5a715a69118b48e576a9f5}{Wang}{W\bibinitperiod}{Jun}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=7e168229cdd64c6788554682804369a9}{Rosato}{R\bibinitperiod}{Matthew\bibnamedelima J.}{M\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{880d9aa60c3dc1d72188ca3e5dc278b2}
+      \strng{fullhash}{880d9aa60c3dc1d72188ca3e5dc278b2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{journaltitle}{The 7th International Conference on Automatic Face and Gesture Recognition}
+      \field{month}{04}
+      \field{title}{A 3D Facial Expression Database For Facial Behavior Research}
+      \field{year}{2006}
     \endentry
   \endsortlist
 \endrefsection

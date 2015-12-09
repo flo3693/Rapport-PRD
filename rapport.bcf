@@ -2235,8 +2235,27 @@
     <bcf:datasource type="file" datatype="bibtex">biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">article</bcf:citekey>
+    <bcf:citekey order="1">darwin</bcf:citekey>
+    <bcf:citekey order="2">ekman</bcf:citekey>
+    <bcf:citekey order="3">ekman2</bcf:citekey>
+    <bcf:citekey order="4">urlfaps</bcf:citekey>
+    <bcf:citekey order="5">sota3d</bcf:citekey>
+    <bcf:citekey order="6">bu3dfe_article</bcf:citekey>
+    <bcf:citekey order="7">bu4dfe_article</bcf:citekey>
+    <bcf:citekey order="8">bosphorus_article</bcf:citekey>
+    <bcf:citekey order="9">sota3d</bcf:citekey>
+    <bcf:citekey order="10">bu3dfe_article</bcf:citekey>
+    <bcf:citekey order="11">bu4dfe_article</bcf:citekey>
+    <bcf:citekey order="12">bosphorus_article</bcf:citekey>
+    <bcf:citekey order="13">ict_3drfe</bcf:citekey>
+    <bcf:citekey order="14">d3dfacs</bcf:citekey>
+    <bcf:citekey order="15">gavabdb</bcf:citekey>
+    <bcf:citekey order="16">emotient</bcf:citekey>
+    <bcf:citekey order="17">affectiva</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
+    <bcf:citekey order="18">simu_gabor</bcf:citekey>
+    <bcf:citekey order="19">instr_simu_gabor</bcf:citekey>
+    <bcf:citekey order="20">italiens</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

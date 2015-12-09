@@ -47,18 +47,14 @@
 % On indique les mots clés avec \motcle{mot clé} en français et \keyword{keyword} en anglais
 % Le résumé significatif et descriptif du contenu du rapport en 5 à 10 lignes se spécifie par \resume{...} en français et \abstract{...} en anglais
 % Attention : tout doit tenir sur la dernière page
-\resume{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sit amet sapien sed sodales. Pellentesque faucibus lacus mauris, id semper odio viverra eu. Aliquam erat volutpat. Proin ultricies velit et tortor consequat cursus. Curabitur ac elit suscipit ligula iaculis auctor. Sed tristique nulla libero, non tempor nibh laoreet vel. Cras id congue diam. Vestibulum tellus felis, egestas non diam a, rhoncus eleifend metus. Aliquam ligula mauris, pharetra sit amet erat a, luctus rhoncus arcu. Vivamus ac metus mauris.
-
-Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapibus ante malesuada eget. Phasellus mauris augue, convallis eu nulla ac, ornare luctus augue. Praesent fringilla urna sed lacus viverra placerat. Nunc pulvinar facilisis ultrices. Nulla neque justo, suscipit sit amet dignissim at, facilisis eget metus. Curabitur venenatis, ante bibendum volutpat accumsan, eros diam faucibus neque, at mattis augue massa ut nisl. Integer enim leo, sodales at euismod vel, efficitur vel magna. Etiam congue, augue in aliquet rutrum, magna elit sodales metus, quis hendrerit purus urna hendrerit purus. Quisque euismod leo at felis efficitur, vel posuere tortor accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eget vestibulum augue.}
+\resume{Résumé}
 % chaque mot clé ou groupe de mots clés est défini via la commande \motcle en français
 \motcle{mot}
 \motcle{clé}
 \motcle{deux mots}
 
 % résumé en anglais
-\abstract{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus sit amet sapien sed sodales. Pellentesque faucibus lacus mauris, id semper odio viverra eu. Aliquam erat volutpat. Proin ultricies velit et tortor consequat cursus. Curabitur ac elit suscipit ligula iaculis auctor. Sed tristique nulla libero, non tempor nibh laoreet vel. Aliquam ligula mauris, pharetra sit amet erat a, luctus rhoncus arcu. Vivamus ac metus mauris.
-
-Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapibus ante malesuada eget. Phasellus mauris augue, convallis eu nulla ac, ornare luctus augue. Praesent fringilla urna sed lacus viverra placerat. Nunc pulvinar facilisis ultrices. Nulla neque justo, suscipit sit amet dignissim at, facilisis eget metus. Sed rhoncus in dolor a facilisis. Mauris in consectetur nisl. Curabitur venenatis, ante bibendum volutpat accumsan, eros diam faucibus neque, at mattis augue massa ut nisl. Integer enim leo, sodales at euismod vel, efficitur vel magna. Etiam congue, augue in aliquet rutrum, magna elit sodales metus, quis hendrerit purus urna hendrerit purus. Quisque euismod leo at felis efficitur, vel posuere tortor accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eget vestibulum augue.}
+\abstract{Abstract}
 
 % chaque mot clé ou groupe de mots clés est défini via la commande \motcle en anglais
 % Attention : il n'y a pas forcément une traduction directe entre les mots clés et les keywords
@@ -81,82 +77,295 @@ Nam mattis elit eget lectus rhoncus euismod. Etiam fermentum diam velit, ac dapi
 % La commande \unnumberedchapter fonctionne de façon identique à \chapter mais produit un chapitre non numéroté présent dans la table des matières (à la différence de \chapter*)
 % Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
 \unnumberedchapter[Introduction]{Introduction et présentation du projet}
-
+L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple cité \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
+C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec une machine que mon projet prend place.\\
+\\
 Monsieur Slimane étant membre d'une association s'occupant de personnes handicapées, il souhaitait pouvoir aider et faciliter la vie de ces derniers via un projet réalisé au sein de l'école.\\
-Dans ce projet de recherche et développement, mon but est de construire un système permettant, à partir d'un flux vidéo, de détecter l'émotion actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.\\
+Dans ce projet de recherche et développement, mon but est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression du visage actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.\\
 \\
-Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir toutes les recherches que j'ai pu réalisées ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
+Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir l'état de l'art en matière de reconnaissance faciale d'émotions ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
 \\
-Dans la partie Recherche de ce rapport, je vais tout d'abord vous présenter les deux façons majeures permettant de définir les mouvements du visages qui composent une émotion.\\
-Je vous présenterai ensuite les différentes techniques permettant de capturer un visage, que ce soit en 2D ou en 3D, ainsi que les avantages et inconvénient de chacune de ces techniques.\\
-Je continuerai ensuite en présentant les différentes étapes nécessaires à la construction d'un système de reconnaissance faciale d'émotions performant et efficace. Je décrirai également l'état de l'art de chacune de ces étapes.\\
-Je ferai ensuite une présentation des bases de données publiques les plus connues utilisées pour la reconnaissance d'émotions.\\
+Dans la partie Recherche de ce rapport, je vais tout d'abord vous présenter les sept émotions universelles ainsi que deux normes majeures permettant de définir les mouvements du visages qui composent une expression.\\
+Je vous présenterai ensuite les différentes techniques permettant de capturer un visage et de reconnaître une émotion, tout d'abord en 3D puis en 2D, ainsi que les avantages et inconvénients de chacune de ces techniques. Dans chacune de ces étapes, je présenterai l'état de l'art actuelle en terme de matériel, de méthodes et également de base de données disponibles. \\
+Je continuerai ensuite en présentant les différentes étapes nécessaires à la construction d'un système de reconnaissance faciale d'émotions performant et efficace.\\
 Je finirai ensuite par définir concrètement de quoi se compose chaque partie de l'application que j'ai développé, ainsi que les choix qui ont permit cette définition.\\
 \\
-Dans la partie Développement, ....
+Dans la partie Développement, [rédaction en deuxième partie de l'année]
 
 
 % Je peux diviser le rapport en partie
 \part{Recherche}
 \label{part:part_recherche}
 
-\chapter{Le tout premier truc}
-\label{chap:toutpremier}
+\chapter{Émotions universelles et mouvements du visage}
+\label{chap:chap1_1}
 
-\lipsum[1]
+Ce chapitre va me permettre d'introduire les notions nécessaires à la décomposition et donc à la reconnaissance d'une expression faciale et de son émotion associée.\\
+Pour un simple sourire, nous utilisons une vingtaine de muscles (les muscles zygomatiques), il ne peut donc pas être décrit par un seul mouvement du visage mais plusieurs. C'est exactement la même chose pour une expression, on ne la reconnaît que grâce à l'ensemble des mouvements faciaux qui la composent.\\
+C'est sur ce principe qu'on était crée les deux normes de description des mouvements du visage que je vais vous présenter: le FACS et MPEG-4.\\
+L'utilisation de l'une ou l'autre de ces normes permet de définir entièrement le spectre des mouvements rentrant en jeu dans n'importe quelle émotion.\\
+\\
+Mais tout d'abord, je vais vous introduire les sept émotions universelles qui seront utilisées tout au long de mon projet et donc de ce rapport.
 
-\section{Pour ne pas se casser la tête}
+\section{Les 7 émotions universelles}
+\label{sec:expr_uni}
 
-\label{sec:cassetete}
+A ce jour, il a été démontré qu'il existait 7 émotions qui partagent une expression universellement compréhensible.\\
+On considère qu'une émotion possède une expression universelle si tout individu est capable d'exprimer cette émotion et est également capable de la reconnaître et de l'interpréter chez autrui.\\
+Les sept émotions universelles sont donc les suivantes:
+\begin{itemize}
+	\item la neutralité
+	\item la joie
+	\item la tristesse
+	\item la colère
+	\item la peur
+	\item la surprise
+	\item le dégoût
+\end{itemize}
 
-Pour ne pas se casser la tête à rédiger mon rapport, je lis le mode d'emploi (cf. \ref{fig:modeemploi})
-Toute figure ou table doit avoir un titre et être référencée dans le texte (sinon ça ne sert à rien).
-Pour cela, vous devez utiliser deux environnements \texttt{Figure} et \texttt{Table}. Chacun de ces environments admet deux paramètres : le label et le titre de la figure/table. Le positionnement de la figure/table étant contrôlé par la classe de document, il est très important que ces figures/tables soient référencées dans le texte (ex: \autoref{fig:modeemploi}, \autoref{fig:modeemploi2}, \autoref{tab:deficits}).
+C'est Charles Darwin qui, en 1872 dans son livre \cite{darwin}, a introduit cette idée d'émotions universelles entre les hommes mais également entre différentes espèces. Il a observé que les hommes et les animaux partagent des émotions comprises par tous et qui sont nécessaires à leur survie.\\
+\\
+Mais ce n'est qu'en 1971 que le psychologue Paul Ekman, après un voyage en Papouasie-Nouvelle-Guinée, a confirmé les théories de Darwin. Dans son article \cite{ekman} écrit avec la participation de Wallace Fielsen, il définit les 7 émotions universelles citées plus haut.\\
 
-\begin{Figure}{fig:modeemploi}{Ma superbe image}
-\pgfimage{polytech/modeemploi}
+\section{Le FACS}
+\label{sec:facs}
+
+En 1978, Ekman et Fielsen publie \cite{ekman2} et apporte une nouvelle pierre à l'édifice en définissant un système de codification manuelle des expressions du visage: le \textbf{Facial Action Coding System} (FACS).\\
+Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage. La \autoref{ex_au} représente certaines de ces AUs.\\
+
+\begin{Figure}{ex_au}{Exemples d'AUs}
+ \pgfimage{images/AU.png}
 \end{Figure}
 
-\begin{Table}{tab:deficits}{Déficit public de la France : on est mal barré !}
-\begin{tabu}{cccccccc}
-	&2007	&2008	&2009	&2010	&2011	&2012	&2013\\\hline
-Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
-\% PIB	&64.4\%	&68.5\%	&79.5\%	&82.7\%	&86.2\%	&90.6\%	&93.5\%\\\hline
-\end{tabu}
+La composition de plusieurs AU permet donc de décrire une expression et donc de reconnaître une émotion. Par exemple, un sourire et donc l'émotion de la joie est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
+La tristesse quand à elle va être composée des AUs 1, 4 et 15 et la colère des AUs 4, 5, 7 et 23.\\
+N'importe quelle expression du visage peut donc être représentée par une combinaison d'AU, ce qui fait de FACS le système le plus utilisé par les psychologues ainsi que par les personnes travaillant sur la reconnaissance faciale d'émotions.\\
+\\
+Le système \textbf{FACS} possède également un degré d'intensité allant de A à E et permettant de spécifier l'intensité d'une AU :
+\begin{itemize}
+	\item A : Très Faible
+	\item B : Minime
+	\item C : Moyen
+	\item D : Sévère
+	\item E : Maximum
+\end{itemize}
+La surprise peut donc être défini comme la combinaison des AUs 1, 2, 5B et 26.\\
+\\
+Enfin des ajouts ont été apportés à cette norme. 13 nouveaux AUs ont été ajoutées pour décrire le mouvement de la tête et 7 autres pour le mouvement des yeux.\\
+Nous arrivons donc a un total de 66 AUs, chacune possédant 5 intensités, permettant de décrire les mouvements faciaux.\\
+\\
+Néanmoins, un autre système de codification fait concurrence au FACS et est également bien implanté dans le milieu de la reconnaissance d'émotions.
+
+\newpage
+\section{La norme MPEG-4}
+\label{sec:fapu}
+
+La norme MPEG-4, qui est une norme de codage vidéo, dispose de son propre système permettant de normaliser les mouvements du visage et de reconnaître des expressions.\\
+Pour cela, ce système défini des points clés du visage (\autoref{points_fapu}) appelés \textbf{Facial Features Points} (FFP) auxquels seront appliqués des mesures pour créer des distances entre ces FFP (\autoref{distance_fapu}) appelées \textbf{Facial Animation Parameter Units} (FAPU).\\
+Ces FAPU vont servir à la description des mouvements musculaires appelés \textbf{Facial Action Parameters} (FAP, équivalent des AUs de la norme FACS). 68 FAPs sont recensés à ce jour, j'en ai regroupé quelques uns dans le tableau \autoref{tab:fap}.\\
+Le descriptif complet de ces FAP se trouve dans le document à cette adresse \cite{urlfaps}, dans l'annexe numéro 1.
+
+\begin{Table}{tab:fap}{Exemple de Facial Action Parameters}
+	\begin{tabu}{|c|c|X[m]|}
+		\hline
+		Numéro &Nom &Description\\\hline
+		3 &open\_ jaw &Vertical jaw displacement (does not affect mouth opening)\\\hline
+		7 &stretch\_ r\_ cornerlip &Horizontal displacement of right inner lip corner\\\hline
+		10 &raise\_ b\_ lip\_ lm  &Vertical displacement of midpoint between left corner and middle of bottom inner lip\\\hline
+		42 &lift\_ r\_ cheek &Vertical displacement of right cheek\\\hline
+	\end{tabu}
 \end{Table}
 
-\begin{Figure}{fig:modeemploi2}{Ma superbe image encore !!}
-\pgfimage{polytech/modeemploi}
+\begin{Figure}{points_fapu}{Quelques Facial Features Points utilisés par la norme MPEG-4}
+ \pgfimage{images/points_fapu.png}
 \end{Figure}
 
-\part{essai}
-\label{part:essai}
+\begin{Figure}{distance_fapu}{Facial Animation Parameter Units utilisés par la norme MPEG-4}
+ \pgfimage{images/distance_fapu.png}
+\end{Figure}
 
-\chapter{truc}
-\lipsum[1-20]
+Cependant, la norme de MPEG-4 est moins réaliste que FACS d'un point de vue musculaire.\\
+Par exemple : l'AU 26 de FACS (« Jaw Drop ») décrit le mouvement d'abaissement du menton, cet abaissement est accompagné d'un abaissement de la lèvre inférieure. Or l'abaissement du menton de MPEG-4 (FAP 3 - open\_ jaw) ne décrit pas l'abaissement de la lèvre inférieure.\\
+MPEG-4 ne décrit que les mouvements \textit{visibles} du visages, contrairement à FACS qui lui décrit les mouvements \textit{réalistes} du visage.\\
+\\
+Nous allons maintenant voir quelles technologies sont disponibles pour réaliser l'acquisition des images qui seront à traiter par la suite.
 
-\section{Ma section}
-\lipsum[1-5]
+\chapter{État de l'art}
+\label{chap1_2}
 
-\section{Ma section}
-\lipsum[1-5]
+Dans ce chapitre, je vais vous présenter l'état de l'art des systèmes et techniques existants permettant de faire de la reconnaissance facial d'émotion.\\
+Mon projet se basant sur des images et vidéos en 2D, ce chapitre va principalement se concentrer sur les techniques d'acquisition et d'analyse d'images 2D.\\
+Cependant, j'ai tout de même réalisé quelques recherches sur le matériel utilisé pour l'acquisition d'images en 3D ainsi que les bases de données disponibles et c'est donc par ces recherches que je vais entamer ce chapitre.
 
-\subsection{Ma section}
-\lipsum[1-5]
-\subsection{Ma section}
-\lipsum[1-5]
-\subsubsection{Ma section}
-\lipsum[1-5]
-\subsubsection{Ma section}
-\lipsum[1-5]
-\paragraph{Ma section}
-\lipsum[1-5]
-\paragraph{Ma section}
-\lipsum[1-5]
-\subparagraph{Ma section}
-\lipsum[1-5]
-\subparagraph{Ma section}
-\lipsum[1-5]
+\newpage
+\section{3D}
+\label{sec:3d}
+
+Comme je l'ai expliqué plus haut, mon projet et donc mon système de reconnaissance utilisera des images 2D mais j'ai tout de même mené quelques recherches sur les images en 3D également.\\
+Je vais tout d'abord vous présenter les techniques utilisées pour acquérir des images en 3D. Je vous présenterai ensuite certains matériels déjà existant permettant de faire de la capture d'images 3D et utilisant les techniques que je vous aurais présenter précédemment. Je terminerai enfin cette section sur la 3D en vous présentant les bases de données de visages les plus connues et les plus utilisés par les systèmes de reconnaissance faciale d'émotion en 3D.\\
+Les informations que vous allez trouver dans cette section proviennent en majorité de l'article \cite{sota3d}.
+
+\subsection{Techniques d'acquisition}
+\label{subsec:tech}
+
+\subsubsection{Reconstruction à partir d'une image}
+\label{single_img_reconstruct}
+Il est possible, à partir d'une image en 2D capturé par une caméra basique, d'obtenir une image en 3D.\\
+La méthode la plus prometteuse est celle du \textbf{3D Morphable Model} (3DMM), qui consiste à apposer un visage en 3D (masque) sur l'image en 2D et que le modifier pour le faire correspondre avec l'image. Sont ensuite extraites les informations correspondant au masque modifié qui vont permettre de créer le visage de l'image en 3D.\\
+La \autoref{3dmm} présente un exemple de visage 3D récupéré depuis une image 2D.\\
+Cette technique est très pratique et répandue car elle ne nécessite pas de matériel au coût exorbitant, une simple caméra est nécessaire.
+
+\begin{Figure}{3dmm}{Reconstruction d'un visage 2D (1) en 3D (2) grâce à la méthode 3DMM}
+ \pgfimage{images/3dmm.png}
+\end{Figure}
+
+\subsubsection{Lumière structurée}
+\label{struc_light}
+Une autre technique, une des plus utilisé, est la technique de la lumière structurée.\\
+Elle consiste à projeter plusieurs rais de lumière (visible ou infra-rouge) de longueur d'onde différente puis, à l'aide d'un capteur, de mesurer la déformation de ces rais de lumière pour construire le visage en 3D.\\
+La \autoref{structured} montre un exemple de lumière structurée.\\
+L'utilisation de cette technique requiert d'avoir un matériel spécifique contenant un émetteur et un récepteur, cet outil peut aller de quelques centaines d'euros pour les moins chère à plusieurs dizaines de milliers d'euros pour les plus performants.
+
+\begin{Figure}{structured}{Exemple de lumière structurée}
+ \pgfimage{images/structured.jpg}
+\end{Figure}
+
+\subsubsection{Stéréo photométrique}
+\label{photo_stereo}
+La technique de la stéréo photométrique consiste à prendre plusieurs photos d'un même objet avec un même appareil sous différentes illuminations (lumière venant de droite, lumière venant de devant ...). Pour obtenir un visage en 3D, il ne reste qu'à assembler les photos obtenues.\\
+La \autoref{stereo_imgs} montre un exemple de reconstruction d'un objet grâce à la stéréo photométrique.\\
+Cette technique requiert également un équipement coûteux et n'est donc pas accessible à tout le monde.
+
+\begin{Figure}{stereo_imgs}{Exemple de reconstruction d'un objet grâce à la stéréo photométrique}
+ \pgfimage{images/stereo_imgs.png}
+\end{Figure}
+
+
+\subsubsection{Stéréo multi-vue}
+\label{multi_stereo}
+C'est une technique très similaire à celle de la stéréo photométrique sauf qu'au lieu de prendre en photo un visage sous différentes illuminations, le visage est pris sous différents angles simultanément avec plusieurs appareils.\\
+Cette technique requiert elle aussi un équipement spécifique coûteux.\\
+\\
+\\
+
+\subsection{Dispositifs d'acquisition d'images}
+\label{dispositif_acquisiton}
+Plusieurs types de dispositifs différents existent à l'heure actuelle permettant de capturer des images en 3D. La plupart d'entre eux se basent sur les techniques présentées précédemment.\\
+Je vais ici vous présenter les deux dispositifs les plus connus.
+
+\subsubsection{Kinect}
+\label{kinect}
+Probablement la caméra 3D la plus connu du grand public : la Kinect de Microsoft.\\
+Créer initialement pour créer une immersion plus poussée pour les jeux de la console XBox 360, elle a depuis été amélioré et ne sert plus exclusivement qu'à jouer aux jeux vidéos.\\
+Elle utilise la technique de la lumière structuré (infra-rouge dans ce cas) pour capturer les images en 3D de ce qu'elle filme.\\
+La Kinect reste cependant une caméra 3D low-cost, de mauvaise qualité lorsqu'on le compare à d'autres dispositifs du même type, tel que celui que je vais présenter maintenant.
+
+\begin{Figure}{kinect2}{Version 2 de la Kinect de Microsoft}
+ \pgfimage{images/kinect2.png}
+\end{Figure}
+
+\subsubsection{Minolta Vivid 910}
+\label{minolta}
+Un autre dispositif très utilisé et utilisant lui aussi la technologie de la lumière structurée est le Minolta Vivid 910.\\
+Un comparatif entre la qualité de Kinect et de Minolta est présenté en \autoref{kinectvsminolta}. On s'aperçoit très clairement du gouffre séparant ces deux dispositifs. Bien sûr le prix n'est pas le même, car nous passons de quelques centaines d'euros pour la Kinect à plusieurs dizaines de milliers d'euros pour le Minolta Vivid 910.
+
+\begin{Figure}{img_minolta}{Minolta Vivid 910}
+ \pgfimage{images/minolta.jpg}
+\end{Figure}
+
+\begin{Figure}{kinectvsminolta}{Comparatif de la qualité entre Kinect et Minolta}
+ \pgfimage{images/kinectvsminolta.png}
+\end{Figure}
+
+\newpage
+\subsection{Base de données de visages 3D}
+\label{bdd3d}
+Les dispositifs tels que le Minolta Vivid 910 présentées précédemment permettent également la création de bases de données de visage en 3D. Leurs grandes qualités permettent d'obtenir des images très précises, facilement exploitable.\\
+Je vais maintenant vous présenter les bases de données les plus connues et pouvant être utilisée par la communauté scientifique.
+
+\subsubsection{BU-3DFE}
+Les premiers efforts pour récolter des données en 3D ont menés à la création de la base de données BU-3DFE (Binghamton University 3D Facial Expression \cite{bu3dfe_article}).\\
+Les images contenues dans cette base sont statiques et ont été capturées par le dispositif 3dMD.\\
+Elles se composent de 100 sujets âgés de 18 à 70 ans, dont 56\% de femmes, et appartenant à différentes ethnicités.\\
+Chaque sujet réalise les 7 expressions basiques (cf \autoref{sec:expr_uni}) et chaque expression, sauf l'expression neutre, est réalisée suivant 4 niveaux d'intensités. Pour chaque sujet, il y a donc 25 images différentes, ce qui nous donne au total 2500 images dans cette base de données.\\
+Un exemple de données contenues dans cette base sont présentés en \autoref{bu3dfe}.\\
+Chaque donnée contient également la position de 83 points clés du visage.
+
+\begin{Figure}{bu3dfe}{Exemple de données contenues dans BU-3DFE}
+ \pgfimage{images/bu3dfe.png}
+\end{Figure}
+
+\subsubsection{BU-4DFE}
+Une extension de la base BU-3DFE a été réalisé dans le but d'obtenir un espace 3D dynamique, c'est-à-dire rajouter la dimension du temps dans les images de la base, en plus des 3 dimensions déjà présentes.\\
+En effet, dans la version de base, il n'y avait qu'une seule image présente pour une expression et une intensité, mais dans le but d'obtenir des analyses plus performantes, inclure la notion du temps dans ces images devient indispensable.\\
+La base de données BU-4DFE \cite{bu4dfe_article} se compose donc de 101 sujets (58 femmes) de différentes ethnicités, chaque sujet réalisant 6 des expressions basiques (toutes sauf la neutre). Chaque séquence d'émotion contient environ 100 frames, ce qui nous permet d'obtenir environ 60600 différents frames dans la base.
+
+\subsubsection{Bosphorus 3D Face Database}
+La base de données Bosphorus \cite{bosphorus_article}
+Cette base de données est composé de 105 sujets (45 femmes) dont la plupart sont de type Caucasien et dont un tiers sont des acteurs professionnels.\\
+Chaque sujet réalise environ 35 expressions et toutes les images sont codés en terme de FACS (\autoref{sec:facs}).\\
+Plusieurs illuminations et occlusions du visage (barbe, moustache, lunettes...) sont également présentes pour chaque sujet. 24 points clés du visage sont également définis pour chaque donnée.\\
+Un exemple de donnée est présente en \autoref{bosphorus_img}
+
+\begin{Figure}{bosphorus_img}{Exemple de données contenues dans la base de données Bosphorus}
+ \pgfimage{images/bosphorus.jpg}
+\end{Figure}
+
+\subsubsection{Comparaison des différentes bases de données 3D}
+
+Précédemment, je ne vous est présenté que les bases de données les plus populaires. Cependant, beaucoup d'autres existent également.\\
+J'ai donc réalisé un tableau (\autoref{tab:bdd3d}) recensant ces différentes bases de données publiquement disponible, et pouvant représenté un intêret dans la reconnaissance d'émotions, avec leurs principales caractéristiques (données principalement tirées de \cite{sota3d}).
+
+\begin{Table}{tab:bdd3d}{Comparaison de bases de données 3D}
+	\begin{tabular}{|p{2.5cm}|p{2cm}|p{3.5cm}|p{6cm}|}
+		\hline
+		\textbf{Nom} &\textbf{Type de données} &\textbf{Taille} &\textbf{Contenu}\\\hline
+		BU-3DFE (\cite{bu3dfe_article}) &Statique &100 adultes &6 émotions basiques avec 4 niveaux d'intensités\\
+		BU-4DFE (\cite{bu4dfe_article}) &Dynamique &101 adultes &6 émotions basiques\\
+		Bosphorus (\cite{bosphorus_article}) &Statique &105 adultes (dont 25 acteurs) &6 émotions basiques, 24 AUs, occlusions\\
+		ICT-3DRFE (\cite{ict_3drfe}) &Statique &23 adultes &6 émotions basiques, 2 expressions neutres, 4 orientations du regard (haut, bas, gauche, droite) et un visage "grimaçant"\\
+		D3DFACS (\cite{d3dfacs}) &Dynamique &10 adultes (dont 4 experts en FACS) &Jusqu'à 38 AUs par sujets\\
+		Gavabdb (\cite{gavabdb}) &Statique &61 adultes &3 expressions: sourires ouverts/fermés et aléatoire\\\hline
+	\end{tabular}
+\end{Table}
+
+
+\newpage
+\section{2D}
+\label{sec:2d}
+Passons maintenant à ce qui va m'être utile à la réalisation de mon projet: la 2D.\\
+Dans cette section, je présenterai tout d'abord rapidement les dispositifs permettant de récupérer des images en 2D, puis plusieurs bases de données de visages 2D et enfin des méthodes permettant de réaliser de la reconnaissance faciale d'expression.\\
+
+\subsection{Dispositifs d'acquisition d'images 2D}
+Contrairement à la 3D, il n'est pas nécessaire d'avoir des dispositifs extrêmement couteux pour acquérir des images en 2D.\\
+En effet, un simple appareil photo ou une simple caméra trouvés dans n'importe quelle commerce suffit amplement.\\
+Plusieurs entreprises se sont spécialisées dans le domaine de reconnaissance d'émotions et permettent, par exemple, aux publicitaires de tester leur publicités et d'avoir un feedback sur ce que ressentent les spectateurs. Pour cela, ces entreprises(\cite{emotient},\cite{affectiva}) utilisent la webcam intégrée dans les ordinateurs pour ensuite traiter les images.\\
+\\
+Dans le cadre de ce projet, nous utiliserons une caméra \textbf{PTZ} (Pan, Tilt, Zoom). Ces caméras permettent de faire une rotation selon l'axe Z (Pan), une rotation selon l'axe X (Tilt) et de zoomer selon l'axe Y. Souvent utilisé en temps que caméra de surveillance, dans le cadre de ce projet, ce type de caméra va nous permettre de se déplacer pour trouver la personne présente dans la pièce puis de zoomer sur son visage pour pouvoir ensuite l'analyser.\\
+Un exemple de caméra PTZ est présenté en \autoref{ptz}.
+
+\begin{Figure}{ptz}{Exemple de caméra PTZ}
+ \pgfimage{images/ptz.png}
+\end{Figure}
+
+Dans le cas d'images statiques (images, photos), la reconnaissance se fera directement sur l'image.\\
+Par contre dans le cas d'un flux vidéo récupéré via une caméra, c'est les \textit{frames} (images constituant une vidéo) de la vidéo qui vont être analysées.
+
+\newpage
+\subsection{Bases de données de visages 2D}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
+
+\part{Développement}
+\label{part:part_dev}
+
 
 \unnumberedchapter{Conclusion}
 
@@ -164,13 +373,6 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 
 \chapter{Ma première annexe}
 
-\lipsum[1-4]
-
-\chapter{Ma deuxième annexe}
-
-\cite{article}
-
-\lipsum[1-4]
 
 \weeklyreport{17/09/2015}{
 	Découverte de 2 grandes méthodes de description des mouvements du visage existent : le FACS (Facial Action Coding System) mis en place par P. Ekman et w. Friesen en 1978 et le FAPU (Facial Animation Parameter Units) introduit par la norme de codage vidéo MPEG-4.\\
@@ -189,21 +391,42 @@ Milliards \euro&1216	&1324	&1499	&1602	&1725	&1841	&1925\\\hline
 	Commencement de l'écriture du rapport.
 }
 \weeklyreport{15/10/2015}{
-
+	Continuation des recherches sur les filtres de Gabor et leur fonctionnement. J'ai essayé de comprendre le fonctionnement des filtres et l'impact des différents paramètres. Grâce à un simulateur que j'ai trouvé en ligne (\cite{simu_gabor}) et aux instructions associées (\cite{instr_simu_gabor}), j'ai pu constater l'effet qu'ont les différents paramètres sur le résultat final.
 }
 \weeklyreport{22/10/2015}{
-	
+	Étude approfondi des bases de données MMI Mimicry et HCI Tagging.
 }
 \weeklyreport{05/11/2015}{
-	
+	Documentation sur les caractéristiques pseudo-Haar et leur fonctionnement.\\
+	Recherche de techniques permettant de placer les points clés d'un visage sans FACS (ASM, AAM ...)
 }
 \weeklyreport{12/11/2015}{
-	
+	Réunion avec Mrs Conte et Slimane : décision de l'arrêt de la phase état de l'art pour commencer le développement; prise de décision sur les spécifications de notre système.	
 }
 \weeklyreport{19/11/2015}{
-	
+	Documentation plus poussée sur ASM, récupération d'un programme Matlab d'analyse d'émotions réalisé par des collègues italiens à Mr Conte et tentative de le faire fonctionner sous Octave vu que nous ne possédons pas de licence Matlab.\\
+	Commencement de la prise en main de la librairie C++ OpenCV mais suite à un entretien avec Mr Conte, la décision a été prise de changer les spécifications de notre programme pour continuer le travail qui a déjà été réalisés par ses collègues italiens.
 }
 \weeklyreport{26/11/2015}{
+	Étude approfondi de l'article écrit par Vitale et al. (\cite{italiens}) et rendez vous avec Mr Conte pour faire fonctionner le programme Matlab, presque fonctionnel au final.
+}
+\weeklyreport{03/12/2015}{
+	Fin de l'étude approfondi de l'article de Vitale et al.\\
+	Travail sur le programme Matlab pour le faire fonctionner à 100\%.
+}
+\weeklyreport{10/12/2015}{
+	
+}
+\weeklyreport{17/12/2015}{
+	
+}
+\weeklyreport{07/01/2016}{
+	
+}
+\weeklyreport{14/01/2016}{
+	
+}
+\weeklyreport{21/01/2016}{
 	
 }
 

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  12 OCT 2015 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  9 DEC 2015 08:44
 entering extended mode
 **rapport.tex
 (rapport.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 (polytech/polytech.cls
-Document Class: polytech/polytech 2015/10/01 Polytech document class by Sebasti
+Document Class: polytech/polytech 2015/11/18 Polytech document class by Sebasti
 en Aupetit <aupetit@univ-tours.fr>, V1.0
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
 Package: etex 2015/07/08 v2.3 eTeX basic definition package (PEB,DPC)
@@ -1095,17 +1095,38 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `boldsf'
 (Font)                  U/jkpexa/m/n --> U/jkpexa/bx/n on input line 620.
 LaTeX Info: Redefining \not on input line 1580.
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
+\MT@toks=\toks24
+\MT@count=\count285
+LaTeX Info: Redefining \textls on input line 766.
+\MT@outer@kern=\dimen125
+LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
+\MT@listname@count=\count286
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
+File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip69
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
+))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box28
-\beforetitleunit=\skip69
-\aftertitleunit=\skip70
-\ttl@plus=\dimen125
-\ttl@minus=\dimen126
-\ttl@toksa=\toks24
-\titlewidth=\dimen127
-\titlewidthlast=\dimen128
-\titlewidthfirst=\dimen129
+\beforetitleunit=\skip70
+\aftertitleunit=\skip71
+\ttl@plus=\dimen126
+\ttl@minus=\dimen127
+\ttl@toksa=\toks25
+\titlewidth=\dimen128
+\titlewidthlast=\dimen129
+\titlewidthfirst=\dimen130
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1116,20 +1137,20 @@ Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count287
 LaTeX Info: Redefining \ref on input line 353.
 LaTeX Info: Redefining \pageref on input line 353.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip71
-\f@ncyO@elh=\skip72
-\f@ncyO@erh=\skip73
-\f@ncyO@olh=\skip74
-\f@ncyO@orh=\skip75
-\f@ncyO@elf=\skip76
-\f@ncyO@erf=\skip77
-\f@ncyO@olf=\skip78
-\f@ncyO@orf=\skip79
+\fancy@headwidth=\skip72
+\f@ncyO@elh=\skip73
+\f@ncyO@erh=\skip74
+\f@ncyO@olh=\skip75
+\f@ncyO@orh=\skip76
+\f@ncyO@elf=\skip77
+\f@ncyO@erf=\skip78
+\f@ncyO@olf=\skip79
+\f@ncyO@orf=\skip80
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
@@ -1179,23 +1200,23 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count286
+\lst@mode=\count288
 \lst@gtempboxa=\box29
-\lst@token=\toks25
-\lst@length=\count287
-\lst@currlwidth=\dimen130
-\lst@column=\count288
-\lst@pos=\count289
-\lst@lostspace=\dimen131
-\lst@width=\dimen132
-\lst@newlines=\count290
-\lst@lineno=\count291
-\lst@maxwidth=\dimen133
+\lst@token=\toks26
+\lst@length=\count289
+\lst@currlwidth=\dimen131
+\lst@column=\count290
+\lst@pos=\count291
+\lst@lostspace=\dimen132
+\lst@width=\dimen133
+\lst@newlines=\count292
+\lst@lineno=\count293
+\lst@maxwidth=\dimen134
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count292
-\lst@skipnumbers=\count293
+\c@lstnumber=\count294
+\lst@skipnumbers=\count295
 \lst@framebox=\box30
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
@@ -1208,12 +1229,12 @@ Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \@fancybox=\box31
-\shadowsize=\dimen134
+\shadowsize=\dimen135
 \@Sbox=\box32
-\do@VerbBox=\toks26
-\the@fancyput=\toks27
-\this@fancyput=\toks28
-\EndVerbatimTokens=\toks29
+\do@VerbBox=\toks27
+\the@fancyput=\toks28
+\this@fancyput=\toks29
+\EndVerbatimTokens=\toks30
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read2
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tabu\tabu.sty"
@@ -1221,41 +1242,41 @@ Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen135
-\extrarowheight=\dimen136
-\NC@list=\toks30
-\extratabsurround=\skip80
-\backup@length=\skip81
+\col@sep=\dimen136
+\extrarowheight=\dimen137
+\NC@list=\toks31
+\extratabsurround=\skip81
+\backup@length=\skip82
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box33
-\sift@deathcycles=\count294
-\@vwid@loff=\dimen137
-\@vwid@roff=\dimen138
+\sift@deathcycles=\count296
+\@vwid@loff=\dimen138
+\@vwid@roff=\dimen139
 )
-\c@taburow=\count295
-\tabu@nbcols=\count296
-\tabu@cnt=\count297
-\tabu@Xcol=\count298
-\tabu@alloc=\count299
-\tabu@nested=\count300
-\tabu@target=\dimen139
-\tabu@spreadtarget=\dimen140
-\tabu@naturalX=\dimen141
-\tabucolX=\dimen142
-\tabu@Xsum=\dimen143
-\extrarowdepth=\dimen144
-\abovetabulinesep=\dimen145
-\belowtabulinesep=\dimen146
-\tabustrutrule=\dimen147
-\tabu@thebody=\toks31
-\tabu@footnotes=\toks32
+\c@taburow=\count297
+\tabu@nbcols=\count298
+\tabu@cnt=\count299
+\tabu@Xcol=\count300
+\tabu@alloc=\count301
+\tabu@nested=\count302
+\tabu@target=\dimen140
+\tabu@spreadtarget=\dimen141
+\tabu@naturalX=\dimen142
+\tabucolX=\dimen143
+\tabu@Xsum=\dimen144
+\extrarowdepth=\dimen145
+\abovetabulinesep=\dimen146
+\belowtabulinesep=\dimen147
+\tabustrutrule=\dimen148
+\tabu@thebody=\toks32
+\tabu@footnotes=\toks33
 \tabu@box=\box34
 \tabu@arstrutbox=\box35
 \tabu@hleads=\box36
 \tabu@vleads=\box37
-\tabu@cellskip=\skip82
+\tabu@cellskip=\skip83
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
@@ -1273,7 +1294,7 @@ Package graphics Info: Driver file: pdftex.def on input line 94.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count301
+\Gread@gobject=\count303
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\comment\comment.sty"
 \CommentStream=\write5
@@ -1283,9 +1304,9 @@ Excluding comment 'comment')
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
 x"
-\pgfutil@everybye=\toks33
-\pgfutil@tempdima=\dimen148
-\pgfutil@tempdimb=\dimen149
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen149
+\pgfutil@tempdimb=\dimen150
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
 sts.tex"))
@@ -1302,8 +1323,8 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen150
-\Gin@req@width=\dimen151
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
@@ -1311,30 +1332,30 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
 "
-\pgfkeys@pathtoks=\toks34
-\pgfkeys@temptoks=\toks35
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
 ode.tex"
-\pgfkeys@tmptoks=\toks36
+\pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen152
-\pgf@y=\dimen153
-\pgf@xa=\dimen154
-\pgf@ya=\dimen155
-\pgf@xb=\dimen156
-\pgf@yb=\dimen157
-\pgf@xc=\dimen158
-\pgf@yc=\dimen159
+\pgf@x=\dimen153
+\pgf@y=\dimen154
+\pgf@xa=\dimen155
+\pgf@ya=\dimen156
+\pgf@xb=\dimen157
+\pgf@yb=\dimen158
+\pgf@xc=\dimen159
+\pgf@yc=\dimen160
 \w@pgf@writea=\write6
 \r@pgf@reada=\read3
-\c@pgf@counta=\count302
-\c@pgf@countb=\count303
-\c@pgf@countc=\count304
-\c@pgf@countd=\count305
-\t@pgf@toka=\toks37
-\t@pgf@tokb=\toks38
-\t@pgf@tokc=\toks39
+\c@pgf@counta=\count304
+\c@pgf@countb=\count305
+\c@pgf@countc=\count306
+\c@pgf@countd=\count307
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -1352,8 +1373,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
 code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count306
-\pgfsyssoftpath@bigbuffer@items=\count307
+\pgfsyssoftpath@smallbuffer@items=\count308
+\pgfsyssoftpath@bigbuffer@items=\count309
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
 code.tex"
@@ -1369,10 +1390,10 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks40
-\minrowclearance=\skip83
+\everycr=\toks41
+\minrowclearance=\skip84
 )
-\rownum=\count308
+\rownum=\count310
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -1394,12 +1415,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
 "
-\pgfmath@dimen=\dimen160
-\pgfmath@count=\count309
+\pgfmath@dimen=\dimen161
+\pgfmath@count=\count311
 \pgfmath@box=\box39
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
 tex"
@@ -1420,37 +1441,37 @@ code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
 erarithmetics.code.tex")))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count310
+\c@pgfmathroundto@lastzeros=\count312
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
 de.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen161
-\pgf@picmaxx=\dimen162
-\pgf@picminy=\dimen163
-\pgf@picmaxy=\dimen164
-\pgf@pathminx=\dimen165
-\pgf@pathmaxx=\dimen166
-\pgf@pathminy=\dimen167
-\pgf@pathmaxy=\dimen168
-\pgf@xx=\dimen169
-\pgf@xy=\dimen170
-\pgf@yx=\dimen171
-\pgf@yy=\dimen172
-\pgf@zx=\dimen173
-\pgf@zy=\dimen174
+\pgf@picminx=\dimen162
+\pgf@picmaxx=\dimen163
+\pgf@picminy=\dimen164
+\pgf@picmaxy=\dimen165
+\pgf@pathminx=\dimen166
+\pgf@pathmaxx=\dimen167
+\pgf@pathminy=\dimen168
+\pgf@pathmaxy=\dimen169
+\pgf@xx=\dimen170
+\pgf@xy=\dimen171
+\pgf@yx=\dimen172
+\pgf@yy=\dimen173
+\pgf@zx=\dimen174
+\pgf@zy=\dimen175
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
 ruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen175
-\pgf@path@lasty=\dimen176
+\pgf@path@lastx=\dimen176
+\pgf@path@lasty=\dimen177
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
 .code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen177
-\pgf@shorten@start@additional=\dimen178
+\pgf@shorten@end@additional=\dimen178
+\pgf@shorten@start@additional=\dimen179
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
 de.tex"
@@ -1458,19 +1479,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box40
 \pgf@hbox=\box41
 \pgf@layerbox@main=\box42
-\pgf@picture@serial@count=\count311
+\pgf@picture@serial@count=\count313
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
 ate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen179
+\pgflinewidth=\dimen180
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
 ations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen180
-\pgf@pt@y=\dimen181
-\pgf@pt@temp=\dimen182
+\pgf@pt@x=\dimen181
+\pgf@pt@y=\dimen182
+\pgf@pt@temp=\dimen183
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
 e.tex"
@@ -1487,13 +1508,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
 de.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen183
+\pgfarrowsep=\dimen184
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
 e.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen184
-\pgf@sys@shading@range@num=\count312
+\pgf@max=\dimen185
+\pgf@sys@shading@range@num=\count314
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
 e.tex"
@@ -1528,8 +1549,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
 -0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen185
-\pgf@nodesepend=\dimen186
+\pgf@nodesepstart=\dimen186
+\pgf@nodesepend=\dimen187
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
 -1-18.sty"
@@ -1545,10 +1566,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen187
-\pgffor@skip=\dimen188
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@iter=\dimen188
+\pgffor@skip=\dimen189
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
 e.tex"
@@ -1557,32 +1578,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
 dlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count313
-\pgfplotmarksize=\dimen189
+\pgf@plot@mark@count=\count315
+\pgfplotmarksize=\dimen190
 )
-\tikz@lastx=\dimen190
-\tikz@lasty=\dimen191
-\tikz@lastxsaved=\dimen192
-\tikz@lastysaved=\dimen193
-\tikzleveldistance=\dimen194
-\tikzsiblingdistance=\dimen195
+\tikz@lastx=\dimen191
+\tikz@lasty=\dimen192
+\tikz@lastxsaved=\dimen193
+\tikz@lastysaved=\dimen194
+\tikzleveldistance=\dimen195
+\tikzsiblingdistance=\dimen196
 \tikz@figbox=\box45
 \tikz@figbox@bg=\box46
 \tikz@tempbox=\box47
 \tikz@tempbox@bg=\box48
-\tikztreelevel=\count314
-\tikznumberofchildren=\count315
-\tikznumberofcurrentchild=\count316
-\tikz@fig@count=\count317
+\tikztreelevel=\count316
+\tikznumberofchildren=\count317
+\tikznumberofcurrentchild=\count318
+\tikz@fig@count=\count319
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
 e.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count318
-\pgfmatrixcurrentcolumn=\count319
-\pgf@matrix@numberofcolumns=\count320
+\pgfmatrixcurrentrow=\count320
+\pgfmatrixcurrentcolumn=\count321
+\pgf@matrix@numberofcolumns=\count322
 )
-\tikz@expandcount=\count321
+\tikz@expandcount=\count323
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarytopaths.code.tex"
@@ -1590,22 +1611,22 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip84
-\fb@frw=\dimen196
-\fb@frh=\dimen197
-\FrameRule=\dimen198
-\FrameSep=\dimen199
+\OuterFrameSep=\skip85
+\fb@frw=\dimen197
+\fb@frh=\dimen198
+\FrameRule=\dimen199
+\FrameSep=\dimen200
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count322
+\FV@CodeLineNo=\count324
 \FV@InFile=\read4
 \FV@TabBox=\box49
-\c@FancyVerbLine=\count323
-\FV@StepNumber=\count324
+\c@FancyVerbLine=\count325
+\FV@StepNumber=\count326
 \FV@OutFile=\write7
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\makerobust.sty"
@@ -1613,7 +1634,7 @@ Package: makerobust 2006/03/18 v1.0 Make existing macro robust (HO)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count325
+\c@AlgoLine=\count327
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -1628,44 +1649,44 @@ Package `algorithm2e' Release 5.0 -- january 06 2013 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
-\skiptotal=\skip85
-\skiplinenumber=\skip86
-\skiprule=\skip87
-\skiphlne=\skip88
-\skiptext=\skip89
-\skiplength=\skip90
-\algomargin=\skip91
-\skipalgocfslide=\skip92
-\algowidth=\dimen200
-\inoutsize=\dimen201
-\inoutindent=\dimen202
-\interspacetitleruled=\dimen203
-\interspacealgoruled=\dimen204
-\interspacetitleboxruled=\dimen205
+\skiptotal=\skip86
+\skiplinenumber=\skip87
+\skiprule=\skip88
+\skiphlne=\skip89
+\skiptext=\skip90
+\skiplength=\skip91
+\algomargin=\skip92
+\skipalgocfslide=\skip93
+\algowidth=\dimen201
+\inoutsize=\dimen202
+\inoutindent=\dimen203
+\interspacetitleruled=\dimen204
+\interspacealgoruled=\dimen205
+\interspacetitleboxruled=\dimen206
 \algocf@inoutbox=\box50
 \algocf@inputbox=\box51
-\AlCapSkip=\skip93
-\AlCapHSkip=\skip94
-\algoskipindent=\skip95
+\AlCapSkip=\skip94
+\AlCapHSkip=\skip95
+\algoskipindent=\skip96
 \algocf@nlbox=\box52
 \algocf@hangingbox=\box53
 \algocf@untilbox=\box54
-\algocf@skipuntil=\skip96
+\algocf@skipuntil=\skip97
 \algocf@capbox=\box55
-\algoheightruledefault=\skip97
-\algoheightrule=\skip98
-\algotitleheightruledefault=\skip99
-\algotitleheightrule=\skip100
-\c@algocfline=\count326
-\c@algocfproc=\count327
-\c@algocf=\count328
+\algoheightruledefault=\skip98
+\algoheightrule=\skip99
+\algotitleheightruledefault=\skip100
+\algotitleheightrule=\skip101
+\c@algocfline=\count328
+\c@algocfproc=\count329
+\c@algocf=\count330
 \algocf@algoframe=\box56
 \algocf@algobox=\box57
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\totalcount.sty"
 Package: totalcount 2013/05/12 v1.0-92 Total values of counters (AR)
-\c@totalcount@figure=\count329
-\c@totalcount@table=\count330
-\c@totalcount@lstlisting=\count331
+\c@totalcount@figure=\count331
+\c@totalcount@table=\count332
+\c@totalcount@lstlisting=\count333
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
@@ -1704,22 +1725,70 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks47
+\XKV@tempa@toks=\toks48
+)
+\XKV@depth=\count334
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box59
+)
+\tc@llx=\dimen207
+\tc@lly=\dimen208
+\tc@urx=\dimen209
+\tc@ury=\dimen210
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen211
+\adjbox@Height=\dimen212
+\adjbox@Depth=\dimen213
+\adjbox@Totalheight=\dimen214
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count335
+))
+LaTeX Info: Redefining \adjsetlength on input line 221.
+LaTeX Info: Redefining \adjaddtolength on input line 221.
+LaTeX Info: Redefining \adjsetcounter on input line 221.
+LaTeX Info: Redefining \adjaddtocounter on input line 221.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarydecorations.pathmorphing.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarydecorations.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecoration
 s.code.tex"
-\pgfdecoratedcompleteddistance=\dimen206
-\pgfdecoratedremainingdistance=\dimen207
-\pgfdecoratedinputsegmentcompleteddistance=\dimen208
-\pgfdecoratedinputsegmentremainingdistance=\dimen209
-\pgf@decorate@distancetomove=\dimen210
-\pgf@decorate@repeatstate=\count332
-\pgfdecorationsegmentamplitude=\dimen211
-\pgfdecorationsegmentlength=\dimen212
+\pgfdecoratedcompleteddistance=\dimen215
+\pgfdecoratedremainingdistance=\dimen216
+\pgfdecoratedinputsegmentcompleteddistance=\dimen217
+\pgfdecoratedinputsegmentremainingdistance=\dimen218
+\pgf@decorate@distancetomove=\dimen219
+\pgf@decorate@repeatstate=\count336
+\pgfdecorationsegmentamplitude=\dimen220
+\pgfdecorationsegmentlength=\dimen221
 )
-\tikz@lib@dec@box=\box59
+\tikz@lib@dec@box=\box60
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.pathmorphing.code.tex"))
@@ -1778,16 +1847,16 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package hobsub Info: Skipping package `refcount' (already loaded).
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-\@linkdim=\dimen213
-\Hy@linkcounter=\count333
-\Hy@pagecounter=\count334
+\@linkdim=\dimen222
+\Hy@linkcounter=\count337
+\Hy@pagecounter=\count338
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count335
+\Hy@SavedSpaceFactor=\count339
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1820,12 +1889,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count336
+\c@Hy@tempcnt=\count340
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen214
-\Fld@menulength=\count337
-\Field@Width=\dimen215
-\Fld@charsize=\dimen216
+\XeTeXLinkMargin=\dimen223
+\Fld@menulength=\count341
+\Field@Width=\dimen224
+\Fld@charsize=\dimen225
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1835,31 +1904,31 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count338
-\c@Item=\count339
-\c@Hfootnote=\count340
+\Hy@abspage=\count342
+\c@Item=\count343
+\c@Hfootnote=\count344
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count341
-\c@bookmark@seq@number=\count342
+\Fld@listcount=\count345
+\c@bookmark@seq@number=\count346
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip101
+\Hy@SectionHShift=\skip102
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
-\BKM@id=\count343
+\BKM@id=\count347
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pageslts\pageslts.sty"
 Package: pageslts 2015/08/17 v1.2e Refers to special pages' numbers/names (HMM)
@@ -1903,10 +1972,10 @@ Package pageslts Info: Option fnsymbolmult enabled
 (pageslts)             If you do not want this, call pageslts with option
 (pageslts)             fnsymbolmult=false.
 (pageslts)              on input line 323.
-\c@CurrentPage=\count344
-\c@pagesLTS.pagenr=\count345
-\c@pagesLTS.current.local.0=\count346
-\c@pagesLTS.pnc.0=\count347
+\c@CurrentPage=\count348
+\c@pagesLTS.pagenr=\count349
+\c@pagesLTS.current.local.0=\count350
+\c@pagesLTS.pnc.0=\count351
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
@@ -1926,55 +1995,55 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen217
-\captionmargin@=\dimen218
-\captionwidth=\dimen219
-\caption@tempdima=\dimen220
-\caption@indent=\dimen221
-\caption@parindent=\dimen222
-\caption@hangindent=\dimen223
+\captionmargin=\dimen226
+\captionmargin@=\dimen227
+\captionwidth=\dimen228
+\caption@tempdima=\dimen229
+\caption@indent=\dimen230
+\caption@parindent=\dimen231
+\caption@hangindent=\dimen232
 )
-\c@ContinuedFloat=\count348
+\c@ContinuedFloat=\count352
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
 (polytech/firstlastpage.sty
-Package: polytech/firstlastpage 2015/10/01 1.0 Polytech document class sub pack
+Package: polytech/firstlastpage 2015/11/18 1.0 Polytech document class sub pack
 age
 
-Package `polytech firstlastpage' 1.0 <2015/10/01>
+Package `polytech firstlastpage' 1.0 <2015/11/18>
 ) (polytech/copyright.sty
-Package: polytech/copyright 2015/10/01 1.0 Polytech document class sub package
+Package: polytech/copyright 2015/11/18 1.0 Polytech document class sub package
 
-Package `polytech copyright' 1.0 <2015/10/01>
+Package `polytech copyright' 1.0 <2015/11/18>
 ) (polytech/headings.sty
-Package: polytech/headings 2015/10/01 1.0 Polytech document class sub package
+Package: polytech/headings 2015/11/18 1.0 Polytech document class sub package
 
-Package `polytech headings' 1.0 <2015/10/01>
+Package `polytech headings' 1.0 <2015/11/18>
 ) (polytech/sectionning.sty
-Package: polytech/sectionning 2015/10/01 1.0 Polytech document class sub packag
+Package: polytech/sectionning 2015/11/18 1.0 Polytech document class sub packag
 e
 
-Package `polytech sectionning' 1.0 <2015/10/01>
-\polytech@chapter@numwidth=\skip102
+Package `polytech sectionning' 1.0 <2015/11/18>
+\polytech@chapter@numwidth=\skip103
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\block.tss"
 File: block.tss 2011/12/15
 ))
 (polytech/floats.sty
-Package: polytech/floats 2015/10/01 1.0 Polytech document class sub package
+Package: polytech/floats 2015/11/18 1.0 Polytech document class sub package
 
-Package `polytech floats' 1.0 <2015/10/01>
+Package `polytech floats' 1.0 <2015/11/18>
 Package caption Info: We need package `newfloat' on input line 24.
 ) (polytech/weeklyreports.sty
-Package: polytech/weeklyreports 2015/10/01 1.0 Polytech document class sub pack
+Package: polytech/weeklyreports 2015/11/18 1.0 Polytech document class sub pack
 age
 
-Package `polytech weeklyreports' 1.0 <2015/10/01>
-\c@polytech@weeklyreport@counter=\count349
+Package `polytech weeklyreports' 1.0 <2015/11/18>
+\c@polytech@weeklyreport@counter=\count353
 ) (polytech/listings.sty
-Package: polytech/listings 2015/10/01 1.0 Polytech document class sub package
+Package: polytech/listings 2015/11/18 1.0 Polytech document class sub package
 
-Package `polytech listings' 1.0 <2015/10/01>
+Package `polytech listings' 1.0 <2015/11/18>
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1988,15 +2057,23 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ))
 (polytech/references.sty
-Package: polytech/references 2015/10/01 1.0 Polytech document class sub package
+Package: polytech/references 2015/11/18 1.0 Polytech document class sub package
 
 
-Package `polytech references' 1.0 <2015/10/01>
+Package `polytech references' 1.0 <2015/11/18>
 Package zref Info: New property: chapter on input line 17.
 Package zref Info: New property: isappendix on input line 18.
+) (polytech/poster.sty
+Package: polytech/poster 2015/11/18 1.0 Polytech document class sub package
+
+Package `polytech poster' 1.0 <2015/11/18>
+\polytechpostervertspace=\skip104
+\polytechpostervertanchor=\skip105
+\polytechposterimagevertspace=\skip106
+\polytechposterlogoheight=\skip107
 )) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count350
+\c@lips@count=\count354
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -2009,68 +2086,68 @@ Package biblatex Info: ... file 'french.lbx' found.
 File: french.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
 (rapport.aux
-\c@pagesLTS.alph.1.local.cnt=\count351
-\c@pagesLTS.roman.1.local.cnt=\count352
+\c@pagesLTS.alph.1.local.cnt=\count355
+\c@pagesLTS.roman.1.local.cnt=\count356
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
-\c@pagesLTS.arabic.1.local.cnt=\count353
+\c@pagesLTS.arabic.1.local.cnt=\count357
 )
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 74.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 74.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 70.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\omljkp.fd"
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 74.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\omsjkp.fd"
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 74.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\omxjkp.fd"
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 74.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 70.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ujkpexa.fd"
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 74.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Try loading font information for T1+jkpf on input line 74.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Try loading font information for T1+jkpf on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\t1jkpf.fd"
 File: t1jkpf.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkpf.
 )
-LaTeX Info: Redefining \degres on input line 74.
-LaTeX Info: Redefining \dots on input line 74.
-LaTeX Info: Redefining \up on input line 74.
+LaTeX Info: Redefining \degres on input line 70.
+LaTeX Info: Redefining \dots on input line 70.
+LaTeX Info: Redefining \up on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2107,122 +2184,210 @@ LaTeX Info: Redefining \up on input line 74.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'rapport.bbl' found.
 (rapport.bbl)
-Package biblatex Info: Reference section=0 on input line 74.
-Package biblatex Info: Reference segment=0 on input line 74.
-\c@lstlisting=\count354
+Package biblatex Info: Reference section=0 on input line 70.
+Package biblatex Info: Reference segment=0 on input line 70.
+LaTeX Info: Redefining \microtypecontext on input line 70.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Redefining babel's language switching commands.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `jkpf' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\c@lstlisting=\count358
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen224
-\scratchbox=\box60
-\nofMPsegments=\count356
-\nofMParguments=\count357
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen225
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count359
+\scratchdimen=\dimen233
+\scratchbox=\box61
+\nofMPsegments=\count360
+\nofMParguments=\count361
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count362
+Normal \dimen register pool exhausted, switching to extended pool.
+\MPscratchDim=\dimen256
+\MPnumerator=\count363
+\makeMPintoPDFobject=\count364
+\everyMPtoPDFconversion=\toks50
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring ON on input line 74.
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring ON on input line 70.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\c@pagesLTS.pnc.alph=\count361
-\c@pagesLTS.double.alph=\count362
-\c@pagesLTS.current.local.alph=\count363
-LaTeX Font Info:    Try loading font information for T1+jkptt on input line 77.
+\c@pagesLTS.pnc.alph=\count365
+\c@pagesLTS.double.alph=\count366
+\c@pagesLTS.current.local.alph=\count367
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot includemp twoside heightrounded 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6885pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04675pt
+* \textwidth=455.24411pt
+* \textheight=759.00034pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-29.59087pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=0.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/jkpf/b/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Try loading font information for T1+jkptt on input line 73.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\t1jkptt.fd"
 File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 )
-LaTeX Font Info:    Try loading font information for OT1+jkpf on input line 77.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `jkptt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for OT1+jkpf on input line 73.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ot1jkpf.fd"
 File: ot1jkpf.fd 2007/01/24 Fontinst v1.928 font definitions for OT1/jkpf.
 )
-LaTeX Font Info:    Try loading font information for U+jkpmia on input line 77.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `jkpf' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for U+jkpmia on input line 73.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ujkpmia.fd"
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 77.
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 77.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 77.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 73.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ujkpsyc.fd"
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 77.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 73.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd") [1
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/jkpf/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [1
+
 
 
 {C:/Users/Florian/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./polytec
-h/polytech.pdf> <./polytech/univ.jpg>] [2
+h/polytech.pdf> <./polytech/univ.pdf
+
+pdfTeX warning: pdflatex (file ./polytech/univ.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>] [2
+
 
 ] [3
 
 ]
-\c@pagesLTS.alph.1.local.count=\count364
-\c@pagesLTS.pnc.roman=\count365
-\c@pagesLTS.double.roman=\count366
-\c@pagesLTS.current.local.roman=\count367
- (rapport.toc)
-\tf@toc=\write8
+\c@pagesLTS.alph.1.local.count=\count368
+\c@pagesLTS.pnc.roman=\count369
+\c@pagesLTS.double.roman=\count370
+\c@pagesLTS.current.local.roman=\count371
+ (rapport.toc
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/jkpf/b/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
  [1
 
 
 
 
-] (rapport.lof)
+])
+\tf@toc=\write8
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Table des ma-tières
+ []
+
+[2] (rapport.lof)
 \tf@lof=\write9
- [2
-
-
-]
-(rapport.lot)
-\tf@lot=\write10
  [3
 
 
+] (rapport.lot)
+\tf@lot=\write10
+ [4
+
+
 ]
-\c@pagesLTS.roman.1.local.count=\count368
-\c@pagesLTS.pnc.arabic=\count369
-\c@pagesLTS.double.arabic=\count370
-\c@pagesLTS.current.local.arabic=\count371
+\c@pagesLTS.roman.1.local.count=\count372
+\c@pagesLTS.pnc.arabic=\count373
+\c@pagesLTS.double.arabic=\count374
+\c@pagesLTS.current.local.arabic=\count375
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--97
+Underfull \hbox (badness 10000) in paragraph at lines 80--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--97
+Underfull \hbox (badness 10000) in paragraph at lines 80--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--94
 
  []
 
@@ -2233,84 +2398,184 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--97
 
 ]
 Chapitre 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
+
+ []
+
 [3
 
- <./polytech/modeemploi.jpg>]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 1 Le tout pre-mier truc
+]
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
+
  []
 
-[4 <./polytech/modeemploi.jpg>] [5
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 1 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
+
+ []
+
+[4 <./images/AU.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 187--192
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 1 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
+
+ []
+
+[5 <./images/points_fapu.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 1 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
+
+ []
+
+[6 <./images/distance_fapu.png>]
 Chapitre 2.
-[6
+[7
 
 ]
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
  []
 
-[7]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+[8 <./images/3dmm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
  []
 
-[8]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
  []
 
-[9]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+
  []
 
-[10]
+
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
  []
 
-[11]
+[9 <./images/structured.jpg> <./images/stereo_imgs.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
  []
 
-[12]
+[10 <./images/kinect2.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
+ []
+
+[11 <./images/minolta.jpg> <./images/kinectvsminolta.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
+ []
+
+[12 <./images/bu3dfe.png> <./images/bosphorus.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]|\T1/jkpf/b/n/10.95 Type de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]|\T1/jkpf/m/n/10.95 (+20) BU-3DFE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]|\T1/jkpf/m/n/10.95 (+20) BU-4DFE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]|\T1/jkpf/m/n/10.95 (+20) Bosphorus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]|\T1/jkpf/m/n/10.95 (+20) ICT-3DRFE
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
  []
 
 [13]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+
  []
 
-[14]
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--346
+
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 truc
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
+ []
+
+[14 <./images/ptz.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 2 État de l'art
  []
 
 [15] [16
 
 ] [17
 
-]
-Annexe A.
-[18
+] [18
 
 ]
-Annexe B.
+Annexe A.
 [19
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+jkpf on input line 214
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+[][][][]\T1/jkpf/b/n/24.88 Comptes ren-dus heb-do-ma-
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+jkpf on input line 437
 .
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ts1jkpf.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ts1jkpf.fd"
 File: ts1jkpf.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkpf.
 )
-Underfull \vbox (badness 1082) has occurred while \output is active []
-
+Package microtype Info: Loading generic settings for font family
+(microtype)             `jkpf' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
  [20
 
 ]
@@ -2321,29 +2586,58 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [21] [22
 
 ]
-Overfull \hbox (3.68533pt too wide) in paragraph at lines 214--214
-[]\T1/jkpf/m/n/10.95 Sébastien \T1/jkpf/m/sc/10.95 Au-pe-tit\T1/jkpf/m/n/10.95 
-, Ni-co-las \T1/jkpf/m/sc/10.95 Mon-mar-ché\T1/jkpf/m/n/10.95 , Pierre \T1/jkpf
-/m/sc/10.95 Liar-det \T1/jkpf/m/n/10.95 et Mo-ha-med \T1/jkpf/m/sc/10.95 Sli-ma
-ne\T1/jkpf/m/n/10.95 .    Dis-|
+Overfull \hbox (1.4147pt too wide) in paragraph at lines 437--437
+[]\T1/jkpf/m/n/10.95 (-20) Lijun \T1/jkpf/m/sc/10.95 (-20) Yin\T1/jkpf/m/n/10.9
+5 (-20) , Xiao-chen \T1/jkpf/m/sc/10.95 (-20) Chen\T1/jkpf/m/n/10.95 (-20) , Yi
+ \T1/jkpf/m/sc/10.95 (-20) Sun\T1/jkpf/m/n/10.95 (-20) , Tony \T1/jkpf/m/sc/10.
+95 (-20) Worm \T1/jkpf/m/n/10.95 (-20) et Mi-chael \T1/jkpf/m/sc/10.95 (-20) Re
+ale\T1/jkpf/m/n/10.95 (-20) .    A High-Resolution|
  []
 
 [23
 
 ]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 BIBLIOGRAPHIE
- []
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot includemp twoside heightrounded 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6885pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04675pt
+* \textwidth=455.24411pt
+* \textheight=759.00034pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-29.59087pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=0.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[24] 
+ [24
+
+
+] 
 AED: pageslts setting LastPage 
-[25
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 439.
+\c@pagesLTS.arabic.1.local.count=\count376
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 216.
-\c@pagesLTS.arabic.1.local.count=\count372
- 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
 
 AED: pageslts setting LastPages via AfterLastShipout 
@@ -2353,35 +2647,33 @@ Package pageslts Info: Total number of pages is odd.
 
 
 (rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 439.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
 Package logreq Info: Writing requests to 'rapport.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
  ) 
 Here is how much of TeX's memory you used:
- 36841 strings out of 493673
- 634614 string characters out of 3141524
- 1265336 words of memory out of 3000000
- 39388 multiletter control sequences out of 15000+200000
- 148469 words of font info for 135 fonts, out of 3000000 for 9000
+ 39461 strings out of 493673
+ 678886 string characters out of 3141524
+ 1341275 words of memory out of 3000000
+ 41550 multiletter control sequences out of 15000+200000
+ 167105 words of font info for 375 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,17n,79p,910b,2831s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/kpfonts/jkpbne.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/kpfonts/jkpmite.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/kpfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/kpfonts/jkpmne.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/k
-pfonts/jkpmsc8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfon
-ts/jkpttmn8a.pfb>
-Output written on rapport.pdf (31 pages, 436087 bytes).
+ 62i,17n,94p,910b,2864s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc
+}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbne.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/kpfonts/jkpmite.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/kpfonts/jkpmne.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/kpfonts/jkpmsc8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/kpfonts/jkpttmn8a.pfb>
+Output written on rapport.pdf (31 pages, 1127670 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 56171 words of extra memory for PDF output out of 61914 (max. 10000000)
 

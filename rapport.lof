@@ -4,15 +4,35 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Le tout premier truc}{}{chapter.1}
+\contentsline {chapter}{\numberline {1}\IeC {\'E}motions universelles et mouvements du visage}{}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Ma superbe image\relax }}{3}{figure.caption.5}
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemples d'AUs\relax }}{4}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Ma superbe image encore !!\relax }}{4}{figure.caption.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Quelques Facial Features Points utilis\IeC {\'e}s par la norme MPEG-4\relax }}{5}{figure.caption.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Facial Animation Parameter Units utilis\IeC {\'e}s par la norme MPEG-4\relax }}{6}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {chapter}{\numberline {2}\IeC {\'E}tat de l'art}{}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Reconstruction d'un visage 2D (1) en 3D (2) gr\IeC {\^a}ce \IeC {\`a} la m\IeC {\'e}thode 3DMM\relax }}{8}{figure.caption.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemple de lumi\IeC {\`e}re structur\IeC {\'e}e\relax }}{9}{figure.caption.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemple de reconstruction d'un objet gr\IeC {\^a}ce \IeC {\`a} la st\IeC {\'e}r\IeC {\'e}o photom\IeC {\'e}trique\relax }}{9}{figure.caption.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces Version 2 de la Kinect de Microsoft\relax }}{10}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Minolta Vivid 910\relax }}{11}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Comparatif de la qualit\IeC {\'e} entre Kinect et Minolta\relax }}{11}{figure.caption.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Exemple de donn\IeC {\'e}es contenues dans BU-3DFE\relax }}{12}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Exemple de donn\IeC {\'e}es contenues dans la base de donn\IeC {\'e}es Bosphorus\relax }}{12}{figure.caption.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Exemple de cam\IeC {\'e}ra PTZ\relax }}{14}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

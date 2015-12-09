@@ -52,6 +52,7 @@
 
 % enable some french characters
 \lstset{%
+  	extendedchars=true,%
     literate={è}{{\`e}}1%
              {é}{{\'e}}1%
              {ë}{{\"e}}1%
@@ -59,8 +60,8 @@
              {°}{{\textdegree}}1%
              {à}{{\`a}}1%
              {ù}{{\`u}}1%
-             {ù}{{\`u}}1%
              {î}{{\^i}}1%
+             {ç}{{\c{c}}}1%
 }
 
 % base style for the environment
@@ -90,8 +91,6 @@
 	prebreak=\polytech@lst@prebreak,%
 	postbreak=\polytech@lst@postbreak,%
 	escapeinside={§}{§},% marque paragraphe (majuscule de ! sur un clavier français)
-	inputencoding=utf8,%
-	extendedchars=true,%
 	numberbychapter=true,%
 	captionpos=t,%
 	resetmargins=true
@@ -103,8 +102,7 @@
   keywordstyle=\polytech@lstinline@keywordstyle,%
   commentstyle=\polytech@lstinline@commentstyle,%
   stringstyle=\polytech@lstinline@stringstyle,%
-  inputencoding=utf8,%
-  extendedchars=true,%
+  breaklines=true,%
   showspaces=false,%
   showstringspaces=false,%
   escapeinside={§}{§}% marque paragraphe (majuscule de ! sur un clavier français)
