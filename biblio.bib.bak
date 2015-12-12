@@ -12,6 +12,25 @@
   Timestamp                = {2015.12.03}
 }
 
+@Article{ambadar,
+  Title                    = {All Smiles are Not Created Equal: Morphology and Timing of Smiles Perceived as Amused, Polite and Embarrassed/Nervous},
+  Author                   = {Zara Ambadar and Jeffrey F. Cohn and Lawrence Ian Reed},
+  Year                     = {2009},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
+@Article{mimicry1,
+  Title                    = {The MAHNOB Mimicry Database - a database of naturalistic human interactions},
+  Author                   = {S. Bilakhia and S. Petridis and A. Nijholt and M. Pantic},
+  Journaltitle             = {Pattern Recognition Letters, vol. 66, pp. 52-61},
+  Year                     = {2015},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
 @Article{d3dfacs,
   Title                    = {A FACS valid 3D dynamic action unit database with applications to 3D dynamic morphable facial modeling},
   Author                   = {D. Cosker and E. Krumhuber and A. Hilton},
@@ -51,6 +70,43 @@
   Timestamp                = {2015.12.03}
 }
 
+@Article{ck,
+  Title                    = {Comprehensive Database for Facial Expression Analysis},
+  Author                   = {Takeo Kanade and Jeffrey F. Cohn and Yingli Tian},
+  Journaltitle             = {Proceedings of the Fourth IEEE International Conference on Automatic Face and Gesture Recognition},
+  Year                     = {2000},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
+@Article{tagging2,
+  Title                    = {MAHNOB-HCI-TAGGING DATABASE},
+  Author                   = {Jeroen Lichtenauer and Mohammad Soleymani},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
+@Article{mimicry2,
+  Title                    = {MAHNOB HMI IBUG MIMICRY DATABASE (MHI-MIMICRY)},
+  Author                   = {Jeroen Lichtenauer and Michel Valstar and Xiaofan Sun and Anton Nijholt and Maja Pantic},
+  Year                     = {2011},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
+@Article{ckplus,
+  Title                    = {The Extended Cohn-Kanade Dataset (CK+): A complete dataset for action unit
+and emotion-specified expression},
+  Author                   = {Patrick Lucey and Jeffrey F. Cohn and Takeo Kanade and Jason Saragih and Zara Ambadar and Iain Matthews},
+  Year                     = {2010},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
 @Article{gavabdb,
   Title                    = {Gavabdb: a 3D face database},
   Author                   = {A. Moreno and A. Sanchez},
@@ -78,6 +134,15 @@
 
   Owner                    = {Florian},
   Timestamp                = {2015.11.12}
+}
+
+@Article{mmi2,
+  Title                    = {Web-based database for facial expression analysis},
+  Author                   = {Maja Pantic and Michel Valstar and Ron Rademaker and Ludo Maat},
+  Year                     = {2005},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
 }
 
 @Article{ekman2,
@@ -110,6 +175,16 @@
   Timestamp                = {2015.11.22}
 }
 
+@Article{tagging1,
+  Title                    = {A Multimodal Database for Affect Recognition and Implicit Tagging},
+  Author                   = {Mohammad Soleymani and Jeroen Lichtenauer and Thierry Pun and Maja Pantic},
+  Journaltitle             = {IEEE Transactions on Affective Computing. 3: pp. 42 - 55, Issue 1},
+  Year                     = {2012},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
+}
+
 @Article{ict_3drfe,
   Title                    = {Effect of Illumination on Automatic Expression Recognition:
 A Novel 3D Relightable Facial Database},
@@ -119,6 +194,17 @@ A Novel 3D Relightable Facial Database},
 
   Owner                    = {Florian},
   Timestamp                = {2015.12.02}
+}
+
+@Article{mmi1,
+  Title                    = {Induced Disgust, Happiness and Surprise: an Addition to the MMI Facial
+Expression Database},
+  Author                   = {Michel F. Valstar and Maja Pantic},
+  Journaltitle             = {Proceedings of Int'l Conf. Language Resources and Evaluation, Workshop on EMOTION},
+  Year                     = {2010},
+
+  Owner                    = {Florian},
+  Timestamp                = {2015.12.09}
 }
 
 @Online{urlfaps,
@@ -131,10 +217,12 @@ A Novel 3D Relightable Facial Database},
   Timestamp                = {2015.11.01}
 }
 
-@Article{,
+@Article{italiens,
   Title                    = {Affective facial expression processing via
 simulation: A probabilistic model},
   Author                   = {Jonathan Vitale and Mary-Anne Williams and Benjamin Johnston and Giuseppe Boccignone},
+  Journaltitle             = {Biologically Inspired Cognitive Architectures},
+  Year                     = {2014},
 
   Owner                    = {Florian},
   Timestamp                = {2015.12.03}

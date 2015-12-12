@@ -42,7 +42,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.3.3}Bosphorus 3D Face Database}{12}{subsubsection.2.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.4}Comparaison des diff\IeC {\'e}rentes bases de donn\IeC {\'e}es 3D}{13}{subsubsection.2.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.4}Comparatif des diff\IeC {\'e}rentes bases de donn\IeC {\'e}es 3D}{13}{subsubsection.2.1.3.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}2D}{14}{section.2.2}
 \defcounter {refsection}{0}\relax 
@@ -50,13 +50,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Bases de donn\IeC {\'e}es de visages 2D}{15}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}D\IeC {\'e}veloppement}{16}{part.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Cohn-Kanade (CK) \cite {ck}}{15}{subsubsection.2.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{17}{chapter*.19}
+\contentsline {subsubsection}{\numberline {2.2.2}CK+ \cite {ckplus}}{16}{subsubsection.2.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{18}{part*.20}
+\contentsline {subsubsection}{\numberline {2.2.3}Man-Machine Interaction (MMI) \cite {mmi1}\cite {mmi2}}{16}{subsubsection.2.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Ma premi\IeC {\`e}re annexe}{19}{appendix.A}
+\contentsline {subsubsection}{\numberline {2.2.4}MHI Mimicry \cite {mimicry1} \cite {mimicry2}}{16}{subsubsection.2.2.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.5}HCI Tagging \cite {tagging1} \cite {tagging2}}{17}{subsubsection.2.2.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.6}Comparatif des bases de donn\IeC {\'e}es 2D}{19}{subsubsection.2.2.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{II\hspace {1em}D\IeC {\'e}veloppement}{20}{part.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{21}{chapter*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{22}{part*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Ma premi\IeC {\`e}re annexe}{23}{appendix.A}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 

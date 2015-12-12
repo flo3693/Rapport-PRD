@@ -1,4 +1,4 @@
-\documentclass[overfullbox]{polytech/polytech}
+\documentclass[overfullbox, poster]{polytech/polytech}
 
 % LISEZ LE MODE D'EMPLOI POUR L'INTEGRALITE DES CONSIGNES
 
@@ -66,6 +66,21 @@
 
 
 \bibliography{biblio}
+
+\posterblock{Objectif}{
+L'objectif de ce projet est de réaliser une application d'aide aux personnes handicapées.\\
+Cette application, à l'aide d'une caméra, va repérer le visage d'une personne puis zoomer dessus pour ensuite analyser son émotion actuelle.\\
+En fonction de l'émotion perçue, une action spécifique sera réalisé (ex: si la personne est triste, lui mettre de la musique joyeuse). 
+}{images/ptz.png}{}
+
+\posterblock{????}{
+
+}{images/AU.png}{}
+
+\posterblock{????}{
+
+}{images/ck.jpg}{}
+
 % le document commence ici
 \begin{document}
 
@@ -311,7 +326,7 @@ Un exemple de donnée est présente en \autoref{bosphorus_img}
  \pgfimage{images/bosphorus.jpg}
 \end{Figure}
 
-\subsubsection{Comparaison des différentes bases de données 3D}
+\subsubsection{Comparatif des différentes bases de données 3D}
 
 Précédemment, je ne vous est présenté que les bases de données les plus populaires. Cependant, beaucoup d'autres existent également.\\
 J'ai donc réalisé un tableau (\autoref{tab:bdd3d}) recensant ces différentes bases de données publiquement disponible, et pouvant représenté un intêret dans la reconnaissance d'émotions, avec leurs principales caractéristiques (données principalement tirées de \cite{sota3d}).
@@ -320,12 +335,12 @@ J'ai donc réalisé un tableau (\autoref{tab:bdd3d}) recensant ces différentes 
 	\begin{tabular}{|p{2.5cm}|p{2cm}|p{3.5cm}|p{6cm}|}
 		\hline
 		\textbf{Nom} &\textbf{Type de données} &\textbf{Taille} &\textbf{Contenu}\\\hline
-		BU-3DFE (\cite{bu3dfe_article}) &Statique &100 adultes &6 émotions basiques avec 4 niveaux d'intensités\\
-		BU-4DFE (\cite{bu4dfe_article}) &Dynamique &101 adultes &6 émotions basiques\\
-		Bosphorus (\cite{bosphorus_article}) &Statique &105 adultes (dont 25 acteurs) &6 émotions basiques, 24 AUs, occlusions\\
-		ICT-3DRFE (\cite{ict_3drfe}) &Statique &23 adultes &6 émotions basiques, 2 expressions neutres, 4 orientations du regard (haut, bas, gauche, droite) et un visage "grimaçant"\\
-		D3DFACS (\cite{d3dfacs}) &Dynamique &10 adultes (dont 4 experts en FACS) &Jusqu'à 38 AUs par sujets\\
-		Gavabdb (\cite{gavabdb}) &Statique &61 adultes &3 expressions: sourires ouverts/fermés et aléatoire\\\hline
+		BU-3DFE\cite{bu3dfe_article} &Statique &100 adultes &6 émotions basiques avec 4 niveaux d'intensités\\
+		BU-4DFE\cite{bu4dfe_article} &Dynamique &101 adultes &6 émotions basiques\\
+		Bosphorus\cite{bosphorus_article} &Statique &105 adultes (dont 25 acteurs) &6 émotions basiques, 24 AUs, occlusions\\
+		ICT-3DRFE\cite{ict_3drfe} &Statique &23 adultes &6 émotions basiques, 2 expressions neutres, 4 orientations du regard (haut, bas, gauche, droite) et un visage "grimaçant"\\
+		D3DFACS\cite{d3dfacs} &Dynamique &10 adultes (dont 4 experts en FACS) &Jusqu'à 38 AUs par sujets\\
+		Gavabdb\cite{gavabdb} &Statique &61 adultes &3 expressions: sourires ouverts/fermés et aléatoire\\\hline
 	\end{tabular}
 \end{Table}
 
@@ -353,15 +368,113 @@ Par contre dans le cas d'un flux vidéo récupéré via une caméra, c'est les \
 
 \newpage
 \subsection{Bases de données de visages 2D}
+Je vais ici vous présenter différentes bases de données de visages 2D, libre d'accès à la communauté scientifique, intéressantes pour la recherche et permettant de réaliser une reconnaissance faciale d'expressions.
+
+\subsubsection{Cohn-Kanade (CK) \cite{ck}}
+Probablement la base de données de visage 2D la plus connue et la plus utilisé pour la reconnaissance faciale d'expressions, elle se compose de 97 sujets (65\% femmes, 15\% afro-américains et 3\% asiatiques ou sud américain) âgés de 18 à 30 ans et réalisant les 6 expressions universelles (joie, tristesse, dégoût, peur, surprise et colère).\\
+Cette base contient au total 486 séquences vidéos, du visage neutre au départ jusqu'à l'\textbf{apex} (le pic de l'émotion) à la fin. Ces séquences sont en niveaux de gris et digitalisé en tableaux de 640*480 pixels avec donc une précision de 8 bits (dû aux niveaux de gris).\\
+Toutes ces séquences sont entièrement codées en termes de FACS et d'AUs mais ne contiennent pas de label spécifiant l'émotion présentée.\\
+Toutes les expressions présentes dans les séquences vidéos contenues dans cette base sont posées et non spontanées, cela signifie qu'on a demandé à ces personnes de produire telle ou telle émotion, cela ne leur est pas venu d'eux-même spontanément. Les expressions présentées seront donc plus "exagérées" qu'en temps normal.
+
+\begin{Figure}{ck}{Exemple de données de CK (de haut en bas et de gauche à droite : neutre, surprise, joie, colère, dégoût)}
+ \pgfimage{images/ck.jpg}
+\end{Figure}
+
+\subsubsection{CK+ \cite{ckplus}}
+C'est la version amélioré de la base de données CK.\\
+Cette fois-ci, elle contient des expressions posées et spontanées.\\
+Les expressions spontanées proviennent de \cite{ambadar}. \\
+Dans le cas des expressions posées, le nombre de sujets a été augmenté 27\% et le nombre des séquences de 22\%.
+Les séquences sont toujours codées en termes de FACS et d'AUS avec, cette fois-ci, un label associé à l'expression présentée qui se trouvera dans les metadata de la vidéos.\\
+Cette version propose également des protocoles et des résultats pour le suivi des ponts clés du visage ainsi que pour la reconnaissance d'émotion.\\
+\\
+Actuellement, une troisième version de CK est en préparation, avec comme principale ajout la synchronisation entre une séquence frontale et une séquence orientée de 30 degrés par rapport à la vue frontal.
+
+\subsubsection{Man-Machine Interaction (MMI)  \cite{mmi1}\cite{mmi2}}
+Créée en 2002, cette base de données, comme CK+, se composent de deux parties: une partie posée et une partie spontanée.\\
+Cette base contient plus de 2900 vidéos ainsi que des images en haute résolution de 75 sujets (48\% de femmes, européen, africain et sud américain) âgés de 19 à 62 ans. Chaque séquence vidéos contient soit une expression dans son entièreté, soit un AU spécifique\\
+Les données de cette base sont également codés en terme de FACS et d'AUs.\\
+L'avantage de cette base de données est qu'elle contient toute l'étendu d'une expression: visage neutre - \textbf{onset} (début de l'expression) - \textbf{apex} (pic) - \textbf{offset} (fin de l'expression) - visage neutre .\\
+Cela permet de réaliser une reconnaissance d'émotion dans le temps plus précise.\\
+Certaines des séquences vidéos sont en couleur, les autres sont en niveaux de gris.
+
+\begin{Figure}{mmi}{Exemple de données de MMI}
+ \pgfimage{images/mmi.png}
+\end{Figure}
+
+\subsubsection{MHI Mimicry \cite{mimicry1} \cite{mimicry2}}
+Cette base de données est intéressantes car elle diffère totalement des deux précédentes au niveau de sa construction.\\
+Elle se compose de 54 vidéos (sessions) de 40 sujets (28 hommes, 12 femmes) entre 18 et 40 ans venant de l'Imperial College de Londres. Sur chaque session, 2 participants interagissent et chaque session est divisé en deux parties.\\
+Tout d'abord une partie débat dans laquelle les deux participants vont discuter de politique. Ils seront donc soit du même avis, soit d'un avis opposé.\\
+La deuxième partie consiste en un "jeu de rôle" : un participant joue le rôle d'un étudiant cherchant un appartement et le deuxième participant joue le rôle d'un propriétaire d'appartement. Le but de l'étudiant est donc de trouver un appartement et celui du propriétaire de louer son appartement, ils ont donc un but qui les relie.\\
+Cela permet d'observer le comportement humain lors d'une discussion où l'on est d'accord ou non et lorsque l'on veut convaincre quelqu'un, comment nous "mimons" ou non le comportement de notre interlocuteur dans le but de montrer nos intentions, de nous faire accepter.\\
+Chaque session est divisé en "épisodes d’intérêt" et chaque épisode est labellisé en fonction de ce qu'on y voit: sourire, hochement de tête, penchement du corps en avant ou en arrière.\\
+Sont aussi labellisés le rôle de chaque participant (s'il parle ou s'il écoute) ainsi que leurs intentions (2 catégories):
+\begin{itemize}
+\item Social Signal Expression (inconscient) : compréhension, accord, confusion, "liking"
+\item Desired Goal (conscient) : flatter l'autre, souligner la compréhension, exprimer l'accord, partager l'empathie, augmenter l'acceptation.\\
+\end{itemize}
+Tous les enregistrements ont été réalisés avec 15 caméras (7 par participants et une vue d'ensemble) et 3 micros (un micro de tête par participant et un au milieu de la pièce). Un exemple des images récupérées par les caméras se trouvent en \autoref{mimicry}
+
+\begin{Figure}{mimicry}{Exemple de données de MHI Mimicry}
+ \pgfimage{images/mimicry.png}
+\end{Figure}
+
+Cependant, sur cette base de données, aucune notion de FACS ni d'AUs n'est présente, les données sont labellisées en fonction du ressenti et de l'auto-évaluation réalisée par les participants..
+
+\subsubsection{HCI Tagging \cite{tagging1} \cite{tagging2}}
+C'est avec cette base de données que j'ai travaillé à la réalisation de mon projet.\\\\
+Créée par la même équipe que celle qui a créée MHI Mimicry, cette base de données se compose de 27 participants (11 hommes, 16 femmes) de 19 à 40 ans.\\
+Elle est divisée en 2 parties: la première partie contient 20 vidéos et la deuxième 28 vidéos et 14 images.\\
+Chaque vidéos contient la vidéo du visage, l'audio et les expressions vocales, la position où regardent les yeux et les signaux physionomiques (température du corps, rythme de la respiration, EEG, rythme cardiaque). Les vidéos ont été filmées via 6 caméras: 5 en niveaux de gris et d'orientations différentes (frontal, bas-gauche, bas-droite, vue d'ensemble et profil gauche) et une en couleur (frontal).\\
+Concernant la partie 1 (Explicit Tagging) : chaque participant regarde plusieurs vidéos et à la fin de chaque vidéo un feedback sur leur ressenti leur ai demandé:
+\begin{itemize}
+\item émotion ressenti (parmi neutre, anxieux, amusé, triste, joyeux, dégoûté, en colère, surpris ou apeuré)
+\item excitation (sur une échelle de 1 à 9)
+\item agréabilité (sur une échelle de 1 à 9)
+\item dominance (sur une échelle de 1 à 9)
+\item prédictibilité (sur une échelle de 1 à 9)
+\end{itemize}
+
+Les vidéos visionnées par les participants lors de la partie 1 sont séparées par de petits clips courts neutre pour remettre l'expression de la personne à 0, la réinitialiser en quelque sorte.\\
+\\
+Concernant la partie 2 (Implicit Tagging) : on diffuse à chaque participant une image ou une vidéo deux fois. La première fois sans rien puis la deuxième fois avec un \textit{tag} censé décrire ce qu'il se passe dans la vidéo/image. Soit ce tag est correct soit il est erroné, le participant doit donc dire si il est d'accord ou non avec le tag attribué en appuyant respectivement sur un bouton vert ou rouge. Pour illustrer cela, un exemple est présent en \autoref{tag}. Cependant, comme les créateurs de cette base n'ont pas les droits pour ces images, les images accessibles que j'ai récupéré ne contiennent que les bords contrairement aux images diffusées aux participants.\\
+
+\begin{Figure}{tag}{Même image avec 2 tags différents: le premier erroné (Kiss), le deuxième correct (Handshake)}
+ \pgfimage{images/tag.jpg}
+\end{Figure}
+
+Un exemple des différentes données vidéos contenues dans cette base est en \autoref{tag2}.
+
+\begin{Figure}{tag2}{Données contenues dans HCI Tagging}
+ \pgfimage{images/tag.png}
+\end{Figure}
+
+Pareillement à MHI Mimicry, aucune notion de FACS ni d'AUs n'est présente, les données sont labellisées en fonction de l'auto-évaluation réalisée par tous les participants.
+
+\newpage
+\subsubsection{Comparatif des bases de données 2D}
+
+\begin{Table}{tab:bdd2d}{Comparaison de bases de données 2D}
+	\begin{tabular}{|p{2cm}|p{0.7cm}|p{5cm}|p{4cm}|p{2cm}|}
+		\hline
+		\textbf{Nom} &\textbf{P/S} &\textbf{Taille} &\textbf{Contenu} &\textbf{Label}\\\hline
+		CK\cite{ck} &P & 97 sujets (65\% femmes, 15\% afro-américains et 3\% asiatiques ou sud américain) de 18 à 30 ans &486 séquences vidéos des 6 émotions basiques & FACS\\
+		CK+\cite{ckplus} &P/S &Nombre de sujets augmenté 27\% &Nombre de séquences augmenté 27\% &FACS + émotion\\
+		MMI\cite{mmi1} \cite{mmi2} &P/S &75 sujets (48\% de femmes, européen, africain et sud américain) de 19 à 62 ans &2900 vidéos des 6 émotions basiques ou d'AUs spécifiques &FACS\\
+		MHI Mimicry\cite{mimicry1}\cite{mimicry2} &S & 40 sujets (28 hommes, 12 femmes) entre 18 et 40 ans &54 vidéos (sessions) &Auto-évaluation\\
+		HCI Tagging\cite{tagging1}\cite{tagging2} &S &27 sujets (11 hommes, 16 femmes) de 19 à 40 ans &Partie 1 : 20 vidéos; Partie 2 : 28 images et 14 vidéos &Auto-évaluation\\\hline
+	\end{tabular}
+\end{Table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \part{Développement}
 \label{part:part_dev}

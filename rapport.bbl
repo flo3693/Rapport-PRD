@@ -37,6 +37,38 @@
       \verb https://labs.affectiva.com/superbowl/affdexweb.html
       \endverb
     \endentry
+    \entry{ambadar}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ee0b06c5e1c3c5a6bc0022956be2beac}{Ambadar}{A\bibinitperiod}{Zara}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=dca211510061173951c4c10f6b2718c1}{Cohn}{C\bibinitperiod}{Jeffrey\bibnamedelima F.}{J\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=d928ce8f86b881eaec496d2a6e558ef1}{Reed}{R\bibinitperiod}{Lawrence\bibnamedelima Ian}{L\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{86ba410e2e6679698312e7e52415879b}
+      \strng{fullhash}{86ba410e2e6679698312e7e52415879b}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{All Smiles are Not Created Equal: Morphology and Timing of Smiles Perceived as Amused, Polite and Embarrassed/Nervous}
+      \field{year}{2009}
+    \endentry
+    \entry{mimicry1}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9eb1d129d6f1e6bf395ace747b8513d8}{Bilakhia}{B\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=07f987ebc672fe5c7475c98144008a1d}{Petridis}{P\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=e8fd35d79801a6f816e05ae27e8b6a72}{Nijholt}{N\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=e7c78a33eacb9d294e08b451d56c86b1}{Pantic}{P\bibinitperiod}{M.}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d0e19cc01f11c36a7146ef2051490e9c}
+      \strng{fullhash}{d0e19cc01f11c36a7146ef2051490e9c}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern Recognition Letters, vol. 66, pp. 52-61}
+      \field{title}{The MAHNOB Mimicry Database - a database of naturalistic human interactions}
+      \field{year}{2015}
+    \endentry
     \entry{d3dfacs}{article}{}
       \name{author}{3}{}{%
         {{hash=c26c4f8bc69b593cb2e2fd7148043acf}{Cosker}{C\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
@@ -113,6 +145,71 @@
       \verb http://emotient.com/livecam-demo/
       \endverb
     \endentry
+    \entry{ck}{article}{}
+      \name{author}{3}{}{%
+        {{hash=45496c6a7530cfbfb4f3218a2602b77e}{Kanade}{K\bibinitperiod}{Takeo}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=dca211510061173951c4c10f6b2718c1}{Cohn}{C\bibinitperiod}{Jeffrey\bibnamedelima F.}{J\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=03f21fd83ed3b25ce1c7ef18a13aba61}{Tian}{T\bibinitperiod}{Yingli}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9175b7c9ec46214ec9de5ca1b9ecfe66}
+      \strng{fullhash}{9175b7c9ec46214ec9de5ca1b9ecfe66}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Fourth IEEE International Conference on Automatic Face and Gesture Recognition}
+      \field{title}{Comprehensive Database for Facial Expression Analysis}
+      \field{year}{2000}
+    \endentry
+    \entry{tagging2}{article}{}
+      \name{author}{2}{}{%
+        {{hash=60626202d9288aaa05a92e5e6c21920e}{Lichtenauer}{L\bibinitperiod}{Jeroen}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=102f5f953b96751cafe841ae28608655}{Soleymani}{S\bibinitperiod}{Mohammad}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{06a3048117b3fa787286984e5a364422}
+      \strng{fullhash}{06a3048117b3fa787286984e5a364422}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MAHNOB-HCI-TAGGING DATABASE}
+      \field{year}{2012}
+    \endentry
+    \entry{mimicry2}{article}{}
+      \name{author}{5}{}{%
+        {{hash=60626202d9288aaa05a92e5e6c21920e}{Lichtenauer}{L\bibinitperiod}{Jeroen}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=2073fede368bd0275238f03be584e4d9}{Valstar}{V\bibinitperiod}{Michel}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=4ceed0746f1fc63dc5166e5c23c969af}{Sun}{S\bibinitperiod}{Xiaofan}{X\bibinitperiod}{}{}{}{}}%
+        {{hash=502bc6b9f3abf9e924285aa3910e08cd}{Nijholt}{N\bibinitperiod}{Anton}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{cbf736b422aa359adde94d06d2216774}
+      \strng{fullhash}{cbf736b422aa359adde94d06d2216774}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MAHNOB HMI IBUG MIMICRY DATABASE (MHI-MIMICRY)}
+      \field{year}{2011}
+    \endentry
+    \entry{ckplus}{article}{}
+      \name{author}{6}{}{%
+        {{hash=7ec74a05c0565b3f616f47382c901164}{Lucey}{L\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=dca211510061173951c4c10f6b2718c1}{Cohn}{C\bibinitperiod}{Jeffrey\bibnamedelima F.}{J\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=45496c6a7530cfbfb4f3218a2602b77e}{Kanade}{K\bibinitperiod}{Takeo}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=45538e0890c42b85bd3dbf4c6ca5b1c8}{Saragih}{S\bibinitperiod}{Jason}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=ee0b06c5e1c3c5a6bc0022956be2beac}{Ambadar}{A\bibinitperiod}{Zara}{Z\bibinitperiod}{}{}{}{}}%
+        {{hash=de7691b01181d3d91375d999b474c55f}{Matthews}{M\bibinitperiod}{Iain}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9612e61fc20e8bf452034b20729ce44d}
+      \strng{fullhash}{9612e61fc20e8bf452034b20729ce44d}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Extended Cohn-Kanade Dataset (CK+): A complete dataset for action unit and emotion-specified expression}
+      \field{year}{2010}
+    \endentry
     \entry{gavabdb}{article}{}
       \name{author}{2}{}{%
         {{hash=f28088ac9132e4b0bccfbdd9d5af699d}{Moreno}{M\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
@@ -163,6 +260,22 @@
       \verb http://matlabserver.cs.rug.nl/edgedetectionweb/web/index.html
       \endverb
     \endentry
+    \entry{mmi2}{article}{}
+      \name{author}{4}{}{%
+        {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=2073fede368bd0275238f03be584e4d9}{Valstar}{V\bibinitperiod}{Michel}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=80f1e2b52a2996aae9e5180aab970bfb}{Rademaker}{R\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=d40c7d2f80e6b64aad1ffe33606836a9}{Maat}{M\bibinitperiod}{Ludo}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0865a8cec32603709abf5951e42b9104}
+      \strng{fullhash}{0865a8cec32603709abf5951e42b9104}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web-based database for facial expression analysis}
+      \field{year}{2005}
+    \endentry
     \entry{sota3d}{article}{}
       \name{author}{4}{}{%
         {{hash=5242ecc7b56695d1c555c03371c63339}{Sandbach}{S\bibinitperiod}{Georgia}{G\bibinitperiod}{}{}{}{}}%
@@ -202,6 +315,23 @@
       \field{title}{Bosphorus database for 3D face analysis}
       \field{year}{2008}
     \endentry
+    \entry{tagging1}{article}{}
+      \name{author}{4}{}{%
+        {{hash=102f5f953b96751cafe841ae28608655}{Soleymani}{S\bibinitperiod}{Mohammad}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=60626202d9288aaa05a92e5e6c21920e}{Lichtenauer}{L\bibinitperiod}{Jeroen}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=365121602dae6fe0f43231bf62bdd821}{Pun}{P\bibinitperiod}{Thierry}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2b518ad7ff4413c4aac0b02aefb64177}
+      \strng{fullhash}{2b518ad7ff4413c4aac0b02aefb64177}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Affective Computing. 3: pp. 42 - 55, Issue 1}
+      \field{title}{A Multimodal Database for Affect Recognition and Implicit Tagging}
+      \field{year}{2012}
+    \endentry
     \entry{ict_3drfe}{article}{}
       \name{author}{4}{}{%
         {{hash=4587e873eac96496837ae0746e073417}{Stratou}{S\bibinitperiod}{Giota}{G\bibinitperiod}{}{}{}{}}%
@@ -236,6 +366,21 @@
       \verb{url}
       \verb http://www.visagetechnologies.com/uploads/2012/08/MPEG-4FBAOverview.pdf
       \endverb
+    \endentry
+    \entry{mmi1}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5860e32e9fbc4f6cb405f7cb3450ccb4}{Valstar}{V\bibinitperiod}{Michel\bibnamedelima F.}{M\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b06a31bb1db3c9bc8e035011f8468fe7}
+      \strng{fullhash}{b06a31bb1db3c9bc8e035011f8468fe7}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of Int'l Conf. Language Resources and Evaluation, Workshop on EMOTION}
+      \field{title}{Induced Disgust, Happiness and Surprise: an Addition to the MMI Facial Expression Database}
+      \field{year}{2010}
     \endentry
     \entry{italiens}{article}{}
       \name{author}{4}{}{%
