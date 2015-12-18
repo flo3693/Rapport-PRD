@@ -2269,10 +2269,12 @@
     <bcf:citekey order="40">mimicry2</bcf:citekey>
     <bcf:citekey order="41">tagging1</bcf:citekey>
     <bcf:citekey order="42">tagging2</bcf:citekey>
+    <bcf:citekey order="43">sal</bcf:citekey>
+    <bcf:citekey order="44">jaffe</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
-    <bcf:citekey order="43">simu_gabor</bcf:citekey>
-    <bcf:citekey order="44">instr_simu_gabor</bcf:citekey>
-    <bcf:citekey order="45">italiens</bcf:citekey>
+    <bcf:citekey order="45">simu_gabor</bcf:citekey>
+    <bcf:citekey order="46">instr_simu_gabor</bcf:citekey>
+    <bcf:citekey order="47">italiens</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

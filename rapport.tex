@@ -1,4 +1,7 @@
 \documentclass[overfullbox, poster]{polytech/polytech}
+\let\oldtabular=\tabular
+\def\tabular{\scriptsize\oldtabular}
+
 
 % LISEZ LE MODE D'EMPLOI POUR L'INTEGRALITE DES CONSIGNES
 
@@ -91,29 +94,167 @@ En fonction de l'émotion perçue, une action spécifique sera réalisé (ex: si
 % Le chapitre d'introduction générale n'est souvent pas numéroté
 % La commande \unnumberedchapter fonctionne de façon identique à \chapter mais produit un chapitre non numéroté présent dans la table des matières (à la différence de \chapter*)
 % Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
-\unnumberedchapter[Introduction]{Introduction et présentation du projet}
+\unnumberedchapter[Introduction]{Introduction}
+Le Projet de Recherche et Développement (anciennement Projet de Fin d'Études) est un projet se déroulant durant toute la 5ème année de master ingénieur au sein de l'école Polytech Tours. Ce rapport va présenter les travaux que j'ai effectué durant toute la durée de ce projet.\\
+\\
+Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir le cahier des charges du projet, l'état de l'art en matière de reconnaissance faciale d'émotions ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
+\\
+Dans la partie Recherche de ce rapport, après avoir défini le cahier des charges, je vais vous présenter les sept émotions universelles ainsi que deux normes majeures permettant de définir les mouvements du visages qui composent une expression.\\
+Je vous présenterai ensuite un état de l'art en matière de reconnaissance faciale d'expression, notamment les différentes techniques permettant de capturer un visage et de reconnaître une émotion, tout d'abord en 3D puis en 2D, ainsi que les avantages et inconvénients de chacune de ces techniques. Dans chacune de ces étapes, je présenterai l'état de l'art actuelle en terme de matériel, de méthodes et également de base de données disponibles. \\
+Je continuerai ensuite en présentant les différentes étapes nécessaires à la construction d'un système de reconnaissance faciale d'émotions performant et efficace.\\
+Je définirai ensuite les spécifications de l'application ainsi que les choix qui ont permit cette définition.\\
+Je conclurai par un planning prévisionnel ainsi que par les méthodologies et les outils de suivi utilisés durant ce projet.\\
+\\
+Dans la partie Développement, [rédaction en deuxième partie de l'année]\\
+\\
+\\
+Pour ce projet de recherche et développement, j'ai été encadré par Donatello Conte et Mohamed Slimane.
+
+
+\part{Recherche}
+\label{part:part_recherche}
+
+\chapter{Cahier des charges du projet}
+\label{chap:chap_cdc}
+
+\section{Contexte et présentation}
 L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple cité \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
 C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec une machine que mon projet prend place.\\
 \\
 Monsieur Slimane étant membre d'une association s'occupant de personnes handicapées, il souhaitait pouvoir aider et faciliter la vie de ces derniers via un projet réalisé au sein de l'école.\\
-Dans ce projet de recherche et développement, mon but est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression du visage actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.\\
-\\
-Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir l'état de l'art en matière de reconnaissance faciale d'émotions ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
-\\
-Dans la partie Recherche de ce rapport, je vais tout d'abord vous présenter les sept émotions universelles ainsi que deux normes majeures permettant de définir les mouvements du visages qui composent une expression.\\
-Je vous présenterai ensuite les différentes techniques permettant de capturer un visage et de reconnaître une émotion, tout d'abord en 3D puis en 2D, ainsi que les avantages et inconvénients de chacune de ces techniques. Dans chacune de ces étapes, je présenterai l'état de l'art actuelle en terme de matériel, de méthodes et également de base de données disponibles. \\
-Je continuerai ensuite en présentant les différentes étapes nécessaires à la construction d'un système de reconnaissance faciale d'émotions performant et efficace.\\
-Je finirai ensuite par définir concrètement de quoi se compose chaque partie de l'application que j'ai développé, ainsi que les choix qui ont permit cette définition.\\
-\\
-Dans la partie Développement, [rédaction en deuxième partie de l'année]
+Dans ce projet de recherche et développement, mon but est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression du visage actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.
 
+\section{Objectif}
+L'objectif est de réaliser une application qui pourra détecter en temps réel les émotions d'une personne handicapée se trouvant dans une pièce à l'aide d'une caméra fixée à un mur de cette même pièce. La caméra devra être capable de bouger et de zoomer pour suivre le visage de la personne.
 
-% Je peux diviser le rapport en partie
-\part{Recherche}
-\label{part:part_recherche}
+\section{Périmètre}
+Ce projet se concentre principalement sur les personnes handicapées mais l'application qui résultera de ce projet pourra également être utilisé pour des personnes non handicapées.\\
+L'application devra être fonctionnel dans n'importe quelle pièce d'une maison ou d'une structure spécialisée dans l'accueil de personnes handicapées.
+
+\section{Description fonctionnelle}
+Le projet se découpe en 2 fonctions principales:
+\begin{itemize}
+\item Repérer le visage
+\item Reconnaître l'expression\\
+\end{itemize}
+
+Chacune de ces fonctions se décomposent en plusieurs sous-fonctions.
+
+\subsection{Repérer le visage}
+Cette première focntion principale va permettre de trouver le visage d'une personne, de le suivre et de zoomer dessus.\\
+Les sous-fonctions suivantes seront donc nécessaires:
+\begin{itemize}
+\item Un algorithme de détection de visage dans une image
+\item Un algorithme de suivi de visage
+\item Un algorithme de zoom\\
+\end{itemize}
+
+Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonctions.
+
+\begin{tabular}{|l|p{12.5cm}|}
+   \hline
+   \multicolumn{2}{|l|}{\textbf{Fonction: Repérer le visage/Détection du visage}} \\
+   \hline
+   Objectif &Détecter un visage dans un environnement quelconque.\\
+   \hline
+   Description &En analysant les frames d'un flux vidéo, cet algorithme nous renverra la position d'un cadre entourant le visage trouvé.\\
+   \hline
+   Contraintes &Cet algorithme doit être rapide. \\
+   \hline
+   Niveau de priorité &Haute \\
+   \hline
+\end{tabular}
+
+\begin{tabular}{|l|p{12.5cm}|}
+   \hline
+   \multicolumn{2}{|l|}{\textbf{Fonction: Repérer le visage/Suivi du visage}} \\
+   \hline
+   Objectif &Suivre le visage entre plusieurs frames d'un flux vidéo dans le but de ne pas le perdre. \\
+   \hline
+   Description &En comparant 2 frames consécutives d'un flux vidéo, l'algorithme devra nous dire le déplacement du visage pour pouvoir le suivre avec la caméra. Il devra également être capable de faire le suivi si jamais le visage se retrouve occulté pendant quelques secondes. \\
+   \hline
+   Contraintes &Éviter le plus possible l'accumulation d'erreur de précision pouvant amener à la perte du visage. \\
+   \hline
+   Niveau de priorité &Haute \\
+   \hline
+\end{tabular}
+
+\begin{tabular}{|l|p{12.5cm}|}
+   \hline
+   \multicolumn{2}{|l|}{\textbf{Fonction: Repérer le visage/Zoom}} \\
+   \hline
+   Objectif &Zoomer sur une zone de l'image. \\
+   \hline
+   Description &L'algorithme devra pouvoir zoomer sur le cadre contenant le visage renvoyé par la sous-fonction de détection du visage. \\
+   \hline
+   Contraintes &Disposer d'une caméra ayant la possibilité de zoomer. \\
+   \hline
+   Niveau de priorité &Moyenne \\
+   \hline
+\end{tabular}
+
+\subsection{Reconnaître l'expression}
+Cette deuxième fonction principale va permettre d'identifier l'expression faciale de la personne.\\
+Les sous-fonctions suivantes seront donc nécessaires:
+\begin{itemize}
+\item Un algorithme d'apprentissage
+\item Un algorithme d'extraction des points clés (\textit{features}) du visage
+\item Un algorithme de classification\\
+\end{itemize}
+
+Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonctions.
+
+\begin{tabular}{|l|p{12.5cm}|}
+   \hline
+   \multicolumn{2}{|l|}{\textbf{Fonction: Reconnaître l'expression/Apprentissage}} \\
+   \hline
+   Objectif &Apprendre au système à classifier les expressions en fonction d'une base d'apprentissage.\\
+   \hline
+   Description &Pour chaque élément dans la base d'apprentissage, une émotion lui sera associé. Cela va permettre au système d'apprendre à quel expression du visage appartient une émotion.\\
+   \hline
+   Contraintes &La base d'apprentissage doit être assez fourni et pertinente pour permettre un apprentissage performant. \\
+   \hline
+   Niveau de priorité &Haute \\
+   \hline
+\end{tabular}
+
+\begin{tabular}{|l|p{12.5cm}|}
+   \hline
+   \multicolumn{2}{|l|}{\textbf{Fonction: Reconnaître l'expression/Extraction des \textit{features} du visage.}} \\
+   \hline
+   Objectif &Extraire les \textit{features} du visage pour pouvoir ensuite réaliser une classification. \\
+   \hline
+   Description &Cet algorithme devra extraire les \textit{features} du visage d'une personne se trouvant sur une frame d'un flux vidéo. Les \textit{features} d'un visage sont par exemple le coin des yeux, la position de la pupille, les coins de la bouche, le nez, les joues... Les positions des \textit{features} retournées permettront la classification. \\
+   \hline
+   Contraintes & \\
+   \hline
+   Niveau de priorité &Haute \\
+   \hline
+\end{tabular}
+
+\begin{tabular}{|l|p{12.5cm}|}
+   \hline
+   \multicolumn{2}{|l|}{\textbf{Fonction: Reconnaître l'expression/Classification}} \\
+   \hline
+   Objectif &Classifier l'expression du visage et retourner l'émotion associée. \\
+   \hline
+   Description &L'algorithme devra classifier l'expression du visage de la personne récupéré depuis un flux vidéo, grâce aux positions des \textit{features}, en fonction de l'apprentissage qui aura été effectué précédemment. \\
+   \hline
+   Contraintes &Cet algorithme doit être rapide et fiable (au moins 90\% de reconnaissance). \\
+   \hline
+   Niveau de priorité &Haute \\
+   \hline
+\end{tabular}
+
+\section{Budget}
+Ce projet ne dispose pas d'un budget précis.\\
+Néanmoins en réalisant un état de l'art des matériels disponibles à notre projet, nous avons décidé de choisir une caméra ne dépassant pas les 500€.
+
+\section{Délai}
+La partie recherche devra être fini pour le 15 janvier 2016 et la partie développement (et donc le projet complet) devra être fini pour la fin du second semestre, c'est-à-dire fin mars/début avril.
 
 \chapter{Émotions universelles et mouvements du visage}
-\label{chap:chap1_1}
+\label{chap:chap_emotions}
 
 Ce chapitre va me permettre d'introduire les notions nécessaires à la décomposition et donc à la reconnaissance d'une expression faciale et de son émotion associée.\\
 Pour un simple sourire, nous utilisons une vingtaine de muscles (les muscles zygomatiques), il ne peut donc pas être décrit par un seul mouvement du visage mais plusieurs. C'est exactement la même chose pour une expression, on ne la reconnaît que grâce à l'ensemble des mouvements faciaux qui la composent.\\
@@ -122,6 +263,7 @@ L'utilisation de l'une ou l'autre de ces normes permet de définir entièrement 
 \\
 Mais tout d'abord, je vais vous introduire les sept émotions universelles qui seront utilisées tout au long de mon projet et donc de ce rapport.
 
+\newpage
 \section{Les 7 émotions universelles}
 \label{sec:expr_uni}
 
@@ -171,7 +313,6 @@ Nous arrivons donc a un total de 66 AUs, chacune possédant 5 intensités, perme
 \\
 Néanmoins, un autre système de codification fait concurrence au FACS et est également bien implanté dans le milieu de la reconnaissance d'émotions.
 
-\newpage
 \section{La norme MPEG-4}
 \label{sec:fapu}
 
@@ -206,7 +347,7 @@ MPEG-4 ne décrit que les mouvements \textit{visibles} du visages, contrairement
 Nous allons maintenant voir quelles technologies sont disponibles pour réaliser l'acquisition des images qui seront à traiter par la suite.
 
 \chapter{État de l'art}
-\label{chap1_2}
+\label{chap:chap_sota}
 
 Dans ce chapitre, je vais vous présenter l'état de l'art des systèmes et techniques existants permettant de faire de la reconnaissance facial d'émotion.\\
 Mon projet se basant sur des images et vidéos en 2D, ce chapitre va principalement se concentrer sur les techniques d'acquisition et d'analyse d'images 2D.\\
@@ -454,18 +595,69 @@ Pareillement à MHI Mimicry, aucune notion de FACS ni d'AUs n'est présente, les
 
 \newpage
 \subsubsection{Comparatif des bases de données 2D}
+Pour récapituler toutes les informations que j'ai pu donner précédemment et pour introduire de nouvelles bases de données accessibles à la communauté scientifique dont je n'ai pas parlé, j'ai donc réalisé le tableau comparatif suivant:
 
 \begin{Table}{tab:bdd2d}{Comparaison de bases de données 2D}
-	\begin{tabular}{|p{2cm}|p{0.7cm}|p{5cm}|p{4cm}|p{2cm}|}
+	\begin{tabular}{|p{1.5cm}|p{0.7cm}|p{4cm}|p{5cm}|p{2.5cm}|}
 		\hline
 		\textbf{Nom} &\textbf{P/S} &\textbf{Taille} &\textbf{Contenu} &\textbf{Label}\\\hline
 		CK\cite{ck} &P & 97 sujets (65\% femmes, 15\% afro-américains et 3\% asiatiques ou sud américain) de 18 à 30 ans &486 séquences vidéos des 6 émotions basiques & FACS\\
 		CK+\cite{ckplus} &P/S &Nombre de sujets augmenté 27\% &Nombre de séquences augmenté 27\% &FACS + émotion\\
 		MMI\cite{mmi1} \cite{mmi2} &P/S &75 sujets (48\% de femmes, européen, africain et sud américain) de 19 à 62 ans &2900 vidéos des 6 émotions basiques ou d'AUs spécifiques &FACS\\
-		MHI Mimicry\cite{mimicry1}\cite{mimicry2} &S & 40 sujets (28 hommes, 12 femmes) entre 18 et 40 ans &54 vidéos (sessions) &Auto-évaluation\\
-		HCI Tagging\cite{tagging1}\cite{tagging2} &S &27 sujets (11 hommes, 16 femmes) de 19 à 40 ans &Partie 1 : 20 vidéos; Partie 2 : 28 images et 14 vidéos &Auto-évaluation\\\hline
+		MHI Mimicry \cite{mimicry1}\cite{mimicry2} &S & 40 sujets (28 hommes, 12 femmes) entre 18 et 40 ans &54 vidéos (sessions) &Auto-évaluation\\
+		HCI Tagging \cite{tagging1}\cite{tagging2} &S &27 sujets (11 hommes, 16 femmes) de 19 à 40 ans &Partie 1 : 20 vidéos; Partie 2 : 28 images et 14 vidéos &Auto-évaluation\\
+		SAL \cite{sal} &S &24 sujets &10 heures de vidéo: les sujets parle à une intelligence artificielle et leurs émotions sont changées en fonction des différentes personnalités de l'IA &Feeltrace\\
+		JAFFE\cite{jaffe} &P &10 femmes japonaises &213 images des 7 émotions basiques &Noté selon 6 adjectifs d'émotion par 60 sujets Japonais\\
+		\hline
 	\end{tabular}
 \end{Table}
+
+\chapter{Architecture d'un système de reconnaissance d'émotion}
+Dans ce chapitre je vais introduire les différentes parties nécessaires à la construction d'un système permettant de reconnaître des expressions et émotions.\\
+Un tel système se constitue de 4 parties (ou 3 car la première et deuxième peuvent être combiné en une seule):
+\begin{itemize}
+\item Récupération du visage
+\item Normalisation du visage
+\item Extraction des \textit{features} (nez, bouches, yeux …)
+\item Classification\\
+\end{itemize}
+
+Chacune de ces parties sera décrit plus précisément dans les sections suivantes avec un état de l'art sur les techniques existantes pour chacune d'entre elles.
+
+\newpage
+\section{Récupération du visage}
+
+\subsection{Absolu}
+
+\subsection{Différentiel}
+
+
+\section{Normalisation du visage}
+
+
+\section{Extraction des \textit{features}}
+
+\subsection{Filtres de Gabor}
+
+\subsection{Composantes pseudo-Haar}
+
+\subsection{Local Binary Pattern (LBP)}
+
+
+\section{Classification}
+
+\subsection{Classificateurs binaires}
+
+\subsection{Classificateurs multi-classes}
+
+
+
+\chapter{Spécifications de l'application}
+\label{chap:chap_specif}
+
+
+\chapter{Planning et outils utilisés}
+\label{chap:chap_planning}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -483,9 +675,6 @@ Pareillement à MHI Mimicry, aucune notion de FACS ni d'AUs n'est présente, les
 \unnumberedchapter{Conclusion}
 
 \appendix
-
-\chapter{Ma première annexe}
-
 
 \weeklyreport{17/09/2015}{
 	Découverte de 2 grandes méthodes de description des mouvements du visage existent : le FACS (Facial Action Coding System) mis en place par P. Ekman et w. Friesen en 1978 et le FAPU (Facial Animation Parameter Units) introduit par la norme de codage vidéo MPEG-4.\\
@@ -528,10 +717,12 @@ Pareillement à MHI Mimicry, aucune notion de FACS ni d'AUs n'est présente, les
 	Travail sur le programme Matlab pour le faire fonctionner à 100\%.
 }
 \weeklyreport{10/12/2015}{
-	
+	Rédaction du rapport.\\
+	Téléchargement de Matlab pour faire fonctionner le programme car il est impossible de le faire fonctionner avec Octave.\\
+	RDV avec Mr Conte pour vérifier la compréhension de l'article, des zones d'ombre persistent.
 }
 \weeklyreport{17/12/2015}{
-	
+	Étude du programme Matlab fonctionnel et comparaison de l'article au programme pour trouver à quelle partie du programme correspond chaque partie de l'article dans le but de mieux le comprendre.
 }
 \weeklyreport{07/01/2016}{
 	

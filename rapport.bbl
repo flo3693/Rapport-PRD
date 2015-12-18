@@ -210,6 +210,23 @@
       \field{title}{The Extended Cohn-Kanade Dataset (CK+): A complete dataset for action unit and emotion-specified expression}
       \field{year}{2010}
     \endentry
+    \entry{jaffe}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7b9ca2dab846613d57548e09826d8f9a}{Lyons}{L\bibinitperiod}{Michael\bibnamedelima J.}{M\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=47793bee6029ed81fba4ccfc58c48808}{Akamatsu}{A\bibinitperiod}{Shigeru}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=3d0c0fa74c7de76329a466dc625f98a5}{Kamachi}{K\bibinitperiod}{Miyuki}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=2973494849e44be8eb6fbf4be0e04b4f}{Gyoba}{G\bibinitperiod}{Jiro}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{df2ad67e6e2b0058037c342420428401}
+      \strng{fullhash}{df2ad67e6e2b0058037c342420428401}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings, Third IEEE International Conference on Automatic Face and Gesture Recognition}
+      \field{title}{Coding Facial Expressions with Gabor Wavelets}
+      \field{year}{1998}
+    \endentry
     \entry{gavabdb}{article}{}
       \name{author}{2}{}{%
         {{hash=f28088ac9132e4b0bccfbdd9d5af699d}{Moreno}{M\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
@@ -314,6 +331,18 @@
       \field{month}{05}
       \field{title}{Bosphorus database for 3D face analysis}
       \field{year}{2008}
+    \endentry
+    \entry{sal}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labeltitlesource}{title}
+      \field{title}{Site officiel de SAL}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2015}
+      \verb{url}
+      \verb http://emotion-research.net/toolbox/toolboxdatabase.2006-09-26.5667892524
+      \endverb
     \endentry
     \entry{tagging1}{article}{}
       \name{author}{4}{}{%

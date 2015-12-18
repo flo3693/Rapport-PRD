@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  10 DEC 2015 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  17 DEC 2015 18:11
 entering extended mode
 **rapport.tex
 (rapport.tex
@@ -2096,58 +2096,58 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
 \c@pagesLTS.arabic.1.local.cnt=\count357
 )
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 85.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 85.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 88.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 88.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\omljkp.fd"
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 85.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 88.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\omsjkp.fd"
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 85.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 88.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\omxjkp.fd"
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 85.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 88.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ujkpexa.fd"
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 88.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Try loading font information for T1+jkpf on input line 85.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Try loading font information for T1+jkpf on input line 88.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\t1jkpf.fd"
 File: t1jkpf.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkpf.
 )
-LaTeX Info: Redefining \degres on input line 85.
-LaTeX Info: Redefining \dots on input line 85.
-LaTeX Info: Redefining \up on input line 85.
+LaTeX Info: Redefining \degres on input line 88.
+LaTeX Info: Redefining \dots on input line 88.
+LaTeX Info: Redefining \up on input line 88.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2189,9 +2189,9 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'rapport.bbl' found.
 (rapport.bbl)
-Package biblatex Info: Reference section=0 on input line 85.
-Package biblatex Info: Reference segment=0 on input line 85.
-LaTeX Info: Redefining \microtypecontext on input line 85.
+Package biblatex Info: Reference section=0 on input line 88.
+Package biblatex Info: Reference segment=0 on input line 88.
+LaTeX Info: Redefining \microtypecontext on input line 88.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2223,10 +2223,10 @@ Normal \dimen register pool exhausted, switching to extended pool.
 \everyMPtoPDFconversion=\toks50
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 85.
-LaTeX Info: Redefining \ref on input line 85.
-LaTeX Info: Redefining \pageref on input line 85.
-LaTeX Info: Redefining \nameref on input line 85.
+Package hyperref Info: Link coloring ON on input line 88.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \c@pagesLTS.pnc.alph=\count365
@@ -2267,7 +2267,7 @@ Package caption Info: End \AtBeginDocument code.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/jkpf/b/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for T1+jkptt on input line 88.
+LaTeX Font Info:    Try loading font information for T1+jkptt on input line 91.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\t1jkptt.fd"
@@ -2277,7 +2277,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `jkptt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OT1+jkpf on input line 88.
+LaTeX Font Info:    Try loading font information for OT1+jkpf on input line 91.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ot1jkpf.fd"
@@ -2287,13 +2287,13 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `jkpf' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for U+jkpmia on input line 88.
+LaTeX Font Info:    Try loading font information for U+jkpmia on input line 91.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ujkpmia.fd"
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+LaTeX Font Info:    Try loading font information for U+msa on input line 91.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -2301,7 +2301,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+LaTeX Font Info:    Try loading font information for U+msb on input line 91.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2309,13 +2309,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 88.
+LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 91.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ujkpsyc.fd"
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 88.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 91.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
 Package microtype Info: Character `029' is missing
@@ -2372,22 +2372,27 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \c@pagesLTS.double.arabic=\count374
 \c@pagesLTS.current.local.arabic=\count375
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--109
+Underfull \hbox (badness 10000) in paragraph at lines 98--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--109
+Underfull \hbox (badness 10000) in paragraph at lines 98--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--109
+Underfull \hbox (badness 10000) in paragraph at lines 98--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--109
+Underfull \hbox (badness 10000) in paragraph at lines 98--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--112
 
  []
 
@@ -2399,300 +2404,371 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--109
 ]
 Chapitre 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--124
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 155--160
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--173
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 1 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
-
+ [][][][]\T1/jkpf/b/sc/12 1 Ca-hier des charges du pro-jet
  []
 
-[4 <./images/AU.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 202--207
-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 1 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
-
- []
-
-[5 <./images/points_fapu.png>]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 1 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
-
- []
-
-[6 <./images/distance_fapu.png>]
-Chapitre 2.
-[7
-
-]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[8 <./images/3dmm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[9 <./images/structured.jpg> <./images/stereo_imgs.png>]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[10 <./images/kinect2.png>]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[11 <./images/minolta.jpg> <./images/kinectvsminolta.png>]
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[12 <./images/bu3dfe.png> <./images/bosphorus.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 345--345
-[]|\T1/jkpf/b/n/10.95 Type de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--345
-[]|\T1/jkpf/m/n/10.95 (+20) ICT-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 351--353
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--361
-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[14 <./images/ptz.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 373.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 383.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--392
-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[15 <./images/ck.jpg>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 393.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 393.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 405.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 405.
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[16 <./images/mmi.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 425.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 425.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 438--441
-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[17 <./images/mimicry.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--455
-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[18 <./images/tag.jpg>]
-Underfull \hbox (badness 1603) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) 486 sé-quences vi-déos
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) FACS +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) MMI[[][]17[][]]
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) 40 su-jets (28 hommes, 12
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) Auto-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) HCI Tag-
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) 27 su-jets (11 hommes, 16
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 469--469
-[]|\T1/jkpf/m/n/10.95 (+20) Auto-
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 État de l'art
- []
-
-[19 <./images/tag.png>] [20
-
-] [21
-
-] [22
-
-]
-Annexe A.
-[23
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 551--551
-[][][][]\T1/jkpf/b/n/24.88 Comptes ren-dus heb-do-ma-
- []
-
-LaTeX Font Info:    Try loading font information for TS1+jkpf on input line 551
+[4]
+LaTeX Font Info:    Try loading font information for TS1+jkpf on input line 251
 .
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ts1jkpf.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ts1jkpf.fd"
 File: ts1jkpf.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkpf.
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `jkpf' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [24
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 1 Ca-hier des charges du pro-jet
+ []
+
+[5]
+Chapitre 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--265
+
+ []
+
+[6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
+
+ []
+
+[7 <./images/AU.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 309--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--348
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
+
+ []
+
+[9 <./images/points_fapu.png> <./images/distance_fapu.png>]
+Chapitre 3.
+[10
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[11 <./images/3dmm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[12 <./images/structured.jpg> <./images/stereo_imgs.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[13 <./images/kinect2.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[14 <./images/minolta.jpg> <./images/kinectvsminolta.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[15 <./images/bu3dfe.png> <./images/bosphorus.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/jkpf/b/n/8 Type de don-
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 486--486
+[]|\T1/jkpf/m/n/8 105 adultes (dont 25 ac-
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--502
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[17 <./images/ptz.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 524.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--533
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[18 <./images/ck.jpg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 534.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 534.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 546.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 546.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[19 <./images/mmi.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 566.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 566.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--572
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[20 <./images/mimicry.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 580--583
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--583
+
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[21 <./images/tag.jpg>]
+Underfull \hbox (badness 2080) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 97 su-jets (65% femmes, 15%
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 Nombre de su-jets aug-menté
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 MMI[[][]18[][]]
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 MHI Mi-mi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 40 su-jets (28 hommes, 12
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 HCI Tag-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 27 su-jets (11 hommes, 16
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--613
+[]|\T1/jkpf/m/n/8 SAL
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 613--613
+\T1/jkpf/m/n/8 tifs d'émo-tion par
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 3 État de l'art
+ []
+
+[22 <./images/tag.png>]
+Chapitre 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
+
+ []
+
+[23
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 4 Ar-chi-tec-ture d'un sys-tème de re-con-nais-sance 
+d'émo-tion
+ []
+
+[24]
+Chapitre 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
+[][][][]\T1/jkpf/b/n/24.88 Spécifications de l'ap-pli-ca-
+ []
+
+[25
+
+]
+Chapitre 6.
+[26
+
+] [27
+
+] [28
+
+] [29
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+[][][][]\T1/jkpf/b/n/24.88 Comptes ren-dus heb-do-ma-
+ []
+
+[30
 
 ]
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 Comptes ren-dus heb-do-ma-daires
  []
 
-[25] [26
+[31]
+Overfull \hbox (11.05765pt too wide) in paragraph at lines 741--741
+[]\T1/jkpf/m/it/10.95 (-20) Site of-fi-ciel de SAL\T1/jkpf/m/n/10.95 (-20) . \T
+1/jkpf/m/sc/10.95 (-20) url \T1/jkpf/m/n/10.95 (-20) : [][]$\T1/jkptt/m/n/10.95
+ http : / / emotion -[] research . net / toolbox / toolboxdatabase .$|
+ []
 
-] [27
+[32
+
+] [33
 
 ]
-Overfull \hbox (1.4147pt too wide) in paragraph at lines 551--551
+Overfull \hbox (1.4147pt too wide) in paragraph at lines 741--741
 []\T1/jkpf/m/n/10.95 (-20) Lijun \T1/jkpf/m/sc/10.95 (-20) Yin\T1/jkpf/m/n/10.9
 5 (-20) , Xiao-chen \T1/jkpf/m/sc/10.95 (-20) Chen\T1/jkpf/m/n/10.95 (-20) , Yi
  \T1/jkpf/m/sc/10.95 (-20) Sun\T1/jkpf/m/n/10.95 (-20) , Tony \T1/jkpf/m/sc/10.
@@ -2705,7 +2781,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 BIBLIOGRAPHIE
  []
 
-[28]
+[34]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -2739,54 +2815,54 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 551--551
+Underfull \hbox (badness 4872) in paragraph at lines 741--741
 [][][][]\T1/jkpf/b/n/24.88 Application d'aide à l'in-ter-ac-tion hom-me/-ma-
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 551--551
+Underfull \hbox (badness 1448) in paragraph at lines 741--741
  [][][][]\T1/jkpf/b/sc/10.95 Ecole Po-ly-tech-nique de l'Uni-ver-sité Fran-çois
  Ra-be-lais de Tours
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--551
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
  []\T1/jkpf/b/n/10.95 Département In-for-ma-tique
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--551
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
  []\T1/jkpf/b/n/10 64 ave-nue Jean Por-ta-lis, 37200 Tours, France
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--551
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
  []$\T1/jkptt/b/n/10 www . polytech . univ -[] tours . fr$[]
  []
 
 
-Underfull \hbox (badness 6758) in paragraph at lines 551--551
+Underfull \hbox (badness 6758) in paragraph at lines 741--741
  [][][][]\T1/jkpf/b/n/14.4 Informatique
  []
 
-<images/ptz.png, id=452, 192.72pt x 192.72pt>
+<images/ptz.png, id=530, 192.72pt x 192.72pt>
 File: images/ptz.png Graphic file (type png)
  <use images/ptz.png>
-Package pdftex.def Info: images/ptz.png used on input line 551.
+Package pdftex.def Info: images/ptz.png used on input line 741.
 (pdftex.def)             Requested size: 192.71951pt x 192.71951pt.
 
-<images/AU.png, id=453, 376.40625pt x 190.46156pt>
+<images/AU.png, id=531, 376.40625pt x 190.46156pt>
 File: images/AU.png Graphic file (type png)
  <use images/AU.png>
-Package pdftex.def Info: images/AU.png used on input line 551.
+Package pdftex.def Info: images/AU.png used on input line 741.
 (pdftex.def)             Requested size: 376.40532pt x 190.46107pt.
 
-<images/ck.jpg, id=454, 303.38344pt x 346.29375pt>
+<images/ck.jpg, id=532, 303.38344pt x 346.29375pt>
 File: images/ck.jpg Graphic file (type jpg)
  <use images/ck.jpg>
-Package pdftex.def Info: images/ck.jpg used on input line 551.
+Package pdftex.def Info: images/ck.jpg used on input line 741.
 (pdftex.def)             Requested size: 303.38269pt x 346.2929pt.
- [29
+ [35
 
 
  <./images/ptz.png> <./images/AU.png> <./images/ck.jpg>]
@@ -2822,7 +2898,7 @@ Package pdftex.def Info: images/ck.jpg used on input line 551.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [30
+ [36
 
 
 
@@ -2830,8 +2906,8 @@ Package pdftex.def Info: images/ck.jpg used on input line 551.
 ]
 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 553.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 743.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 743.
 \c@pagesLTS.arabic.1.local.count=\count376
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -2843,34 +2919,37 @@ Package pageslts Info: Total number of pages is odd.
 
 
 (rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 553.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 743.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 743.
 Package logreq Info: Writing requests to 'rapport.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 743.
  ) 
 Here is how much of TeX's memory you used:
- 39683 strings out of 493673
- 681861 string characters out of 3141524
- 1344173 words of memory out of 3000000
- 41650 multiletter control sequences out of 15000+200000
- 182179 words of font info for 441 fonts, out of 3000000 for 9000
+ 39814 strings out of 493673
+ 683696 string characters out of 3141524
+ 1345418 words of memory out of 3000000
+ 41741 multiletter control sequences out of 15000+200000
+ 217088 words of font info for 474 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,17n,94p,910b,2864s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,17n,94p,934b,2865s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbne.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/kpfonts/jkpmite.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/kpfonts/jkpmne.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/kpfonts/jkpmsc8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/kpfonts/jkpttbn8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/kpfonts/jkpttmn8a.pfb>
-Output written on rapport.pdf (37 pages, 2141348 bytes).
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbite.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/kpfonts/jkpbne.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/kpfonts/jkpmite.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/kpfonts/jkpmn8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/kpfonts/jkpmnc.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/k
+pfonts/jkpmne.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts
+/jkpmsc8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkp
+ttbn8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttm
+n8a.pfb>
+Output written on rapport.pdf (43 pages, 2199221 bytes).
 PDF statistics:
- 669 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
- 57291 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
+ 61563 words of extra memory for PDF output out of 61914 (max. 10000000)
 

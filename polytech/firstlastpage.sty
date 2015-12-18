@@ -82,7 +82,8 @@ Projet PeiP
 \csdef{polytech@typereport@name@pc}{Projet collectif}
 \csdef{polytech@typereport@name@psi}{Projet Systèmes d'Information}
 \csdef{polytech@typereport@name@pasr}{Projet Architecture, Système et Réseaux}
-\csdef{polytech@typereport@name@podi5}{Projet d'option DI5}
+\csdef{polytech@typereport@name@podi5}{\csuse{polytech@typereport@name@pldi5}}
+\csdef{polytech@typereport@name@pldi5}{Projet libre DI5}
 \csdef{polytech@typereport@name@peip1s2}{\csuse{polytech@typereport@peip}~S2}
 \csdef{polytech@typereport@name@peip2s4}{\csuse{polytech@typereport@peip}~S4}
 \csdef{polytech@typereport@name@stage}{Rapport de stage}
@@ -357,9 +358,12 @@ Projet PeiP
 		    	\ifstrequal{#1}{}{ }{\\\maxsizebox{0.5\textwidth}{1cm}{\minsizebox{0.5\textwidth}{1cm}{\pgfimage[height=1cm]{#1}}}}
 		    };
 		\end{tikzpicture}%
-	}
-	\csdef{polytech@output@company@simple}{#2}
-	\csdef{polytech@output@company@poster}{\ifstrequal{#1}{}{}{\pgfimage[height=1cm]{#1}}}
+	}%
+	\csdef{polytech@output@company@simple}{#2}%
+	\ifstrequal{#1}{}{%
+	}{%
+		\csdef{polytech@output@company@poster}{\pgfimage[height=1cm]{#1}}%
+	}%
 }
 \@onlypreamble\company
 

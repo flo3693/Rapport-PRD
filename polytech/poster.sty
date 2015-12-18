@@ -119,12 +119,17 @@
 		\path (authors.north); \pgfgetlastxy{\authorsxN}{\authorsyN}
 		\node[anchor=north east, color=polytechdarkblue,align=center,inner sep=0cm, outer sep=0cm, text width=5cm, yshift=-0.8cm] at (title.south east) {%
 			\setlength{\polytechposterlogoheight}{\authorsyN-\authorsyS-2em}
-			\maxsizebox{5cm}{\polytechposterlogoheight}{%
-				\minsizebox{5cm}{\polytechposterlogoheight}{%
-					\csuse{polytech@output@company@poster}%
+			\ifcsdef{polytech@output@company@poster}{
+				\maxsizebox{5cm}{\polytechposterlogoheight}{%
+					\minsizebox{5cm}{\polytechposterlogoheight}{%
+						\csuse{polytech@output@company@poster}%
+					}%
 				}%
-			}%
-			\par%
+				\par%
+			}{
+				\vspace{0.5\polytechposterlogoheight}
+				\par
+			}
 			\parskip0pt%
 			{\csuse{polytech@font@poster@company}En collaboration avec\linebreak\csuse{polytech@output@company@simple}}%
 		};
