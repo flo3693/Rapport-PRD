@@ -29,6 +29,7 @@
       \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Exemple de reconnaissance d'emotion via la webcam de notre ordinateur realise par la societe Affectiva}
       \field{title}{Demonstration de la reconnaissance d'emotion via la webcam par la societe Affectiva}
       \field{urlday}{03}
       \field{urlmonth}{12}
@@ -36,21 +37,6 @@
       \verb{url}
       \verb https://labs.affectiva.com/superbowl/affdexweb.html
       \endverb
-    \endentry
-    \entry{ambadar}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ee0b06c5e1c3c5a6bc0022956be2beac}{Ambadar}{A\bibinitperiod}{Zara}{Z\bibinitperiod}{}{}{}{}}%
-        {{hash=dca211510061173951c4c10f6b2718c1}{Cohn}{C\bibinitperiod}{Jeffrey\bibnamedelima F.}{J\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
-        {{hash=d928ce8f86b881eaec496d2a6e558ef1}{Reed}{R\bibinitperiod}{Lawrence\bibnamedelima Ian}{L\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{86ba410e2e6679698312e7e52415879b}
-      \strng{fullhash}{86ba410e2e6679698312e7e52415879b}
-      \field{sortinit}{A}
-      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{All Smiles are Not Created Equal: Morphology and Timing of Smiles Perceived as Amused, Polite and Embarrassed/Nervous}
-      \field{year}{2009}
     \endentry
     \entry{mimicry1}{article}{}
       \name{author}{4}{}{%
@@ -65,9 +51,27 @@
       \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage MHI Mimicry}
       \field{journaltitle}{Pattern Recognition Letters, vol. 66, pp. 52-61}
       \field{title}{The MAHNOB Mimicry Database - a database of naturalistic human interactions}
       \field{year}{2015}
+    \endentry
+    \entry{aam}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ef5bc8a1586c7aee160fe790a28ef3a5}{Cootes}{C\bibinitperiod}{Timothy\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=a45ffd90f1c73235bc1c41b8bf9bdfc6}{Edwards}{E\bibinitperiod}{Gareth\bibnamedelima J.}{G\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=278b6085b33702532a9ce2ab451da662}{Taylor}{T\bibinitperiod}{Christopher\bibnamedelima J.}{C\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9d47f08bebc2db1b74264d8c18af390b}
+      \strng{fullhash}{9d47f08bebc2db1b74264d8c18af390b}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la methode AAM. Creation du modele grace a la base d'apprentissage puis matching du modele avec un autre visage via un processus iteratif puis extraction de la position des features du visage}
+      \field{journaltitle}{IEEE transactions on pattern analysis and machine intelligence}
+      \field{title}{Active Appearance Models}
+      \field{year}{2001}
     \endentry
     \entry{d3dfacs}{article}{}
       \name{author}{3}{}{%
@@ -81,6 +85,7 @@
       \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage D3DFACS}
       \field{journaltitle}{IEEE InternationalConference on Computer Vision (ICCV)}
       \field{title}{A FACS valid 3D dynamic action unit database with applications to 3D dynamic morphable facial modeling}
       \field{year}{2011}
@@ -95,6 +100,7 @@
       \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Ce livre de Charles DARWIN decrit les similitudes entre les hommes et les animaux en matiere d'emotions}
       \field{title}{L'Expression des émotions chez l'homme et les animaux}
       \field{year}{1872}
     \endentry
@@ -108,6 +114,7 @@
       \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Description et manuel d'utilisation du systeme FACS cree par Paul EKMAN}
       \field{journaltitle}{Palo Alto : Consulting Psychologists Press}
       \field{title}{Facial Action Coding System (FACS) : Manual}
       \field{year}{1978}
@@ -123,6 +130,7 @@
       \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article ecrit par Ekman apres son voyage en Papouasie-Nouvelle-Guinee et decrivant pour la premiere fois les 7 emotions universelles (neutre, joie, peur, colere, degout, tristesse et surprise)}
       \field{journaltitle}{Journal of Personality and Social Psychology}
       \field{title}{Constants across culture in the face and emotion.}
       \field{year}{1971}
@@ -137,6 +145,7 @@
       \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Exemple de reconnaissance d'emotion via la webcam de notre ordinateur realise par la societe Affectiva}
       \field{title}{Demonstration de la reconnaissance d'emotion via la webcam par la societe Emotient}
       \field{urlday}{03}
       \field{urlmonth}{12}
@@ -157,6 +166,7 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage Cohn-Kanade (CK)}
       \field{journaltitle}{Proceedings of the Fourth IEEE International Conference on Automatic Face and Gesture Recognition}
       \field{title}{Comprehensive Database for Facial Expression Analysis}
       \field{year}{2000}
@@ -172,6 +182,7 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Manuel d 'utilisation de la base de donnees de visage HCI Tagging}
       \field{title}{MAHNOB-HCI-TAGGING DATABASE}
       \field{year}{2012}
     \endentry
@@ -189,6 +200,7 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Manuel d 'utilisation de la base de donnees de visage MHI Mimicry}
       \field{title}{MAHNOB HMI IBUG MIMICRY DATABASE (MHI-MIMICRY)}
       \field{year}{2011}
     \endentry
@@ -207,6 +219,7 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la 2eme version de la base de donnees de visage Cohn-Kanade (CK+)}
       \field{title}{The Extended Cohn-Kanade Dataset (CK+): A complete dataset for action unit and emotion-specified expression}
       \field{year}{2010}
     \endentry
@@ -223,6 +236,7 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage JAFFE}
       \field{journaltitle}{Proceedings, Third IEEE International Conference on Automatic Face and Gesture Recognition}
       \field{title}{Coding Facial Expressions with Gabor Wavelets}
       \field{year}{1998}
@@ -238,6 +252,7 @@
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage Gavabdb}
       \field{title}{Gavabdb: a 3D face database}
       \field{year}{2004}
     \endentry
@@ -254,6 +269,7 @@
       \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Decrit chaque parametre du simulateur de filtres de Gabor et leurs impacts et explique comment l'utiliser au mieux}
       \field{title}{Instructions pour le simulateur de filtres de Gabor}
       \verb{url}
       \verb http://matlabserver.cs.rug.nl/edgedetectionweb/web/edgedetection_params.html
@@ -272,6 +288,7 @@
       \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Site permettant de simuler le comportement des filtres de Gabor sur une image de notre choix. Tous les parametres des filtres peuvent etre modifies.}
       \field{title}{Simulateur de filtres de Gabor}
       \verb{url}
       \verb http://matlabserver.cs.rug.nl/edgedetectionweb/web/index.html
@@ -290,6 +307,7 @@
       \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage MMI}
       \field{title}{Web-based database for facial expression analysis}
       \field{year}{2005}
     \endentry
@@ -306,6 +324,7 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Etat de l'art sur les techniques et materiels utilises dans la reconnaissance d'expressions en 3D. Description des differentes techniques utilisees par differents materiels (ex: Kinect) pour recuperer des visages en 3D et les analyser ensuite}
       \field{journaltitle}{IMAGE AND VISION COMPUTING}
       \field{title}{Static and dynamic 3D facial expression recognition: A comprehensive survey}
       \field{year}{2012}
@@ -326,6 +345,7 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage Bosphorus}
       \field{day}{09}
       \field{journaltitle}{The First COST 2101 Workshop on Biometrics and Identity Management}
       \field{month}{05}
@@ -336,6 +356,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labeltitlesource}{title}
+      \field{annotation}{Site decrivant la base de donnees de visage SAL}
       \field{title}{Site officiel de SAL}
       \field{urlday}{16}
       \field{urlmonth}{12}
@@ -357,6 +378,7 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage HCI Tagging}
       \field{journaltitle}{IEEE Transactions on Affective Computing. 3: pp. 42 - 55, Issue 1}
       \field{title}{A Multimodal Database for Affect Recognition and Implicit Tagging}
       \field{year}{2012}
@@ -374,6 +396,7 @@
       \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage ICT-3DRFE}
       \field{journaltitle}{9th International Conference on Automatic Face and Gesture Recognition}
       \field{title}{Effect of Illumination on Automatic Expression Recognition: A Novel 3D Relightable Facial Database}
       \field{year}{2011}
@@ -388,6 +411,7 @@
       \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Description du systeme de FAPU introduit par la norme de codage MPEG-4}
       \field{title}{MPEG-4 Face and Body Animation (MPEG-4 FBA) : An overview}
       \field{urlday}{01}
       \field{urlmonth}{11}
@@ -407,9 +431,25 @@
       \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage MMI}
       \field{journaltitle}{Proceedings of Int'l Conf. Language Resources and Evaluation, Workshop on EMOTION}
       \field{title}{Induced Disgust, Happiness and Surprise: an Addition to the MMI Facial Expression Database}
       \field{year}{2010}
+    \endentry
+    \entry{violajones}{article}{}
+      \name{author}{2}{}{%
+        {{hash=050f01d5a79687cfd1d63ef25567fc35}{Viola}{V\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=80a34115f7f4e3ff2f51ad2aab7d955b}{Jones}{J\bibinitperiod}{Mickael}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0c5b79bb15a6d324452ebfacf2ee4bc4}
+      \strng{fullhash}{0c5b79bb15a6d324452ebfacf2ee4bc4}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Cet article decrit l'algorithme cree par Viola et Jones. Ce fut l'un des premiers algorithmes a detecter efficacement en temps reel des visages dans une image et il est maintenant utilise dans un grand nombre de detecteurs.}
+      \field{title}{Robust Real-Time Face Detection}
+      \field{year}{2001}
     \endentry
     \entry{italiens}{article}{}
       \name{author}{4}{}{%
@@ -424,8 +464,25 @@
       \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant une nouvelle approche permettant d'analyser des emotions via une methode probabilistique}
       \field{journaltitle}{Biologically Inspired Cognitive Architectures}
       \field{title}{Affective facial expression processing via simulation: A probabilistic model}
+      \field{year}{2014}
+    \endentry
+    \entry{sota2d}{article}{}
+      \name{author}{3}{}{%
+        {{hash=318946a0c75684dda4bd601a40feb691}{Whitehill}{W\bibinitperiod}{Jacob}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=29ef211edcd875dd9bfd9d3a448cbdb2}{Bartlett}{B\bibinitperiod}{Marian\bibnamedelima Stewart}{M\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=86a1ee8031a7ca5191dd6c078cbf82c9}{Movellan}{M\bibinitperiod}{Javier\bibnamedelima R.}{J\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f57184c49ab7217d49b4b26122e3311b}
+      \strng{fullhash}{f57184c49ab7217d49b4b26122e3311b}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Article ecrit par les fondateurs de l'entreprise Emotient et faisant un etat de l'art des differentes parties d'un systeme de reconnaissances d'emotions ainsi que de plusieurs techniques et bases de donnees}
+      \field{title}{Automatic Facial Expression Recognition}
       \field{year}{2014}
     \endentry
     \entry{bu4dfe_article}{article}{}
@@ -442,6 +499,7 @@
       \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage BU4DFE}
       \field{day}{19}
       \field{journaltitle}{The 8th International Conference on Automatic Face and Gesture Recognition}
       \field{month}{09}
@@ -462,6 +520,7 @@
       \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{Article decrivant la base de donnees de visage BU3DFE}
       \field{day}{12}
       \field{journaltitle}{The 7th International Conference on Automatic Face and Gesture Recognition}
       \field{month}{04}

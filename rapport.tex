@@ -95,6 +95,9 @@ En fonction de l'émotion perçue, une action spécifique sera réalisé (ex: si
 % La commande \unnumberedchapter fonctionne de façon identique à \chapter mais produit un chapitre non numéroté présent dans la table des matières (à la différence de \chapter*)
 % Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
 \unnumberedchapter[Introduction]{Introduction}
+L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple cité \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
+C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec une machine que ce projet prend place.\\
+\\
 Le Projet de Recherche et Développement (anciennement Projet de Fin d'Études) est un projet se déroulant durant toute la 5ème année de master ingénieur au sein de l'école Polytech Tours. Ce rapport va présenter les travaux que j'ai effectué durant toute la durée de ce projet.\\
 \\
 Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir le cahier des charges du projet, l'état de l'art en matière de reconnaissance faciale d'émotions ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
@@ -117,15 +120,26 @@ Pour ce projet de recherche et développement, j'ai été encadré par Donatello
 \chapter{Cahier des charges du projet}
 \label{chap:chap_cdc}
 
+\section{MOA}
+\begin{itemize}
+\item Donatello CONTE: Maître de conférence et enseignant chercheur en informatique à l'école Polytech Tours
+\item Mohamed SLIMANE: Professeur des Universités et enseignant chercheur en informatique à l'école Polytech Tours
+\end{itemize}
+
+\section{MOE}
+Florian TISSIER: élève en dernière année de master ingénieur en informatique à Polytech Tours
+
 \section{Contexte et présentation}
-L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple cité \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
-C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec une machine que mon projet prend place.\\
+Ce projet de recherche et développement prend place dans le cursus de dernière année de master ingénieur dispensé à l'école Polytech Tours.\\
 \\
 Monsieur Slimane étant membre d'une association s'occupant de personnes handicapées, il souhaitait pouvoir aider et faciliter la vie de ces derniers via un projet réalisé au sein de l'école.\\
-Dans ce projet de recherche et développement, mon but est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression du visage actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.
+Le but de ce projet de recherche et développement est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression du visage actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.
 
-\section{Objectif}
-L'objectif est de réaliser une application qui pourra détecter en temps réel les émotions d'une personne handicapée se trouvant dans une pièce à l'aide d'une caméra fixée à un mur de cette même pièce. La caméra devra être capable de bouger et de zoomer pour suivre le visage de la personne.
+\section{Problématique et objectif}
+Comment faciliter la vie quotidienne des personnes handicapées grâce à leurs émotions?\\
+\\
+L'objectif est de réaliser une application qui pourra détecter en temps réel les émotions d'une personne handicapée se trouvant dans une pièce à l'aide d'une caméra fixée à un mur de cette même pièce. La caméra devra être capable de bouger et de zoomer pour suivre le visage de la personne.\\
+Une fois l'émotion détecté, des actions spécifiques devront être réalisées (ex: changement de la couleur de la lumière, lecture de musique douce...)
 
 \section{Périmètre}
 Ce projet se concentre principalement sur les personnes handicapées mais l'application qui résultera de ce projet pourra également être utilisé pour des personnes non handicapées.\\
@@ -524,7 +538,7 @@ Toutes les expressions présentes dans les séquences vidéos contenues dans cet
 \subsubsection{CK+ \cite{ckplus}}
 C'est la version amélioré de la base de données CK.\\
 Cette fois-ci, elle contient des expressions posées et spontanées.\\
-Les expressions spontanées proviennent de \cite{ambadar}. \\
+%Les expressions spontanées proviennent de \cite{ambadar}. \\
 Dans le cas des expressions posées, le nombre de sujets a été augmenté 27\% et le nombre des séquences de 22\%.
 Les séquences sont toujours codées en termes de FACS et d'AUS avec, cette fois-ci, un label associé à l'expression présentée qui se trouvera dans les metadata de la vidéos.\\
 Cette version propose également des protocoles et des résultats pour le suivi des ponts clés du visage ainsi que pour la reconnaissance d'émotion.\\
@@ -616,23 +630,55 @@ Pour récapituler toutes les informations que j'ai pu donner précédemment et p
 Dans ce chapitre je vais introduire les différentes parties nécessaires à la construction d'un système permettant de reconnaître des expressions et émotions.\\
 Un tel système se constitue de 4 parties (ou 3 car la première et deuxième peuvent être combiné en une seule):
 \begin{itemize}
-\item Récupération du visage
-\item Normalisation du visage
+\item Détection du visage
 \item Extraction des \textit{features} (nez, bouches, yeux …)
 \item Classification\\
 \end{itemize}
 
-Chacune de ces parties sera décrit plus précisément dans les sections suivantes avec un état de l'art sur les techniques existantes pour chacune d'entre elles.
+Chacune de ces parties sera décrit plus précisément dans les sections suivantes avec un état de l'art sur les techniques existantes pour chacune d'entre elles.\\
+Une partie des informations se trouvant de ce chapitre sont tirées de \cite{sota2d} écrit par les fondateurs de la société Emotient et qui présente un état de l'art des différentes parties d'un système de reconnaissances d'émotions.
 
 \newpage
-\section{Récupération du visage}
+\section{Détection du visage}
+Depuis déjà plusieurs années, la détection de visage dans une image ou vidéo est devenu une réalité grâce aux algorithmes d'apprentissage.\\
+La détection de visage sur une vidéo ou une image se retrouve de plus en plus dans notre quotidien. Tout d'abord dans nos appareils photos ou smartphones mais également sur les réseaux sociaux comme Facebook, qui repère les visages sur une photos lorsque l'on souhaite identifier des personnes, ou encore Snapchat, qui depuis la dernière mise à jour repère notre visage grâce à la caméra frontale d'un smartphone pour ensuite lui appliquer diverses animations et déformations.\\
+\\
+Les algorithmes de détection de visage se divisent en 2 catégories: les absolus et les différentiels, chacun ayant leurs avantages et inconvénients.\\
 
 \subsection{Absolu}
+Les détecteurs absolus, aussi appelés détecteurs \textit{frame-by-frame}, vont déterminer la position d'un visage sur chaque frame d'une vidéo, indépendamment des frames précédentes.\\
+Le principale avantage de ces détecteurs est qu'ils sont très facilement parallélisable sur plusieurs frames d'une vidéo en même temps. Il permet également de réagir très rapidement si jamais le nombre de visages dans l'image change subitement et ne "dérive" pas au court du temps. Ici le terme "dériver" fait référence au fait de perdre la position d'un visage.\\
+Cependant, comme dit précédemment, ces détecteurs n'utilisent pas de notions de temps qui pourraient les rendre plus rapide et précis.\\
+\\
+L'algorithme de détection utilisé par la plupart de ces détecteurs est l'algorithme de \textbf{Viola-Jones} \cite{violajones} créé en 2001.\\
+Cet algorithme va tout d'abord apprendre un classificateur à différencier des visages d'autres objets grâce à un apprentissage réalisés avec des images de différentes tailles de visages ou de divers autres objets. A noté qu'il est préférable d'avoir un nombre d'objets quelconque très supérieur au nombre de visages si nous voulons que l'algorithme soit efficace.\\
+Une fois l'apprentissage fini et que l'on passe une nouvelle image à l'algorithme, il va analyser cette dernière en extrayant plusieurs \textit{patchs}, des bouts de l'image, de différentes tailles qu'il va ensuite normaliser à une taille précise (par exemple 48*48 pixels) puis les donner au classificateur qui va se charger de définir si oui ou non se trouve un visage dans ce patch.\\
+Cette étape d'extraction de patchs peut également être paralléliser pour gagner ne rapidité.\\
 
 \subsection{Différentiel}
+Contrairement aux détecteurs absolus, les détecteurs différentiels, aussi appelés \textit{face trackers}, déterminent la position d'un visage sur une image grâce à sa position précédente. Si la position d'un visage est connu à l'instant \textit{t}, le détecteur différentiel va se servir de cette position pour trouver celle à l'instant \textit{t+1}.\\
+Bien sûr, il faut initialiser la position à l'instant 0 pour faire fonctionner ces détecteurs. Pour cela il est possible d'utiliser un détecteur absolu sur la toute première frame du flux vidéo.\\
+L'avantage de ces détecteurs est leur grande rapidité et précision. Cependant, l'inconvénient est que l'accumulation de petite erreurs sur les positions peut mener à la "dérive" du détecteur puisqu'il ne se remet jamais à 0 une fois lancé.\\
+\\
+L'un des plus connus est l'algorithme \textbf{Active Appearance Model} (AAM).\\
+Dans AAM, un visage est représenté comme un modèle en forme de maillage triangulaire composé d'environ
+70 points. Ce modèle est construit grâce à un apprentissage sur différentes visages réalisant différentes expressions et dans lesquels les \textit{features} sont connus. Il va donc chercher à faire correspondre ce modèle avec tout visage se trouvant sur une image en le déformant pour faire correspondre les features du modèle à celles du visage. Les déformations possibles ont été calculés au préalable.\\
+Sur la première frame de la vidéo, il suffit d'initialiser les positions des features de chaque visage (manuellement ou via un tracker absolu) puis, sur les frames suivantes, la position de ces features est trackée grâce aux différentes déformations possibles.\\
+\\
+AAM ne permet pas que de détecter des visages mais permet également d'en extraire les features.
 
+\subsection{Comparatif}
+Voici un comparatif avantages/inconvénients de ces 2 types de détecteurs.
 
-\section{Normalisation du visage}
+\begin{Table}{tab:comp-detecteur}{Avantages/inconvénients des 2 types de détecteurs}
+	\begin{tabular}{|c|p{6cm}|p{6cm}|}
+		\hline
+		 &\textbf{Avantages} &\textbf{Inconvénients}\\\hline
+		\textbf{Absolu} &Facilement parallélisable, très réactif en cas de changement soudain du nombre de visage et ne "dérive" pas &Plus lent et moins précis que les différentiels \\\hline
+		\textbf{Différentiel} &Très rapide et d'une grande précision &Peut "dériver" si de petites erreurs s'accumulent au fur et à mesure\\
+		\hline
+	\end{tabular}
+\end{Table}
 
 
 \section{Extraction des \textit{features}}
@@ -645,12 +691,41 @@ Chacune de ces parties sera décrit plus précisément dans les sections suivant
 
 
 \section{Classification}
+Une fois les features extraites, il ne reste plus qu'à les analyser pour les classifier.\\
+Deux types de classificateurs existent: les systèmes basés sur des règles d'experts (\textit{rule-based expert systems}) et les classificateurs avec apprentissage (\textit{machine learning classifiers}).
+Les premiers sont de moins en moins répandu car ils sont beaucoup plus compliqué à utiliser que les autres. C'est donc sur les classificateurs avec apprentissage que je vais me concentrer.\\
+Parmi ces classificateurs, nous pouvons les classer en 2 catégories: les binaires et les multi-classes.
 
 \subsection{Classificateurs binaires}
+Comme l'indique son nom, ce type de classificateur ne permet de classifier une instance qu'entre 2 classes (ex: sourire VS pas de sourire).\\
+\\
+Le classificateur binaire le plus connu est le \textbf{Support Vector Machine} (SVM).\\
+Les SVMs se basent sur 2 notions très importantes.\\
+La première est la notion de \textit{marge maximale}. Cette marge est la distance entre la frontière de séparation des 2 classes et les échantillons les plus proches appelés vecteurs supports. La frontière de séparation est choisi de telle sorte qu'elle maximise le plus la marge. C'est donc grâce à un apprentissage que l'on peut définir cette frontière.\\
+La deuxième notion est celle de la transformation de l'espace de représentation en un espace de dimension plus grand, voir infini. cette notion est utile lorsque les données ne sont pas linéairement séparable dans l'espace d'origine. En projetant dans un espace de dimension plus grand, il est plus probable de trouver une séparation \autoref{svm}.\\
+Cette transformation est réalisé via une fonction noyau qui va permettre de transformer un produit scalaire dans un espace de grande dimension.
+
+\begin{Figure}{svm}{Exemple de projection dans un espace plus grand réalisé par SVM}
+ \pgfimage{images/svm.png}
+\end{Figure}
+
 
 \subsection{Classificateurs multi-classes}
+Contrairement aux binaires, ces classificateurs permettent de classifier une instance selon un nombre de classes supérieur à 2.\\
+\\
+Le classificateur multi-classes le plus connu est le \textbf{k-Plus Proche Voisin} (kPPV).\\
+Le kPPV fonctionne d'une manière très simple.\\
+Tout d'abord un apprentissage grâce à une base d'apprentissage composé de couples "entrée-sortie".\\
+Puis la phase de classification se fait en cherchant la distance minimum entre un nouvel échantillon d'entrée dont la sortie doit être déterminée et les \textit{k} échantillons d'apprentissage dont l'entrée est la plus proche \autoref{kppv}.\\
+Une fois ces k plus proche voisins trouvés, il suffit de trouver quelle classe est majoritairement présente pour trouver la sortie associée et donc à quelle classe appartient le nouvel échantillon. Si jamais il y a un nombre égale d'échantillon de plusieurs classes (par exemple avec k=3 on obtient 1 échantillons de 3 différentes classes), on choisi alors aléatoirement la classe d'appartenance.\\
+
+\begin{Figure}{kppv}{Fonctionnement du kPPV avec k=3, 3 classes et 4 échantillons dont un indécis}
+ \pgfimage{images/kppv.png}
+\end{Figure}
 
 
+\chapter{Critiques de l'existant et nouvelle approche}
+\label{chap:chap_critiques}
 
 \chapter{Spécifications de l'application}
 \label{chap:chap_specif}
