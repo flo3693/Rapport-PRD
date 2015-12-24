@@ -2272,10 +2272,15 @@
     <bcf:citekey order="43">jaffe</bcf:citekey>
     <bcf:citekey order="44">sota2d</bcf:citekey>
     <bcf:citekey order="45">violajones</bcf:citekey>
-    <bcf:citekey order="0">*</bcf:citekey>
     <bcf:citekey order="46">simu_gabor</bcf:citekey>
     <bcf:citekey order="47">instr_simu_gabor</bcf:citekey>
-    <bcf:citekey order="48">italiens</bcf:citekey>
+    <bcf:citekey order="48">violajones</bcf:citekey>
+    <bcf:citekey order="49">papa</bcf:citekey>
+    <bcf:citekey order="50">extended_haar</bcf:citekey>
+    <bcf:citekey order="0">*</bcf:citekey>
+    <bcf:citekey order="51">simu_gabor</bcf:citekey>
+    <bcf:citekey order="52">instr_simu_gabor</bcf:citekey>
+    <bcf:citekey order="53">italiens</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

@@ -204,6 +204,22 @@
       \field{title}{MAHNOB HMI IBUG MIMICRY DATABASE (MHI-MIMICRY)}
       \field{year}{2011}
     \endentry
+    \entry{extended_haar}{article}{}
+      \name{author}{2}{}{%
+        {{hash=42799a7004bdddef8e2efeda20abcc68}{Lienhart}{L\bibinitperiod}{Rainer}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=adec46bf1e84455d183b63d4eb3952cb}{Maydt}{M\bibinitperiod}{Jochen}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1fbd1866da25ef688421b0800644e9cd}
+      \strng{fullhash}{1fbd1866da25ef688421b0800644e9cd}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Extensions des composantes de Haar, rajout de composantes orientees a 45 degres permettant d'augmenter les performances de la methode des composantes pseudo-Haar dans la detection de contours ou d'objets}
+      \field{journaltitle}{IEEE ICIP}
+      \field{title}{An Extended Set of Haar-like Features for Rapid Object Detection}
+      \field{year}{2002}
+    \endentry
     \entry{ckplus}{article}{}
       \name{author}{6}{}{%
         {{hash=7ec74a05c0565b3f616f47382c901164}{Lucey}{L\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
@@ -310,6 +326,23 @@
       \field{annotation}{Article decrivant la base de donnees de visage MMI}
       \field{title}{Web-based database for facial expression analysis}
       \field{year}{2005}
+    \endentry
+    \entry{papa}{article}{}
+      \name{author}{3}{}{%
+        {{hash=762665b7ef5ee38a8d43f3e14d36ceb6}{Papageorgiou}{P\bibinitperiod}{Constantine\bibnamedelima P.}{C\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{hash=bbe1c83bdecf8bd406328eafda50bcda}{Oren}{O\bibinitperiod}{Michael}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=f65eec80d26b2ab02398d1e78643c9a6}{Poggio}{P\bibinitperiod}{Tomaso}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9c08bfd5a5d7da4dcf092bbd8d3657fb}
+      \strng{fullhash}{9c08bfd5a5d7da4dcf092bbd8d3657fb}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Travaux sur lesquels Viola et Jones se sont bases pour realiser leur detecteur de visage et decrivant des caracteristiques concues a partir des ondelettes de Haar}
+      \field{journaltitle}{International Conference on Computer Vision}
+      \field{title}{A General Framework for Object Detection}
+      \field{year}{1998}
     \endentry
     \entry{sota3d}{article}{}
       \name{author}{4}{}{%

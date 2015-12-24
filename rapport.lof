@@ -48,11 +48,29 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Architecture d'un syst\IeC {\`e}me de reconnaissance d'\IeC {\'e}motion}{}{chapter.4}
+\contentsline {chapter}{\numberline {4}Architecture d'un syst\IeC {\`e}me de reconnaissance d'\IeC {\'e}motions}{}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Exemple de projection dans un espace plus grand r\IeC {\'e}alis\IeC {\'e} par SVM\relax }}{26}{figure.caption.26}
+\contentsline {figure}{\numberline {1}{\ignorespaces Image utilis\IeC {\'e}e pour v\IeC {\'e}rifier l'effet des filtres de Gabor\relax }}{27}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Fonctionnement du kPPV avec k=3, 3 classes et 4 \IeC {\'e}chantillons dont un ind\IeC {\'e}cis\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {2}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\lambda $\relax }}{28}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\theta $\relax }}{28}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\Psi $\relax }}{29}{figure.caption.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\gamma $\relax }}{29}{figure.caption.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Effet du changement du param\IeC {\`e}tre $n $\relax }}{30}{figure.caption.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Effet du changement du param\IeC {\`e}tre $b $ associ\IeC {\'e} \IeC {\`a} $\sigma $\relax }}{30}{figure.caption.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Composantes pseudo-Haar utilis\IeC {\'e} par Viola et Jones\relax }}{30}{figure.caption.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Extension de composantes pseudo-Haar d\IeC {\'e}fini par Lienhart et Maydt\relax }}{31}{figure.caption.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces Exemple de projection dans un espace plus grand r\IeC {\'e}alis\IeC {\'e} par SVM\relax }}{33}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces Fonctionnement du kPPV avec k=3, 3 classes et 4 \IeC {\'e}chantillons dont un ind\IeC {\'e}cis\relax }}{33}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

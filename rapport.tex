@@ -71,18 +71,17 @@
 \bibliography{biblio}
 
 \posterblock{Objectif}{
-L'objectif de ce projet est de réaliser une application d'aide aux personnes handicapées.\\
-Cette application, à l'aide d'une caméra, va repérer le visage d'une personne puis zoomer dessus pour ensuite analyser son émotion actuelle.\\
-En fonction de l'émotion perçue, une action spécifique sera réalisé (ex: si la personne est triste, lui mettre de la musique joyeuse). 
+L'objectif de ce projet est de réaliser une application qui, à l'aide d'une caméra, va repérer le visage d'une personne handicapée puis zoomer dessus pour ensuite analyser son émotion actuelle.\\
+En fonction de l'émotion perçue, une action spécifique sera réalisée (ex: si la personne est triste, lui mettre de la musique joyeuse). 
 }{images/ptz.png}{}
-
-\posterblock{????}{
-
-}{images/AU.png}{}
-
-\posterblock{????}{
-
-}{images/ck.jpg}{}
+\posterblock{Normes de description}{
+	%Plusieurs normes permettent de définir des expressions du visage et donc des émotions.\\
+%Une des plus connue est la norme \textbf{FACS}, qui signifie Facial Action Coding System. Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage.  Par exemple un sourire, et donc l'émotion de la joie, est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
+%Plusieurs niveaux d'intensités sont également défini, allant de A (très faible) à E (maximum), pour chaque AU.
+}{images/AU.png}{Exemple d'AUs utilisées dans le système FACS}
+\posterblock{Ajouts fonctionnels}{
+	%La réalisation d'une telle application passe par une phase d'apprentissage. Dans cette phase, l'application va apprendre à reconnaître telle ou telle émotion en utilisant des images déjà labellisées avec le nom d'une émotion ou avec une des normes de description comme FACS. Ces images se trouvent dans différentes bases de données de visages comme la base Cohn-Kanade ou la base HCI-Tagging.
+}{images/ck.jpg}{Exemple d'images (issues de Cohn-Kanade) utilisées pour l'apprentissage}
 
 % le document commence ici
 \begin{document}
@@ -626,7 +625,7 @@ Pour récapituler toutes les informations que j'ai pu donner précédemment et p
 	\end{tabular}
 \end{Table}
 
-\chapter{Architecture d'un système de reconnaissance d'émotion}
+\chapter{Architecture d'un système de reconnaissance d'émotions}
 Dans ce chapitre je vais introduire les différentes parties nécessaires à la construction d'un système permettant de reconnaître des expressions et émotions.\\
 Un tel système se constitue de 4 parties (ou 3 car la première et deuxième peuvent être combiné en une seule):
 \begin{itemize}
@@ -646,14 +645,15 @@ La détection de visage sur une vidéo ou une image se retrouve de plus en plus 
 Les algorithmes de détection de visage se divisent en 2 catégories: les absolus et les différentiels, chacun ayant leurs avantages et inconvénients.\\
 
 \subsection{Absolu}
+\label{absolu}
 Les détecteurs absolus, aussi appelés détecteurs \textit{frame-by-frame}, vont déterminer la position d'un visage sur chaque frame d'une vidéo, indépendamment des frames précédentes.\\
 Le principale avantage de ces détecteurs est qu'ils sont très facilement parallélisable sur plusieurs frames d'une vidéo en même temps. Il permet également de réagir très rapidement si jamais le nombre de visages dans l'image change subitement et ne "dérive" pas au court du temps. Ici le terme "dériver" fait référence au fait de perdre la position d'un visage.\\
 Cependant, comme dit précédemment, ces détecteurs n'utilisent pas de notions de temps qui pourraient les rendre plus rapide et précis.\\
 \\
-L'algorithme de détection utilisé par la plupart de ces détecteurs est l'algorithme de \textbf{Viola-Jones} \cite{violajones} créé en 2001.\\
+Le tout premier algorithme de détection qui est maintenant utilisé par la plupart de ces détecteurs est l'algorithme de \textbf{Viola-Jones} \cite{violajones} créé en 2001.\\
 Cet algorithme va tout d'abord apprendre un classificateur à différencier des visages d'autres objets grâce à un apprentissage réalisés avec des images de différentes tailles de visages ou de divers autres objets. A noté qu'il est préférable d'avoir un nombre d'objets quelconque très supérieur au nombre de visages si nous voulons que l'algorithme soit efficace.\\
 Une fois l'apprentissage fini et que l'on passe une nouvelle image à l'algorithme, il va analyser cette dernière en extrayant plusieurs \textit{patchs}, des bouts de l'image, de différentes tailles qu'il va ensuite normaliser à une taille précise (par exemple 48*48 pixels) puis les donner au classificateur qui va se charger de définir si oui ou non se trouve un visage dans ce patch.\\
-Cette étape d'extraction de patchs peut également être paralléliser pour gagner ne rapidité.\\
+Cette étape d'extraction de patchs peut également être paralléliser pour gagner en rapidité.\\
 
 \subsection{Différentiel}
 Contrairement aux détecteurs absolus, les détecteurs différentiels, aussi appelés \textit{face trackers}, déterminent la position d'un visage sur une image grâce à sa position précédente. Si la position d'un visage est connu à l'instant \textit{t}, le détecteur différentiel va se servir de cette position pour trouver celle à l'instant \textit{t+1}.\\
@@ -680,16 +680,138 @@ Voici un comparatif avantages/inconvénients de ces 2 types de détecteurs.
 	\end{tabular}
 \end{Table}
 
-
+\newpage
 \section{Extraction des \textit{features}}
+La deuxième partie d'un système de reconnaissance faciale d'émotions est l'extraction des \textit{features} du visage précédemment repéré. Ces features sont les points clés d'un visage et se composent par exemple de la position du coin des yeux, des lèvres, du nez, des joues, de la position de la pupille, etc. \\
+Pour extraire ces points et leurs positions, plusieurs algorithmes existent et je vais maintenant vous en expliquer quelques uns.
 
 \subsection{Filtres de Gabor}
+Dans le domaine de la vision par ordinateur, les filtres de Gabor sont principalement utilisés dans l'analyse de textures, la détection de contour et l'extraction d'éléments. C'est un filtre linéaire dont la réponse va être une sinusoïde modulée grâce à une fonction gaussienne.\\
+\\
+Son fonctionnement est très simple: tout d'abord une fonction de Gabor est générée. Ensuite cette fonction sera appliquée à chaque pixel de l'image. Les résultats obtenus pour chaque pixel seront ensuite stockés et résulteront en la création d'une nouvelle image "filtrée".\\
+\\
+Une fonction de Gabor peut s'écrire de 3 façons différentes.\\
+Tout d'abord, seulement en forme réelle:
+\begin{equation}
+G(x,y;\lambda ,\theta ,\Psi ,\sigma ,\gamma )=\mathrm{e}(- \frac{x'^2+\gamma ^2 y'^2}{2\sigma ^2})*\mathrm{cos}(2\pi \frac{x'}{\lambda}+\Psi)
+\label{gabor_reel}
+\end{equation}
+
+Ou seulement en forme imaginaire:
+\begin{equation}
+G(x,y;\lambda ,\theta ,\Psi ,\sigma ,\gamma )=\mathrm{e}(- \frac{x'^2+\gamma ^2 y'^2}{2\sigma ^2})*\mathrm{sin}(2\pi \frac{x'}{\lambda}+\Psi)
+\label{gabor_im}
+\end{equation}
+
+Ou bien en combinant \eqref{gabor_reel} et \eqref{gabor_im} pour obtenir la fonction sous forme complexe:
+\begin{equation}
+G(x,y;\lambda ,\theta ,\Psi ,\sigma ,\gamma )=\mathrm{e}(- \frac{x'^2+\gamma ^2 y'^2}{2\sigma ^2})*\mathrm{e}(\mathrm{i}(2\pi \frac{x'}{\lambda}+\Psi))
+\label{gabor_complexe}
+\end{equation}
+Avec :
+\begin{align*}
+x'=x\mathrm{cos}\theta + y\mathrm{sin}\theta \\
+y'= -x\mathrm{sin}\theta + y\mathrm{cos}\theta
+\end{align*}
+Et avec comme paramètres:
+\begin{itemize}
+\item \textit{x} et \textit{y}: les coordonnées du pixel
+\item $\lambda $: la longueur d'onde du filtre, en pixel
+\item $\theta $: l'orientation du filtre, en degré
+\item $\Psi $: le décalage de phase (phase offset), en degré
+\item $\sigma $: l'écart type de la gaussienne
+\item $\gamma $: le rapport d'aspect spatial (spatial aspect ratio)\\
+\end{itemize}
+
+Un dernier paramètre qui peut se révéler utile et ne se trouvant pas directement dans la formule de la fonction est le nombre d'orientation \textit{n}. Ce paramètre va permettre de générer un banc de filtres de différentes orientations en faisant varier le paramètre $\theta $ qui prendra comme valeur $\theta + \frac{i\pi}{n}$ avec i$\in $[0,n-1].\\
+Grâce à un site internet permettant de simuler des filtres de Gabor (\cite{simu_gabor})et au mode d'emploi associé (\cite{instr_simu_gabor}), j'ai pu voir l'effet qu'ont les différentes paramètres sur le résultat final.\\
+\\
+Tout d'abord, pour que mes "expériences" soient cohérentes, il fallait fixer une valeur par défaut pour chaque paramètre ainsi qu'une image de base. Les paramètres, lorsque je ne les modifierai pas, seront donc fixé à: $\lambda = 8 $, $\theta = 0 $, $\Psi = 0 $, $\sigma = 4.48 $ et $\gamma = 0.5 $ et $n = 8 $; quant à l'image de base, ce sera la célèbre photo de Lena (\autoref{lena}).
+\begin{Figure}{lena}{Image utilisée pour vérifier l'effet des filtres de Gabor}.
+ \pgfimage{images/lena.jpg}
+\end{Figure}
+
+J'ai donc fait varier chacun de ces paramètres, un seul à la fois, pour voir l'effet produit sur le résultat. Tous mes résultats, que je vais maintenant expliqué, sont présentés dans les figures de \autoref{lambda} à \autoref{sigma}.\\
+\\
+J'ai tout d'abord commencé par faire varier $\lambda $ (\autoref{lambda}). Ce paramètre va permettre de faire varier la taille de notre filtre, ce qui va permettre de repérer des bords plus ou moins fins. En consultant le mode d'emploi du simulateur, on apprend que sa valeur doit être supérieur ou égale à 2 et qu'elle doit être plus petit qu'un cinquième de la taille de l'image pour que le filtre fonctionne correctement.\\
+\\
+Puis j'ai fait varier $\theta $ (\autoref{theta}). En variant l'orientation, cela va permettre au filtre de ne pas capter les même contours: il ne va capter que les contours ayant la même orientation. C'est pour cela que l'on utilise un banc de filtre et non pas un seul filtre tout seul car sinon nous ne capteront que des contours ayant la même orientation (vertical par exemple si $\theta = 0° $).Ses valeurs sont comprises entre 0 et 360.\\
+\\
+En modifiant $\Psi $ (\autoref{psi}), cela va changer la disposition du filtre, sa "symétrie". Les valeurs sont comprises entre -180 et 180. Les valeurs 0 et 180 correspondent respectivement aux symétries centrés "center-on" et "center-off", et les valeurs -90 et 90 correspondent aux dissymétries associées. Ce paramètre permet de changer "l'emplacement" des contours, comme montré sur la figure associée.\\
+\\
+Le paramètre $\gamma $ permet de définir l'ellipticité de la fonction de Gabor (\autoref{gamma}). Ses valeurs sont réelles et si $\gamma = 1 $, alors le filtre sera de forme ronde. Plus ce paramètre est élevé, plus le filtre sera "plat". Modifier l'ellipticité permet d'avoir des contours plus ou moins précis.\\
+En modifiant le paramètre \textit{n} (\autoref{n}), comme je l'ai expliqué précédemment, cela aura pour conséquence de créer plusieurs filtres d'orientation différentes. Comme un filtre ne permet de trouver que les contours ayant la même orientation, avoir un banc de filtres assez fourni permet de trouver tous les contours d'une image.\\
+J'ai enfin terminé par le paramètre $\sigma $ (\autoref{sigma}). Au départ, ce paramètre est inconnu et il se calcule grâce à un nouveau paramètre, \textit{b}, correspondant à la largeur de la bande (en octave). On sait que :
+\begin{align*}
+b = \log _2 (\frac{\frac{\sigma}{\lambda} \pi + \sqrt{\frac{ln 2}{2}}}{\frac{\sigma}{\lambda} \pi - \sqrt{\frac{ln 2}{2}}})\Leftrightarrow \frac{\sigma}{\lambda} = \frac{1}{\pi } \sqrt{\frac{ln 2}{2}} * \frac{2^b + 1}{2^b - 1}
+\end{align*}
+
+En définissant une valeur pour b, on défini donc la valeur de $\sigma $. Lorsque l'on choisit b=1, on obtient $\sigma =0.56\lambda $. Plus b est petit, plus $\sigma $ est grand. Dans mes expériences j'ai fixé b à 1, ce qui m'a donc donné $\sigma = 0.56 * 8 = 4.48$.
+\newpage
+\begin{Figure}{lambda}{Effet du changement du paramètre $\lambda $}.
+ \pgfimage{images/lambda.png}
+\end{Figure}
+\begin{Figure}{theta}{Effet du changement du paramètre $\theta $}.
+ \pgfimage{images/theta.png}
+\end{Figure}
+\newpage
+\begin{Figure}{psi}{Effet du changement du paramètre $\Psi $}.
+ \pgfimage{images/psi.png}
+\end{Figure}
+\begin{Figure}{gamma}{Effet du changement du paramètre $\gamma $}.
+ \pgfimage{images/gamma.png}
+\end{Figure}
+\newpage
+\begin{Figure}{n}{Effet du changement du paramètre $n $}.
+ \pgfimage{images/n.png}
+\end{Figure}
+\begin{Figure}{sigma}{Effet du changement du paramètre $b $ associé à $\sigma $}.
+ \pgfimage{images/sigma.png}
+\end{Figure}
 
 \subsection{Composantes pseudo-Haar}
+Les composantes pseudo-Haar ont été crée par Paul Viola et Michael Jones en 2001 lors de la conception de leur détecteur de visage (cf \autoref{absolu} et \cite{violajones}). Cette méthode se base sur les travaux de Papageorgiou et al. (\cite{papa}) qui décrivent des caractéristiques constuites à partir d'ondelettes de Haar (d'où leurs noms de pseudo-Haar).\\
+Les composantes utilisées par Viola et Jones sont présentées en \autoref{haar}.
+
+\begin{Figure}{haar}{Composantes pseudo-Haar utilisé par Viola et Jones}.
+ \pgfimage{images/haar.png}
+\end{Figure}
+
+Ces composantes sont donc des masques, également appelées fenêtres de détection, composées d'un différent nombre de rectangle.\\
+Leur utilisation est également très simple. Ces composantes sont appliqués à toutes les positions possibles sur l'image, tout d'abord de petite taille (20*20 pixels par exemple) puis en les agrandissant. A chaque position, on soustrait la somme des pixels contenus dans la partie noire à la somme des pixels contenus dans la partie blanche. Le résultat d'une caractéristique à une certaine position est donc un nombre réel qui va coder les variations du contenu pixellique.\\
+\\
+Cette méthode est d'une grande rapidité lorsqu'elle est utilisée avec des \textbf{images intégrales}.\\
+Une image intégrale est un image dérivé d'une image originale, de la même taille que cette dernière, et dont la valeur de chaque pixel est la somme des pixels au-dessus et des pixels à gauche du pixel courant de l'image originale. Sous forme mathématique, cela se traduit de cette façon:
+\begin{align*}
+imgInt(x,y)= \sum \nolimits_{x' \leq x , y' \leq y} imgOri(x',y')
+\end{align*}
+
+Grâce à ces résultats sous forme de correspondance, il est même possible de calculer la valeur de chaque pixel de façon récursive pour gagner en rapidité de la façon suivante:
+\begin{align*}
+s(x,y)=s(x,y-1)+imgOri(x,y)\\
+imgInt(x,y)=imgInt(x-1,y)+s(x,y)
+\end{align*}
+avec \textit{s(x,y)} correspondant à la somme cumulée de la ligne \textit{x} jusqu'à la colonne \textit{y}. \\
+Une fois l'image intégrale complètement calculée, avoir la somme de n'importe qu'elle rectangle de l'image d'origine s'obtient en seulement 4 accès à l'image intégrale. En prenant un rectangle ABCD, cette somme s'obtient de cette manière:
+\begin{align*}
+\sum imgOri(ABCD) = imgInt(A) + imgInt(C) - (imgInt(B) + imgInt(D))
+\end{align*}
+\\
+L'année suivante, en 2002, Lienhart et Maydt (\cite{extended_haar})ont créé une extension aux composantes créées par Viola et Jones. Ils ont crées des masques orientés de 45°, ce qui a pour conséquence d'améliorer d'environ 10\% les performances par rapport à l'utilisation seule des masques crées par Viola et Jones. Ces masques permettent désormais de repérer des bords, des lignes ainsi que des "centres", telle que la pupille d'un oeil par exemple. J'ai regroupé ces nouveaux masques dans la \autoref{haar_extended}.
+
+\begin{Figure}{haar_extended}{Extension de composantes pseudo-Haar défini par Lienhart et Maydt}.
+ \pgfimage{images/extended_haar.png}
+\end{Figure}
+
+Pour aller de paire avec ces nouveaux masques et l'utilisation des images intégrales, une nouvelle formule est nécessaire qui calcule maintenant la somme dans un demi-rectangle orienté de 45° :
+\begin{align*}
+imgInt(x,y)= \sum \nolimits_{x' \leq x , x' \leq x - |y-y'|} imgOri(x',y')
+\end{align*}
+
 
 \subsection{Local Binary Pattern (LBP)}
 
-
+\newpage
 \section{Classification}
 Une fois les features extraites, il ne reste plus qu'à les analyser pour les classifier.\\
 Deux types de classificateurs existent: les systèmes basés sur des règles d'experts (\textit{rule-based expert systems}) et les classificateurs avec apprentissage (\textit{machine learning classifiers}).
@@ -716,8 +838,9 @@ Contrairement aux binaires, ces classificateurs permettent de classifier une ins
 Le classificateur multi-classes le plus connu est le \textbf{k-Plus Proche Voisin} (kPPV).\\
 Le kPPV fonctionne d'une manière très simple.\\
 Tout d'abord un apprentissage grâce à une base d'apprentissage composé de couples "entrée-sortie".\\
-Puis la phase de classification se fait en cherchant la distance minimum entre un nouvel échantillon d'entrée dont la sortie doit être déterminée et les \textit{k} échantillons d'apprentissage dont l'entrée est la plus proche \autoref{kppv}.\\
+Puis la phase de classification se fait en cherchant la distance minimum entre un nouvel échantillon d'entrée dont la sortie doit être déterminée et les \textit{k} échantillons d'apprentissage dont l'entrée est la plus proche.\\
 Une fois ces k plus proche voisins trouvés, il suffit de trouver quelle classe est majoritairement présente pour trouver la sortie associée et donc à quelle classe appartient le nouvel échantillon. Si jamais il y a un nombre égale d'échantillon de plusieurs classes (par exemple avec k=3 on obtient 1 échantillons de 3 différentes classes), on choisi alors aléatoirement la classe d'appartenance.\\
+Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été appris via la phase d'apprentissage et où k est fixé à 3; quatre échantillons doivent être classés dont un se trouvant en zone d'indécision.
 
 \begin{Figure}{kppv}{Fonctionnement du kPPV avec k=3, 3 classes et 4 échantillons dont un indécis}
  \pgfimage{images/kppv.png}
@@ -798,6 +921,9 @@ Une fois ces k plus proche voisins trouvés, il suffit de trouver quelle classe 
 }
 \weeklyreport{17/12/2015}{
 	Étude du programme Matlab fonctionnel et comparaison de l'article au programme pour trouver à quelle partie du programme correspond chaque partie de l'article dans le but de mieux le comprendre.
+}
+\weeklyreport{Vacances de Noël}{
+	
 }
 \weeklyreport{07/01/2016}{
 	
