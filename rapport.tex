@@ -77,11 +77,11 @@ L'objectif de ce projet est de réaliser une application qui, à l'aide d'une ca
 A ce jour, il a été démontré qu'il existait 7 émotions dite universelles qui sont les suivantes: la neutralité, la joie, la tristesse, la colère, la peur, la surprise et le dégoût.\\
 C'est Charles Darwin en 1872 puis le psychologue Paul Ekman en 1971 qui ont défini ces émotions.
 }{images/ck.jpg}{}
-\posterblock{Normes de description}{
+\posterblock{Norme de description}{
 	%Plusieurs normes permettent de définir des expressions du visage et donc des émotions.\\
-Une des plus connue est la norme \textbf{FACS}, qui signifie Facial Action Coding System. Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage.  Par exemple un sourire, et donc l'émotion de la joie, est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
+Pour décrire les mouvements du visage, la norme la plus connue est \textbf{FACS}, qui signifie Facial Action Coding System. Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage.  Par exemple un sourire, et donc l'émotion de la joie, est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
 %Plusieurs niveaux d'intensités sont également défini, allant de A (très faible) à E (maximum), pour chaque AU.
-}{images/AU.png}{Exemple d'AUs utilisées dans le système FACS}
+}{images/AU.png}{}
 
 % le document commence ici
 \begin{document}
@@ -166,7 +166,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
 
 \begin{tabular}{|l|p{12.5cm}|}
    \hline
-   \multicolumn{2}{|l|}{\textbf{Fonction: Repérer le visage/Détection du visage}} \\
+   \multicolumn{2}{|l|}{\textbf{Fonction F1: Repérer le visage/Détection du visage}} \\
    \hline
    Objectif &Détecter un visage dans un environnement quelconque.\\
    \hline
@@ -180,7 +180,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
 
 \begin{tabular}{|l|p{12.5cm}|}
    \hline
-   \multicolumn{2}{|l|}{\textbf{Fonction: Repérer le visage/Suivi du visage}} \\
+   \multicolumn{2}{|l|}{\textbf{Fonction F2: Repérer le visage/Suivi du visage}} \\
    \hline
    Objectif &Suivre le visage entre plusieurs frames d'un flux vidéo dans le but de ne pas le perdre. \\
    \hline
@@ -194,7 +194,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
 
 \begin{tabular}{|l|p{12.5cm}|}
    \hline
-   \multicolumn{2}{|l|}{\textbf{Fonction: Repérer le visage/Zoom}} \\
+   \multicolumn{2}{|l|}{\textbf{Fonction F3: Repérer le visage/Zoom}} \\
    \hline
    Objectif &Zoomer sur une zone de l'image. \\
    \hline
@@ -219,7 +219,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
 
 \begin{tabular}{|l|p{12.5cm}|}
    \hline
-   \multicolumn{2}{|l|}{\textbf{Fonction: Reconnaître l'expression/Apprentissage}} \\
+   \multicolumn{2}{|l|}{\textbf{Fonction F4: Reconnaître l'expression/Apprentissage}} \\
    \hline
    Objectif &Apprendre au système à classifier les expressions en fonction d'une base d'apprentissage.\\
    \hline
@@ -233,7 +233,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
 
 \begin{tabular}{|l|p{12.5cm}|}
    \hline
-   \multicolumn{2}{|l|}{\textbf{Fonction: Reconnaître l'expression/Extraction des \textit{features} du visage.}} \\
+   \multicolumn{2}{|l|}{\textbf{Fonction F5: Reconnaître l'expression/Extraction des \textit{features} du visage.}} \\
    \hline
    Objectif &Extraire les \textit{features} du visage pour pouvoir ensuite réaliser une classification. \\
    \hline
@@ -247,7 +247,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
 
 \begin{tabular}{|l|p{12.5cm}|}
    \hline
-   \multicolumn{2}{|l|}{\textbf{Fonction: Reconnaître l'expression/Classification}} \\
+   \multicolumn{2}{|l|}{\textbf{Fonction F6: Reconnaître l'expression/Classification}} \\
    \hline
    Objectif &Classifier l'expression du visage et retourner l'émotion associée. \\
    \hline
@@ -869,6 +869,7 @@ Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été
 \chapter{Nouvelle approche via un modèle probabiliste}
 \label{chap:chap_newmodel}
 
+\newpage
 \chapter{Spécifications de l'application}
 \label{chap:chap_specif}
 
@@ -876,6 +877,16 @@ Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été
 Il n'y aura qu'un seul type d'utilisateur qui manipulera (indirectement) cette application: \textbf{les personnes handicapées}.\\
 Elles vagueront à leurs occupations normalement et l'application se chargera de repérer leurs émotions. Ces personnes n'ont donc aucunement besoin d'avoir des connaissances en informatique.
 
+\section{Fonctions}
+A l'heure où j'écris ce rapport, toutes les spécifications concernant l'ensemble des fonctions ne sont pas encore connues.\\
+Je vais néanmoins présenter les spécifications qui ont déjà été établi pour certaines fonctions.
+
+\textbf{Fonction F4: Reconnaître l'expression/Apprentissage}\\
+Cette fonction sera la même que celle déjà utilisée par Vitale et al. dans leur programme Matlab.\\
+\\
+\textbf{Fonction F6: Reconnaître l'expression/Classification}\\
+Cette fonction devra utiliser le programme Matlab de Vitale et al. déjà existant. A partir des travaux déjà réalisé, cette fonction viendra se greffer sur le programme et permettra, grâce à une image donnée en entrée, de trouver sur l'espace latent, recensant les échantillons appris lors de la phase d'apprentissage, de trouver l'émotion la plus proche et donc la plus probable.\\
+Pour l'instant, une fonctionnalité du programme est de pouvoir naviguer dans cette espace avec la souris de l'ordinateur et de voir en temps réel l'émotion associé au point désigné par la souris. Il suffira donc de rajouter une méthode permettant de placer un point fictif sur cette espace (correspondant à l'échantillon à déterminer) et d'utiliser la fonction précédemment utilisée dans la navigation pour obtenir l'émotion associée la plus probable.
 
 \chapter{Planning et outils utilisés}
 \label{chap:chap_planning}
@@ -933,8 +944,8 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\part{Développement}
-\label{part:part_dev}
+%\part{Développement}
+%\label{part:part_dev}
 
 
 \unnumberedchapter{Conclusion}

@@ -116,9 +116,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Utilisateurs}{36}{section.6.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Fonctions}{36}{section.6.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{37}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Planning pr\IeC {\'e}visionnel}{37}{section.7.1}
+\contentsline {section}{\numberline {1}Planning du projet}{37}{section.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Outils}{38}{section.7.2}
 \defcounter {refsection}{0}\relax 
@@ -126,11 +128,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Gestion de projet}{38}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}D\IeC {\'e}veloppement}{39}{part.2}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{39}{chapter*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{40}{chapter*.39}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{41}{part*.40}
+\contentsline {part}{Annexes}{40}{part*.40}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 
