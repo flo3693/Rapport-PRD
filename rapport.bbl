@@ -154,6 +154,24 @@
       \verb http://emotient.com/livecam-demo/
       \endverb
     \endentry
+    \entry{lbp_origin}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7515cd8b1a8c43a6db438701c9868754}{Harwood}{H\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=0240facf91d55371265e2c99fa594124}{Ojala}{O\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=723ae43cf02ad6da1f3567fff5eca631}{Pietkinen}{P\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=6f7848ec03a9a588461075200c82dc92}{Kelman}{K\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=8f2d58e32d065296e0ddcff5f6509a9f}{Davis}{D\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{b0441d1293d8f0a1bc5c622886cb1477}
+      \strng{fullhash}{b0441d1293d8f0a1bc5c622886cb1477}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Article introduisant pour la premiere fois l'utilisation des motifs locaux binaires pour mesurer le contaste d'une image}
+      \field{title}{Texture classification by center-symmetric auto-correlation, using Kullback discrimination of distributions}
+      \field{year}{1993}
+    \endentry
     \entry{ck}{article}{}
       \name{author}{3}{}{%
         {{hash=45496c6a7530cfbfb4f3218a2602b77e}{Kanade}{K\bibinitperiod}{Takeo}{T\bibinitperiod}{}{}{}{}}%
@@ -310,6 +328,23 @@
       \verb http://matlabserver.cs.rug.nl/edgedetectionweb/web/index.html
       \endverb
     \endentry
+    \entry{lbp}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0240facf91d55371265e2c99fa594124}{Ojala}{O\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=fd2727628390fd63cd8b41bea0cce8c3}{Pietikinen}{P\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=7515cd8b1a8c43a6db438701c9868754}{Harwood}{H\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{eb899c806987cb5de81400d076c46f05}
+      \strng{fullhash}{eb899c806987cb5de81400d076c46f05}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Article expliquant l'utilisation des motifs binaires locaux dans l'analyse de texture d'une image.}
+      \field{journaltitle}{Pattern Recognition 29}
+      \field{title}{A comparative study of texture measures a with classification based on feature distributions}
+      \field{year}{1996}
+    \endentry
     \entry{mmi2}{article}{}
       \name{author}{4}{}{%
         {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
@@ -395,7 +430,7 @@
       \field{urlmonth}{12}
       \field{urlyear}{2015}
       \verb{url}
-      \verb http://emotion-research.net/toolbox/toolboxdatabase.2006-09-26.5667892524
+      \verb http://emotion-research.net/toolbox/%20toolboxdatabase.2006-09-26.5667892524
       \endverb
     \endentry
     \entry{tagging1}{article}{}

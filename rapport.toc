@@ -28,6 +28,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8}D\IeC {\'e}lai}{5}{section.1.8}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Livrable}{5}{section.1.9}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}\IeC {\'E}motions universelles et mouvements du visage}{6}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Les 7 \IeC {\'e}motions universelles}{7}{section.2.1}
@@ -100,25 +102,35 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Composantes pseudo-Haar}{30}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Local Binary Pattern (LBP)}{31}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {2.3}Motifs binaires locaux}{32}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Classification}{32}{section.4.3}
+\contentsline {section}{\numberline {3}Classification}{33}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Classificateurs binaires}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {3.1}Classificateurs binaires}{33}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Classificateurs multi-classes}{32}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {3.2}Classificateurs multi-classes}{33}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Critiques de l'existant et nouvelle approche}{34}{chapter.5}
+\contentsline {chapter}{\numberline {5}Nouvelle approche via un mod\IeC {\`e}le probabiliste}{35}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Sp\IeC {\'e}cifications de l'application}{35}{chapter.6}
+\contentsline {chapter}{\numberline {6}Sp\IeC {\'e}cifications de l'application}{36}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{36}{chapter.7}
+\contentsline {section}{\numberline {1}Utilisateurs}{36}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}D\IeC {\'e}veloppement}{37}{part.2}
+\contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{37}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{38}{chapter*.37}
+\contentsline {section}{\numberline {1}Planning pr\IeC {\'e}visionnel}{37}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{39}{part*.38}
+\contentsline {section}{\numberline {2}Outils}{38}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Versioning}{38}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Gestion de projet}{38}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{II\hspace {1em}D\IeC {\'e}veloppement}{39}{part.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{40}{chapter*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{41}{part*.40}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 

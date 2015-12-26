@@ -71,17 +71,17 @@
 \bibliography{biblio}
 
 \posterblock{Objectif}{
-L'objectif de ce projet est de réaliser une application qui, à l'aide d'une caméra, va repérer le visage d'une personne handicapée puis zoomer dessus pour ensuite analyser son émotion actuelle.\\
-En fonction de l'émotion perçue, une action spécifique sera réalisée (ex: si la personne est triste, lui mettre de la musique joyeuse). 
+L'objectif de ce projet est de réaliser une application qui, à l'aide d'une caméra, va repérer le visage d'une personne handicapée puis zoomer dessus pour ensuite analyser son émotion actuelle. En fonction de l'émotion perçue, une action spécifique sera réalisée (ex: si la personne est triste, lui mettre de la musique joyeuse). 
 }{images/ptz.png}{}
+\posterblock{7 émotions universelles}{
+A ce jour, il a été démontré qu'il existait 7 émotions dite universelles qui sont les suivantes: la neutralité, la joie, la tristesse, la colère, la peur, la surprise et le dégoût.\\
+C'est Charles Darwin en 1872 puis le psychologue Paul Ekman en 1971 qui ont défini ces émotions.
+}{images/ck.jpg}{}
 \posterblock{Normes de description}{
 	%Plusieurs normes permettent de définir des expressions du visage et donc des émotions.\\
-%Une des plus connue est la norme \textbf{FACS}, qui signifie Facial Action Coding System. Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage.  Par exemple un sourire, et donc l'émotion de la joie, est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
+Une des plus connue est la norme \textbf{FACS}, qui signifie Facial Action Coding System. Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage.  Par exemple un sourire, et donc l'émotion de la joie, est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
 %Plusieurs niveaux d'intensités sont également défini, allant de A (très faible) à E (maximum), pour chaque AU.
 }{images/AU.png}{Exemple d'AUs utilisées dans le système FACS}
-\posterblock{Ajouts fonctionnels}{
-	%La réalisation d'une telle application passe par une phase d'apprentissage. Dans cette phase, l'application va apprendre à reconnaître telle ou telle émotion en utilisant des images déjà labellisées avec le nom d'une émotion ou avec une des normes de description comme FACS. Ces images se trouvent dans différentes bases de données de visages comme la base Cohn-Kanade ou la base HCI-Tagging.
-}{images/ck.jpg}{Exemple d'images (issues de Cohn-Kanade) utilisées pour l'apprentissage}
 
 % le document commence ici
 \begin{document}
@@ -138,7 +138,7 @@ Le but de ce projet de recherche et développement est de construire un système
 Comment faciliter la vie quotidienne des personnes handicapées grâce à leurs émotions?\\
 \\
 L'objectif est de réaliser une application qui pourra détecter en temps réel les émotions d'une personne handicapée se trouvant dans une pièce à l'aide d'une caméra fixée à un mur de cette même pièce. La caméra devra être capable de bouger et de zoomer pour suivre le visage de la personne.\\
-Une fois l'émotion détecté, des actions spécifiques devront être réalisées (ex: changement de la couleur de la lumière, lecture de musique douce...)
+Une fois l'émotion détectée, des actions spécifiques devront être réalisées (ex: changement de la couleur de la lumière, lecture de musique douce...).
 
 \section{Périmètre}
 Ce projet se concentre principalement sur les personnes handicapées mais l'application qui résultera de ce projet pourra également être utilisé pour des personnes non handicapées.\\
@@ -265,6 +265,9 @@ Néanmoins en réalisant un état de l'art des matériels disponibles à notre p
 
 \section{Délai}
 La partie recherche devra être fini pour le 15 janvier 2016 et la partie développement (et donc le projet complet) devra être fini pour la fin du second semestre, c'est-à-dire fin mars/début avril.
+
+\section{Livrable}
+Le livrable de ce projet correspondra en une application Matlab qui réalisera la phase d'apprentissage et la classification des émotions.
 
 \chapter{Émotions universelles et mouvements du visage}
 \label{chap:chap_emotions}
@@ -735,7 +738,7 @@ J'ai donc fait varier chacun de ces paramètres, un seul à la fois, pour voir l
 \\
 J'ai tout d'abord commencé par faire varier $\lambda $ (\autoref{lambda}). Ce paramètre va permettre de faire varier la taille de notre filtre, ce qui va permettre de repérer des bords plus ou moins fins. En consultant le mode d'emploi du simulateur, on apprend que sa valeur doit être supérieur ou égale à 2 et qu'elle doit être plus petit qu'un cinquième de la taille de l'image pour que le filtre fonctionne correctement.\\
 \\
-Puis j'ai fait varier $\theta $ (\autoref{theta}). En variant l'orientation, cela va permettre au filtre de ne pas capter les même contours: il ne va capter que les contours ayant la même orientation. C'est pour cela que l'on utilise un banc de filtre et non pas un seul filtre tout seul car sinon nous ne capteront que des contours ayant la même orientation (vertical par exemple si $\theta = 0° $).Ses valeurs sont comprises entre 0 et 360.\\
+Puis j'ai fait varier $\theta $ (\autoref{theta}). En variant l'orientation, cela va permettre au filtre de ne pas capter les même contours: il ne va capter que les contours ayant la même orientation. C'est pour cela que l'on utilise un banc de filtre et non pas un seul filtre tout seul car sinon nous ne capteront que des contours ayant la même orientation (vertical par exemple si $\theta = 0 $°).Ses valeurs sont comprises entre 0 et 360.\\
 \\
 En modifiant $\Psi $ (\autoref{psi}), cela va changer la disposition du filtre, sa "symétrie". Les valeurs sont comprises entre -180 et 180. Les valeurs 0 et 180 correspondent respectivement aux symétries centrés "center-on" et "center-off", et les valeurs -90 et 90 correspondent aux dissymétries associées. Ce paramètre permet de changer "l'emplacement" des contours, comme montré sur la figure associée.\\
 \\
@@ -797,7 +800,7 @@ Une fois l'image intégrale complètement calculée, avoir la somme de n'importe
 \sum imgOri(ABCD) = imgInt(A) + imgInt(C) - (imgInt(B) + imgInt(D))
 \end{align*}
 \\
-L'année suivante, en 2002, Lienhart et Maydt (\cite{extended_haar})ont créé une extension aux composantes créées par Viola et Jones. Ils ont crées des masques orientés de 45°, ce qui a pour conséquence d'améliorer d'environ 10\% les performances par rapport à l'utilisation seule des masques crées par Viola et Jones. Ces masques permettent désormais de repérer des bords, des lignes ainsi que des "centres", telle que la pupille d'un oeil par exemple. J'ai regroupé ces nouveaux masques dans la \autoref{haar_extended}.
+L'année suivante, en 2002, Lienhart et Maydt (\cite{extended_haar})ont créé une extension aux composantes créées par Viola et Jones. Ils ont crées des masques orientés de 45°, ce qui a pour conséquence d'améliorer d'environ 10\% les performances par rapport à l'utilisation seule des masques crées par Viola et Jones. Ces masques permettent désormais de repérer des bords, des lignes ainsi que des "centres", telle que la pupille d'un oeil par exemple. Par contre, ils ont décider de ne pas utiliser un des masques crée par Viola et Jones, le masque en forme de "damier". J'ai regroupé ces nouveaux masques dans la \autoref{haar_extended}.
 
 \begin{Figure}{haar_extended}{Extension de composantes pseudo-Haar défini par Lienhart et Maydt}.
  \pgfimage{images/extended_haar.png}
@@ -809,7 +812,23 @@ imgInt(x,y)= \sum \nolimits_{x' \leq x , x' \leq x - |y-y'|} imgOri(x',y')
 \end{align*}
 
 
-\subsection{Local Binary Pattern (LBP)}
+\subsection{Motifs binaires locaux}
+La méthode des motifs binaires locaux, ou \textit{local binary pattern (LBP)} en anglais, permet également de détecter des textures ainsi que des objets dans une image.\\
+Cette méthode a été popularisé en 1996 (\cite{lbp}) pour l'analyse des différentes textures d'une image après avoir été introduit pour la première fois en 1993 (\cite{lbp_origin}) pour mesurer le contraste d'une image.\\ 
+Le principe de cette méthode est de comparer le niveaux de luminance d'un pixel d'une image avec celui de ses voisins. Cette méthode va également résulter en la création d'une nouvelle image de même taille que l'originale contenant le résultat du motif binaire local de chaque pixel.\\
+Ces motifs se calculent de cette façon:
+\begin{itemize}
+\item Calculer la différence entre le pixel étudié et chacun de ses voisins pour obtenir une matrice
+\item Changer les valeurs de la matrice: les négatives deviennent 0 et les positives ou égales à 0 deviennent 1
+\item Multiplier, terme à terme, avec une matrice contenant les puissances de 2 de 1 ($2^0$) à 128 ($2^7$).
+\item Additionner le résultat de chaque multiplication pour obtenir le LBP\\
+\end{itemize}
+Ce fonctionnement est résumé dans la \autoref{lbp} (image issue de la page Wikipédia des LBP).
+\begin{Figure}{lbp}{Fonctionnement des motifs binaires locaux}.
+ \pgfimage{images/lbp.png}
+\end{Figure}
+
+Dans cet exemple, les pixels voisins utilisés pour calculer le LBP font partie du voisinage direct du pixel étudié mais il est également possible d'utiliser des pixels faisant partie d'un voisinage plus éloigné. Cela peut permettre de détecter des bords ou des coins dans une image (ex: coins des yeux).
 
 \newpage
 \section{Classification}
@@ -847,15 +866,63 @@ Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été
 \end{Figure}
 
 
-\chapter{Critiques de l'existant et nouvelle approche}
-\label{chap:chap_critiques}
+\chapter{Nouvelle approche via un modèle probabiliste}
+\label{chap:chap_newmodel}
 
 \chapter{Spécifications de l'application}
 \label{chap:chap_specif}
 
+\section{Utilisateurs}
+Il n'y aura qu'un seul type d'utilisateur qui manipulera (indirectement) cette application: \textbf{les personnes handicapées}.\\
+Elles vagueront à leurs occupations normalement et l'application se chargera de repérer leurs émotions. Ces personnes n'ont donc aucunement besoin d'avoir des connaissances en informatique.
+
 
 \chapter{Planning et outils utilisés}
 \label{chap:chap_planning}
+
+\section{Planning du projet}
+Pour la réalisation de ce projet, j'ai divisé mon travail à réaliser en plusieurs tâches, chaque tâche ayant une date limite pour que le projet soit fini en temps et en heure.\\
+Je vais donc maintenant vous présenter ce planning avec ces tâches sous forme de tableaux car plus simple à lire qu'une petite image avec un diagramme de Gantt.
+
+\begin{Table}{tab:planning}{Planning du projet}
+	\begin{tabular}{|p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{1cm}|p{2cm}|}
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Partie Recherche}}\\\hline
+		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Statut} &\textbf{Livrable}\\\hline
+		Comparaison 2D VS 3D &16/09/15 &1 semaine &24/09/15 &Fini & Compte-rendu\\\hline
+		Architecture &23/09/15 &1 semaine &01/09/15 &Fini  & Powerpoint\\\hline
+		Étude techniques extraction de \textit{features} &30/09/15 &6 semaines &12/11/15 &Fini & Powerpoint\\\hline
+		Étude bases de données &28/10/15 &1 semaine &05/11/15 &Fini & Powerpoint\\\hline
+		Étude article/programme Vitale et al. &19/11/15 &7 semaines &07/01/16 &En Cours & \\\hline
+		Rédaction rapport de recherche &08/10/15 &13 semaines &05/01/16 &Fini & Rapport \LaTeX\\\hline
+		Préparation soutenance &05/01/16 &1 semaine &14/01/16 &A Faire & Powerpoint\\\hline
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Partie Développement (prévision)}}\\\hline
+		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Statut} &\textbf{Livrable}\\\hline
+		Identification des modifications &14/01/16 &2 semaines &02/02/16 &A Faire & Cahier de modifications\\\hline
+		Réalisation des modifications &03/02/16 &4 semaines &03/03/16 &A Faire & \\\hline
+		Rédaction rapport développement &27/01/16 &9 semaines &24/03/16 &A Faire & Rapport \LaTeX\\\hline
+		Préparation soutenance &24/03/16 &1 semaine &01/04/16 &A Faire & Powerpoint\\\hline
+	\end{tabular}
+\end{Table}
+
+La tâche "Comparaison 2D VS 3D" correspond aux recherches que j'ai effectués pour faire un début d'état de l'art sur les technologies 3D et 2D permettant de reconnaître des émotions. Cette recherche à permit de choisir que notre application se ferait avec des données 2D.\\
+La tâche "Architecture" correspond aux recherches m'ayant permis de définir les différentes étapes nécessaires pour construire un système de reconnaissance d'émotions: détection du visage, extraction des \textit{features} et classification.\\
+La tâche "Étude techniques extraction de \textit{features}" correspond aux recherches que j'ai menés sur les filtres de Gabor et sur les filtres de Haar ainsi que d'autres techniques permettant d'extraire les features d'un visage.\\
+La tâche "Étude bases de données" correspond à l'étude des bases de données Cohn-Kanade, MMI, HCI-Tagging et MHI-Mimicry ,ainsi qu'à la prise de connaissance des données contenues dans les bases Cohn-Kanade et HCI-Tagging.\\
+La tâche "Étude article/programme Vitale et al." correspond à la compréhension de l'article écrit par Vitale et al. et dont je vais me baser dessus pour la réalisation de l'application. Cela correspond également au temps passé à essayer de faire marcher le programme sous Octave (un Matlab-like gratuit) ainsi qu'à l'étude du code pour arriver à recouper l'article avec ce dernier.\\
+\\
+La tâche "Identification des modifications" correspond au travail que je vais réaliser à la suite de l'étude de l'article de Vitale et al. et qui va permettre d'identifier quelles parties du programme peuvent être améliorées et les fonctions à rajouter pour pouvoir reconnaître l'émotion contenu dans une image passée en entrée du programme.\\
+La tâche "Réalisation des modifications" consiste à réaliser les modifications qui auront été identifiées dans la tâche précédente.
+
+\section{Outils}
+\subsection{Versioning}
+Pour pouvoir gérer les différentes versions de mon application, j'utilise \textbf{Git} (\href{https://github.com/flo3693}{consulter mon profil GitHub}).\\
+Pour l'instant il ne me sert qu'à versioner mon rapport de projet mais dès que je commencerai le développement, il me permettra également de versioner mon application.
+
+\subsection{Gestion de projet}
+Pour gérer les différentes tâches que j'ai à faire dans ce projet, j'utilise \textbf{Trello} (\url{https://trello.com/}) qui permet de créer des tâches, de les classer sous forme de listes de tâches, d'affecter des statuts (A faire, En cours, Fait). Il est possible d'affecter des personnes à chacune des tâches, de mettre des commentaires et de partager des fichiers.\\
+Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec mes tuteurs académiques.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -901,7 +968,8 @@ Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été
 	Recherche de techniques permettant de placer les points clés d'un visage sans FACS (ASM, AAM ...)
 }
 \weeklyreport{12/11/2015}{
-	Réunion avec Mrs Conte et Slimane : décision de l'arrêt de la phase état de l'art pour commencer le développement; prise de décision sur les spécifications de notre système.	
+	Réunion avec Mrs Conte et Slimane : décision de l'arrêt de la phase état de l'art pour commencer le développement; prise de décision sur les spécifications de notre système.\\
+	Rédaction du rapport.	
 }
 \weeklyreport{19/11/2015}{
 	Documentation plus poussée sur ASM, récupération d'un programme Matlab d'analyse d'émotions réalisé par des collègues italiens à Mr Conte et tentative de le faire fonctionner sous Octave vu que nous ne possédons pas de licence Matlab.\\
