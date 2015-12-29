@@ -350,7 +350,7 @@ simulation: A probabilistic model},
 
 @Online{sal,
   Title                    = {Site officiel de SAL},
-  Url                      = {http://emotion-research.net/toolbox/ \linebreak toolboxdatabase.2006-09-26.5667892524},
+  Url                      = {http://emotion-research.net/toolbox/ toolboxdatabase.2006-09-26.5667892524},
   Urldate                  = {2015-12-16},
 
   Annote                   = {Site decrivant la base de donnees de visage SAL},

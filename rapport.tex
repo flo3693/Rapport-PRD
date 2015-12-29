@@ -9,6 +9,7 @@
 % Attention : il peut y avoir des incompatibilités avec la classe de document
 
 \usepackage{lipsum} %permet de générer du texte
+\usepackage{amsmath}
 
 % on indique le département concerné (di)
 \schooldepartment{di}
@@ -50,22 +51,32 @@
 % On indique les mots clés avec \motcle{mot clé} en français et \keyword{keyword} en anglais
 % Le résumé significatif et descriptif du contenu du rapport en 5 à 10 lignes se spécifie par \resume{...} en français et \abstract{...} en anglais
 % Attention : tout doit tenir sur la dernière page
-\resume{Résumé}
+\resume{Dans le cadre de ce projet, j'ai pour mission de réaliser une application, destinée aux personnes handicapées, qui permettra de reconnaître leurs émotions et de réaliser certaines actions en conséquences (ex: changement de couleur de la lumière).\\
+Dans la partie Recherche de ce projet, j'ai réalisé un état de l'art sur les différentes techniques permettant de reconnaître des émotions (filtres de Gabor, composantes pseudo-Haar,...) et sur comment construire un système de reconnaissance faciale d'expressions fiable et performant. Je me suis également documenté sur une nouvelle approche permettant de représenter des émotions sur un espace fini via un modèle probabiliste.}
 % chaque mot clé ou groupe de mots clés est défini via la commande \motcle en français
-\motcle{mot}
-\motcle{clé}
-\motcle{deux mots}
+\motcle{détection}
+\motcle{émotion}
+\motcle{filtres de Gabor}
+\motcle{composantes pseudo-Haar}
+\motcle{reconnaissance facial d'expression}
+\motcle{FACS}
+\motcle{bases de données de visages}
+\motcle{modèle probabiliste}
 
 % résumé en anglais
-\abstract{Abstract}
+\abstract{During this project, I have the mission to realize an application, for disabled people, which will recognize their emotions and do specifics actions in consequences (e.g: change the color of the lights).\\
+In the Research part of this project, I carried out a state of the art on the different technics allowing emotion recognition (Gabor filters, Haar-like features,...) and on how to build a reliable and efficient facial expression recognition system. I also documented myself about a new way that allows us to represent emotion on a finite space via a probabilistic model.}
 
-% chaque mot clé ou groupe de mots clés est défini via la commande \motcle en anglais
+% chaque mot clé ou groupe de mots clés est défini via la commande \keyword en anglais
 % Attention : il n'y a pas forcément une traduction directe entre les mots clés et les keywords
-\keyword{word}
-\keyword{key}
-\keyword{two words}
-\keyword{fourth word}
-
+\keyword{detection}
+\keyword{emotion}
+\keyword{Gabor filters}
+\keyword{Haar-like features}
+\keyword{facial expression recognition}
+\keyword{FACS}
+\keyword{faces databases}
+\keyword{probabilistic model}
 
 
 \bibliography{biblio}
@@ -94,7 +105,7 @@ Pour décrire les mouvements du visage, la norme la plus connue est \textbf{FACS
 % La commande \unnumberedchapter fonctionne de façon identique à \chapter mais produit un chapitre non numéroté présent dans la table des matières (à la différence de \chapter*)
 % Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
 \unnumberedchapter[Introduction]{Introduction}
-L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple cité \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
+L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple citer \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
 C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec une machine que ce projet prend place.\\
 \\
 Le Projet de Recherche et Développement (anciennement Projet de Fin d'Études) est un projet se déroulant durant toute la 5ème année de master ingénieur au sein de l'école Polytech Tours. Ce rapport va présenter les travaux que j'ai effectué durant toute la durée de ce projet.\\
@@ -843,10 +854,10 @@ Comme l'indique son nom, ce type de classificateur ne permet de classifier une i
 Le classificateur binaire le plus connu est le \textbf{Support Vector Machine} (SVM).\\
 Les SVMs se basent sur 2 notions très importantes.\\
 La première est la notion de \textit{marge maximale}. Cette marge est la distance entre la frontière de séparation des 2 classes et les échantillons les plus proches appelés vecteurs supports. La frontière de séparation est choisi de telle sorte qu'elle maximise le plus la marge. C'est donc grâce à un apprentissage que l'on peut définir cette frontière.\\
-La deuxième notion est celle de la transformation de l'espace de représentation en un espace de dimension plus grand, voir infini. cette notion est utile lorsque les données ne sont pas linéairement séparable dans l'espace d'origine. En projetant dans un espace de dimension plus grand, il est plus probable de trouver une séparation \autoref{svm}.\\
+La deuxième notion est celle de la transformation de l'espace de représentation en un espace de dimension plus grande, voir infinie. Cette notion est utile lorsque les données ne sont pas linéairement séparable dans l'espace d'origine. En projetant dans un espace de dimension plus grande, il est plus probable de trouver une séparation \autoref{svm}.\\
 Cette transformation est réalisé via une fonction noyau qui va permettre de transformer un produit scalaire dans un espace de grande dimension.
 
-\begin{Figure}{svm}{Exemple de projection dans un espace plus grand réalisé par SVM}
+\begin{Figure}{svm}{Exemple de projection dans un espace de plus grande dimension réalisé par SVM}
  \pgfimage{images/svm.png}
 \end{Figure}
 
@@ -866,8 +877,196 @@ Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été
 \end{Figure}
 
 
-\chapter{Nouvelle approche via un modèle probabiliste}
+\chapter{Nouvelle approche}
 \label{chap:chap_newmodel}
+Toutes les rehcerches que je vous ai présentées pour l'instant existent et son implenter dans la communauté scientifique depuis plusieurs années, elles ne présentent donc pas vraiment d'innovations possibles.\\
+\\
+Sur la demande de Mr Conte, j'ai dû étudier un article écrit par Jonathan Vitale, Mary-Anne Williams, Benjamin Johnston et Giuseppe Boccignone, ce dernier étant un collègue de Mr Conte.\\
+\textit{Affective facial expression processing via simulation: A probabilistic model} \cite{italiens} décrit une toute nouvelle approche permettant de reconnaître des expressions faciales \textbf{via un modèle probabiliste}.\\
+Pour aller de paire avec cet article, les auteurs ont également crée un programme Matlab mettant en pratique leurs idées.\\
+\\
+Le but de ce projet étant également de créer une application innovante en travaillant avec des personnes handicapées, nous nous sommes donc mis d'accord avec mes tuteurs académiques pour utiliser cet article et le programme associé pour développer notre application. J'aurais donc pour mission dans la phase de développement d'améliorer le programme existant et d'y ajouter des fonctionnalités qui seront propres à l'utilisation que nous ferions de l'application.\\
+Un entretien Skype est prévu avec Mr Boccignone pour parler du programme et avoir certaines précisions à propos des notions abordées dans l'article. L'écriture d'un article en collaboration avec les auteurs originaux est également envisagée.\\
+\\
+Je vais maintenant vous présenter ce modèle probabiliste permettant de représenter les émotions ainsi que le travail déjà réalisé via le programme Matlab.
+
+\newpage
+\section{Contexte de simulation}
+Pour comprendre les études menées dans l'article, il faut d'abord poser le problème et donc le contexte de simulation de la détection d'émotions.\\
+A un certain moment, un individu, appelé \textit{acteur}, éprouvera un certain état interne, noté $X_{act}$. Cet état interne $X_{act}$ peut soit être déclenché par un évènement extérieur soit induit (remémoration d'un certain souvenir).\\
+$X_{act}$ va déclencher un comportement correspondant, noté $Y_{act}$, qui peut être par exemple une expression facial, une posture particulière, un changement du rythme cardiaque, etc.\\
+Un second individu, appelé \textit{observateur}, va maintenant utiliser $Y_{act}$ pour trouver l'état interne $X_{obs}$ lui permettant d'être dans l'état mental $M_{obs}$ correspondant à celui de l'acteur.\\
+Cette situation de simulation est illustré en \autoref{simu} (figure tirée de l'article \cite{italiens}).
+
+\begin{Figure}{simu}{Situation de simulation pour la détection d'émotions}
+ \pgfimage{images/simu.png}
+\end{Figure}
+
+Plusieurs manières existent pour traduire cette simulation en langage compréhensible par un ordinateur, dont 3 sont intéressantes.
+
+\paragraph{Générer-et-tester}
+L'observateur suppose que l'acteur ressent $X_{act}$, il va donc faire en sorte de ressentir la même chose $X_{obs}$. En fonction de $X_{obs}$, l'observateur obtient $Y_{obs}$. Il compare ensuite son état extérieur $Y_{obs}$ à celui de l'acteur, $Y_{act}$, et si se sont les même, alors ce que ressent l'observateur avec cette émotion, $M_{obs}$, est également ce que ressent l'acteur, $M_{act}$.\\
+En langage mathématique, cela peut se traduire de la façon suivante:
+\begin{align*}
+\text{Soit l'hypothèse }X_{act}\simeq X_{obs}\text{ : SI } X_{obs}\mapsto Y_{obs}\simeq Y_{act} \text{ ALORS } X_{obs}\mapsto M_{obs}\simeq M_{act}
+\end{align*}
+
+\paragraph{Simulation inverse}
+L'observateur imite l'état extérieur $Y_{act}$ de l'acteur pour obtenir $Y_{obs}$. Puis, en fonction de l'état copiée $Y_{obs}$, l'observateur va ressentir $X_{obs}$. En supposant $X_{obs}\simeq X_{act}$, l'observateur obtient un état mental $M_{obs}$ censé être le même que celui de l'acteur, $M_{act}$.\\
+En langage mathématique, cela peut se traduire de la façon suivante:
+\begin{align*}
+\text{Soit }Y_{obs}\simeq Y_{act}\text{ : } Y_{obs}\mapsto X_{obs}\mapsto M_{obs}\simeq M_{act}
+\end{align*}
+
+\paragraph{Simulation inverse utilisant une boucle "as if"}
+Similaire au modèle précédent sauf qu'ici l'observateur ne copie pas l'état extérieur. Il se contente de se demander (intervention du "as if") ce que ressent l'acteur en fonction de $Y_{act}$. Il va donc ressentir $X_{obs}$ qui va le mener à $M_{obs}$ et donc $M_{act}$.\\
+En langage mathématique, cela peut se traduire de la façon suivante:
+\begin{align*}
+Y_{act}\mapsto X_{obs}\mapsto M_{obs}\simeq M_{act}
+\end{align*}
+
+\section{Modèle réalisé}
+Pour la réalisation du modèle probabiliste, plusieurs probabilités on été définies:
+\begin{itemize}
+\item $P(Y_{obs}/Y_{act})$ : représente la probabilité pour l'observateur de ressentir intérieurement $Y_{obs}$ quand l'acteur affiche $Y_{act}$. Cette probabilité est appelé \textit{transcodage}.
+\item $P(X_{obs}/Y_{obs})$ : représente la probabilité d'être dans un état interne $X_{obs}$ sachant $Y_{obs}$. Cette probabilité est appelé \textit{correspondance inverse}.
+\item $P(Y_{obs}/X_{obs})$ : représente la probabilité que l'observateur génère un état $Y_{obs}$ sachant l'état interne $X_{obs}$. Cette probabilité est appelé \textit{correspondance vers l'avant}.\\
+\end{itemize}
+
+Une fonction de décision $\mathcal{D}(\bullet )$ est également nécessaire et permettra de comparer l'état interne $Y_{act}$ de l'acteur avec un état simulé $\check{Y}_{obs}$.\\
+\\
+Ces probabilités nous permette d'obtenir les variables suivantes:
+\begin{equation}
+y_{obs}\sim P(Y_{obs}/Y_{act}= y_{act})
+\label{yobs}
+\end{equation}
+qui permet de définir le processus de transcodage transformant une instance de l'expression faciale de l'acteur $y_{act}$ en une instance de représentation interne de l'observateur $y_{obs}$,
+\begin{equation}
+x_{obs}\sim P(P(X_{obs}/Y_{obs}= y_{obs})
+\label{xobs}
+\end{equation}
+qui décrit le processus de correspondance inverse donc la détection de l'état $x_{obs}$ à partir de l'expression faciale (interne) $y_{obs}$, et
+\begin{equation}
+\check{y}_{obs}\sim P(Y_{obs}/X_{obs}= x_{obs})
+\label{checkyobs}
+\end{equation}
+qui décrit le processus de correspondance vers l'avant et donc la correspondance de l'expression simulé par l'observateur $\check{y}_{obs}$ quand il se trouve dans l'état interne $x_{obs}$.\\
+\\
+La fonction $\mathcal{D}(\bullet )$ compare le $y_{obs}$ transcodé de l'équation \eqref{yobs} à l'expression générée intérieurement $\check{y}_{obs}$ de l'équation \eqref{checkyobs}, et est également utilisé via l'équation \eqref{xobs} pour contrôler quand le processus de comparaison aura converger vers la solution la plus probable.\\
+\\
+Les processus de transcodage, de correspondance inverse et de correspondance vers l'avant se produisent dans 2 espaces latents distincts:
+\begin{itemize}
+\item l'espace latent d'auto-projection, noté Z
+\item l'espace latent du premier ordre \textit{phenomenologique}\\
+\end{itemize}
+
+L'espace Z est défini de la façon suivante:\\
+\begin{equation}
+P(Z)=\mathcal{N}(0,I_L)
+\label{pz}
+\end{equation}
+qui permet de donner la priorité des points dans l'espace Z de dimension L,
+\begin{equation}
+P(y_{act}/z)=\mathcal{N}(W_{act}z+\mu _{act}, \sigma ^2 _{act}I_D)
+\label{yactz}
+\end{equation}
+qui permet d'avoir la probabilité d'obtenir l'expression faciale de l'acteur $y_{act}$, avec D$\gg $ L, sachant z$\in $ Z, et
+\begin{equation}
+P(y_{obs}/z)=\mathcal{N}(W_{obs}z+\mu _{act}, \sigma ^2 _{obs}I_D)
+\label{yobsz}
+\end{equation}
+qui permet d'avoir la probabilité d'obtenir l'expression faciale de l'observateur $y_{act}$, avec D$\gg $ L, sachant z$\in $ Z, avec :\\
+$\mathcal{N}(\bullet )$: distribution Gaussienne ; $W_{act}$ et $W_{obs}$: paramètres de correspondance de l'acteur et de l'observateur ; $\mu $: moyenne ; $\sigma $: variance ; $I_L $ et $I_D $ : matrices identités de dimensions L et D.\\
+\\
+On peut également définir les variables suivantes: \\
+W=$
+\begin{pmatrix}
+   W_{act} \\
+   W_{obs} 
+\end{pmatrix}
+$
+, $\mu = \begin{pmatrix}
+   \mu _{act} \\
+   \mu _{obs} 
+\end{pmatrix}
+$
+ et $\Phi = \begin{pmatrix}
+   \sigma ^2 _{act}I_D &0 \\
+   0 &\sigma ^2 _{obs}I_D
+\end{pmatrix}
+$.\\
+Vu que le modèle est gaussien, $y_{act}$ et $y_{obs}$ suivent une distribution gaussienne de la forme $\mathcal{N}(\mu ,\Sigma)$ avec $\Sigma = \Phi +WW^T$ correspondant à la matrice de covariance.\\
+On obtient donc:
+\begin{equation}
+P(y_{obs}|y_{act})\sim \mathcal{N}(\hat{\mu }_{obs}, \hat{\Sigma }_{obs})
+\label{musigma}
+\end{equation}
+où $\hat{\mu }_{obs} = \mu _{obs} + \Sigma ^T _c \Sigma ^{-1} _a$ et $\hat{\Sigma }_{obs} =\Sigma _b - \Sigma ^T _c \Sigma ^{-1} _a \Sigma _c $ est le complément de Schur de $\Sigma $ réécrit sous la forme du bloc $\Sigma = \begin{pmatrix}
+   \Sigma _a &\Sigma _c \\
+   \Sigma ^T _c &\Sigma _b
+\end{pmatrix}
+$.\\
+L'équation \eqref{musigma} nous retourne la probabilité de correspondance de l'expression faciale de l'observateur sachant une expression faciale similaire de l'acteur. POur faire cela, elle utilise $W_{act}$ et $W_{obs}$ en distribution normale multivariée.\\
+\\
+Pour résoudre $\check{y}_{obs}$, on passe par l'utilisation du GPLVM (Gaussian Process Latent Variable
+model) et l'on obtient 
+\begin{equation}
+P(Y_{obs}|X_{obs})=\frac{1}{\sqrt{(2\pi )^{ND}}|K^D |} \exp (- \frac{1}{2}tr(K^{-1}Y_{obs}Y^T_{obs}))
+\label{gplvm}
+\end{equation}
+avec $Y_{obs}$ correspondant à l'ensemble  d'apprentissage et K à la matrice de noyau dont les éléments sont définis par $(K)_{i,j}=\Phi (x_{i,obs},x_{j,obs})$.\\
+\\
+Une fois que $P(Y_{obs}/X_{obs})$ est appris, il est très facile d'obtenir $P(X_{obs}/Y_{obs})$ par GPLVM.
+
+\section{Fonctionnement}
+Le fonctionnement de ce modèle probabiliste, utilisant les notions présentées dans la section précédente, est décrit dans la \autoref{fonctionnement}.
+\begin{Figure}{fonctionnement}{Fonctionnement du modèle probabiliste}
+ \pgfimage{images/fonctionnement.png}
+\end{Figure}
+
+$y_{act}$ est transcodé via l'espace latent d'auto-projection Z en $y_{obs}$.\\
+Au même moment, un ensemble $\check{S}$ d'échantillons d'expressions de l'observateur est généré via l'équation \eqref{gplvm}. Avec $\mathcal{D}$, une mesure de similarité est utilisé pour évaluer la vraisemblance entre les échantillons de $\check{S}$ et de $y_{obs}$. L'état initial $\check{x}$ est sélectionné de cette manière:
+\begin{align*}
+\check{x} \in \check{S} | \check{x}\mapsto \check{y}_{obs}\wedge \check{y}_{obs}=arg_y \max \mathcal{D}(\check{y}_{obs},y)
+\end{align*}
+
+En utilisant HGP-LVM (Hierarchical Gaussian Process Latent Variable Model), il est possible de créer un vocabulaire S:$X\mapsto \{Y_{obs}^j \}_{j=1}^{\infty}$ qui génère un ensemble infini d'expressions faciales.\\
+$\check{S}$ est un sous-ensemble de S.\\
+\\
+Chaque point de l'espace latent représente un état interne phénomenologique x. Une telle représentation est de dimension q et dans le cas de cette article et du programme Matlab, q=2.\\
+
+\section{Comparaison}
+Pour fonctionner, le module de rapprochement (cf \autoref{fonctionnement}) utilise la mesure \textbf{SSIM} (Structural SIMilarity).\\
+Cette mesure est effectué sur plusieurs "parties" de l'image, appelées fenêtres, et ensuite une moyenne est calculé pour obtenir le résultat final. Le mesure entre 2 fenêtres x et y se calcule comme suit:
+\begin{align*}
+SSIM(x,y)=\frac{(2\mu _x\mu _y+c_1)(2\sigma _{xy}+c_2)}{(\mu ^2_x+\mu ^2_y+c_1)(\sigma ^2_x+\sigma ^2_y+c_2)}
+\end{align*}
+avec $\mu _x$ et $\mu _y$: moyennes de x et y ; $\sigma ^2_x$ et $\sigma ^2_y$ : variances de x et y ; $\sigma _{xy}$: covariance de x et y ; $c_1$ et $c_2$ : variables de stabilisation de la division quand celle-ci à un dénominateur faible.
+
+\section{Programme Matlab}
+Le programme associé à cette article permet de mettre en application le modèle proposé.\\
+\\
+Au lancement, la phase d'apprentissage s'enclenche. Elle consiste en l'apprentissage de 60 images en niveaux de gris d'une personne réalisant plusieurs expressions faciales différentes. Ces images sont tout d'abord récupérées depuis un fichier \textit{.mat} où elles sont écrit sous forme d'une ligne composé de 551 pixels, autrement dit une matrice de pixel de taille 1*551.\\
+Ces images seront ensuite redimensionnées à la taille 29*19 pixels pour obtenir de "vraies" images.\\
+Ces 60 images sous forme de lignes sont stockées dans une variable Y qui sera donc de taille 60*551.\\
+Le méthode \textbf{PCA} (Principal Component Analysis) est ensuite appliquée à Y. Cela va permettre de décorréler les variables en elles dans le but d'obtenir de nouvelles variables appelées "composantes principales". Cela va réduire le nombre de variables et réduire la redondance de l'information.\\
+\\
+Le GPLVM est ensuite lancé.\\
+Les coordonnées x et y de chaque image dans l'espace latent sont calculées au travers de plusieurs itérations (ici 15 itérations) pour obtenir des coordonnées précises grâce à la mise à jour à chaque itération.\\
+\\
+Une fois que les coordonnées des 60 images sont calculées, le programme fini par afficher l'espace latent. Sur cette espace se trouvent les positions précédemment calculées, comme montré sur la \autoref{espacelatent}.
+\begin{Figure}{espacelatent}{Espace latent représenté grâce au programme Matlab}
+ \pgfimage{images/espacelatent.png}
+\end{Figure}
+
+En parallèle de l'affichage de cette espace s'affiche également une fenêtre contenant une image.\\
+La principale fonctionnalité de ce programme est de pouvoir se "déplacer" dans l'espace latent avec la souris et de visualiser en temps réel à quelle image, donc émotion, correspond la position de la souris sur cette espace. C'est donc dans cette deuxième fenêtre contenant une image que va s'effectuer la mise à jour en temps réel.\\
+Pour réaliser cela, le programme a défini un déclencheur sur l'évènement \textit{move} de la souris lorsque cette dernière ce déplace dans l'espace. Une fois déclenché, le programme va récupérer les positions de la souris et des axes dans la fenêtre pour ensuite normaliser la position du point par rapport à celles des axes, ce qui va permettre d'obtenir la position x et y de la souris dans le repère.\\
+En fonction de cela, l'image appris lors de la phase d'apprentissage la plus proche et dont l'expression est la plus probable est retourné.\\
+Pour finir, l'image est ensuite affiché dans la fenêtre. Des exemples des images pouvant être retournées sont présentées en \autoref{face}.
+\begin{Figure}{face}{Exemples d'images retournées lorsque l'on se déplace sur l'espace latent}
+ \pgfimage{images/face.png}
+\end{Figure}
 
 \newpage
 \chapter{Spécifications de l'application}
@@ -881,10 +1080,11 @@ Elles vagueront à leurs occupations normalement et l'application se chargera de
 A l'heure où j'écris ce rapport, toutes les spécifications concernant l'ensemble des fonctions ne sont pas encore connues.\\
 Je vais néanmoins présenter les spécifications qui ont déjà été établi pour certaines fonctions.
 
-\textbf{Fonction F4: Reconnaître l'expression/Apprentissage}\\
-Cette fonction sera la même que celle déjà utilisée par Vitale et al. dans leur programme Matlab.\\
-\\
-\textbf{Fonction F6: Reconnaître l'expression/Classification}\\
+
+\paragraph{Fonction F4: Reconnaître l'expression/Apprentissage}
+Cette fonction sera la même que celle déjà utilisée par Vitale et al. dans leur programme Matlab.
+
+\paragraph{Fonction F6: Reconnaître l'expression/Classification}
 Cette fonction devra utiliser le programme Matlab de Vitale et al. déjà existant. A partir des travaux déjà réalisé, cette fonction viendra se greffer sur le programme et permettra, grâce à une image donnée en entrée, de trouver sur l'espace latent, recensant les échantillons appris lors de la phase d'apprentissage, de trouver l'émotion la plus proche et donc la plus probable.\\
 Pour l'instant, une fonctionnalité du programme est de pouvoir naviguer dans cette espace avec la souris de l'ordinateur et de voir en temps réel l'émotion associé au point désigné par la souris. Il suffira donc de rajouter une méthode permettant de placer un point fictif sur cette espace (correspondant à l'échantillon à déterminer) et d'utiliser la fonction précédemment utilisée dans la navigation pour obtenir l'émotion associée la plus probable.
 
@@ -949,6 +1149,7 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 
 
 \unnumberedchapter{Conclusion}
+
 
 \appendix
 

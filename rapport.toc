@@ -110,27 +110,47 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Classificateurs multi-classes}{33}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Nouvelle approche via un mod\IeC {\`e}le probabiliste}{35}{chapter.5}
+\contentsline {chapter}{\numberline {5}Nouvelle approche}{35}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Sp\IeC {\'e}cifications de l'application}{36}{chapter.6}
+\contentsline {section}{\numberline {1}Contexte de simulation}{36}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Utilisateurs}{36}{section.6.1}
+\contentsline {paragraph}{G\IeC {\'e}n\IeC {\'e}rer-et-tester}{36}{paragraph*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Fonctions}{36}{section.6.2}
+\contentsline {paragraph}{Simulation inverse}{36}{paragraph*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{37}{chapter.7}
+\contentsline {paragraph}{Simulation inverse utilisant une boucle "as if"}{37}{paragraph*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Planning du projet}{37}{section.7.1}
+\contentsline {section}{\numberline {2}Mod\IeC {\`e}le r\IeC {\'e}alis\IeC {\'e}}{37}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Outils}{38}{section.7.2}
+\contentsline {section}{\numberline {3}Fonctionnement}{38}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Versioning}{38}{subsection.7.2.1}
+\contentsline {section}{\numberline {4}Comparaison}{39}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Gestion de projet}{38}{subsection.7.2.2}
+\contentsline {section}{\numberline {5}Programme Matlab}{39}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{39}{chapter*.39}
+\contentsline {chapter}{\numberline {6}Sp\IeC {\'e}cifications de l'application}{42}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{40}{part*.40}
+\contentsline {section}{\numberline {1}Utilisateurs}{42}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Fonctions}{42}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Fonction F4: Reconna\IeC {\^\i }tre l'expression/Apprentissage}{42}{paragraph*.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Fonction F6: Reconna\IeC {\^\i }tre l'expression/Classification}{42}{paragraph*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{43}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Planning du projet}{43}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Outils}{44}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Versioning}{44}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Gestion de projet}{44}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{45}{chapter*.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{46}{part*.49}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 
