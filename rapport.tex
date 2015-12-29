@@ -1068,6 +1068,11 @@ Pour finir, l'image est ensuite affiché dans la fenêtre. Des exemples des imag
  \pgfimage{images/face.png}
 \end{Figure}
 
+\section{Modification à apporter}
+Pour adapter ce programme à notre problématique, il va falloir modifié ce programme pour qu'il puisse classifier une image d'un visage réalisant une expression, prise en entrée, et retourner l'émotion correspondante.\\
+Pour cela, une première piste serait de faire passer l'image en entrée dans les mêmes fonctions que les images du set d'apprentissage ce qui nous permettrait d'obtenir ses coordonnées dans l'espace latent. Puis avec ces coordonnées, procéder de la même façon que lorsque l'on se déplace sur l'espace latent avec la souris et donc déduire de quelle émotion ces coordonnées sont la plus proche.\\
+Pour l'instant, cette idée n'est qu'une hypothèse et aucun travail n'a été effectué dans le but de corroborer ou non cette première piste. Ce sera le travail que j'aurai a effectué durant la phase Développement de ce projet.
+
 \newpage
 \chapter{Spécifications de l'application}
 \label{chap:chap_specif}
@@ -1084,8 +1089,11 @@ Je vais néanmoins présenter les spécifications qui ont déjà été établi p
 \paragraph{Fonction F4: Reconnaître l'expression/Apprentissage}
 Cette fonction sera la même que celle déjà utilisée par Vitale et al. dans leur programme Matlab.
 
+\paragraph{Fonction F5: Reconnaître l'expression/Extraction des \textit{features} du visage}
+Étant donné que nous utiliserons le modèle de Vitale et al., cette fonction n'est pas nécessaire puisqu'aucune extraction de features n'est requis.
+
 \paragraph{Fonction F6: Reconnaître l'expression/Classification}
-Cette fonction devra utiliser le programme Matlab de Vitale et al. déjà existant. A partir des travaux déjà réalisé, cette fonction viendra se greffer sur le programme et permettra, grâce à une image donnée en entrée, de trouver sur l'espace latent, recensant les échantillons appris lors de la phase d'apprentissage, de trouver l'émotion la plus proche et donc la plus probable.\\
+Cette fonction devra utiliser le programme Matlab de Vitale et al. déjà existant. A partir des travaux déjà réalisé, cette fonction viendra se greffer sur le programme et permettra, grâce à une image donnée en entrée, de trouver sur l'espace latent, recensant les échantillons appris lors de la phase d'apprentissage, l'émotion la plus proche et donc la plus probable.\\
 Pour l'instant, une fonctionnalité du programme est de pouvoir naviguer dans cette espace avec la souris de l'ordinateur et de voir en temps réel l'émotion associé au point désigné par la souris. Il suffira donc de rajouter une méthode permettant de placer un point fictif sur cette espace (correspondant à l'échantillon à déterminer) et d'utiliser la fonction précédemment utilisée dans la navigation pour obtenir l'émotion associée la plus probable.
 
 \chapter{Planning et outils utilisés}
@@ -1203,17 +1211,17 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 	Étude du programme Matlab fonctionnel et comparaison de l'article au programme pour trouver à quelle partie du programme correspond chaque partie de l'article dans le but de mieux le comprendre.
 }
 \weeklyreport{Vacances de Noël}{
-	
+	Fin du rapport 
 }
-\weeklyreport{07/01/2016}{
+%\weeklyreport{07/01/2016}{
 	
-}
-\weeklyreport{14/01/2016}{
+%}
+%\weeklyreport{14/01/2016}{
 	
-}
-\weeklyreport{21/01/2016}{
+%}
+%\weeklyreport{21/01/2016}{
 	
-}
+%}
 
 % petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
 \nocite{*}
