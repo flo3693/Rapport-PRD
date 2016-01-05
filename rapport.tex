@@ -1,4 +1,4 @@
-\documentclass[overfullbox, poster]{polytech/polytech}
+\documentclass[poster]{polytech/polytech}
 \let\oldtabular=\tabular
 \def\tabular{\scriptsize\oldtabular}
 
@@ -110,7 +110,8 @@ C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec
 \\
 Le Projet de Recherche et Développement (anciennement Projet de Fin d'Études) est un projet se déroulant durant toute la 5ème année de master ingénieur au sein de l'école Polytech Tours. Ce rapport va présenter les travaux que j'ai effectué durant toute la durée de ce projet.\\
 \\
-Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir le cahier des charges du projet, l'état de l'art en matière de reconnaissance faciale d'émotions ainsi que toutes les bases théoriques dont j'aurais besoin par la suite. La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
+Ce rapport va donc se diviser en deux grandes parties: tout d'abord la partie Recherche qui va contenir le cahier des charges du projet, l'état de l'art en matière de reconnaissance faciale d'émotions ainsi que toutes les bases théoriques dont j'aurais besoin par la suite.\\
+La deuxième partie est la partie Développement qui va se concentrer sur les différentes étapes du développement de cette application d'aide aux personnes handicapées.\\
 \\
 Dans la partie Recherche de ce rapport, après avoir défini le cahier des charges, je vais vous présenter les sept émotions universelles ainsi que deux normes majeures permettant de définir les mouvements du visages qui composent une expression.\\
 Je vous présenterai ensuite un état de l'art en matière de reconnaissance faciale d'expression, notamment les différentes techniques permettant de capturer un visage et de reconnaître une émotion, tout d'abord en 3D puis en 2D, ainsi que les avantages et inconvénients de chacune de ces techniques. Dans chacune de ces étapes, je présenterai l'état de l'art actuelle en terme de matériel, de méthodes et également de base de données disponibles. \\
@@ -118,10 +119,10 @@ Je continuerai ensuite en présentant les différentes étapes nécessaires à l
 Je définirai ensuite les spécifications de l'application ainsi que les choix qui ont permit cette définition.\\
 Je conclurai par un planning prévisionnel ainsi que par les méthodologies et les outils de suivi utilisés durant ce projet.\\
 \\
-Dans la partie Développement, [rédaction en deuxième partie de l'année]\\
+%Dans la partie Développement, [rédaction en deuxième partie de l'année]\\
+%\\
 \\
-\\
-Pour ce projet de recherche et développement, j'ai été encadré par Donatello Conte et Mohamed Slimane.
+Pour ce projet de recherche et développement, j'ai été encadré par Donatello CONTE et Mohamed SLIMANE.
 
 
 \part{Recherche}
@@ -143,7 +144,7 @@ Florian TISSIER: élève en dernière année de master ingénieur en informatiqu
 Ce projet de recherche et développement prend place dans le cursus de dernière année de master ingénieur dispensé à l'école Polytech Tours.\\
 \\
 Monsieur Slimane étant membre d'une association s'occupant de personnes handicapées, il souhaitait pouvoir aider et faciliter la vie de ces derniers via un projet réalisé au sein de l'école.\\
-Le but de ce projet de recherche et développement est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression du visage actuelle d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.
+Le but de ce projet de recherche et développement est de construire un système permettant, à partir d'un flux vidéo acquis grâce à une caméra, de détecter l'expression actuelle du visage d'une personne handicapée dans le but de réaliser certaines actions pouvant améliorer son bien être.
 
 \section{Problématique et objectif}
 Comment faciliter la vie quotidienne des personnes handicapées grâce à leurs émotions?\\
@@ -165,7 +166,7 @@ Le projet se découpe en 2 fonctions principales:
 Chacune de ces fonctions se décomposent en plusieurs sous-fonctions.
 
 \subsection{Repérer le visage}
-Cette première focntion principale va permettre de trouver le visage d'une personne, de le suivre et de zoomer dessus.\\
+Cette première fonction principale va permettre de trouver le visage d'une personne, de le suivre et de zoomer dessus.\\
 Les sous-fonctions suivantes seront donc nécessaires:
 \begin{itemize}
 \item Un algorithme de détection de visage dans une image
@@ -209,14 +210,14 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
    \hline
    Objectif &Zoomer sur une zone de l'image. \\
    \hline
-   Description &L'algorithme devra pouvoir zoomer sur le cadre contenant le visage renvoyé par la sous-fonction de détection du visage. \\
+   Description &L'algorithme devra pouvoir zoomer sur le cadre contenant le visage renvoyé par la sous-fonction F1. \\
    \hline
    Contraintes &Disposer d'une caméra ayant la possibilité de zoomer. \\
    \hline
    Niveau de priorité &Moyenne \\
    \hline
 \end{tabular}
-
+\newpage
 \subsection{Reconnaître l'expression}
 Cette deuxième fonction principale va permettre d'identifier l'expression faciale de la personne.\\
 Les sous-fonctions suivantes seront donc nécessaires:
@@ -234,9 +235,9 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
    \hline
    Objectif &Apprendre au système à classifier les expressions en fonction d'une base d'apprentissage.\\
    \hline
-   Description &Pour chaque élément dans la base d'apprentissage, une émotion lui sera associé. Cela va permettre au système d'apprendre à quel expression du visage appartient une émotion.\\
+   Description &Pour chaque élément dans la base d'apprentissage, une émotion lui sera associé. Cela va permettre au système d'apprendre à quelle expression du visage appartient une émotion.\\
    \hline
-   Contraintes &La base d'apprentissage doit être assez fourni et pertinente pour permettre un apprentissage performant. \\
+   Contraintes &La base d'apprentissage doit être assez fournie et pertinente pour permettre un apprentissage performant. \\
    \hline
    Niveau de priorité &Haute \\
    \hline
@@ -262,7 +263,7 @@ Vous trouverez ci-après un descriptif plus précis de chacune de ces sous-fonct
    \hline
    Objectif &Classifier l'expression du visage et retourner l'émotion associée. \\
    \hline
-   Description &L'algorithme devra classifier l'expression du visage de la personne récupéré depuis un flux vidéo, grâce aux positions des \textit{features}, en fonction de l'apprentissage qui aura été effectué précédemment. \\
+   Description &L'algorithme devra classifier l'expression du visage de la personne récupérée depuis un flux vidéo, grâce aux positions des \textit{features}, en fonction de l'apprentissage qui aura été effectué précédemment. \\
    \hline
    Contraintes &Cet algorithme doit être rapide et fiable (au moins 90\% de reconnaissance). \\
    \hline
@@ -275,17 +276,17 @@ Ce projet ne dispose pas d'un budget précis.\\
 Néanmoins en réalisant un état de l'art des matériels disponibles à notre projet, nous avons décidé de choisir une caméra ne dépassant pas les 500€.
 
 \section{Délai}
-La partie recherche devra être fini pour le 15 janvier 2016 et la partie développement (et donc le projet complet) devra être fini pour la fin du second semestre, c'est-à-dire fin mars/début avril.
+La partie recherche devra être fini pour le 15 janvier 2016 et la partie développement (et donc le projet complet) devra être fini pour la fin du second semestre, c'est-à-dire fin mars.
 
 \section{Livrable}
 Le livrable de ce projet correspondra en une application Matlab qui réalisera la phase d'apprentissage et la classification des émotions.
 
-\chapter{Émotions universelles et mouvements du visage}
+\chapter{Émotions universelles et \mbox{mouvements} du visage}
 \label{chap:chap_emotions}
 
 Ce chapitre va me permettre d'introduire les notions nécessaires à la décomposition et donc à la reconnaissance d'une expression faciale et de son émotion associée.\\
 Pour un simple sourire, nous utilisons une vingtaine de muscles (les muscles zygomatiques), il ne peut donc pas être décrit par un seul mouvement du visage mais plusieurs. C'est exactement la même chose pour une expression, on ne la reconnaît que grâce à l'ensemble des mouvements faciaux qui la composent.\\
-C'est sur ce principe qu'on était crée les deux normes de description des mouvements du visage que je vais vous présenter: le FACS et MPEG-4.\\
+C'est sur ce principe qu'ont été créé les deux normes de description des mouvements du visage que je vais vous présenter: le FACS et MPEG-4.\\
 L'utilisation de l'une ou l'autre de ces normes permet de définir entièrement le spectre des mouvements rentrant en jeu dans n'importe quelle émotion.\\
 \\
 Mais tout d'abord, je vais vous introduire les sept émotions universelles qui seront utilisées tout au long de mon projet et donc de ce rapport.
@@ -352,10 +353,10 @@ Le descriptif complet de ces FAP se trouve dans le document à cette adresse \ci
 	\begin{tabu}{|c|c|X[m]|}
 		\hline
 		Numéro &Nom &Description\\\hline
-		3 &open\_ jaw &Vertical jaw displacement (does not affect mouth opening)\\\hline
-		7 &stretch\_ r\_ cornerlip &Horizontal displacement of right inner lip corner\\\hline
-		10 &raise\_ b\_ lip\_ lm  &Vertical displacement of midpoint between left corner and middle of bottom inner lip\\\hline
-		42 &lift\_ r\_ cheek &Vertical displacement of right cheek\\\hline
+		3 &open\_ jaw &Déplacement vertical de la mâchoire (n'affecte pas l'ouverture de la bouche)\\\hline
+		7 &stretch\_ r\_ cornerlip &Déplacement horizontal du coin droit de la lèvre intérieure\\\hline
+		10 &raise\_ b\_ lip\_ lm  &Déplacement vertical du point médian entre le coin gauche et le bas de la lèvre intérieure\\\hline
+		42 &lift\_ r\_ cheek &Déplacement vertical de la joue droite\\\hline
 	\end{tabu}
 \end{Table}
 
@@ -369,7 +370,6 @@ Le descriptif complet de ces FAP se trouve dans le document à cette adresse \ci
 
 Cependant, la norme de MPEG-4 est moins réaliste que FACS d'un point de vue musculaire.\\
 Par exemple : l'AU 26 de FACS (« Jaw Drop ») décrit le mouvement d'abaissement du menton, cet abaissement est accompagné d'un abaissement de la lèvre inférieure. Or l'abaissement du menton de MPEG-4 (FAP 3 - open\_ jaw) ne décrit pas l'abaissement de la lèvre inférieure.\\
-MPEG-4 ne décrit que les mouvements \textit{visibles} du visages, contrairement à FACS qui lui décrit les mouvements \textit{réalistes} du visage.\\
 \\
 Nous allons maintenant voir quelles technologies sont disponibles pour réaliser l'acquisition des images qui seront à traiter par la suite.
 
@@ -384,8 +384,8 @@ Cependant, j'ai tout de même réalisé quelques recherches sur le matériel uti
 \section{3D}
 \label{sec:3d}
 
-Comme je l'ai expliqué plus haut, mon projet et donc mon système de reconnaissance utilisera des images 2D mais j'ai tout de même mené quelques recherches sur les images en 3D également.\\
-Je vais tout d'abord vous présenter les techniques utilisées pour acquérir des images en 3D. Je vous présenterai ensuite certains matériels déjà existant permettant de faire de la capture d'images 3D et utilisant les techniques que je vous aurais présenter précédemment. Je terminerai enfin cette section sur la 3D en vous présentant les bases de données de visages les plus connues et les plus utilisés par les systèmes de reconnaissance faciale d'émotion en 3D.\\
+Comme je l'ai expliqué plus haut, mon projet, et donc mon système de reconnaissance, utilisera des images 2D mais j'ai tout de même mené quelques recherches sur les images en 3D également.\\
+Je vais tout d'abord vous présenter les techniques utilisées pour acquérir des images en 3D. Je vous exposerai ensuite certains matériels déjà existant permettant de faire de la capture d'images 3D et utilisant les techniques que je vous aurais présenté précédemment. Je terminerai enfin cette section sur la 3D en vous introduisant les bases de données de visages les plus connues et les plus utilisées par les systèmes de reconnaissance faciale d'émotion en 3D.\\
 Les informations que vous allez trouver dans cette section proviennent en majorité de l'article \cite{sota3d}.
 
 \subsection{Techniques d'acquisition}
@@ -394,7 +394,7 @@ Les informations que vous allez trouver dans cette section proviennent en majori
 \subsubsection{Reconstruction à partir d'une image}
 \label{single_img_reconstruct}
 Il est possible, à partir d'une image en 2D capturé par une caméra basique, d'obtenir une image en 3D.\\
-La méthode la plus prometteuse est celle du \textbf{3D Morphable Model} (3DMM), qui consiste à apposer un visage en 3D (masque) sur l'image en 2D et que le modifier pour le faire correspondre avec l'image. Sont ensuite extraites les informations correspondant au masque modifié qui vont permettre de créer le visage de l'image en 3D.\\
+La méthode la plus prometteuse est celle du \textbf{3D Morphable Model} (3DMM), qui consiste à apposer un visage en 3D (masque) sur l'image en 2D et de le modifier pour le faire correspondre avec l'image. Sont ensuite extraites les informations correspondant au masque modifié qui vont permettre de créer le visage de l'image en 3D.\\
 La \autoref{3dmm} présente un exemple de visage 3D récupéré depuis une image 2D.\\
 Cette technique est très pratique et répandue car elle ne nécessite pas de matériel au coût exorbitant, une simple caméra est nécessaire.
 
@@ -439,7 +439,7 @@ Je vais ici vous présenter les deux dispositifs les plus connus.
 \subsubsection{Kinect}
 \label{kinect}
 Probablement la caméra 3D la plus connu du grand public : la Kinect de Microsoft.\\
-Créer initialement pour créer une immersion plus poussée pour les jeux de la console XBox 360, elle a depuis été amélioré et ne sert plus exclusivement qu'à jouer aux jeux vidéos.\\
+Créer initialement pour créer une immersion plus poussée pour les jeux de la console XBox 360, elle a depuis été amélioré avec sa version XBox One et ne sert plus exclusivement qu'à jouer aux jeux vidéos.\\
 Elle utilise la technique de la lumière structuré (infra-rouge dans ce cas) pour capturer les images en 3D de ce qu'elle filme.\\
 La Kinect reste cependant une caméra 3D low-cost, de mauvaise qualité lorsqu'on le compare à d'autres dispositifs du même type, tel que celui que je vais présenter maintenant.
 
@@ -481,11 +481,10 @@ Chaque donnée contient également la position de 83 points clés du visage.
 \subsubsection{BU-4DFE}
 Une extension de la base BU-3DFE a été réalisé dans le but d'obtenir un espace 3D dynamique, c'est-à-dire rajouter la dimension du temps dans les images de la base, en plus des 3 dimensions déjà présentes.\\
 En effet, dans la version de base, il n'y avait qu'une seule image présente pour une expression et une intensité, mais dans le but d'obtenir des analyses plus performantes, inclure la notion du temps dans ces images devient indispensable.\\
-La base de données BU-4DFE \cite{bu4dfe_article} se compose donc de 101 sujets (58 femmes) de différentes ethnicités, chaque sujet réalisant 6 des expressions basiques (toutes sauf la neutre). Chaque séquence d'émotion contient environ 100 frames, ce qui nous permet d'obtenir environ 60600 différents frames dans la base.
+La base de données BU-4DFE \cite{bu4dfe_article} se compose donc de 101 sujets (58 femmes) de différentes ethnicités, chaque sujet réalisant 6 des expressions basiques (toutes sauf la neutre). Chaque séquence d'émotion contient environ 100 frames, ce qui nous permet d'obtenir environ 60600 différentes frames dans la base.
 
 \subsubsection{Bosphorus 3D Face Database}
-La base de données Bosphorus \cite{bosphorus_article}
-Cette base de données est composé de 105 sujets (45 femmes) dont la plupart sont de type Caucasien et dont un tiers sont des acteurs professionnels.\\
+La base de données Bosphorus \cite{bosphorus_article} est composé de 105 sujets (45 femmes) dont la plupart sont de type Caucasien et dont un tiers sont des acteurs professionnels.\\
 Chaque sujet réalise environ 35 expressions et toutes les images sont codés en terme de FACS (\autoref{sec:facs}).\\
 Plusieurs illuminations et occlusions du visage (barbe, moustache, lunettes...) sont également présentes pour chaque sujet. 24 points clés du visage sont également définis pour chaque donnée.\\
 Un exemple de donnée est présente en \autoref{bosphorus_img}
@@ -497,12 +496,12 @@ Un exemple de donnée est présente en \autoref{bosphorus_img}
 \subsubsection{Comparatif des différentes bases de données 3D}
 
 Précédemment, je ne vous est présenté que les bases de données les plus populaires. Cependant, beaucoup d'autres existent également.\\
-J'ai donc réalisé un tableau (\autoref{tab:bdd3d}) recensant ces différentes bases de données publiquement disponible, et pouvant représenté un intêret dans la reconnaissance d'émotions, avec leurs principales caractéristiques (données principalement tirées de \cite{sota3d}).
+J'ai donc réalisé un tableau (\autoref{tab:bdd3d}) recensant ces différentes bases de données publiquement disponible, et pouvant représenter un intérêt dans la reconnaissance d'émotions, avec leurs principales caractéristiques (données principalement tirées de \cite{sota3d}).
 
 \begin{Table}{tab:bdd3d}{Comparaison de bases de données 3D}
 	\begin{tabular}{|p{2.5cm}|p{2cm}|p{3.5cm}|p{6cm}|}
 		\hline
-		\textbf{Nom} &\textbf{Type de données} &\textbf{Taille} &\textbf{Contenu}\\\hline
+		\textbf{Nom} &\textbf{Type de \mbox{données}} &\textbf{Taille} &\textbf{Contenu}\\\hline
 		BU-3DFE\cite{bu3dfe_article} &Statique &100 adultes &6 émotions basiques avec 4 niveaux d'intensités\\
 		BU-4DFE\cite{bu4dfe_article} &Dynamique &101 adultes &6 émotions basiques\\
 		Bosphorus\cite{bosphorus_article} &Statique &105 adultes (dont 25 acteurs) &6 émotions basiques, 24 AUs, occlusions\\
@@ -539,7 +538,7 @@ Par contre dans le cas d'un flux vidéo récupéré via une caméra, c'est les \
 Je vais ici vous présenter différentes bases de données de visages 2D, libre d'accès à la communauté scientifique, intéressantes pour la recherche et permettant de réaliser une reconnaissance faciale d'expressions.
 
 \subsubsection{Cohn-Kanade (CK) \cite{ck}}
-Probablement la base de données de visage 2D la plus connue et la plus utilisé pour la reconnaissance faciale d'expressions, elle se compose de 97 sujets (65\% femmes, 15\% afro-américains et 3\% asiatiques ou sud américain) âgés de 18 à 30 ans et réalisant les 6 expressions universelles (joie, tristesse, dégoût, peur, surprise et colère).\\
+Probablement la base de données de visage 2D la plus connue et la plus utilisée pour la reconnaissance faciale d'expressions, elle se compose de 97 sujets (65\% femmes, 15\% afro-américains et 3\% asiatiques ou sud américain) âgés de 18 à 30 ans et réalisant les 6 expressions universelles (joie, tristesse, dégoût, peur, surprise et colère).\\
 Cette base contient au total 486 séquences vidéos, du visage neutre au départ jusqu'à l'\textbf{apex} (le pic de l'émotion) à la fin. Ces séquences sont en niveaux de gris et digitalisé en tableaux de 640*480 pixels avec donc une précision de 8 bits (dû aux niveaux de gris).\\
 Toutes ces séquences sont entièrement codées en termes de FACS et d'AUs mais ne contiennent pas de label spécifiant l'émotion présentée.\\
 Toutes les expressions présentes dans les séquences vidéos contenues dans cette base sont posées et non spontanées, cela signifie qu'on a demandé à ces personnes de produire telle ou telle émotion, cela ne leur est pas venu d'eux-même spontanément. Les expressions présentées seront donc plus "exagérées" qu'en temps normal.
@@ -553,16 +552,16 @@ C'est la version amélioré de la base de données CK.\\
 Cette fois-ci, elle contient des expressions posées et spontanées.\\
 %Les expressions spontanées proviennent de \cite{ambadar}. \\
 Dans le cas des expressions posées, le nombre de sujets a été augmenté 27\% et le nombre des séquences de 22\%.
-Les séquences sont toujours codées en termes de FACS et d'AUS avec, cette fois-ci, un label associé à l'expression présentée qui se trouvera dans les metadata de la vidéos.\\
+Les séquences sont toujours codées en termes de FACS et d'AUS avec, cette fois-ci, un label associé à l'expression présentée qui se trouvera dans les metadata de la vidéo.\\
 Cette version propose également des protocoles et des résultats pour le suivi des ponts clés du visage ainsi que pour la reconnaissance d'émotion.\\
 \\
 Actuellement, une troisième version de CK est en préparation, avec comme principale ajout la synchronisation entre une séquence frontale et une séquence orientée de 30 degrés par rapport à la vue frontal.
 
 \subsubsection{Man-Machine Interaction (MMI)  \cite{mmi1}\cite{mmi2}}
 Créée en 2002, cette base de données, comme CK+, se composent de deux parties: une partie posée et une partie spontanée.\\
-Cette base contient plus de 2900 vidéos ainsi que des images en haute résolution de 75 sujets (48\% de femmes, européen, africain et sud américain) âgés de 19 à 62 ans. Chaque séquence vidéos contient soit une expression dans son entièreté, soit un AU spécifique\\
+Cette base contient plus de 2900 vidéos ainsi que des images en haute résolution de 75 sujets (48\% de femmes, européen, africain et sud américain) âgés de 19 à 62 ans. Chaque séquence vidéo contient soit une expression dans son entièreté, soit un AU spécifique\\
 Les données de cette base sont également codés en terme de FACS et d'AUs.\\
-L'avantage de cette base de données est qu'elle contient toute l'étendu d'une expression: visage neutre - \textbf{onset} (début de l'expression) - \textbf{apex} (pic) - \textbf{offset} (fin de l'expression) - visage neutre .\\
+L'avantage de cette base de données est qu'elle contient toute l'étendue d'une expression: visage neutre - \textbf{onset} (début de l'expression) - \textbf{apex} (pic) - \textbf{offset} (fin de l'expression) - visage neutre .\\
 Cela permet de réaliser une reconnaissance d'émotion dans le temps plus précise.\\
 Certaines des séquences vidéos sont en couleur, les autres sont en niveaux de gris.
 
@@ -595,9 +594,10 @@ C'est avec cette base de données que j'ai travaillé à la réalisation de mon 
 Créée par la même équipe que celle qui a créée MHI Mimicry, cette base de données se compose de 27 participants (11 hommes, 16 femmes) de 19 à 40 ans.\\
 Elle est divisée en 2 parties: la première partie contient 20 vidéos et la deuxième 28 vidéos et 14 images.\\
 Chaque vidéos contient la vidéo du visage, l'audio et les expressions vocales, la position où regardent les yeux et les signaux physionomiques (température du corps, rythme de la respiration, EEG, rythme cardiaque). Les vidéos ont été filmées via 6 caméras: 5 en niveaux de gris et d'orientations différentes (frontal, bas-gauche, bas-droite, vue d'ensemble et profil gauche) et une en couleur (frontal).\\
+Un exemple des différentes données vidéos contenues dans cette base est en \autoref{tag2}.\\
 Concernant la partie 1 (Explicit Tagging) : chaque participant regarde plusieurs vidéos et à la fin de chaque vidéo un feedback sur leur ressenti leur ai demandé:
 \begin{itemize}
-\item émotion ressenti (parmi neutre, anxieux, amusé, triste, joyeux, dégoûté, en colère, surpris ou apeuré)
+\item émotion ressentie (parmi neutre, anxieux, amusé, triste, joyeux, dégoûté, en colère, surpris ou apeuré)
 \item excitation (sur une échelle de 1 à 9)
 \item agréabilité (sur une échelle de 1 à 9)
 \item dominance (sur une échelle de 1 à 9)
@@ -612,8 +612,6 @@ Concernant la partie 2 (Implicit Tagging) : on diffuse à chaque participant une
  \pgfimage{images/tag.jpg}
 \end{Figure}
 
-Un exemple des différentes données vidéos contenues dans cette base est en \autoref{tag2}.
-
 \begin{Figure}{tag2}{Données contenues dans HCI Tagging}
  \pgfimage{images/tag.png}
 \end{Figure}
@@ -624,7 +622,7 @@ Pareillement à MHI Mimicry, aucune notion de FACS ni d'AUs n'est présente, les
 \subsubsection{Comparatif des bases de données 2D}
 Pour récapituler toutes les informations que j'ai pu donner précédemment et pour introduire de nouvelles bases de données accessibles à la communauté scientifique dont je n'ai pas parlé, j'ai donc réalisé le tableau comparatif suivant:
 
-\begin{Table}{tab:bdd2d}{Comparaison de bases de données 2D}
+\begin{Table}{tab:bdd2d}{Comparaison de bases de données 2D (P/S : Posée/Spontanée)}
 	\begin{tabular}{|p{1.5cm}|p{0.7cm}|p{4cm}|p{5cm}|p{2.5cm}|}
 		\hline
 		\textbf{Nom} &\textbf{P/S} &\textbf{Taille} &\textbf{Contenu} &\textbf{Label}\\\hline
@@ -639,16 +637,18 @@ Pour récapituler toutes les informations que j'ai pu donner précédemment et p
 	\end{tabular}
 \end{Table}
 
+Malheureusement, aucune base de données existantes ne concernent les personnes handicapées.
+
 \chapter{Architecture d'un système de reconnaissance d'émotions}
 Dans ce chapitre je vais introduire les différentes parties nécessaires à la construction d'un système permettant de reconnaître des expressions et émotions.\\
-Un tel système se constitue de 4 parties (ou 3 car la première et deuxième peuvent être combiné en une seule):
+Un tel système se constitue de 3 parties :
 \begin{itemize}
 \item Détection du visage
 \item Extraction des \textit{features} (nez, bouches, yeux …)
 \item Classification\\
 \end{itemize}
 
-Chacune de ces parties sera décrit plus précisément dans les sections suivantes avec un état de l'art sur les techniques existantes pour chacune d'entre elles.\\
+Chacune de ces parties sera décrite plus précisément dans les sections suivantes avec un état de l'art sur les techniques existantes pour chacune d'entre elles.\\
 Une partie des informations se trouvant de ce chapitre sont tirées de \cite{sota2d} écrit par les fondateurs de la société Emotient et qui présente un état de l'art des différentes parties d'un système de reconnaissances d'émotions.
 
 \newpage
@@ -661,12 +661,12 @@ Les algorithmes de détection de visage se divisent en 2 catégories: les absolu
 \subsection{Absolu}
 \label{absolu}
 Les détecteurs absolus, aussi appelés détecteurs \textit{frame-by-frame}, vont déterminer la position d'un visage sur chaque frame d'une vidéo, indépendamment des frames précédentes.\\
-Le principale avantage de ces détecteurs est qu'ils sont très facilement parallélisable sur plusieurs frames d'une vidéo en même temps. Il permet également de réagir très rapidement si jamais le nombre de visages dans l'image change subitement et ne "dérive" pas au court du temps. Ici le terme "dériver" fait référence au fait de perdre la position d'un visage.\\
+Le principal avantage de ces détecteurs est qu'ils sont très facilement parallélisable sur plusieurs frames d'une vidéo. Ils permettent également de réagir très rapidement si jamais le nombre de visages dans l'image change subitement et ne "dérive" pas au court du temps. Ici le terme "dériver" fait référence au fait de perdre la position d'un visage.\\
 Cependant, comme dit précédemment, ces détecteurs n'utilisent pas de notions de temps qui pourraient les rendre plus rapide et précis.\\
 \\
 Le tout premier algorithme de détection qui est maintenant utilisé par la plupart de ces détecteurs est l'algorithme de \textbf{Viola-Jones} \cite{violajones} créé en 2001.\\
 Cet algorithme va tout d'abord apprendre un classificateur à différencier des visages d'autres objets grâce à un apprentissage réalisés avec des images de différentes tailles de visages ou de divers autres objets. A noté qu'il est préférable d'avoir un nombre d'objets quelconque très supérieur au nombre de visages si nous voulons que l'algorithme soit efficace.\\
-Une fois l'apprentissage fini et que l'on passe une nouvelle image à l'algorithme, il va analyser cette dernière en extrayant plusieurs \textit{patchs}, des bouts de l'image, de différentes tailles qu'il va ensuite normaliser à une taille précise (par exemple 48*48 pixels) puis les donner au classificateur qui va se charger de définir si oui ou non se trouve un visage dans ce patch.\\
+Une fois l'apprentissage fini et que l'on passe une nouvelle image à l'algorithme, il va analyser cette dernière en extrayant plusieurs \textit{patchs}, des bouts de l'image, de différentes tailles qu'il va ensuite normaliser à une taille précise puis les donner au classificateur qui va se charger de définir si oui ou non se trouve un visage dans ce patch.\\
 Cette étape d'extraction de patchs peut également être paralléliser pour gagner en rapidité.\\
 
 \subsection{Différentiel}
@@ -676,7 +676,7 @@ L'avantage de ces détecteurs est leur grande rapidité et précision. Cependant
 \\
 L'un des plus connus est l'algorithme \textbf{Active Appearance Model} (AAM).\\
 Dans AAM, un visage est représenté comme un modèle en forme de maillage triangulaire composé d'environ
-70 points. Ce modèle est construit grâce à un apprentissage sur différentes visages réalisant différentes expressions et dans lesquels les \textit{features} sont connus. Il va donc chercher à faire correspondre ce modèle avec tout visage se trouvant sur une image en le déformant pour faire correspondre les features du modèle à celles du visage. Les déformations possibles ont été calculés au préalable.\\
+70 points. Ce modèle est construit grâce à un apprentissage sur différents visages réalisant différentes expressions et dans lesquels les \textit{features} sont connus. Il va donc chercher à faire correspondre ce modèle avec tout visage se trouvant sur une image en le déformant pour faire correspondre les features du modèle à celles du visage. Les déformations possibles ont été calculé au préalable.\\
 Sur la première frame de la vidéo, il suffit d'initialiser les positions des features de chaque visage (manuellement ou via un tracker absolu) puis, sur les frames suivantes, la position de ces features est trackée grâce aux différentes déformations possibles.\\
 \\
 AAM ne permet pas que de détecter des visages mais permet également d'en extraire les features.
@@ -754,7 +754,9 @@ Puis j'ai fait varier $\theta $ (\autoref{theta}). En variant l'orientation, cel
 En modifiant $\Psi $ (\autoref{psi}), cela va changer la disposition du filtre, sa "symétrie". Les valeurs sont comprises entre -180 et 180. Les valeurs 0 et 180 correspondent respectivement aux symétries centrés "center-on" et "center-off", et les valeurs -90 et 90 correspondent aux dissymétries associées. Ce paramètre permet de changer "l'emplacement" des contours, comme montré sur la figure associée.\\
 \\
 Le paramètre $\gamma $ permet de définir l'ellipticité de la fonction de Gabor (\autoref{gamma}). Ses valeurs sont réelles et si $\gamma = 1 $, alors le filtre sera de forme ronde. Plus ce paramètre est élevé, plus le filtre sera "plat". Modifier l'ellipticité permet d'avoir des contours plus ou moins précis.\\
+\\
 En modifiant le paramètre \textit{n} (\autoref{n}), comme je l'ai expliqué précédemment, cela aura pour conséquence de créer plusieurs filtres d'orientation différentes. Comme un filtre ne permet de trouver que les contours ayant la même orientation, avoir un banc de filtres assez fourni permet de trouver tous les contours d'une image.\\
+\\
 J'ai enfin terminé par le paramètre $\sigma $ (\autoref{sigma}). Au départ, ce paramètre est inconnu et il se calcule grâce à un nouveau paramètre, \textit{b}, correspondant à la largeur de la bande (en octave). On sait que :
 \begin{align*}
 b = \log _2 (\frac{\frac{\sigma}{\lambda} \pi + \sqrt{\frac{ln 2}{2}}}{\frac{\sigma}{\lambda} \pi - \sqrt{\frac{ln 2}{2}}})\Leftrightarrow \frac{\sigma}{\lambda} = \frac{1}{\pi } \sqrt{\frac{ln 2}{2}} * \frac{2^b + 1}{2^b - 1}
@@ -792,10 +794,10 @@ Les composantes utilisées par Viola et Jones sont présentées en \autoref{haar
 \end{Figure}
 
 Ces composantes sont donc des masques, également appelées fenêtres de détection, composées d'un différent nombre de rectangle.\\
-Leur utilisation est également très simple. Ces composantes sont appliqués à toutes les positions possibles sur l'image, tout d'abord de petite taille (20*20 pixels par exemple) puis en les agrandissant. A chaque position, on soustrait la somme des pixels contenus dans la partie noire à la somme des pixels contenus dans la partie blanche. Le résultat d'une caractéristique à une certaine position est donc un nombre réel qui va coder les variations du contenu pixellique.\\
+Leur utilisation est également très simple. Ces composantes sont appliquées à toutes les positions possibles sur l'image, tout d'abord de petite taille (20*20 pixels par exemple) puis en les agrandissant. A chaque position, on soustrait la somme des pixels contenus dans la partie noire à la somme des pixels contenus dans la partie blanche. Le résultat d'une caractéristique à une certaine position est donc un nombre réel qui va coder les variations du contenu pixellique.\\
 \\
 Cette méthode est d'une grande rapidité lorsqu'elle est utilisée avec des \textbf{images intégrales}.\\
-Une image intégrale est un image dérivé d'une image originale, de la même taille que cette dernière, et dont la valeur de chaque pixel est la somme des pixels au-dessus et des pixels à gauche du pixel courant de l'image originale. Sous forme mathématique, cela se traduit de cette façon:
+Une image intégrale est une image dérivée d'une image originale, de la même taille que cette dernière, et dont la valeur de chaque pixel est la somme des pixels au-dessus et des pixels à gauche du pixel courant de l'image originale. Sous forme mathématique, cela se traduit de cette façon:
 \begin{align*}
 imgInt(x,y)= \sum \nolimits_{x' \leq x , y' \leq y} imgOri(x',y')
 \end{align*}
@@ -811,7 +813,7 @@ Une fois l'image intégrale complètement calculée, avoir la somme de n'importe
 \sum imgOri(ABCD) = imgInt(A) + imgInt(C) - (imgInt(B) + imgInt(D))
 \end{align*}
 \\
-L'année suivante, en 2002, Lienhart et Maydt (\cite{extended_haar})ont créé une extension aux composantes créées par Viola et Jones. Ils ont crées des masques orientés de 45°, ce qui a pour conséquence d'améliorer d'environ 10\% les performances par rapport à l'utilisation seule des masques crées par Viola et Jones. Ces masques permettent désormais de repérer des bords, des lignes ainsi que des "centres", telle que la pupille d'un oeil par exemple. Par contre, ils ont décider de ne pas utiliser un des masques crée par Viola et Jones, le masque en forme de "damier". J'ai regroupé ces nouveaux masques dans la \autoref{haar_extended}.
+L'année suivante, en 2002, Lienhart et Maydt (\cite{extended_haar})ont créé une extension aux composantes créées par Viola et Jones. Ils ont créés des masques orientés de 45°, ce qui a pour conséquence d'améliorer d'environ 10\% les performances par rapport à l'utilisation seule des masques créés par Viola et Jones. Ces masques permettent désormais de repérer des bords, des lignes ainsi que des "centres", telle que la pupille d'un oeil par exemple. Par contre, ils ont décidé de ne pas utiliser un des masques de Viola et Jones, le masque en forme de "damier". J'ai regroupé ces nouveaux masques dans la \autoref{haar_extended}.
 
 \begin{Figure}{haar_extended}{Extension de composantes pseudo-Haar défini par Lienhart et Maydt}.
  \pgfimage{images/extended_haar.png}
@@ -825,7 +827,7 @@ imgInt(x,y)= \sum \nolimits_{x' \leq x , x' \leq x - |y-y'|} imgOri(x',y')
 
 \subsection{Motifs binaires locaux}
 La méthode des motifs binaires locaux, ou \textit{local binary pattern (LBP)} en anglais, permet également de détecter des textures ainsi que des objets dans une image.\\
-Cette méthode a été popularisé en 1996 (\cite{lbp}) pour l'analyse des différentes textures d'une image après avoir été introduit pour la première fois en 1993 (\cite{lbp_origin}) pour mesurer le contraste d'une image.\\ 
+Cette méthode a été popularisée en 1996 (\cite{lbp}) pour l'analyse des différentes textures d'une image après avoir été introduit pour la première fois en 1993 (\cite{lbp_origin}) pour mesurer le contraste d'une image.\\ 
 Le principe de cette méthode est de comparer le niveaux de luminance d'un pixel d'une image avec celui de ses voisins. Cette méthode va également résulter en la création d'une nouvelle image de même taille que l'originale contenant le résultat du motif binaire local de chaque pixel.\\
 Ces motifs se calculent de cette façon:
 \begin{itemize}
@@ -853,9 +855,9 @@ Comme l'indique son nom, ce type de classificateur ne permet de classifier une i
 \\
 Le classificateur binaire le plus connu est le \textbf{Support Vector Machine} (SVM).\\
 Les SVMs se basent sur 2 notions très importantes.\\
-La première est la notion de \textit{marge maximale}. Cette marge est la distance entre la frontière de séparation des 2 classes et les échantillons les plus proches appelés vecteurs supports. La frontière de séparation est choisi de telle sorte qu'elle maximise le plus la marge. C'est donc grâce à un apprentissage que l'on peut définir cette frontière.\\
-La deuxième notion est celle de la transformation de l'espace de représentation en un espace de dimension plus grande, voir infinie. Cette notion est utile lorsque les données ne sont pas linéairement séparable dans l'espace d'origine. En projetant dans un espace de dimension plus grande, il est plus probable de trouver une séparation \autoref{svm}.\\
-Cette transformation est réalisé via une fonction noyau qui va permettre de transformer un produit scalaire dans un espace de grande dimension.
+La première est la notion de \textit{marge maximale}. Cette marge est la distance entre la frontière de séparation des 2 classes et les échantillons les plus proches appelés vecteurs supports. La frontière de séparation est choisie de telle sorte qu'elle maximise le plus la marge. C'est donc grâce à un apprentissage que l'on peut définir cette frontière.\\
+La deuxième notion est celle de la transformation de l'espace de représentation en un espace de dimension plus grande, voir infinie. Cette notion est utile lorsque les données ne sont pas linéairement séparable dans l'espace d'origine. En projetant dans un espace de dimension plus grande, il est plus probable de trouver une séparation, comme nous le montre l'exemple en \autoref{svm}.\\
+Cette transformation est réalisée via une fonction noyau qui va permettre de transformer un produit scalaire dans un espace de grande dimension.
 
 \begin{Figure}{svm}{Exemple de projection dans un espace de plus grande dimension réalisé par SVM}
  \pgfimage{images/svm.png}
@@ -879,7 +881,7 @@ Un exemple vous est présenté en \autoref{kppv} dans lequel 3 classes ont été
 
 \chapter{Nouvelle approche}
 \label{chap:chap_newmodel}
-Toutes les rehcerches que je vous ai présentées pour l'instant existent et son implenter dans la communauté scientifique depuis plusieurs années, elles ne présentent donc pas vraiment d'innovations possibles.\\
+Toutes les recherches que je vous ai présenté pour l'instant existent et son implanter dans la communauté scientifique depuis plusieurs années, elles ne présentent donc pas vraiment d'innovations possibles.\\
 \\
 Sur la demande de Mr Conte, j'ai dû étudier un article écrit par Jonathan Vitale, Mary-Anne Williams, Benjamin Johnston et Giuseppe Boccignone, ce dernier étant un collègue de Mr Conte.\\
 \textit{Affective facial expression processing via simulation: A probabilistic model} \cite{italiens} décrit une toute nouvelle approche permettant de reconnaître des expressions faciales \textbf{via un modèle probabiliste}.\\
@@ -926,7 +928,7 @@ Y_{act}\mapsto X_{obs}\mapsto M_{obs}\simeq M_{act}
 \end{align*}
 
 \section{Modèle réalisé}
-Pour la réalisation du modèle probabiliste, plusieurs probabilités on été définies:
+Pour la réalisation du modèle probabiliste, plusieurs probabilités ont été définies:
 \begin{itemize}
 \item $P(Y_{obs}/Y_{act})$ : représente la probabilité pour l'observateur de ressentir intérieurement $Y_{obs}$ quand l'acteur affiche $Y_{act}$. Cette probabilité est appelé \textit{transcodage}.
 \item $P(X_{obs}/Y_{obs})$ : représente la probabilité d'être dans un état interne $X_{obs}$ sachant $Y_{obs}$. Cette probabilité est appelé \textit{correspondance inverse}.
@@ -1006,10 +1008,10 @@ où $\hat{\mu }_{obs} = \mu _{obs} + \Sigma ^T _c \Sigma ^{-1} _a$ et $\hat{\Sig
    \Sigma ^T _c &\Sigma _b
 \end{pmatrix}
 $.\\
-L'équation \eqref{musigma} nous retourne la probabilité de correspondance de l'expression faciale de l'observateur sachant une expression faciale similaire de l'acteur. POur faire cela, elle utilise $W_{act}$ et $W_{obs}$ en distribution normale multivariée.\\
+L'équation \eqref{musigma} nous retourne la probabilité de correspondance de l'expression faciale de l'observateur sachant une expression faciale similaire de l'acteur. Pour faire cela, elle utilise $W_{act}$ et $W_{obs}$ en distribution normale multivariée.\\
 \\
 Pour résoudre $\check{y}_{obs}$, on passe par l'utilisation du GPLVM (Gaussian Process Latent Variable
-model) et l'on obtient 
+Model) et l'on obtient 
 \begin{equation}
 P(Y_{obs}|X_{obs})=\frac{1}{\sqrt{(2\pi )^{ND}}|K^D |} \exp (- \frac{1}{2}tr(K^{-1}Y_{obs}Y^T_{obs}))
 \label{gplvm}
@@ -1037,7 +1039,7 @@ Chaque point de l'espace latent représente un état interne phénomenologique x
 
 \section{Comparaison}
 Pour fonctionner, le module de rapprochement (cf \autoref{fonctionnement}) utilise la mesure \textbf{SSIM} (Structural SIMilarity).\\
-Cette mesure est effectué sur plusieurs "parties" de l'image, appelées fenêtres, et ensuite une moyenne est calculé pour obtenir le résultat final. Le mesure entre 2 fenêtres x et y se calcule comme suit:
+Cette mesure est effectuée sur plusieurs "parties" de l'image, appelées fenêtres, et ensuite une moyenne est calculée pour obtenir le résultat final. Le mesure entre 2 fenêtres x et y se calcule comme suit:
 \begin{align*}
 SSIM(x,y)=\frac{(2\mu _x\mu _y+c_1)(2\sigma _{xy}+c_2)}{(\mu ^2_x+\mu ^2_y+c_1)(\sigma ^2_x+\sigma ^2_y+c_2)}
 \end{align*}
@@ -1046,10 +1048,10 @@ avec $\mu _x$ et $\mu _y$: moyennes de x et y ; $\sigma ^2_x$ et $\sigma ^2_y$ :
 \section{Programme Matlab}
 Le programme associé à cette article permet de mettre en application le modèle proposé.\\
 \\
-Au lancement, la phase d'apprentissage s'enclenche. Elle consiste en l'apprentissage de 60 images en niveaux de gris d'une personne réalisant plusieurs expressions faciales différentes. Ces images sont tout d'abord récupérées depuis un fichier \textit{.mat} où elles sont écrit sous forme d'une ligne composé de 551 pixels, autrement dit une matrice de pixel de taille 1*551.\\
+Au lancement, la phase d'apprentissage s'enclenche. Elle consiste en l'apprentissage de 60 images en niveaux de gris d'une personne réalisant plusieurs expressions faciales différentes. Ces images sont tout d'abord récupérées depuis un fichier \textit{.mat} où elles sont écrit sous forme d'une ligne composé de 551 pixels, autrement dit une matrice de pixels de taille 1*551.\\
 Ces images seront ensuite redimensionnées à la taille 29*19 pixels pour obtenir de "vraies" images.\\
 Ces 60 images sous forme de lignes sont stockées dans une variable Y qui sera donc de taille 60*551.\\
-Le méthode \textbf{PCA} (Principal Component Analysis) est ensuite appliquée à Y. Cela va permettre de décorréler les variables en elles dans le but d'obtenir de nouvelles variables appelées "composantes principales". Cela va réduire le nombre de variables et réduire la redondance de l'information.\\
+Le méthode \textbf{PCA} (Principal Component Analysis) est ensuite appliquée à Y. Cela va permettre de décorréler les variables entre elles dans le but d'obtenir de nouvelles variables appelées "composantes principales". Cela va réduire le nombre de variables et réduire la redondance de l'information.\\
 \\
 Le GPLVM est ensuite lancé.\\
 Les coordonnées x et y de chaque image dans l'espace latent sont calculées au travers de plusieurs itérations (ici 15 itérations) pour obtenir des coordonnées précises grâce à la mise à jour à chaque itération.\\
@@ -1060,18 +1062,18 @@ Une fois que les coordonnées des 60 images sont calculées, le programme fini p
 \end{Figure}
 
 En parallèle de l'affichage de cette espace s'affiche également une fenêtre contenant une image.\\
-La principale fonctionnalité de ce programme est de pouvoir se "déplacer" dans l'espace latent avec la souris et de visualiser en temps réel à quelle image, donc émotion, correspond la position de la souris sur cette espace. C'est donc dans cette deuxième fenêtre contenant une image que va s'effectuer la mise à jour en temps réel.\\
-Pour réaliser cela, le programme a défini un déclencheur sur l'évènement \textit{move} de la souris lorsque cette dernière ce déplace dans l'espace. Une fois déclenché, le programme va récupérer les positions de la souris et des axes dans la fenêtre pour ensuite normaliser la position du point par rapport à celles des axes, ce qui va permettre d'obtenir la position x et y de la souris dans le repère.\\
-En fonction de cela, l'image appris lors de la phase d'apprentissage la plus proche et dont l'expression est la plus probable est retourné.\\
-Pour finir, l'image est ensuite affiché dans la fenêtre. Des exemples des images pouvant être retournées sont présentées en \autoref{face}.
+La principale fonctionnalité de ce programme est de pouvoir se "déplacer" dans l'espace latent avec la souris et de visualiser en temps réel à quelle image, donc émotion, correspond la position de la souris sur cet espace. C'est donc dans cette deuxième fenêtre contenant une image que va s'effectuer la mise à jour en temps réel.\\
+Pour réaliser cela, le programme a défini un déclencheur sur l'évènement \textit{move} de la souris lorsque cette dernière se déplace. Une fois déclenché, le programme va récupérer les positions de la souris et des axes dans la fenêtre pour ensuite normaliser la position du point par rapport à celles des axes, ce qui va permettre d'obtenir la position x et y de la souris dans le repère.\\
+En fonction de cela, l'image apprise lors de la phase d'apprentissage la plus proche et dont l'expression est la plus probable est retournée.\\
+Pour finir, l'image est ensuite affichée dans la fenêtre. Des exemples des images pouvant être retournées sont présentées en \autoref{face}.
 \begin{Figure}{face}{Exemples d'images retournées lorsque l'on se déplace sur l'espace latent}
  \pgfimage{images/face.png}
 \end{Figure}
 
 \section{Modification à apporter}
-Pour adapter ce programme à notre problématique, il va falloir modifié ce programme pour qu'il puisse classifier une image d'un visage réalisant une expression, prise en entrée, et retourner l'émotion correspondante.\\
+Pour adapter ce programme à notre problématique, il va falloir le modifier pour qu'il puisse classifier une image d'un visage réalisant une expression, prise en entrée, et retourner l'émotion correspondante.\\
 Pour cela, une première piste serait de faire passer l'image en entrée dans les mêmes fonctions que les images du set d'apprentissage ce qui nous permettrait d'obtenir ses coordonnées dans l'espace latent. Puis avec ces coordonnées, procéder de la même façon que lorsque l'on se déplace sur l'espace latent avec la souris et donc déduire de quelle émotion ces coordonnées sont la plus proche.\\
-Pour l'instant, cette idée n'est qu'une hypothèse et aucun travail n'a été effectué dans le but de corroborer ou non cette première piste. Ce sera le travail que j'aurai a effectué durant la phase Développement de ce projet.
+Pour l'instant, cette idée n'est qu'une hypothèse et aucun travail n'a été effectué dans le but de corroborer ou non cette première piste. Ce sera le travail que j'aurai à effectuer durant la phase Développement de ce projet.
 
 \newpage
 \chapter{Spécifications de l'application}
@@ -1090,11 +1092,11 @@ Je vais néanmoins présenter les spécifications qui ont déjà été établi p
 Cette fonction sera la même que celle déjà utilisée par Vitale et al. dans leur programme Matlab.
 
 \paragraph{Fonction F5: Reconnaître l'expression/Extraction des \textit{features} du visage}
-Étant donné que nous utiliserons le modèle de Vitale et al., cette fonction n'est pas nécessaire puisqu'aucune extraction de features n'est requis.
+Étant donné que nous utiliserons le modèle de Vitale et al., cette fonction n'est pas nécessaire puisqu'aucune extraction de features n'est requise.
 
 \paragraph{Fonction F6: Reconnaître l'expression/Classification}
-Cette fonction devra utiliser le programme Matlab de Vitale et al. déjà existant. A partir des travaux déjà réalisé, cette fonction viendra se greffer sur le programme et permettra, grâce à une image donnée en entrée, de trouver sur l'espace latent, recensant les échantillons appris lors de la phase d'apprentissage, l'émotion la plus proche et donc la plus probable.\\
-Pour l'instant, une fonctionnalité du programme est de pouvoir naviguer dans cette espace avec la souris de l'ordinateur et de voir en temps réel l'émotion associé au point désigné par la souris. Il suffira donc de rajouter une méthode permettant de placer un point fictif sur cette espace (correspondant à l'échantillon à déterminer) et d'utiliser la fonction précédemment utilisée dans la navigation pour obtenir l'émotion associée la plus probable.
+Cette fonction devra utiliser le programme Matlab de Vitale et al. déjà existant. A partir des travaux déjà réalisés, cette fonction viendra se greffer sur le programme et permettra, grâce à une image donnée en entrée, de trouver sur l'espace latent, recensant les échantillons appris lors de la phase d'apprentissage, l'émotion la plus proche et donc la plus probable.\\
+Pour l'instant, une fonctionnalité du programme est de pouvoir naviguer dans cette espace avec la souris de l'ordinateur et de voir en temps réel l'émotion associée au point désigné par la souris. Il suffira donc de rajouter une méthode permettant de placer un point fictif sur cet espace (correspondant à l'échantillon à déterminer) et d'utiliser la fonction précédemment utilisée dans la navigation pour obtenir l'émotion associée la plus probable.
 
 \chapter{Planning et outils utilisés}
 \label{chap:chap_planning}
@@ -1125,13 +1127,14 @@ Je vais donc maintenant vous présenter ce planning avec ces tâches sous forme 
 	\end{tabular}
 \end{Table}
 
-La tâche "Comparaison 2D VS 3D" correspond aux recherches que j'ai effectués pour faire un début d'état de l'art sur les technologies 3D et 2D permettant de reconnaître des émotions. Cette recherche à permit de choisir que notre application se ferait avec des données 2D.\\
+La tâche "Comparaison 2D VS 3D" correspond aux recherches que j'ai effectués pour faire un début d'état de l'art sur les technologies 3D et 2D permettant de reconnaître des émotions. Cette recherche a permis de choisir que notre application se ferait avec des données 2D après le compte-rendu que j'ai réalisé auprès de mes tuteurs académiques.\\
 La tâche "Architecture" correspond aux recherches m'ayant permis de définir les différentes étapes nécessaires pour construire un système de reconnaissance d'émotions: détection du visage, extraction des \textit{features} et classification.\\
-La tâche "Étude techniques extraction de \textit{features}" correspond aux recherches que j'ai menés sur les filtres de Gabor et sur les filtres de Haar ainsi que d'autres techniques permettant d'extraire les features d'un visage.\\
+La tâche "Étude techniques extraction de \textit{features}" correspond aux recherches que j'ai menées sur les filtres de Gabor et sur les filtres de Haar ainsi que d'autres techniques permettant d'extraire les features d'un visage.\\
 La tâche "Étude bases de données" correspond à l'étude des bases de données Cohn-Kanade, MMI, HCI-Tagging et MHI-Mimicry ,ainsi qu'à la prise de connaissance des données contenues dans les bases Cohn-Kanade et HCI-Tagging.\\
+Ces 3 dernières tâches ont amenées la création d'une présentation Powerpoint que j'ai présenté à mes tuteurs académiques.\\
 La tâche "Étude article/programme Vitale et al." correspond à la compréhension de l'article écrit par Vitale et al. et dont je vais me baser dessus pour la réalisation de l'application. Cela correspond également au temps passé à essayer de faire marcher le programme sous Octave (un Matlab-like gratuit) ainsi qu'à l'étude du code pour arriver à recouper l'article avec ce dernier.\\
 \\
-La tâche "Identification des modifications" correspond au travail que je vais réaliser à la suite de l'étude de l'article de Vitale et al. et qui va permettre d'identifier quelles parties du programme peuvent être améliorées et les fonctions à rajouter pour pouvoir reconnaître l'émotion contenu dans une image passée en entrée du programme.\\
+La tâche "Identification des modifications" correspond au travail que je vais réaliser à la suite de l'étude de l'article de Vitale et al. et qui va permettre d'identifier quelles parties du programme peuvent être améliorées et les fonctions à rajouter pour pouvoir reconnaître l'émotion contenue dans une image passée en entrée du programme.\\
 La tâche "Réalisation des modifications" consiste à réaliser les modifications qui auront été identifiées dans la tâche précédente.
 
 \section{Outils}
@@ -1157,7 +1160,13 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 
 
 \unnumberedchapter{Conclusion}
-
+Je tiens tout d'abord à remercier mes tuteurs académiques, Mr Mohamed SLIMANE et Mr Donatello CONTE, de m'avoir fait confiance pour la réalisation de ce projet ainsi que pour leur aide et disponibilité tout au long de ce projet.\\
+\\
+Avoir eu l'occasion de passer près de 4 mois à faire de la recherche pour ce projet a été très intéressant.\\
+Faire un état de l'art des différentes techniques et technologies disponibles pour faire de la reconnaissance faciale d'émotions m'a permis de m'ouvrir sur un monde totalement différent de ce que je connaissais jusqu'à présent.\\
+Cette première partie de mon projet de recherche et développement m'a également montré ce que cela pouvait être de faire de la recherche dans le cadre universitaire dans le but de faire de nouvelles découvertes ou de concevoir des applications concrètes pouvant aider au quotidien.\\
+\\
+Maintenant que ces recherches sont terminées, je vais commencer le développement de l'application.
 
 \appendix
 
@@ -1224,7 +1233,7 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 %}
 
 % petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
-\nocite{*}
+%\nocite{*}
 
 
 \makelastpages

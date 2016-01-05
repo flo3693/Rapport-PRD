@@ -1,20 +1,20 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'rapport.blg'
-[54] biber-MSWIN:273> INFO - === %a %b %e, %Y, %H:%M:%S
-[55] Biber.pm:333> INFO - Reading 'rapport.bcf'
-[306] Biber.pm:642> INFO - Using all citekeys in bib section 0
-[326] Biber.pm:2977> INFO - Processing section 0
-[345] Biber.pm:3115> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[441] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[532] bibtex.pm:895> INFO - Found BibTeX data source 'biblio.bib'
-[631] Utils.pm:146> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[632] Utils.pm:146> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[632] Utils.pm:146> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[632] Utils.pm:146> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
-[948] UCollate.pm:66> INFO - Overriding locale 'fr-FR' defaults 'level = 4' with 'level = 2'
-[948] UCollate.pm:66> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[948] UCollate.pm:66> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[948] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'fr-FR'
-[1008] bbl.pm:505> INFO - Writing 'rapport.bbl' with encoding 'UTF-8'
-[1124] bbl.pm:596> INFO - Output to rapport.bbl
-[1125] Biber.pm:106> INFO - WARNINGS: 4
+[51] biber-MSWIN:273> INFO - === %a %b %e, %Y, %H:%M:%S
+[52] Biber.pm:333> INFO - Reading 'rapport.bcf'
+[362] Biber.pm:645> INFO - Found 32 citekeys in bib section 0
+[386] Biber.pm:2977> INFO - Processing section 0
+[409] Biber.pm:3115> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[531] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[615] bibtex.pm:895> INFO - Found BibTeX data source 'biblio.bib'
+[734] Utils.pm:146> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[734] Utils.pm:146> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[734] Utils.pm:146> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[734] Utils.pm:146> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[1046] UCollate.pm:66> INFO - Overriding locale 'fr-FR' defaults 'level = 4' with 'level = 2'
+[1046] UCollate.pm:66> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1046] UCollate.pm:66> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1046] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'fr-FR'
+[1151] bbl.pm:505> INFO - Writing 'rapport.bbl' with encoding 'UTF-8'
+[1299] bbl.pm:596> INFO - Output to rapport.bbl
+[1300] Biber.pm:106> INFO - WARNINGS: 4

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  29 DEC 2015 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  5 JAN 2016 09:47
 entering extended mode
 **rapport.tex
 (rapport.tex
@@ -2383,32 +2383,27 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \c@pagesLTS.double.arabic=\count374
 \c@pagesLTS.current.local.arabic=\count375
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--125
+Underfull \hbox (badness 10000) in paragraph at lines 108--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--125
+Underfull \hbox (badness 10000) in paragraph at lines 108--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--125
+Underfull \hbox (badness 10000) in paragraph at lines 108--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--125
+Underfull \hbox (badness 10000) in paragraph at lines 108--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--125
+Underfull \hbox (badness 10000) in paragraph at lines 108--126
 
  []
 
@@ -2420,29 +2415,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--125
 ]
 Chapitre 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--147
+Underfull \hbox (badness 10000) in paragraph at lines 144--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--153
+Underfull \hbox (badness 10000) in paragraph at lines 150--154
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
@@ -2452,9 +2442,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for TS1+jkpf on input line 275
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+jkpf on input line 276
 .
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ts1jkpf.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\kpfonts\ts1jkpf.fd"
 File: ts1jkpf.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkpf.
 )
 Package microtype Info: Loading generic settings for font family
@@ -2469,63 +2463,65 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [5]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--292
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[][][][]\T1/jkpf/b/n/24.88 Émotions uni-ver-selles et
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--293
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
+Underfull \hbox (badness 10000) in paragraph at lines 318--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--329
+Underfull \hbox (badness 10000) in paragraph at lines 325--330
 
  []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
-
+ [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et [] du vi-sage
  []
 
 [7 <./images/AU.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 336--342
+Underfull \hbox (badness 10000) in paragraph at lines 337--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--342
+Underfull \hbox (badness 10000) in paragraph at lines 337--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--375
+Underfull \hbox (badness 10000) in paragraph at lines 371--375
 
  []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
-
+ [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et [] du vi-sage
  []
 
 [8]
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et mou-ve-ments du vi-sage
-
+ [][][][]\T1/jkpf/b/sc/12 2 Émo-tions uni-ver-selles et [] du vi-sage
  []
 
 [9 <./images/points_fapu.png> <./images/distance_fapu.png>]
@@ -2573,12 +2569,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [15 <./images/bu3dfe.png> <./images/bosphorus.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 513--513
-[]|\T1/jkpf/b/n/8 Type de don-
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+[]|\T1/jkpf/b/n/8 Type de
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 513--513
+Underfull \hbox (badness 3281) in paragraph at lines 512--512
 []|\T1/jkpf/m/n/8 105 adultes (dont 25 ac-
  []
 
@@ -2588,12 +2584,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 519--521
+Underfull \hbox (badness 10000) in paragraph at lines 518--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 523--529
+Underfull \hbox (badness 10000) in paragraph at lines 522--528
 
  []
 
@@ -2605,14 +2601,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [17 <./images/ptz.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 541.
+(hyperref)                removing `\cite' on input line 540.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 551.
+(hyperref)                removing `\cite' on input line 550.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--560
+Underfull \hbox (badness 10000) in paragraph at lines 551--559
 
  []
 
@@ -2624,19 +2620,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [18 <./images/ck.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 561.
+(hyperref)                removing `\cite' on input line 560.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 561.
+(hyperref)                removing `\cite' on input line 560.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 573.
+(hyperref)                removing `\cite' on input line 572.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 573.
+(hyperref)                removing `\cite' on input line 572.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -2644,30 +2640,20 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [19 <./images/mmi.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 593.
+(hyperref)                removing `\cite' on input line 592.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cite' on input line 593.
+(hyperref)                removing `\cite' on input line 592.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--599
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 607--610
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 607--610
+Underfull \hbox (badness 10000) in paragraph at lines 593--599
 
  []
 
@@ -2677,52 +2663,62 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [20 <./images/mimicry.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 607--610
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 607--610
+
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 3 État de l'art
  []
 
 [21 <./images/tag.jpg>]
-Underfull \hbox (badness 2080) in paragraph at lines 640--640
+Underfull \hbox (badness 2080) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 97 su-jets (65% femmes, 15%
  []
 
 
-Underfull \hbox (badness 6893) in paragraph at lines 640--640
+Underfull \hbox (badness 6893) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 Nombre de su-jets aug-menté
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--640
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 MMI[[][]22[][]]
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 640--640
+Underfull \hbox (badness 2142) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 MHI Mi-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--640
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 40 su-jets (28 hommes, 12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--640
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 HCI Tag-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--640
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 27 su-jets (11 hommes, 16
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--640
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
 []|\T1/jkpf/m/n/8 SAL
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 640--640
+Underfull \hbox (badness 3460) in paragraph at lines 638--638
 \T1/jkpf/m/n/8 tifs d'émo-tion par
  []
 
@@ -2803,22 +2799,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 740--747
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 748--759
+Underfull \hbox (badness 10000) in paragraph at lines 748--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 748--759
+Underfull \hbox (badness 10000) in paragraph at lines 748--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 748--759
+Underfull \hbox (badness 10000) in paragraph at lines 748--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 748--759
+Underfull \hbox (badness 10000) in paragraph at lines 748--761
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 748--761
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 748--761
 
  []
 
@@ -2847,7 +2853,7 @@ d'émo-tions
  []
 
 [29 <./images/psi.png> <./images/gamma.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 794--799
+Underfull \hbox (badness 10000) in paragraph at lines 796--801
 
  []
 
@@ -2864,7 +2870,7 @@ d'émo-tions
  []
 
 [31 <./images/extended_haar.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 835--836
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
 
  []
 
@@ -2875,12 +2881,12 @@ d'émo-tions
  []
 
 [32 <./images/lbp.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 852--859
+Underfull \hbox (badness 10000) in paragraph at lines 854--861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--874
+Underfull \hbox (badness 10000) in paragraph at lines 868--876
 
  []
 
@@ -2899,17 +2905,17 @@ d'émo-tions
 [34 <./images/svm.png> <./images/kppv.png>]
 Chapitre 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 882--892
+Underfull \hbox (badness 10000) in paragraph at lines 884--894
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 882--892
+Underfull \hbox (badness 10000) in paragraph at lines 884--894
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 882--892
+Underfull \hbox (badness 10000) in paragraph at lines 884--894
 
  []
 
@@ -2921,37 +2927,37 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [36 <./images/simu.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--939
+Underfull \hbox (badness 10000) in paragraph at lines 938--941
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--958
+Underfull \hbox (badness 10000) in paragraph at lines 954--960
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--958
+Underfull \hbox (badness 10000) in paragraph at lines 954--960
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 960--961
+Underfull \hbox (badness 10000) in paragraph at lines 962--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 977--1000
+Underfull \hbox (badness 10000) in paragraph at lines 979--1002
 
  []
 
@@ -2961,12 +2967,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1015
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1020
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1022
 
  []
 
@@ -2976,27 +2982,27 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [38 <./images/fonctionnement.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1039
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1039
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1061
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1063
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1061
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1063
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1061
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1063
 
  []
 
@@ -3018,7 +3024,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [41 <./images/face.png>]
 Chapitre 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1079
 [][][][]\T1/jkpf/b/n/24.88 Spécifications de l'ap-pli-ca-
  []
 
@@ -3027,17 +3033,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1077--1077
 ]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1126--1126
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1128
 []|\T1/jkpf/m/n/8 En
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 1126--1126
+Underfull \hbox (badness 5147) in paragraph at lines 1128--1128
 []|\T1/jkpf/m/n/8 Rédaction rap-port dé-ve-lop-pe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1128--1136
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1139
 
  []
 
@@ -3048,12 +3054,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 7 Plan-ning et ou-tils uti-li-sés
  []
 
-[44] [45
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1163--1170
+
+ []
+
+[45
 
 ] [46
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1230
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1239
 [][][][]\T1/jkpf/b/n/24.88 Comptes ren-dus heb-do-ma-
  []
 
@@ -3065,10 +3081,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [48]
-Overfull \hbox (28.4681pt too wide) in paragraph at lines 1230--1230
+Overfull \hbox (28.4681pt too wide) in paragraph at lines 1239--1239
 []\T1/jkpf/m/it/10.95 (-20) Site of-fi-ciel de SAL\T1/jkpf/m/n/10.95 (-20) . \T
 1/jkpf/m/sc/10.95 (-20) url \T1/jkpf/m/n/10.95 (-20) : [][]$\T1/jkptt/m/n/10.95
- http : / / emotion -[] research . net / toolbox / %20toolboxdatabase .$|
+ http : / / emotion -[] research . net / toolbox / %20toolboxdatabase .$
  []
 
 [49
@@ -3081,12 +3097,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [51]
-Overfull \hbox (1.4147pt too wide) in paragraph at lines 1230--1230
+Overfull \hbox (1.4147pt too wide) in paragraph at lines 1239--1239
 []\T1/jkpf/m/n/10.95 (-20) Lijun \T1/jkpf/m/sc/10.95 (-20) Yin\T1/jkpf/m/n/10.9
 5 (-20) , Xiao-chen \T1/jkpf/m/sc/10.95 (-20) Chen\T1/jkpf/m/n/10.95 (-20) , Yi
  \T1/jkpf/m/sc/10.95 (-20) Sun\T1/jkpf/m/n/10.95 (-20) , Tony \T1/jkpf/m/sc/10.
 95 (-20) Worm \T1/jkpf/m/n/10.95 (-20) et Mi-chael \T1/jkpf/m/sc/10.95 (-20) Re
-ale\T1/jkpf/m/n/10.95 (-20) .    A High-Resolution|
+ale\T1/jkpf/m/n/10.95 (-20) .    A High-Resolution
  []
 
 
@@ -3128,52 +3144,52 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 1230--1230
+Underfull \hbox (badness 4872) in paragraph at lines 1239--1239
 [][][][]\T1/jkpf/b/n/24.88 Application d'aide à l'in-ter-ac-tion hom-me/-ma-
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 1230--1230
+Underfull \hbox (badness 1448) in paragraph at lines 1239--1239
  [][][][]\T1/jkpf/b/sc/10.95 Ecole Po-ly-tech-nique de l'Uni-ver-sité Fran-çois
  Ra-be-lais de Tours
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1230
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1239
  []\T1/jkpf/b/n/10.95 Département In-for-ma-tique
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1230
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1239
  []\T1/jkpf/b/n/10 64 ave-nue Jean Por-ta-lis, 37200 Tours, France
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1230
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1239
  []$\T1/jkptt/b/n/10 www . polytech . univ -[] tours . fr$[]
  []
 
 
-Underfull \hbox (badness 6758) in paragraph at lines 1230--1230
+Underfull \hbox (badness 6758) in paragraph at lines 1239--1239
  [][][][]\T1/jkpf/b/n/14.4 Informatique
  []
 
-<images/ptz.png, id=779, 192.72pt x 192.72pt>
+<images/ptz.png, id=775, 192.72pt x 192.72pt>
 File: images/ptz.png Graphic file (type png)
  <use images/ptz.png>
-Package pdftex.def Info: images/ptz.png used on input line 1230.
+Package pdftex.def Info: images/ptz.png used on input line 1239.
 (pdftex.def)             Requested size: 192.71951pt x 192.71951pt.
 
-<images/ck.jpg, id=780, 303.38344pt x 346.29375pt>
+<images/ck.jpg, id=776, 303.38344pt x 346.29375pt>
 File: images/ck.jpg Graphic file (type jpg)
  <use images/ck.jpg>
-Package pdftex.def Info: images/ck.jpg used on input line 1230.
+Package pdftex.def Info: images/ck.jpg used on input line 1239.
 (pdftex.def)             Requested size: 303.38269pt x 346.2929pt.
 
-<images/AU.png, id=781, 376.40625pt x 190.46156pt>
+<images/AU.png, id=777, 376.40625pt x 190.46156pt>
 File: images/AU.png Graphic file (type png)
  <use images/AU.png>
-Package pdftex.def Info: images/AU.png used on input line 1230.
+Package pdftex.def Info: images/AU.png used on input line 1239.
 (pdftex.def)             Requested size: 376.40532pt x 190.46107pt.
  [53
 
@@ -3219,8 +3235,8 @@ Package pdftex.def Info: images/AU.png used on input line 1230.
 ]
 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1232.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 1232.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1241.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 1241.
 \c@pagesLTS.arabic.1.local.count=\count376
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3232,18 +3248,18 @@ Package pageslts Info: Total number of pages is odd.
 
 
 (rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1232.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1232.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1241.
 
 Package logreq Info: Writing requests to 'rapport.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1232.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1241.
  ) 
 Here is how much of TeX's memory you used:
- 40179 strings out of 493673
- 687600 string characters out of 3141524
- 1355405 words of memory out of 3000000
- 41872 multiletter control sequences out of 15000+200000
- 246836 words of font info for 577 fonts, out of 3000000 for 9000
+ 40153 strings out of 493673
+ 687204 string characters out of 3141524
+ 1355386 words of memory out of 3000000
+ 41865 multiletter control sequences out of 15000+200000
+ 245332 words of font info for 567 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,17n,94p,934b,3787s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
@@ -3264,9 +3280,9 @@ pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttbn8a.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on rapport.pdf (63 pages, 3055132 bytes).
+Output written on rapport.pdf (63 pages, 3077805 bytes).
 PDF statistics:
- 1150 PDF objects out of 1200 (max. 8388607)
- 256 named destinations out of 1000 (max. 500000)
+ 1144 PDF objects out of 1200 (max. 8388607)
+ 252 named destinations out of 1000 (max. 500000)
  63299 words of extra memory for PDF output out of 74296 (max. 10000000)
 

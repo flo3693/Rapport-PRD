@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}Rep\IeC {\'e}rer le visage}{4}{subsection.1.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Reconna\IeC {\^\i }tre l'expression}{4}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {6.2}Reconna\IeC {\^\i }tre l'expression}{5}{subsection.1.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7}Budget}{5}{section.1.7}
 \defcounter {refsection}{0}\relax 
@@ -30,7 +30,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9}Livrable}{5}{section.1.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}\IeC {\'E}motions universelles et mouvements du visage}{6}{chapter.2}
+\contentsline {chapter}{\numberline {2}\IeC {\'E}motions universelles et \unhbox \voidb@x \hbox {mouvements} du visage}{6}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Les 7 \IeC {\'e}motions universelles}{7}{section.2.1}
 \defcounter {refsection}{0}\relax 
