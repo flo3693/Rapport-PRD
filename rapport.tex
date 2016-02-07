@@ -82,17 +82,17 @@ In the Research part of this project, I carried out a state of the art on the di
 \bibliography{biblio}
 
 \posterblock{Objectif}{
-L'objectif de ce projet est de réaliser une application qui, à l'aide d'une caméra, va repérer le visage d'une personne handicapée puis zoomer dessus pour ensuite analyser son émotion actuelle. En fonction de l'émotion perçue, une action spécifique sera réalisée (ex: si la personne est triste, lui mettre de la musique joyeuse). 
+Repérer le visage d'une personne handicapée grâce à une caméra puis analyser son émotion actuelle.\\
+En fonction de l'émotion récupérée, une action spécifique sera réalisée (ex: changement de couleur de la lumière). 
 }{images/ptz.png}{}
-\posterblock{7 émotions universelles}{
-A ce jour, il a été démontré qu'il existait 7 émotions dite universelles qui sont les suivantes: la neutralité, la joie, la tristesse, la colère, la peur, la surprise et le dégoût.\\
-C'est Charles Darwin en 1872 puis le psychologue Paul Ekman en 1971 qui ont défini ces émotions.
-}{images/ck.jpg}{}
-\posterblock{Norme de description}{
-	%Plusieurs normes permettent de définir des expressions du visage et donc des émotions.\\
-Pour décrire les mouvements du visage, la norme la plus connue est \textbf{FACS}, qui signifie Facial Action Coding System. Ce système décompose tous les mouvements du visage en 46 \textbf{Action Units} (AU), chacune décrivant la contraction ou la décontraction d'un ou plusieurs muscles du visage.  Par exemple un sourire, et donc l'émotion de la joie, est composé des AUs 6 (remontée des joues) et 12 (étirement du coin des lèvres).\\
-%Plusieurs niveaux d'intensités sont également défini, allant de A (très faible) à E (maximum), pour chaque AU.
+\posterblock{Première approche}{
+Utilisation de normes de description des mouvements faciaux, telle que la norme \textbf{FACS}, qui permet de définir 7 émotions (neutre, joie, tristesse, peur, surprise, colère et dégoût) en terme d'\textbf{Action Units} représentant des mouvements faciaux.\\
+Approche de moins en moins adaptée aux problèmes d'aujourd'hui.
 }{images/AU.png}{}
+\posterblock{Nouvelle approche}{
+Via un modèle probabiliste, il est possible de représenter les émotions sur un espace fini en 2 dimensions\\
+En fonction de la position d'un point sur cet espace, on peut donc en déduire l'émotion associée.
+}{images/ck2.jpg}{}
 
 % le document commence ici
 \begin{document}
@@ -119,8 +119,9 @@ Je continuerai ensuite en présentant les différentes étapes nécessaires à l
 Je définirai ensuite les spécifications de l'application ainsi que les choix qui ont permit cette définition.\\
 Je conclurai par un planning prévisionnel ainsi que par les méthodologies et les outils de suivi utilisés durant ce projet.\\
 \\
-%Dans la partie Développement, [rédaction en deuxième partie de l'année]\\
-%\\
+Dans la partie Développement, je présenterai, dans une première section, les modifications qui ont été identifiées (notamment grâce à un rendez vous avec Giuseppe Boccignone) et qui vont nous permettre de modifier le programme de Vitale et al. pour l'adapter à notre problématique.\\
+J'expliquerai ensuite dans une seconde section comment j'ai réalisé ces modifications.\\
+Durant la phase d'identification des modifications, j'ai également dû rédiger un article scientifique, à propos de mes travaux réalisés durant ce projet, qui sera présenté, s'il est accepté, à la conférence Handicap 2016 organisé par l'IFRATH à Paris du 8 au 10 Juin 2016.\\
 \\
 Pour ce projet de recherche et développement, j'ai été encadré par Donatello CONTE et Mohamed SLIMANE.
 
@@ -898,7 +899,7 @@ Pour comprendre les études menées dans l'article, il faut d'abord poser le pro
 A un certain moment, un individu, appelé \textit{acteur}, éprouvera un certain état interne, noté $X_{act}$. Cet état interne $X_{act}$ peut soit être déclenché par un évènement extérieur soit induit (remémoration d'un certain souvenir).\\
 $X_{act}$ va déclencher un comportement correspondant, noté $Y_{act}$, qui peut être par exemple une expression facial, une posture particulière, un changement du rythme cardiaque, etc.\\
 Un second individu, appelé \textit{observateur}, va maintenant utiliser $Y_{act}$ pour trouver l'état interne $X_{obs}$ lui permettant d'être dans l'état mental $M_{obs}$ correspondant à celui de l'acteur.\\
-Cette situation de simulation est illustré en \autoref{simu} (figure tirée de l'article \cite{italiens}).
+Cette situation de simulation est illustrée en \autoref{simu} (figure tirée de l'article \cite{italiens}).
 
 \begin{Figure}{simu}{Situation de simulation pour la détection d'émotions}
  \pgfimage{images/simu.png}
@@ -1035,7 +1036,7 @@ Au même moment, un ensemble $\check{S}$ d'échantillons d'expressions de l'obse
 En utilisant HGP-LVM (Hierarchical Gaussian Process Latent Variable Model), il est possible de créer un vocabulaire S:$X\mapsto \{Y_{obs}^j \}_{j=1}^{\infty}$ qui génère un ensemble infini d'expressions faciales.\\
 $\check{S}$ est un sous-ensemble de S.\\
 \\
-Chaque point de l'espace latent représente un état interne phénomenologique x. Une telle représentation est de dimension q et dans le cas de cette article et du programme Matlab, q=2.\\
+Chaque point de l'espace latent représente un état interne phénomenologique x. Une telle représentation est de dimension q et dans le cas de cette article et du programme Matlab, q=2.
 
 \section{Comparaison}
 Pour fonctionner, le module de rapprochement (cf \autoref{fonctionnement}) utilise la mesure \textbf{SSIM} (Structural SIMilarity).\\

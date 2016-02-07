@@ -4,157 +4,157 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Introduction}{1}{chapter*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Recherche}{2}{part.1}
+\contentsline {part}{I\hspace {1em}Recherche}{3}{part.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Cahier des charges du projet}{3}{chapter.1}
+\contentsline {chapter}{\numberline {1}Cahier des charges du projet}{4}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}MOA}{3}{section.1.1}
+\contentsline {section}{\numberline {1}MOA}{4}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}MOE}{3}{section.1.2}
+\contentsline {section}{\numberline {2}MOE}{4}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Contexte et pr\IeC {\'e}sentation}{3}{section.1.3}
+\contentsline {section}{\numberline {3}Contexte et pr\IeC {\'e}sentation}{4}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Probl\IeC {\'e}matique et objectif}{3}{section.1.4}
+\contentsline {section}{\numberline {4}Probl\IeC {\'e}matique et objectif}{4}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}P\IeC {\'e}rim\IeC {\`e}tre}{4}{section.1.5}
+\contentsline {section}{\numberline {5}P\IeC {\'e}rim\IeC {\`e}tre}{5}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Description fonctionnelle}{4}{section.1.6}
+\contentsline {section}{\numberline {6}Description fonctionnelle}{5}{section.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Rep\IeC {\'e}rer le visage}{4}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {6.1}Rep\IeC {\'e}rer le visage}{5}{subsection.1.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Reconna\IeC {\^\i }tre l'expression}{5}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {6.2}Reconna\IeC {\^\i }tre l'expression}{6}{subsection.1.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Budget}{5}{section.1.7}
+\contentsline {section}{\numberline {7}Budget}{6}{section.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}D\IeC {\'e}lai}{5}{section.1.8}
+\contentsline {section}{\numberline {8}D\IeC {\'e}lai}{6}{section.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Livrable}{5}{section.1.9}
+\contentsline {section}{\numberline {9}Livrable}{6}{section.1.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}\IeC {\'E}motions universelles et \unhbox \voidb@x \hbox {mouvements} du visage}{6}{chapter.2}
+\contentsline {chapter}{\numberline {2}\IeC {\'E}motions universelles et \unhbox \voidb@x \hbox {mouvements} du visage}{7}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Les 7 \IeC {\'e}motions universelles}{7}{section.2.1}
+\contentsline {section}{\numberline {1}Les 7 \IeC {\'e}motions universelles}{8}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Le FACS}{7}{section.2.2}
+\contentsline {section}{\numberline {2}Le FACS}{8}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}La norme MPEG-4}{8}{section.2.3}
+\contentsline {section}{\numberline {3}La norme MPEG-4}{9}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}\IeC {\'E}tat de l'art}{10}{chapter.3}
+\contentsline {chapter}{\numberline {3}\IeC {\'E}tat de l'art}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}3D}{11}{section.3.1}
+\contentsline {section}{\numberline {1}3D}{12}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Techniques d'acquisition}{11}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {1.1}Techniques d'acquisition}{12}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.1}Reconstruction \IeC {\`a} partir d'une image}{11}{subsubsection.3.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Reconstruction \IeC {\`a} partir d'une image}{12}{subsubsection.3.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.2}Lumi\IeC {\`e}re structur\IeC {\'e}e}{11}{subsubsection.3.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.2}Lumi\IeC {\`e}re structur\IeC {\'e}e}{12}{subsubsection.3.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.3}St\IeC {\'e}r\IeC {\'e}o photom\IeC {\'e}trique}{11}{subsubsection.3.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.3}St\IeC {\'e}r\IeC {\'e}o photom\IeC {\'e}trique}{12}{subsubsection.3.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.4}St\IeC {\'e}r\IeC {\'e}o multi-vue}{12}{subsubsection.3.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.4}St\IeC {\'e}r\IeC {\'e}o multi-vue}{13}{subsubsection.3.1.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Dispositifs d'acquisition d'images}{13}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {1.2}Dispositifs d'acquisition d'images}{14}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.1}Kinect}{13}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1}Kinect}{14}{subsubsection.3.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.2}Minolta Vivid 910}{13}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2}Minolta Vivid 910}{14}{subsubsection.3.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Base de donn\IeC {\'e}es de visages 3D}{14}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {1.3}Base de donn\IeC {\'e}es de visages 3D}{15}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1}BU-3DFE}{14}{subsubsection.3.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.1}BU-3DFE}{15}{subsubsection.3.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2}BU-4DFE}{15}{subsubsection.3.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2}BU-4DFE}{16}{subsubsection.3.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3}Bosphorus 3D Face Database}{15}{subsubsection.3.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.3}Bosphorus 3D Face Database}{16}{subsubsection.3.1.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.4}Comparatif des diff\IeC {\'e}rentes bases de donn\IeC {\'e}es 3D}{16}{subsubsection.3.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.4}Comparatif des diff\IeC {\'e}rentes bases de donn\IeC {\'e}es 3D}{17}{subsubsection.3.1.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}2D}{17}{section.3.2}
+\contentsline {section}{\numberline {2}2D}{18}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Dispositifs d'acquisition d'images 2D}{17}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {2.1}Dispositifs d'acquisition d'images 2D}{18}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Bases de donn\IeC {\'e}es de visages 2D}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {2.2}Bases de donn\IeC {\'e}es de visages 2D}{19}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Cohn-Kanade (CK) \cite {ck}}{18}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1}Cohn-Kanade (CK) \cite {ck}}{19}{subsubsection.3.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}CK+ \cite {ckplus}}{19}{subsubsection.3.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2}CK+ \cite {ckplus}}{20}{subsubsection.3.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Man-Machine Interaction (MMI) \cite {mmi1}\cite {mmi2}}{19}{subsubsection.3.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3}Man-Machine Interaction (MMI) \cite {mmi1}\cite {mmi2}}{20}{subsubsection.3.2.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.4}MHI Mimicry \cite {mimicry1} \cite {mimicry2}}{19}{subsubsection.3.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.4}MHI Mimicry \cite {mimicry1} \cite {mimicry2}}{20}{subsubsection.3.2.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.5}HCI Tagging \cite {tagging1} \cite {tagging2}}{20}{subsubsection.3.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.5}HCI Tagging \cite {tagging1} \cite {tagging2}}{21}{subsubsection.3.2.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.6}Comparatif des bases de donn\IeC {\'e}es 2D}{22}{subsubsection.3.2.2.6}
+\contentsline {subsubsection}{\numberline {2.2.6}Comparatif des bases de donn\IeC {\'e}es 2D}{23}{subsubsection.3.2.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Architecture d'un syst\IeC {\`e}me de reconnaissance d'\IeC {\'e}motions}{23}{chapter.4}
+\contentsline {chapter}{\numberline {4}Architecture d'un syst\IeC {\`e}me de reconnaissance d'\IeC {\'e}motions}{24}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}D\IeC {\'e}tection du visage}{24}{section.4.1}
+\contentsline {section}{\numberline {1}D\IeC {\'e}tection du visage}{25}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Absolu}{24}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {1.1}Absolu}{25}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Diff\IeC {\'e}rentiel}{24}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {1.2}Diff\IeC {\'e}rentiel}{25}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Comparatif}{25}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {1.3}Comparatif}{26}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Extraction des \textit {features}}{26}{section.4.2}
+\contentsline {section}{\numberline {2}Extraction des \textit {features}}{27}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Filtres de Gabor}{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {2.1}Filtres de Gabor}{27}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Composantes pseudo-Haar}{30}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {2.2}Composantes pseudo-Haar}{31}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Motifs binaires locaux}{32}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {2.3}Motifs binaires locaux}{33}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Classification}{33}{section.4.3}
+\contentsline {section}{\numberline {3}Classification}{34}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Classificateurs binaires}{33}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {3.1}Classificateurs binaires}{34}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Classificateurs multi-classes}{33}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {3.2}Classificateurs multi-classes}{34}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Nouvelle approche}{35}{chapter.5}
+\contentsline {chapter}{\numberline {5}Nouvelle approche}{36}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Contexte de simulation}{36}{section.5.1}
+\contentsline {section}{\numberline {1}Contexte de simulation}{37}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{G\IeC {\'e}n\IeC {\'e}rer-et-tester}{36}{paragraph*.39}
+\contentsline {paragraph}{G\IeC {\'e}n\IeC {\'e}rer-et-tester}{37}{paragraph*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Simulation inverse}{36}{paragraph*.40}
+\contentsline {paragraph}{Simulation inverse}{37}{paragraph*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Simulation inverse utilisant une boucle "as if"}{37}{paragraph*.41}
+\contentsline {paragraph}{Simulation inverse utilisant une boucle "as if"}{38}{paragraph*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Mod\IeC {\`e}le r\IeC {\'e}alis\IeC {\'e}}{37}{section.5.2}
+\contentsline {section}{\numberline {2}Mod\IeC {\`e}le r\IeC {\'e}alis\IeC {\'e}}{38}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Fonctionnement}{38}{section.5.3}
+\contentsline {section}{\numberline {3}Fonctionnement}{39}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Comparaison}{39}{section.5.4}
+\contentsline {section}{\numberline {4}Comparaison}{40}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Programme Matlab}{39}{section.5.5}
+\contentsline {section}{\numberline {5}Programme Matlab}{40}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Modification \IeC {\`a} apporter}{40}{section.5.6}
+\contentsline {section}{\numberline {6}Modification \IeC {\`a} apporter}{41}{section.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Sp\IeC {\'e}cifications de l'application}{42}{chapter.6}
+\contentsline {chapter}{\numberline {6}Sp\IeC {\'e}cifications de l'application}{43}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Utilisateurs}{42}{section.6.1}
+\contentsline {section}{\numberline {1}Utilisateurs}{43}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Fonctions}{42}{section.6.2}
+\contentsline {section}{\numberline {2}Fonctions}{43}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Fonction F4: Reconna\IeC {\^\i }tre l'expression/Apprentissage}{42}{paragraph*.45}
+\contentsline {paragraph}{Fonction F4: Reconna\IeC {\^\i }tre l'expression/Apprentissage}{43}{paragraph*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Fonction F5: Reconna\IeC {\^\i }tre l'expression/Extraction des \textit {features} du visage}{42}{paragraph*.46}
+\contentsline {paragraph}{Fonction F5: Reconna\IeC {\^\i }tre l'expression/Extraction des \textit {features} du visage}{43}{paragraph*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Fonction F6: Reconna\IeC {\^\i }tre l'expression/Classification}{42}{paragraph*.47}
+\contentsline {paragraph}{Fonction F6: Reconna\IeC {\^\i }tre l'expression/Classification}{43}{paragraph*.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{43}{chapter.7}
+\contentsline {chapter}{\numberline {7}Planning et outils utilis\IeC {\'e}s}{44}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Planning du projet}{43}{section.7.1}
+\contentsline {section}{\numberline {1}Planning du projet}{44}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Outils}{44}{section.7.2}
+\contentsline {section}{\numberline {2}Outils}{45}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Versioning}{44}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {2.1}Versioning}{45}{subsection.7.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Gestion de projet}{44}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {2.2}Gestion de projet}{45}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{45}{chapter*.49}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{46}{chapter*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{46}{part*.50}
+\contentsline {part}{Annexes}{47}{part*.50}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 

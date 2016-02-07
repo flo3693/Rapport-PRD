@@ -12,7 +12,7 @@
 		\begin{description}\setlength\itemsep{-0.2em}
 		\item \hspace{1em}author=\{\csuse{polytech@output@students@bibtex}\},
 		\item \hspace{1em}title=\{\csuse{polytech@output@titlewithsubtitle}\},
-		\item \hspace{1em}type=\{\polytech@output@typereport\},
+		\item \hspace{1em}type=\{\csuse{polytech@output@typereport@bibtex}\},
 		\item \hspace{1em}school=\{Ecole Polytechnique de l'Université François Rabelais de Tours\},
 		\item \hspace{1em}address=\{Tours, France\},
 		\item \hspace{1em}year=\{\polytech@output@reportyear\}
@@ -53,27 +53,34 @@
 	\end{center}
 
 
-	Ce document a été rédigé par \csuse{polytech@output@students@simple} susnommé les auteurs.
+	Ce document a été rédigé par \csuse{polytech@output@students@simple} \notbool{polytech@students@plural}{susnommé l'auteur}{susnommés les auteurs}.
 
 	\ifcsdef{polytech@output@company@simple}{
-		L'entreprise \csuse{polytech@output@company@simple} est représentée par \csuse{polytech@output@companysupervisors@simple} susnommé les tuteurs entreprise.\par
+		L'entreprise \csuse{polytech@output@company@simple} est représentée par \csuse{polytech@output@companysupervisors@simple}
+		\notbool{polytech@companysupervisors@plural}{susnommé le tuteur entreprise}{susnommés les tuteurs entreprise}.\par
 	}{}
 
-	L'école polytechnique de l'université François Rabelais de Tours est représentée par \csuse{polytech@output@academicsupervisors@simple} susnommé les tuteurs académiques.
+	L'école polytechnique de l'université François Rabelais de Tours est représentée par \csuse{polytech@output@academicsupervisors@simple}
+	\notbool{polytech@academicsupervisors@plural}{susnommé le tuteur académique}{susnommés les tuteurs académiques}.
 
 	Par l'utilisation de ce modèle de document, l'ensemble des intervenants du projet acceptent les conditions définies ci-après.
 
-	Les auteurs reconnaissent assumer l'entière responsabilité du contenu du document ainsi que toutes suites judiciaires qui pourraient en découler du fait du non respects des lois ou des droits d'auteur.
+	\notbool{polytech@students@plural}{L'auteur reconnait}{Les auteurs reconnaissent} assumer l'entière responsabilité
+	du contenu du document ainsi que toutes suites judiciaires qui pourraient en découler du fait du non respect des lois ou des droits d'auteur.
 
-	Les auteurs attestent que les propos du document sont sincères et assument l'entière responsabilité de la véracité des propos.
+	\notbool{polytech@students@plural}{L'auteur atteste}{Les auteurs attestent} que les propos du document sont sincères
+	et assument l'entière responsabilité de la véracité des propos.
 
-	Les auteurs attestent ne pas s'approprier le travail d'autrui et que le document ne contient aucun plagiat.
+	\notbool{polytech@students@plural}{L'auteur atteste}{Les auteurs attestent} ne pas s'approprier le travail d'autrui et que
+	le document ne contient aucun plagiat.
 
-	Les auteurs attestent que le document ne contient aucun propos diffamatoire ou condamnable devant la loi.
+	\notbool{polytech@students@plural}{L'auteur atteste}{Les auteurs attestent} que le document ne contient aucun propos diffamatoire ou condamnable devant la loi.
 
-	Les auteurs reconnaissent qu'ils ne peuvent diffuser ce document en partie ou en intégralité sous quelque forme que ce soit sans l'accord préalable des tuteurs académiques\ifcsdef{polytech@output@company@simple}{ et de l'entreprise}{}.
+	\notbool{polytech@students@plural}{L'auteur reconnait qu'il ne peut}{Les auteurs reconnaissent qu'ils ne peuvent} diffuser ce document en partie ou en intégralité sous quelque forme que ce soit sans l'accord préalable
+	\notbool{polytech@academicsupervisors@plural}{du tuteur académique}{des tuteurs académiques}%
+	\ifcsdef{polytech@output@company@simple}{ et de l'entreprise}{}.
 
-	Les auteurs autorisent l'école polytechnique de l'université François Rabelais de Tours à diffuser tout ou partie de ce document, sous quelque forme que ce soit, y compris après transformation en citant la source. Cette diffusion devra se faire gracieusement et être accompagnée du présent avertissement.
+	\notbool{polytech@students@plural}{L'auteur autorise}{Les auteurs autorisent} l'école polytechnique de l'université François Rabelais de Tours à diffuser tout ou partie de ce document, sous quelque forme que ce soit, y compris après transformation en citant la source. Cette diffusion devra se faire gracieusement et être accompagnée du présent avertissement.
 
 	\vfill
 	\csuse{polytech@output@citingthedocument}

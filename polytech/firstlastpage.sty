@@ -78,6 +78,7 @@ Projet PeiP
 
 \csdef{polytech@typereport@name@none}{}
 \csdef{polytech@typereport@name@prd}{Projet Recherche \& Développement}
+\csdef{polytech@typereport@name@bibtex@prd}{Projet Recherche \textbackslash\& Développement}
 \csdef{polytech@typereport@name@ppgl}{Projet de programmation et génie logiciel}
 \csdef{polytech@typereport@name@pc}{Projet collectif}
 \csdef{polytech@typereport@name@psi}{Projet Systèmes d'Information}
@@ -93,6 +94,14 @@ Projet PeiP
 		\csuse{polytech@typereport@name@\csuse{polytech@typereport}}%
 	}{%
 		\textbackslash{}typereport not defined%
+	}%
+}
+
+\csdef{polytech@output@typereport@bibtex}{%
+	\ifcsdef{polytech@typereport@name@bibtex@\csuse{polytech@typereport}}{%
+		\csuse{polytech@typereport@name@bibtex@\csuse{polytech@typereport}}%
+	}{%
+		\csuse{polytech@output@typereport}%
 	}%
 }
 
@@ -214,6 +223,8 @@ Projet PeiP
 	}%
 }
 
+\newbool{polytech@students@plural}
+
 % prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\student}[4][]{
 
@@ -227,6 +238,7 @@ Projet PeiP
 		\patchcmd{\polytech@output@students@simple}{\authorand}{, }{}{}
 		\appto\polytech@output@students@simple{\authorand #2 #3}
 		\appto\polytech@output@students@bibtex{ and #3, #2}
+		\booltrue{polytech@students@plural}
 	}
 	\ifcsstring{polytech@students@title@genre}{singular}{\csdef{polytech@students@title@genre}{plural}}{}
 }
@@ -263,6 +275,8 @@ Projet PeiP
 	&\csname polytech@academicsupervisors@title@singular@\polytech@lang\endcsname\ifstrequal{#1}{}{}{,\linebreak{}#1}\\%
 }%
 
+\newbool{polytech@academicsupervisors@plural}
+
 \newcommand{\academicsupervisor}[4][]{
 	\appto\polytech@output@academicsupervisors@compact{\polytech@output@academicsupervisor@compact{#1}{#2}{#3}{#4}}
 	\appto\polytech@output@academicsupervisors@expanded{\polytech@output@academicsupervisor@expanded{#1}{#2}{#3}{#4}}
@@ -272,6 +286,7 @@ Projet PeiP
 	}{
 		\patchcmd{\polytech@output@academicsupervisors@simple}{\authorand}{, }{}{}
 		\appto\polytech@output@academicsupervisors@simple{\authorand #2 #3}
+		\booltrue{polytech@academicsupervisors@plural}
 	}
 	\ifcsstring{polytech@academicsupervisors@title@genre}{singular}{\csdef{polytech@academicsupervisors@title@genre}{plural}}{}
 }
@@ -307,6 +322,8 @@ Projet PeiP
 	&\csname polytech@companysupervisors@title@singular@\csuse{polytech@lang}\endcsname\ifstrequal{#1}{}{}{,\linebreak{}#1}\\%
 }%
 
+\newbool{polytech@companysupervisors@plural}
+
 % prenom (2), nom (3), mail (4), fonction/promo (optionel, 1)
 \newcommand{\companysupervisor}[4][]{
 	\appto\polytech@output@companysupervisors@compact{\polytech@output@companysupervisor@compact{#1}{#2}{#3}{#4}}
@@ -317,6 +334,7 @@ Projet PeiP
 	}{
 		\patchcmd{\polytech@output@companysupervisors@simple}{\authorand}{, }{}{}
 		\appto\polytech@output@companysupervisors@simple{\authorand #2 #3}
+		\booltrue{polytech@companysupervisors@plural}
 	}
 	\ifcsstring{polytech@companysupervisors@title@genre}{singular}{\csdef{polytech@companysupervisors@title@genre}{plural}}{}
 }
@@ -607,7 +625,17 @@ Projet PeiP
 	}{%
 		% weeklyreports
 		\csuse{polytech@output@weeklyreportspart}%
+		\bookmarksetupnext{level=part}%
+		\phantomsection%
+		\pdfbookmark[0]{\csuse{polytech@output@webography@\csuse{polytech@lang}}}{webography}%
 		\printbibliography[type=online,resetnumbers=1,prefixnumbers=WWW,title={\csuse{polytech@output@webography@\csuse{polytech@lang}}}]%
+		\bookmarksetupnext{level=part}%
+		\phantomsection%
+		\ifbool{polytech@english}{%
+			\pdfbookmark[0]{Bibliography}{bibliography}%
+		}{%
+			\pdfbookmark[0]{Bibliographie}{bibliography}%
+		}%
 		\printbibliography[nottype=online,resetnumbers=1]%
 		\csuse{polytech@output@poster}%
 	}%

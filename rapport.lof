@@ -8,83 +8,83 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}\IeC {\'E}motions universelles et \unhbox \voidb@x \hbox {mouvements} du visage}{}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Exemples d'AUs\relax }}{7}{figure.caption.5}
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemples d'AUs\relax }}{8}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Quelques Facial Features Points utilis\IeC {\'e}s par la norme MPEG-4\relax }}{9}{figure.caption.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Quelques Facial Features Points utilis\IeC {\'e}s par la norme MPEG-4\relax }}{10}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Facial Animation Parameter Units utilis\IeC {\'e}s par la norme MPEG-4\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Facial Animation Parameter Units utilis\IeC {\'e}s par la norme MPEG-4\relax }}{10}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}\IeC {\'E}tat de l'art}{}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Reconstruction d'un visage 2D (1) en 3D (2) gr\IeC {\^a}ce \IeC {\`a} la m\IeC {\'e}thode 3DMM\relax }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {1}{\ignorespaces Reconstruction d'un visage 2D (1) en 3D (2) gr\IeC {\^a}ce \IeC {\`a} la m\IeC {\'e}thode 3DMM\relax }}{12}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Exemple de lumi\IeC {\`e}re structur\IeC {\'e}e\relax }}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemple de lumi\IeC {\`e}re structur\IeC {\'e}e\relax }}{13}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Exemple de reconstruction d'un objet gr\IeC {\^a}ce \IeC {\`a} la st\IeC {\'e}r\IeC {\'e}o photom\IeC {\'e}trique\relax }}{12}{figure.caption.11}
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemple de reconstruction d'un objet gr\IeC {\^a}ce \IeC {\`a} la st\IeC {\'e}r\IeC {\'e}o photom\IeC {\'e}trique\relax }}{13}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Version 2 de la Kinect de Microsoft\relax }}{13}{figure.caption.12}
+\contentsline {figure}{\numberline {4}{\ignorespaces Version 2 de la Kinect de Microsoft\relax }}{14}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Minolta Vivid 910\relax }}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {5}{\ignorespaces Minolta Vivid 910\relax }}{15}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Comparatif de la qualit\IeC {\'e} entre Kinect et Minolta\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Comparatif de la qualit\IeC {\'e} entre Kinect et Minolta\relax }}{15}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Exemple de donn\IeC {\'e}es contenues dans BU-3DFE\relax }}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {7}{\ignorespaces Exemple de donn\IeC {\'e}es contenues dans BU-3DFE\relax }}{16}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Exemple de donn\IeC {\'e}es contenues dans la base de donn\IeC {\'e}es Bosphorus\relax }}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {8}{\ignorespaces Exemple de donn\IeC {\'e}es contenues dans la base de donn\IeC {\'e}es Bosphorus\relax }}{16}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Exemple de cam\IeC {\'e}ra PTZ\relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {9}{\ignorespaces Exemple de cam\IeC {\'e}ra PTZ\relax }}{18}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Exemple de donn\IeC {\'e}es de CK (de haut en bas et de gauche \IeC {\`a} droite : neutre, surprise, joie, col\IeC {\`e}re, d\IeC {\'e}go\IeC {\^u}t)\relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Exemple de donn\IeC {\'e}es de CK (de haut en bas et de gauche \IeC {\`a} droite : neutre, surprise, joie, col\IeC {\`e}re, d\IeC {\'e}go\IeC {\^u}t)\relax }}{19}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Exemple de donn\IeC {\'e}es de MMI\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {11}{\ignorespaces Exemple de donn\IeC {\'e}es de MMI\relax }}{20}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Exemple de donn\IeC {\'e}es de MHI Mimicry\relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {12}{\ignorespaces Exemple de donn\IeC {\'e}es de MHI Mimicry\relax }}{21}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces M\IeC {\^e}me image avec 2 tags diff\IeC {\'e}rents: le premier erron\IeC {\'e} (Kiss), le deuxi\IeC {\`e}me correct (Handshake)\relax }}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {13}{\ignorespaces M\IeC {\^e}me image avec 2 tags diff\IeC {\'e}rents: le premier erron\IeC {\'e} (Kiss), le deuxi\IeC {\`e}me correct (Handshake)\relax }}{22}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces Donn\IeC {\'e}es contenues dans HCI Tagging\relax }}{22}{figure.caption.23}
+\contentsline {figure}{\numberline {14}{\ignorespaces Donn\IeC {\'e}es contenues dans HCI Tagging\relax }}{23}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Architecture d'un syst\IeC {\`e}me de reconnaissance d'\IeC {\'e}motions}{}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Image utilis\IeC {\'e}e pour v\IeC {\'e}rifier l'effet des filtres de Gabor\relax }}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {1}{\ignorespaces Image utilis\IeC {\'e}e pour v\IeC {\'e}rifier l'effet des filtres de Gabor\relax }}{28}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\lambda $\relax }}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {2}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\lambda $\relax }}{29}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\theta $\relax }}{28}{figure.caption.28}
+\contentsline {figure}{\numberline {3}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\theta $\relax }}{29}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\Psi $\relax }}{29}{figure.caption.29}
+\contentsline {figure}{\numberline {4}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\Psi $\relax }}{30}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\gamma $\relax }}{29}{figure.caption.30}
+\contentsline {figure}{\numberline {5}{\ignorespaces Effet du changement du param\IeC {\`e}tre $\gamma $\relax }}{30}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Effet du changement du param\IeC {\`e}tre $n $\relax }}{30}{figure.caption.31}
+\contentsline {figure}{\numberline {6}{\ignorespaces Effet du changement du param\IeC {\`e}tre $n $\relax }}{31}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Effet du changement du param\IeC {\`e}tre $b $ associ\IeC {\'e} \IeC {\`a} $\sigma $\relax }}{30}{figure.caption.32}
+\contentsline {figure}{\numberline {7}{\ignorespaces Effet du changement du param\IeC {\`e}tre $b $ associ\IeC {\'e} \IeC {\`a} $\sigma $\relax }}{31}{figure.caption.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Composantes pseudo-Haar utilis\IeC {\'e} par Viola et Jones\relax }}{30}{figure.caption.33}
+\contentsline {figure}{\numberline {8}{\ignorespaces Composantes pseudo-Haar utilis\IeC {\'e} par Viola et Jones\relax }}{31}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Extension de composantes pseudo-Haar d\IeC {\'e}fini par Lienhart et Maydt\relax }}{31}{figure.caption.34}
+\contentsline {figure}{\numberline {9}{\ignorespaces Extension de composantes pseudo-Haar d\IeC {\'e}fini par Lienhart et Maydt\relax }}{32}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Fonctionnement des motifs binaires locaux\relax }}{32}{figure.caption.35}
+\contentsline {figure}{\numberline {10}{\ignorespaces Fonctionnement des motifs binaires locaux\relax }}{33}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Exemple de projection dans un espace de plus grande dimension r\IeC {\'e}alis\IeC {\'e} par SVM\relax }}{34}{figure.caption.36}
+\contentsline {figure}{\numberline {11}{\ignorespaces Exemple de projection dans un espace de plus grande dimension r\IeC {\'e}alis\IeC {\'e} par SVM\relax }}{35}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Fonctionnement du kPPV avec k=3, 3 classes et 4 \IeC {\'e}chantillons dont un ind\IeC {\'e}cis\relax }}{34}{figure.caption.37}
+\contentsline {figure}{\numberline {12}{\ignorespaces Fonctionnement du kPPV avec k=3, 3 classes et 4 \IeC {\'e}chantillons dont un ind\IeC {\'e}cis\relax }}{35}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Nouvelle approche}{}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Situation de simulation pour la d\IeC {\'e}tection d'\IeC {\'e}motions\relax }}{36}{figure.caption.38}
+\contentsline {figure}{\numberline {1}{\ignorespaces Situation de simulation pour la d\IeC {\'e}tection d'\IeC {\'e}motions\relax }}{37}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Fonctionnement du mod\IeC {\`e}le probabiliste\relax }}{38}{figure.caption.42}
+\contentsline {figure}{\numberline {2}{\ignorespaces Fonctionnement du mod\IeC {\`e}le probabiliste\relax }}{39}{figure.caption.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Espace latent repr\IeC {\'e}sent\IeC {\'e} gr\IeC {\^a}ce au programme Matlab\relax }}{40}{figure.caption.43}
+\contentsline {figure}{\numberline {3}{\ignorespaces Espace latent repr\IeC {\'e}sent\IeC {\'e} gr\IeC {\^a}ce au programme Matlab\relax }}{41}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemples d'images retourn\IeC {\'e}es lorsque l'on se d\IeC {\'e}place sur l'espace latent\relax }}{41}{figure.caption.44}
+\contentsline {figure}{\numberline {4}{\ignorespaces Exemples d'images retourn\IeC {\'e}es lorsque l'on se d\IeC {\'e}place sur l'espace latent\relax }}{42}{figure.caption.44}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

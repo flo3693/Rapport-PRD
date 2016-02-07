@@ -213,6 +213,9 @@
 	% patch \eqref to move the chapter part outside the parenthesis
 	\renewcommand{\eqref}[1]{\polytech@ref@eqref{#1}}
 	\robustify{\eqref}
+
+	% \nocite is fordibben
+	\csundef{nocite}
 }
 
 %###
