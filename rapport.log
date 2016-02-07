@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  7 FEB 2016 20:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.18)  7 FEB 2016 20:40
 entering extended mode
 **rapport.tex
 (rapport.tex
@@ -3054,37 +3054,34 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 7 Plan-ning et ou-tils uti-li-sés
  []
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1171
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1171
-
- []
-
-[46
-
-] [47
+[45] [46
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1240
-[][][][]\T1/jkpf/b/n/24.88 Comptes ren-dus heb-do-ma-
- []
-
-[48
+Chapitre 8.
+[47
 
 ]
 Underfull \hbox (badness 10000) has occurred while \output is active
- [][][][]\T1/jkpf/b/sc/12 Comptes ren-dus heb-do-ma-daires
+ [][][][]\T1/jkpf/b/sc/12 8 Iden-ti-fi-ca-tions des mo-di-fi-ca-tions
  []
 
-[49]
-Overfull \hbox (28.4681pt too wide) in paragraph at lines 1240--1240
-[]\T1/jkpf/m/it/10.95 (-20) Site of-fi-ciel de SAL\T1/jkpf/m/n/10.95 (-20) . \T
-1/jkpf/m/sc/10.95 (-20) url \T1/jkpf/m/n/10.95 (-20) : [][]$\T1/jkptt/m/n/10.95
- http : / / emotion -[] research . net / toolbox / %20toolboxdatabase .$
+[48]
+Chapitre 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1182
+[][][][]\T1/jkpf/b/n/24.88 Réalisations des mo-di-fi-ca-
+ []
+
+[49
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1186--1193
+
  []
 
 [50
@@ -3092,12 +3089,35 @@ Overfull \hbox (28.4681pt too wide) in paragraph at lines 1240--1240
 ] [51
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1262
+[][][][]\T1/jkpf/b/n/24.88 Comptes ren-dus heb-do-ma-
+ []
+
+[52
+
+]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][][][]\T1/jkpf/b/sc/12 Comptes ren-dus heb-do-ma-daires
+ []
+
+[53]
+Overfull \hbox (28.4681pt too wide) in paragraph at lines 1262--1262
+[]\T1/jkpf/m/it/10.95 (-20) Site of-fi-ciel de SAL\T1/jkpf/m/n/10.95 (-20) . \T
+1/jkpf/m/sc/10.95 (-20) url \T1/jkpf/m/n/10.95 (-20) : [][]$\T1/jkptt/m/n/10.95
+ http : / / emotion -[] research . net / toolbox / %20toolboxdatabase .$
+ []
+
+[54
+
+] [55
+
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 BIBLIOGRAPHIE
  []
 
-[52]
-Overfull \hbox (1.4147pt too wide) in paragraph at lines 1240--1240
+[56]
+Overfull \hbox (1.4147pt too wide) in paragraph at lines 1262--1262
 []\T1/jkpf/m/n/10.95 (-20) Lijun \T1/jkpf/m/sc/10.95 (-20) Yin\T1/jkpf/m/n/10.9
 5 (-20) , Xiao-chen \T1/jkpf/m/sc/10.95 (-20) Chen\T1/jkpf/m/n/10.95 (-20) , Yi
  \T1/jkpf/m/sc/10.95 (-20) Sun\T1/jkpf/m/n/10.95 (-20) , Tony \T1/jkpf/m/sc/10.
@@ -3110,7 +3130,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  [][][][]\T1/jkpf/b/sc/12 BIBLIOGRAPHIE
  []
 
-[53]
+[57]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -3144,55 +3164,55 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 1240--1240
+Underfull \hbox (badness 4872) in paragraph at lines 1262--1262
 [][][][]\T1/jkpf/b/n/24.88 Application d'aide à l'in-ter-ac-tion hom-me/-ma-
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 1240--1240
+Underfull \hbox (badness 1448) in paragraph at lines 1262--1262
  [][][][]\T1/jkpf/b/sc/10.95 Ecole Po-ly-tech-nique de l'Uni-ver-sité Fran-çois
  Ra-be-lais de Tours
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1262
  []\T1/jkpf/b/n/10.95 Département In-for-ma-tique
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1262
  []\T1/jkpf/b/n/10 64 ave-nue Jean Por-ta-lis, 37200 Tours, France
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1240--1240
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1262
  []$\T1/jkptt/b/n/10 www . polytech . univ -[] tours . fr$[]
  []
 
 
-Underfull \hbox (badness 6758) in paragraph at lines 1240--1240
+Underfull \hbox (badness 6758) in paragraph at lines 1262--1262
  [][][][]\T1/jkpf/b/n/14.4 Informatique
  []
 
-<images/ptz.png, id=783, 192.72pt x 192.72pt>
+<images/ptz.png, id=814, 192.72pt x 192.72pt>
 File: images/ptz.png Graphic file (type png)
  <use images/ptz.png>
-Package pdftex.def Info: images/ptz.png used on input line 1240.
+Package pdftex.def Info: images/ptz.png used on input line 1262.
 (pdftex.def)             Requested size: 192.71951pt x 192.71951pt.
 
-<images/AU.png, id=784, 376.40625pt x 190.46156pt>
+<images/AU.png, id=815, 376.40625pt x 190.46156pt>
 File: images/AU.png Graphic file (type png)
  <use images/AU.png>
-Package pdftex.def Info: images/AU.png used on input line 1240.
+Package pdftex.def Info: images/AU.png used on input line 1262.
 (pdftex.def)             Requested size: 376.40532pt x 190.46107pt.
 
-<images/ck2.jpg, id=785, 450.9347pt x 231.11343pt>
+<images/ck2.jpg, id=816, 450.9347pt x 231.11343pt>
 File: images/ck2.jpg Graphic file (type jpg)
  <use images/ck2.jpg>
-Package pdftex.def Info: images/ck2.jpg used on input line 1240.
+Package pdftex.def Info: images/ck2.jpg used on input line 1262.
 (pdftex.def)             Requested size: 450.9336pt x 231.11287pt.
 
-[54
+[58
 
 
  <./images/ptz.png> <./images/AU.png> <./images/ck2.jpg>]
@@ -3228,7 +3248,7 @@ Package pdftex.def Info: images/ck2.jpg used on input line 1240.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [55
+ [59
 
 
 
@@ -3236,8 +3256,8 @@ Package pdftex.def Info: images/ck2.jpg used on input line 1240.
 ]
 
 AED: pageslts setting LastPage 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1242.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 1242.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1264.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 1264.
 \c@pagesLTS.arabic.1.local.count=\count376
 
 AED: pageslts setting VeryLastPage via AfterLastShipout 
@@ -3249,20 +3269,20 @@ Package pageslts Info: Total number of pages is even.
 
 
 (rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1242.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1242.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1264.
 
 Package logreq Info: Writing requests to 'rapport.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1242.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1264.
  ) 
 Here is how much of TeX's memory you used:
- 40176 strings out of 493673
- 687734 string characters out of 3141524
- 1356278 words of memory out of 3000000
- 41882 multiletter control sequences out of 15000+200000
+ 40197 strings out of 493673
+ 687919 string characters out of 3141524
+ 1356335 words of memory out of 3000000
+ 41892 multiletter control sequences out of 15000+200000
  245332 words of font info for 567 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,17n,94p,934b,3787s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,17n,94p,934b,3789s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Program Fil
@@ -3281,9 +3301,9 @@ pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttbn8a.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on rapport.pdf (64 pages, 3189569 bytes).
+Output written on rapport.pdf (68 pages, 3069032 bytes).
 PDF statistics:
- 1160 PDF objects out of 1200 (max. 8388607)
- 257 named destinations out of 1000 (max. 500000)
- 63315 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1215 PDF objects out of 1440 (max. 8388607)
+ 268 named destinations out of 1000 (max. 500000)
+ 63371 words of extra memory for PDF output out of 74296 (max. 10000000)
 

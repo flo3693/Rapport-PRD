@@ -152,9 +152,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Gestion de projet}{45}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{46}{chapter*.49}
+\contentsline {part}{II\hspace {1em}D\IeC {\'e}veloppement}{46}{part.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{47}{part*.50}
+\contentsline {chapter}{\numberline {8}Identifications des modifications}{47}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Cr\IeC {\'e}ation de la nouvelle base d'apprentissage}{48}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}repr\IeC {\'e}senter et comparer des trajectoires dans l'espace latent}{48}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Repr\IeC {\'e}sentation des donn\IeC {\'e}es sous forme vectorielle}{48}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Migration de Matlab vers Python}{48}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}R\IeC {\'e}alisations des modifications}{49}{chapter.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{50}{chapter*.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{51}{part*.50}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 

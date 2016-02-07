@@ -119,8 +119,8 @@ Je continuerai ensuite en présentant les différentes étapes nécessaires à l
 Je définirai ensuite les spécifications de l'application ainsi que les choix qui ont permit cette définition.\\
 Je conclurai par un planning prévisionnel ainsi que par les méthodologies et les outils de suivi utilisés durant ce projet.\\
 \\
-Dans la partie Développement, je présenterai, dans une première section, les modifications qui ont été identifiées (notamment grâce à un rendez vous avec Giuseppe Boccignone) et qui vont nous permettre de modifier le programme de Vitale et al. pour l'adapter à notre problématique.\\
-J'expliquerai ensuite dans une seconde section comment j'ai réalisé ces modifications.\\
+Dans la partie Développement, je présenterai, dans un premier chapitre, les modifications qui ont été identifiées (notamment grâce à un rendez vous avec Giuseppe Boccignone) et qui vont nous permettre de modifier le programme de Vitale et al. pour l'adapter à notre problématique.\\
+J'expliquerai ensuite dans un second chapitre comment j'ai réalisé ces modifications.\\
 Durant la phase d'identification des modifications, j'ai également dû rédiger un article scientifique, à propos de mes travaux réalisés durant ce projet, qui sera présenté, s'il est accepté, à la conférence Handicap 2016 organisé par l'IFRATH à Paris du 8 au 10 Juin 2016.\\
 \\
 Pour ce projet de recherche et développement, j'ai été encadré par Donatello CONTE et Mohamed SLIMANE.
@@ -1156,8 +1156,30 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\part{Développement}
-%\label{part:part_dev}
+\part{Développement}
+\label{part:part_dev}
+
+\chapter{Identifications des modifications}
+Pour réaliser notre application de reconnaissance d'émotions, mes tuteurs pédagogiques et moi même avons donc choisi de reprendre le programme réalisé par Vitale et al. présenté précédemment.\\
+Grâce à un entretien Skype réalisé avec Giuseppe Boccignone, un des auteurs de l'article \cite{italiens}, nous avons pu identifier les modifications et obtenir certaines pistes concernant leurs implémentations.\\
+Ces modifications sont au nombres de 5 :
+\begin{itemize}
+\item changer la représentation des données, passer d'une représentation pixellique à une représentation vectorielle
+\item utiliser des images de la base de données HCI Tagging pou créer la base d'apprentissage ainsi que la base de test
+\item comparer les trajectoires des différentes émotions dans l'espace latent pour trouver la plus probable
+\item migrer le programme de Matlab vers Python
+\end{itemize}
+\newpage
+
+\section{Création de la nouvelle base d'apprentissage}
+
+\section{représenter et comparer des trajectoires dans l'espace latent}
+
+\section{Représentation des données sous forme vectorielle}
+
+\section{Migration de Matlab vers Python}
+
+\chapter{Réalisations des modifications}
 
 
 \unnumberedchapter{Conclusion}
