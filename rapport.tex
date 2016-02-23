@@ -1162,7 +1162,7 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 \chapter{Identifications des modifications}
 Pour réaliser notre application de reconnaissance d'émotions, mes tuteurs pédagogiques et moi même avons donc choisi de reprendre le programme réalisé par Vitale et al. présenté précédemment.\\
 Grâce à un entretien Skype réalisé avec Giuseppe Boccignone, un des auteurs de l'article \cite{italiens}, nous avons pu identifier les modifications et obtenir certaines pistes concernant leurs implémentations.\\
-Ces modifications sont au nombres de 5 :
+Ces modifications sont au nombres de 4 :
 \begin{itemize}
 \item changer la représentation des données, passer d'une représentation pixellique à une représentation vectorielle
 \item utiliser des images de la base de données HCI Tagging pou créer la base d'apprentissage ainsi que la base de test
@@ -1172,12 +1172,28 @@ Ces modifications sont au nombres de 5 :
 \newpage
 
 \section{Création de la nouvelle base d'apprentissage}
+Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vidéos se trouvant dans la base HCI-Tagging \cite{tagging1}\cite{tagging2}. Pour chaque émotion, j'ai donc extrait 15 frames consécutives de la vidéo ce qui va nous permettre de représenter l'évolution de l'émotion au cours du temps. Les vidéos utilisées ainsi que l'émotion associée se trouve dans le \autoref{tab:base_app}.
 
-\section{représenter et comparer des trajectoires dans l'espace latent}
+\begin{Table}{tab:base_app}{Données utilisées dans notre base d'apprentissage}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		  &\textbf{N$^{o}$ sujet} &\textbf{N$^{o}$ session}&\textbf{Émotion} \\\hline
+		1& 1 & 6& joie\\\hline
+		2& 3 & 264& dégoût\\\hline
+		3& 1 & 28& tristesse\\\hline
+		4& 6 & 662& colère\\\hline
+		5& 3 & 290& surprise\\\hline
+	\end{tabular}
+\end{Table}
 
-\section{Représentation des données sous forme vectorielle}
+J'ai décidé de ne pas utilisé l'émotion de la peur car je n'ai trouvé aucune données réellement exploitables dans la base HCI-Tagging pour cette émotion. En effet, très peu de vidéos représentant la peur se trouve dans cette base et les réactions des sujets soumis à cette émotion sont imperceptibles par rapport à leur état neutre. Donc pour ne pas "fausser" mon application, j'ai décidé de ne pas l'utiliser.
+
+\section{Changement de la représentation des données}
+
+\section{Représenter et comparer des trajectoires dans l'espace latent}
 
 \section{Migration de Matlab vers Python}
+
 
 \chapter{Réalisations des modifications}
 

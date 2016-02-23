@@ -2282,9 +2282,11 @@
     <bcf:citekey order="53">italiens</bcf:citekey>
     <bcf:citekey order="54">italiens</bcf:citekey>
     <bcf:citekey order="55">italiens</bcf:citekey>
-    <bcf:citekey order="56">simu_gabor</bcf:citekey>
-    <bcf:citekey order="57">instr_simu_gabor</bcf:citekey>
-    <bcf:citekey order="58">italiens</bcf:citekey>
+    <bcf:citekey order="56">tagging1</bcf:citekey>
+    <bcf:citekey order="57">tagging2</bcf:citekey>
+    <bcf:citekey order="58">simu_gabor</bcf:citekey>
+    <bcf:citekey order="59">instr_simu_gabor</bcf:citekey>
+    <bcf:citekey order="60">italiens</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>
