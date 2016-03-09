@@ -2284,9 +2284,12 @@
     <bcf:citekey order="55">italiens</bcf:citekey>
     <bcf:citekey order="56">tagging1</bcf:citekey>
     <bcf:citekey order="57">tagging2</bcf:citekey>
-    <bcf:citekey order="58">simu_gabor</bcf:citekey>
-    <bcf:citekey order="59">instr_simu_gabor</bcf:citekey>
-    <bcf:citekey order="60">italiens</bcf:citekey>
+    <bcf:citekey order="58">book_pca</bcf:citekey>
+    <bcf:citekey order="59">asthana</bcf:citekey>
+    <bcf:citekey order="60">simu_gabor</bcf:citekey>
+    <bcf:citekey order="61">instr_simu_gabor</bcf:citekey>
+    <bcf:citekey order="62">italiens</bcf:citekey>
+    <bcf:citekey order="63">handicap2016</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

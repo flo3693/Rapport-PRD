@@ -38,6 +38,24 @@
       \verb https://labs.affectiva.com/superbowl/affdexweb.html
       \endverb
     \endentry
+    \entry{asthana}{article}{}
+      \name{author}{4}{}{%
+        {{hash=bd064ff5e385a96fea6b3ffbf17b254b}{Asthana}{A\bibinitperiod}{Akshay}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=2ac8d8aacb76b57beadc21f996305b69}{Zafeiriou}{Z\bibinitperiod}{Stefanos}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=000f60aba91f70ce7bfd49a806a3c43a}{Cheng}{C\bibinitperiod}{Shiyang}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=8cb77420f48bdd963270052918f1ec5b}{Pantic}{P\bibinitperiod}{Maja}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c9df5fabce831e5834c75e7a381a020d}
+      \strng{fullhash}{c9df5fabce831e5834c75e7a381a020d}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Article presentant les travaux qui ont permis a la realisation du programe Matlab que j'utilise pour extraire 66 features d'un visage sur une image}
+      \field{journaltitle}{Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference}
+      \field{title}{Robust Discriminative Response Map Fitting with Constrained Local Models}
+      \field{year}{2013}
+    \endentry
     \entry{mimicry1}{article}{}
       \name{author}{4}{}{%
         {{hash=9eb1d129d6f1e6bf395ace747b8513d8}{Bilakhia}{B\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
@@ -154,6 +172,39 @@
       \field{annotation}{Article introduisant pour la premiere fois l'utilisation des motifs locaux binaires pour mesurer le contaste d'une image}
       \field{title}{Texture classification by center-symmetric auto-correlation, using Kullback discrimination of distributions}
       \field{year}{1993}
+    \endentry
+    \entry{handicap2016}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7d457e3ce52f017827302089a6bc9c85}{IFRATH}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{7d457e3ce52f017827302089a6bc9c85}
+      \strng{fullhash}{7d457e3ce52f017827302089a6bc9c85}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Site officiel de la conference Handicap 2016}
+      \field{title}{Site officiel de la conference Handicap 2016}
+      \field{urlday}{03}
+      \field{urlmonth}{03}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb http://ifrath.fr/handicap2016/
+      \endverb
+    \endentry
+    \entry{book_pca}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2bd79883a013422af8e4e2bdc423d8df}{Jollife}{J\bibinitperiod}{I.T.}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2bd79883a013422af8e4e2bdc423d8df}
+      \strng{fullhash}{2bd79883a013422af8e4e2bdc423d8df}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Livre expliquant le fonctionnement du Principal Component Analysis}
+      \field{title}{Principal Component Analysis (Second Edition)}
+      \field{year}{2002}
     \endentry
     \entry{ck}{article}{}
       \name{author}{3}{}{%

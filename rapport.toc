@@ -158,17 +158,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Cr\IeC {\'e}ation de la nouvelle base d'apprentissage}{48}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Repr\IeC {\'e}senter et comparer des trajectoires dans l'espace latent}{48}{section.8.2}
+\contentsline {section}{\numberline {2}Changement de la repr\IeC {\'e}sentation des donn\IeC {\'e}es}{48}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Repr\IeC {\'e}sentation des donn\IeC {\'e}es sous forme vectorielle}{48}{section.8.3}
+\contentsline {section}{\numberline {3}Repr\IeC {\'e}senter et comparer des trajectoires dans l'espace latent}{49}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Migration de Matlab vers Python}{48}{section.8.4}
+\contentsline {section}{\numberline {4}Migration de Matlab vers Python}{49}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}R\IeC {\'e}alisations des modifications}{49}{chapter.9}
+\contentsline {chapter}{\numberline {9}R\IeC {\'e}alisations des modifications}{52}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{50}{chapter*.50}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{53}{chapter*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{51}{part*.51}
+\contentsline {part}{Annexes}{54}{part*.53}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 

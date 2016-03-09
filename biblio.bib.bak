@@ -13,6 +13,17 @@
   Timestamp                = {2015.12.03}
 }
 
+@Article{asthana,
+  Title                    = {Robust Discriminative Response Map Fitting with Constrained Local Models},
+  Author                   = {Akshay Asthana and Stefanos Zafeiriou and Shiyang Cheng and Maja Pantic},
+  Journaltitle             = {Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference},
+  Year                     = {2013},
+
+  Annote                   = {Article presentant les travaux qui ont permis a la realisation du programe Matlab que j'utilise pour extraire 66 features d'un visage sur une image},
+  Owner                    = {Florian},
+  Timestamp                = {2016.03.01}
+}
+
 @Article{mimicry1,
   Title                    = {The MAHNOB Mimicry Database - a database of naturalistic human interactions},
   Author                   = {S. Bilakhia and S. Petridis and A. Nijholt and M. Pantic},
@@ -88,6 +99,27 @@
   Timestamp                = {2015.12.24}
 }
 
+@Online{handicap2016,
+  Title                    = {Site officiel de la conference Handicap 2016},
+  Author                   = {IFRATH},
+  Url                      = {http://ifrath.fr/handicap2016/},
+  Urldate                  = {2016-03-03},
+
+  Annote                   = {Site officiel de la conference Handicap 2016},
+  Owner                    = {Florian},
+  Timestamp                = {2016.03.03}
+}
+
+@Book{book_pca,
+  Title                    = {Principal Component Analysis (Second Edition)},
+  Author                   = {I.T. Jollife},
+  Year                     = {2002},
+
+  Annote                   = {Livre expliquant le fonctionnement du Principal Component Analysis},
+  Owner                    = {Florian},
+  Timestamp                = {2016.03.01}
+}
+
 @Article{ck,
   Title                    = {Comprehensive Database for Facial Expression Analysis},
   Author                   = {Takeo Kanade and Jeffrey F. Cohn and Yingli Tian},
@@ -97,6 +129,39 @@
   Annote                   = {Article decrivant la base de donnees de visage Cohn-Kanade (CK)},
   Owner                    = {Florian},
   Timestamp                = {2015.12.09}
+}
+
+@Online{fgplvm_github,
+  Title                    = {Github du FGPLVM de Neil Lawrence},
+  Author                   = {Neil Lawrence},
+  Url                      = {https://github.com/lawrennd/fgplvm},
+  Year                     = {2007},
+  Urldate                  = {2016-03-03},
+
+  Owner                    = {Florian},
+  Timestamp                = {2016.03.03}
+}
+
+@Online{gplvm_github,
+  Title                    = {Github du GPLVM de Neil Lawrence},
+  Author                   = {Neil Lawrence},
+  Url                      = {https://github.com/lawrennd/gplvm},
+  Year                     = {2005},
+  Urldate                  = {2016-03-03},
+
+  Annote                   = {Depot Gihub du programme Matlab de GPLVM utilise dans le programme d'origine que j'ai ensuite modifie},
+  Owner                    = {Florian},
+  Timestamp                = {2016.03.03}
+}
+
+@Article{lawrence2004,
+  Title                    = {Gaussian process latent variable models for visualisation of high dimensional data},
+  Author                   = {Neil Lawrence},
+  Year                     = {2004},
+
+  Annote                   = {Papier correspondant au programme Matlab de l'algorithme GPLVM},
+  Owner                    = {Florian},
+  Timestamp                = {2016.03.03}
 }
 
 @Article{tagging2,
@@ -305,8 +370,7 @@ A Novel 3D Relightable Facial Database},
 }
 
 @Article{italiens,
-  Title                    = {Affective facial expression processing via
-simulation: A probabilistic model},
+  Title                    = {Affective facial expression processing via simulation: A probabilistic model},
   Author                   = {Jonathan Vitale and Mary-Anne Williams and Benjamin Johnston and Giuseppe Boccignone},
   Journaltitle             = {Biologically Inspired Cognitive Architectures},
   Year                     = {2014},

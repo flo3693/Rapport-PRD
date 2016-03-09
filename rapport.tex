@@ -1162,17 +1162,18 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 \chapter{Identifications des modifications}
 Pour réaliser notre application de reconnaissance d'émotions, mes tuteurs pédagogiques et moi même avons donc choisi de reprendre le programme réalisé par Vitale et al. présenté précédemment.\\
 Grâce à un entretien Skype réalisé avec Giuseppe Boccignone, un des auteurs de l'article \cite{italiens}, nous avons pu identifier les modifications et obtenir certaines pistes concernant leurs implémentations.\\
-Ces modifications sont au nombres de 4 :
+Ces modifications sont au nombres de 5 :
 \begin{itemize}
-\item changer la représentation des données, passer d'une représentation pixellique à une représentation vectorielle
 \item utiliser des images de la base de données HCI Tagging pou créer la base d'apprentissage ainsi que la base de test
+\item changer la représentation des données, passer d'une représentation pixellique à une représentation vectorielle
+\item utiliser l'algorithme FGPLVM (Faster GPLVM) pour remplacer l'algorithme GPLVM et donc obtenir des résultats plus rapides
 \item comparer les trajectoires des différentes émotions dans l'espace latent pour trouver la plus probable
 \item migrer le programme de Matlab vers Python
 \end{itemize}
 \newpage
 
 \section{Création de la nouvelle base d'apprentissage}
-Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vidéos se trouvant dans la base HCI-Tagging \cite{tagging1}\cite{tagging2}. Pour chaque émotion, j'ai donc extrait 15 frames consécutives de la vidéo ce qui va nous permettre de représenter l'évolution de l'émotion au cours du temps. Les vidéos utilisées ainsi que l'émotion associée se trouve dans le \autoref{tab:base_app}.
+Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vidéos se trouvant dans la base HCI-Tagging \cite{tagging1}\cite{tagging2}. Pour chaque émotion, j'ai donc extrait 15 frames consécutives (1 frame extraite toutes les 50 frames) de la vidéo ce qui va nous permettre de représenter l'évolution de l'émotion au cours du temps. Les vidéos utilisées ainsi que l'émotion associée se trouve dans le \autoref{tab:base_app}.
 
 \begin{Table}{tab:base_app}{Données utilisées dans notre base d'apprentissage}
 	\begin{tabular}{|c|c|c|c|}
@@ -1186,9 +1187,39 @@ Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vi
 	\end{tabular}
 \end{Table}
 
-J'ai décidé de ne pas utilisé l'émotion de la peur car je n'ai trouvé aucune données réellement exploitables dans la base HCI-Tagging pour cette émotion. En effet, très peu de vidéos représentant la peur se trouve dans cette base et les réactions des sujets soumis à cette émotion sont imperceptibles par rapport à leur état neutre. Donc pour ne pas "fausser" mon application, j'ai décidé de ne pas l'utiliser.
+Ces images sont de taille 780*580 pixels.\\
+J'ai décidé de ne pas utilisé l'émotion de la peur car je n'ai trouvé aucune données réellement exploitables dans la base HCI-Tagging pour cette émotion. En effet, très peu de vidéos représentant la peur se trouve dans cette base et les réactions des sujets soumis à cette émotion sont imperceptibles par rapport à leur état neutre. Donc pour ne pas "fausser" mon application, j'ai décidé de ne pas l'utiliser.\\
+Les frames que j'ai utilisé pour représenter l'émotion de la joie se trouve en \autoref{ex_base_appr}.
+
+\begin{Figure}{ex_base_appr}{Images de notre base d'apprentissage pour l'émotion de la joie}
+ \pgfimage{images/ex_base_apprentissage.png}
+\end{Figure}
 
 \section{Changement de la représentation des données}
+Une fois la nouvelle base d'apprentissage définie, je me suis intéressé à la représentation des données et donc de l'information portée par les images de la base.\\
+Dans le programme d'origine, chaque pixel de chaque image était analysé et via l'algorithme de \textbf{Principal Component Analysis} (PCA, \cite{book_pca}), les pixels représentant un réel apport d'information étaient retournés. C'était ensuite ces pixels qui étaient analysés pour pouvoir construire l'espace latent.\\
+Cependant l'algorithme du PCA est très chronophage et c'est donc pour cela que les images de la base d'apprentissage d'origine étaient de petite taille (29*19 pixels). Il était bien entendu impossible d'utiliser cette technique avec des images de taille 780*580 pixels comme les nôtres car cela représenterait 452 400 pixels à faire analyser par le PCA.\\
+Il devenait alors évident d'abandonner cette représentation pixellique pour une autre plus adapté.\\
+\\
+Après concertation avec mes encadrants, nous avons décider d'utiliser la position des \textit{features} des visages.\\
+Pour cela, j'ai tout d'abord dû rechercher un programme permettant de trouver la position de ces \textit{features} en Matlab. Après en avoir testé plusieurs, j'ai choisi le programme Matlab réalisé par Akshay Asthana dans le cadre de son article \cite{asthana}. Ce programme permet d'extraire les coordonnées des positions de 66 features d'un visage. Il permet aussi d'extraire des données sur l'orientation du visage, même si cela ne nous sera pas utile pour ce projet.\\
+Les 66 points du visage trouvés via ce programme se trouve en \autoref{asthana_img}.
+
+\begin{Figure}{asthana_img}{66 features du visage trouvé grâce au programme de A .Asthana}
+ \pgfimage{images/asthana.png}
+\end{Figure}
+
+Ce programme est très polyvalent car il nous permet, si nous le souhaitons, de changer l'algorithme de détection de visage ainsi que des features du visage. Pour l'instant, 2 méthodes sont présentes permettant de récupérer ces points, une méthode basé sur des arbres (qui est très lente) et une méthode utilisant une fonctionnalité innée à Matlab (beaucoup plus rapide). Cette fonctionnalité permet, directement via Matlab sans utiliser de plugins supplémentaires, de détecter les visages dans une image via l'algorithme de Viola-Jones dont j'ai déjà parlé précédemment (cf \autoref{absolu}) et ensuite de détecter les différentes parties d'un visage (yeux, bouche, nez, etc). C'est cette méthode que j'ai choisi d'utiliser pour extraire les coordonnées des positions des 66 features.\\
+\\
+En plus de ces coordonnées, nous avons également discuté de la possibilité d'utiliser la distance entre ces points plutôt que leurs coordonnées pour représenter ces données. Plus clairement, calculer la distance entre un point et tous les autres pour ensuite récupérer les K distances les plus petites, qui vont donc correspondre en toute logique aux K voisins les plus proches du point choisi au départ.\\
+Cette représentation permettrait de représenter le déplacement des points d'un visage par rapport à ses voisins et non pas seulement leur déplacement dans l'espace.\\
+Après plusieurs tests de construction de l'espace avec ce type de données en changeant la valeur de K, nous sommes arrivés à la conclusion que K=10 était la meilleur solution pour la représentation des données sur l'espace latent.
+\\
+Au final, nous arrivons donc à deux types de représentations différentes : les coordonnées des points et les distances entre les 10 plus proches voisins. Ces données sont sauvegardés dans un fichier \textit{.mat} qui sera chargé via le programme de FGPLVM.
+
+\section{Utilisation de l'algorithme F-GPLVM (Faster GPLVM)}
+Là où le programme d'origine utilisait l'algorithme GPLVM développé par Neil Lawrence \cite{lawrence2004} \cite{gplvm_github} en 2004, je vais utiliser sa version améliorée, FGPLVM \cite{fgplvm_github}, également développé par Lawrence en 2007.\\
+
 
 \section{Représenter et comparer des trajectoires dans l'espace latent}
 
@@ -1259,16 +1290,64 @@ Maintenant que ces recherches sont terminées, je vais commencer le développeme
 	Étude du programme Matlab fonctionnel et comparaison de l'article au programme pour trouver à quelle partie du programme correspond chaque partie de l'article dans le but de mieux le comprendre.
 }
 \weeklyreport{Vacances de Noël}{
-	Fin du rapport 
+	Fin de rédaction du rapport 
 }
-%\weeklyreport{07/01/2016}{
-	
+\weeklyreport{07/01/2016}{
+	Création du PowerPoint pour la soutenance et répétitions.\\
+	Modification du programme Matlab pour qu'il prenne une image en entrée et l'affiche sur l'espace latent.\\
+	Création nouvelle base d'apprentissage plus adaptée, avec des images plus grandes.
+}
+\weeklyreport{14/01/2016}{
+	Soutenance de la partie Recherche\\
+	Continuation de la création de la base d'apprentissage en réduisant la taille des images (les images étaient trop grandes et faisaient crasher mon ordinateur)
+}
+\weeklyreport{21/01/2016}{
+	Rédaction d'un article scientifique sur les travaux réalisés lors de ce projet. L'article sera soumis à la conférence Handicap 2016. Rédaction de l'introduction à 90\%, de l'état de l'art à 15\% et de la méthode proposée à 100\%\\
+	Au niveau du programme Matlab: 
+	\begin{itemize}	
+		\item création nouvelle base d'apprentissage: 31 images de taille 50*81 pixels
+		\item prise d'une image en entrée
+		\item association d'une émotion à une image
+	\end{itemize}
+Mais classification peu efficace pour l'instant.
+}
+\weeklyreport{28/01/2016}{
+	Rédaction de l'article scientifique.\\
+	Conférence Skype avec Giuseppe Boccignone pour nous aider dans nos travaux et nous donner de nouvelles pistes. Plusieurs améliorations ont été dégagés de cette conférence:
+	\begin{itemize}
+		\item changer la représentation des données, passer d'une représentation pixellique à une représentation vectorielle, ce qui nous permettrait de nous affranchir de l'algorithme PCa qui est très chronophage dès qu'une image est un peu grande
+		\item changer la base d'apprentissage avec des images de grandes tailles
+		\item représenter sur l'espace latent la trajectoire dans le temps d'une émotion plutôt que seulement la position d'une image
+		\item utiliser l'algorithme FGPLVM (Faster GPLVM) plutôt que l'algorithme GPLVM utilisé précédemment
+		\item migrer le programme de Matlab vers Python\\
+	\end{itemize}
+	Tentative de migration sous Python mais sans succès et donc prise en main du FGPLVM sous Matlab.
+}
+\weeklyreport{04/02/2016}{
+	Fin de la rédaction de l'article scientifique.\\
+	Création de la nouvelle base d'apprentissage (5 émotions * 15 frames) pour générer les trajectoires.
+}
+\weeklyreport{11/02/2016}{
+	Soumission de l'article scientifique à la conférence Handicap 2016 \cite{handicap2016}.\\
+	Recherche d'une détection des features avec Matlab pour utiliser la position de ces features comme données pour construire l'espace latent\\
+	Création de l'espace latent avec toutes les trajectoires.
+}
+\weeklyreport{Vacances de Février}{
+	Création de l'espace latent avec les coordonnées ou les distances des K plus proches voisins de chaque point (avec K=1,3,5,10).\\
+	Traçage des trajectoires correspondantes sur l'espace latent.
+}
+\weeklyreport{25/02/2016}{
+	Tentative d'ajouter sur l'espace latent des images passées en entrée représentant l'évolution d'une émotion: sans succès.
+}
+\weeklyreport{03/03/2016}{
+	Envoi d'un mail à Giuseppe Boccignone pour lui demander des conseils et de l'aide.
+	Rédaction de la partie Développement du rapport
+}
+%\weeklyreport{10/03/2016}{
 %}
-%\weeklyreport{14/01/2016}{
-	
+%\weeklyreport{17/03/2016}{
 %}
-%\weeklyreport{21/01/2016}{
-	
+%\weeklyreport{24/03/2016}{
 %}
 
 % petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
