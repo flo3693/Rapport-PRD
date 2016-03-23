@@ -2282,14 +2282,23 @@
     <bcf:citekey order="53">italiens</bcf:citekey>
     <bcf:citekey order="54">italiens</bcf:citekey>
     <bcf:citekey order="55">italiens</bcf:citekey>
-    <bcf:citekey order="56">tagging1</bcf:citekey>
-    <bcf:citekey order="57">tagging2</bcf:citekey>
-    <bcf:citekey order="58">book_pca</bcf:citekey>
-    <bcf:citekey order="59">asthana</bcf:citekey>
-    <bcf:citekey order="60">simu_gabor</bcf:citekey>
-    <bcf:citekey order="61">instr_simu_gabor</bcf:citekey>
-    <bcf:citekey order="62">italiens</bcf:citekey>
-    <bcf:citekey order="63">handicap2016</bcf:citekey>
+    <bcf:citekey order="56">book_pca</bcf:citekey>
+    <bcf:citekey order="57">lawrence2004</bcf:citekey>
+    <bcf:citekey order="58">gplvm_github</bcf:citekey>
+    <bcf:citekey order="59">fgplvm_github</bcf:citekey>
+    <bcf:citekey order="60">tagging1</bcf:citekey>
+    <bcf:citekey order="61">tagging2</bcf:citekey>
+    <bcf:citekey order="62">asthana</bcf:citekey>
+    <bcf:citekey order="63">gpmaster</bcf:citekey>
+    <bcf:citekey order="64">srivastava2011</bcf:citekey>
+    <bcf:citekey order="65">linsu2005</bcf:citekey>
+    <bcf:citekey order="66">besse</bcf:citekey>
+    <bcf:citekey order="67">githubflo</bcf:citekey>
+    <bcf:citekey order="68">githubflo2</bcf:citekey>
+    <bcf:citekey order="69">simu_gabor</bcf:citekey>
+    <bcf:citekey order="70">instr_simu_gabor</bcf:citekey>
+    <bcf:citekey order="71">italiens</bcf:citekey>
+    <bcf:citekey order="72">handicap2016</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

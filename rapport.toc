@@ -156,19 +156,55 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Identifications des modifications}{47}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Cr\IeC {\'e}ation de la nouvelle base d'apprentissage}{48}{section.8.1}
+\contentsline {section}{\numberline {1}Changement de la base d'apprentissage}{48}{section.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Changement de la repr\IeC {\'e}sentation des donn\IeC {\'e}es}{48}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Repr\IeC {\'e}senter et comparer des trajectoires dans l'espace latent}{49}{section.8.3}
+\contentsline {section}{\numberline {3}Utilisation de l'algorithme F-GPLVM}{48}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Migration de Matlab vers Python}{49}{section.8.4}
+\contentsline {section}{\numberline {4}Repr\IeC {\'e}sentation des donn\IeC {\'e}es sous formes de trajectoires}{48}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}R\IeC {\'e}alisations des modifications}{52}{chapter.9}
+\contentsline {chapter}{\numberline {9}R\IeC {\'e}daction de l'article scientifique pour la conf\IeC {\'e}rence "Handicap 2016" de l'IFRATH}{49}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{53}{chapter*.52}
+\contentsline {chapter}{\numberline {10}R\IeC {\'e}alisations des \unhbox \voidb@x \hbox {modifications}}{50}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Annexes}{54}{part*.53}
+\contentsline {section}{\numberline {1}Cr\IeC {\'e}ation de la nouvelle base d'apprentissage}{51}{section.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Repr\IeC {\'e}senter les donn\IeC {\'e}es via la position des \textit {features}}{51}{section.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Utilisation de l'algorithme F-GPLVM (Faster GPLVM) pour cr\IeC {\'e}er l'espace latent}{52}{section.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Repr\IeC {\'e}senter et comparer des trajectoires dans l'espace latent}{53}{section.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Construction et affichage de l'espace latent}{54}{paragraph*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Affichage d'une trajectoire \IeC {\`a} classifier dans l'espace latent}{54}{paragraph*.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Classification des trajectoires}{55}{paragraph*.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Tests et r\IeC {\'e}sultats}{59}{chapter.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {12}Notice d'utilisation de mon application}{61}{chapter.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Extraction des coordonn\IeC {\'e}es des \textit {features} des visages}{62}{section.12.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}G\IeC {\'e}n\IeC {\'e}ration des donn\IeC {\'e}es de construction l'espace latent}{62}{section.12.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Affichage de l'espace latent ainsi que des donn\IeC {\'e}es de test}{63}{section.12.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}Gestion de projet et planning final}{64}{chapter.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}M\IeC {\'e}thodologie}{64}{section.13.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Gestion de version}{64}{section.13.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Planning final}{64}{section.13.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Conclusion}{66}{chapter*.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Annexes}{68}{part*.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Article Handicap 2016}{69}{appendix.A}
 \defcounter {refsection}{0}\relax 
 \select@language {french}
 \defcounter {refsection}{0}\relax 

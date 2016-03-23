@@ -10,6 +10,8 @@
 
 \usepackage{lipsum} %permet de générer du texte
 \usepackage{amsmath}
+\usepackage{listings}
+\usepackage{pdfpages}
 
 % on indique le département concerné (di)
 \schooldepartment{di}
@@ -106,7 +108,7 @@ En fonction de la position d'un point sur cet espace, on peut donc en déduire l
 % Attention : un chapitre sans numéro (et ses sections) ne peu(ven)t pas être référencé(s) dans le document (\label, \ref)
 \unnumberedchapter[Introduction]{Introduction}
 L'interaction entre les hommes et les machines a toujours été un enjeu de taille. Arriver à faire communiquer un ordinateur avec un être humain est un défi de tous les jours et est de plus en plus présent dans notre quotidien. Nous pouvons par exemple citer \textit{Siri} d'Apple qui permet de communiquer avec son smartphone simplement en parlant.\\ 
-C'est dans cet optique de facilitation du quotidien grâce à l'interaction avec une machine que ce projet prend place.\\
+C'est dans cette optique de facilitation du quotidien grâce à l'interaction avec une machine que ce projet prend place.\\
 \\
 Le Projet de Recherche et Développement (anciennement Projet de Fin d'Études) est un projet se déroulant durant toute la 5ème année de master ingénieur au sein de l'école Polytech Tours. Ce rapport va présenter les travaux que j'ai effectué durant toute la durée de ce projet.\\
 \\
@@ -591,6 +593,7 @@ Tous les enregistrements ont été réalisés avec 15 caméras (7 par participan
 Cependant, sur cette base de données, aucune notion de FACS ni d'AUs n'est présente, les données sont labellisées en fonction du ressenti et de l'auto-évaluation réalisée par les participants..
 
 \subsubsection{HCI Tagging \cite{tagging1} \cite{tagging2}}
+\label{hci-tagging}
 C'est avec cette base de données que j'ai travaillé à la réalisation de mon projet.\\\\
 Créée par la même équipe que celle qui a créée MHI Mimicry, cette base de données se compose de 27 participants (11 hommes, 16 femmes) de 19 à 40 ans.\\
 Elle est divisée en 2 parties: la première partie contient 20 vidéos et la deuxième 28 vidéos et 14 images.\\
@@ -1103,28 +1106,29 @@ Pour l'instant, une fonctionnalité du programme est de pouvoir naviguer dans ce
 \label{chap:chap_planning}
 
 \section{Planning du projet}
+\label{sec:planning}
 Pour la réalisation de ce projet, j'ai divisé mon travail à réaliser en plusieurs tâches, chaque tâche ayant une date limite pour que le projet soit fini en temps et en heure.\\
 Je vais donc maintenant vous présenter ce planning avec ces tâches sous forme de tableaux car plus simple à lire qu'une petite image avec un diagramme de Gantt.
 
-\begin{Table}{tab:planning}{Planning du projet}
-	\begin{tabular}{|p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{1cm}|p{2cm}|}
+\begin{Table}{tab:planningPrev}{Planning du projet}
+	\begin{tabular}{|p{5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 		\hline
-		\multicolumn{6}{|c|}{\textbf{Partie Recherche}}\\\hline
-		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Statut} &\textbf{Livrable}\\\hline
-		Comparaison 2D VS 3D &16/09/15 &1 semaine &24/09/15 &Fini & Compte-rendu\\\hline
-		Architecture &23/09/15 &1 semaine &01/09/15 &Fini  & Powerpoint\\\hline
-		Étude techniques extraction de \textit{features} &30/09/15 &6 semaines &12/11/15 &Fini & Powerpoint\\\hline
-		Étude bases de données &28/10/15 &1 semaine &05/11/15 &Fini & Powerpoint\\\hline
-		Étude article/programme Vitale et al. &19/11/15 &7 semaines &07/01/16 &En Cours & \\\hline
-		Rédaction rapport de recherche &08/10/15 &13 semaines &05/01/16 &Fini & Rapport \LaTeX\\\hline
-		Préparation soutenance &05/01/16 &1 semaine &14/01/16 &A Faire & Powerpoint\\\hline
+		\multicolumn{5}{|c|}{\textbf{Partie Recherche (réel)}}\\\hline
+		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Livrable}\\\hline
+		Comparaison 2D VS 3D &16/09/15 &1 semaine &24/09/15 & Compte-rendu\\\hline
+		Architecture &23/09/15 &1 semaine &01/09/15 & Powerpoint\\\hline
+		Étude techniques extraction de \textit{features} &30/09/15 &6 semaines &12/11/15 & Powerpoint\\\hline
+		Étude bases de données &28/10/15 &1 semaine &05/11/15 & Powerpoint\\\hline
+		Étude article/programme Vitale et al. &19/11/15 &7 semaines &07/01/16 & \\\hline
+		Rédaction rapport de recherche &08/10/15 &13 semaines &05/01/16 & Rapport \LaTeX\\\hline
+		Préparation soutenance &05/01/16 &1 semaine &14/01/16 & Powerpoint\\\hline
 		\hline
-		\multicolumn{6}{|c|}{\textbf{Partie Développement (prévision)}}\\\hline
-		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Statut} &\textbf{Livrable}\\\hline
-		Identification des modifications &14/01/16 &2 semaines &02/02/16 &A Faire & Cahier de modifications\\\hline
-		Réalisation des modifications &03/02/16 &4 semaines &03/03/16 &A Faire & \\\hline
-		Rédaction rapport développement &27/01/16 &9 semaines &24/03/16 &A Faire & Rapport \LaTeX\\\hline
-		Préparation soutenance &24/03/16 &1 semaine &01/04/16 &A Faire & Powerpoint\\\hline
+		\multicolumn{5}{|c|}{\textbf{Partie Développement (prévision)}}\\\hline
+		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Livrable}\\\hline
+		Identification des modifications &14/01/16 &2 semaines &02/02/16 & \\\hline
+		Réalisation des modifications &03/02/16 &4 semaines &03/03/16 & \\\hline
+		Rédaction rapport développement &27/01/16 &9 semaines &24/03/16 & Rapport \LaTeX\\\hline
+		Préparation soutenance &24/03/16 &1 semaine &01/04/16 & Powerpoint\\\hline
 	\end{tabular}
 \end{Table}
 
@@ -1162,18 +1166,51 @@ Ce Trello n'est que pour mon utilisation personnelle et n'est pas partagé avec 
 \chapter{Identifications des modifications}
 Pour réaliser notre application de reconnaissance d'émotions, mes tuteurs pédagogiques et moi même avons donc choisi de reprendre le programme réalisé par Vitale et al. présenté précédemment.\\
 Grâce à un entretien Skype réalisé avec Giuseppe Boccignone, un des auteurs de l'article \cite{italiens}, nous avons pu identifier les modifications et obtenir certaines pistes concernant leurs implémentations.\\
-Ces modifications sont au nombres de 5 :
+Ces modifications sont au nombres de 4 :
 \begin{itemize}
-\item utiliser des images de la base de données HCI Tagging pou créer la base d'apprentissage ainsi que la base de test
+\item utiliser des images de la base de données HCI Tagging pour créer la base d'apprentissage ainsi que la base de test
 \item changer la représentation des données, passer d'une représentation pixellique à une représentation vectorielle
 \item utiliser l'algorithme FGPLVM (Faster GPLVM) pour remplacer l'algorithme GPLVM et donc obtenir des résultats plus rapides
-\item comparer les trajectoires des différentes émotions dans l'espace latent pour trouver la plus probable
-\item migrer le programme de Matlab vers Python
+\item comparer les trajectoires des différentes émotions dans l'espace latent pour trouver la plus probable\\
 \end{itemize}
+
+Une migration vers le langage Python a également été proposée mais par manque de temps et de compétences dans ce langage, j'ai préféré continuer le projet en Matlab.
+\newpage
+
+\section{Changement de la base d'apprentissage}
+D'ans le programme d'origine, la base d'apprentissage permettant de construire l'espace latent se composait de d'une soixantaine d'images de taille 29*19 pixels.\\
+Du fait de la résolution de ces images, elles étaient difficilement exploitables pour mon projet.\\
+Ave mes encadrants, nous avosn décidé e nous servir de la base HCI-Tagging, présentée précédemment (cf \autoref{hci-tagging}), pour récupérer de nouvelles images. Ces images auront donc une résolution plus importante puisqu'elles seront de taille 780*580 pixels.\\
+Il a également été décidé d'extraire plusieurs images consécutives pour chaque émotions plutôt qu'une seule, ceci dans le but de pouvoir représenter l'évolution d'une émotion au cours du temps grâce à la représentation d'une trajectoire dans l'espace latent.
+
+\section{Changement de la représentation des données}
+Une fois la nouvelle base d'apprentissage définie, je me suis intéressé à la représentation des données et donc de l'information portée par les images de la base.\\
+Dans le programme d'origine, chaque pixel de chaque image était analysé et via l'algorithme de \textbf{Principal Component Analysis} (PCA, \cite{book_pca}), les pixels représentants un réel apport d'information étaient retournés. C'était ensuite ces pixels qui étaient analysés pour pouvoir construire l'espace latent.\\
+Cependant l'algorithme du PCA est très chronophage et c'est donc pour cela que les images de la base d'apprentissage d'origine étaient de petite taille (29*19 pixels). Il était bien entendu impossible d'utiliser cette technique avec des images de taille 780*580 pixels comme les nôtres car cela représenterait 452 400 pixels à faire analyser par le PCA.\\
+Il devenait alors évident d'abandonner cette représentation pixellique pour une autre plus adapté.\\
+\\
+Après concertation avec mes encadrants, nous avons décider d'utiliser la position des \textit{features} des visages et de faire analyser le vecteur des positions de chaque point à notre programme.
+
+\section{Utilisation de l'algorithme F-GPLVM}
+Le programme d'origine utilisait l'algorithme GPLVM développé par Neil Lawrence \cite{lawrence2004} \cite{gplvm_github} en 2004, et il a donc été cité la possibilité de passer à sa version supérieur, c'est-à-dire le FGPLVM \cite{fgplvm_github}, également développé par Lawrence en 2007.\\
+Cela vous me permettre, comme son nom l'indique, d'avoir des résultats plus rapidement mais également de pouvoir rajouter des contraintes ainsi que du dynamisme sur mes variables latentes pour pouvoir obtenir des trajectoires plus lisses dans l'espace latent.
+
+\section{Représentation des données sous formes de trajectoires}
+Comme introduit dans les sections précédentes, nous allons utiliser des trajectoires pour représenter les émotions dans l'espace latent plutôt que de simples points.\\
+Cela est dû à une raison principalement : cela nous permet d'avoir l'évolution de l'émotion au cours du temps ce qui est beaucoup plus fidèle à la réalité.\\
+En effet, personne ne passe directement d'un état neutre à un grand sourire, il y a	 une progression dans son expression et c'est donc cette progression que permet de définir les trajectoires.
+
+
+\chapter{Rédaction de l'article scientifique pour la conférence "Handicap 2016" de l'IFRATH}
+Après avoir identifié les modifications nécessaires à apporter au programme, j'ai écris en collaboration avec Donatello Conte, Mohamed Slimane et Giuseppe Boccignone l'article \textit{Une nouvelle approche à la détection d'émotions pour l'aide à l'interaction homme-machine chez les personnes handicapées}.\\
+Cet article a été soumis à validation pour la conférence "Handicap 2016" de l'IFRATH le 10 février et nous obtiendrons la réponse, si oui ou non il sera publié, le 8 avril.\\
+Vous pouvez retrouver l'article en annexe de ce rapport (\autoref{annexArticle}).
+
+\chapter{Réalisations des \mbox{modifications}}
 \newpage
 
 \section{Création de la nouvelle base d'apprentissage}
-Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vidéos se trouvant dans la base HCI-Tagging \cite{tagging1}\cite{tagging2}. Pour chaque émotion, j'ai donc extrait 15 frames consécutives (1 frame extraite toutes les 50 frames) de la vidéo ce qui va nous permettre de représenter l'évolution de l'émotion au cours du temps. Les vidéos utilisées ainsi que l'émotion associée se trouve dans le \autoref{tab:base_app}.
+Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vidéos se trouvant dans la base HCI-Tagging \cite{tagging1}\cite{tagging2}. Pour chaque émotion, j'ai extrait 15 frames consécutives (1 frame extraite toutes les 50 frames) de la vidéo ce qui va nous permettre de représenter l'évolution de l'émotion au cours du temps. Les vidéos utilisées ainsi que l'émotion associée se trouve dans le \autoref{tab:base_app}.
 
 \begin{Table}{tab:base_app}{Données utilisées dans notre base d'apprentissage}
 	\begin{tabular}{|c|c|c|c|}
@@ -1188,21 +1225,15 @@ Pour créer la base d'apprentissage, j'ai donc utilisé des images issues des vi
 \end{Table}
 
 Ces images sont de taille 780*580 pixels.\\
-J'ai décidé de ne pas utilisé l'émotion de la peur car je n'ai trouvé aucune données réellement exploitables dans la base HCI-Tagging pour cette émotion. En effet, très peu de vidéos représentant la peur se trouve dans cette base et les réactions des sujets soumis à cette émotion sont imperceptibles par rapport à leur état neutre. Donc pour ne pas "fausser" mon application, j'ai décidé de ne pas l'utiliser.\\
+J'ai décidé de ne pas utiliser l'émotion de la peur car je n'ai trouvé aucune données réellement exploitables dans la base HCI-Tagging pour cette émotion. En effet, très peu de vidéos représentant la peur se trouve dans cette base et les réactions des sujets soumis à cette émotion sont imperceptibles par rapport à leur état neutre. Donc pour ne pas "fausser" mon application, j'ai décidé de ne pas l'utiliser.\\
 Les frames que j'ai utilisé pour représenter l'émotion de la joie se trouve en \autoref{ex_base_appr}.
 
 \begin{Figure}{ex_base_appr}{Images de notre base d'apprentissage pour l'émotion de la joie}
  \pgfimage{images/ex_base_apprentissage.png}
 \end{Figure}
 
-\section{Changement de la représentation des données}
-Une fois la nouvelle base d'apprentissage définie, je me suis intéressé à la représentation des données et donc de l'information portée par les images de la base.\\
-Dans le programme d'origine, chaque pixel de chaque image était analysé et via l'algorithme de \textbf{Principal Component Analysis} (PCA, \cite{book_pca}), les pixels représentant un réel apport d'information étaient retournés. C'était ensuite ces pixels qui étaient analysés pour pouvoir construire l'espace latent.\\
-Cependant l'algorithme du PCA est très chronophage et c'est donc pour cela que les images de la base d'apprentissage d'origine étaient de petite taille (29*19 pixels). Il était bien entendu impossible d'utiliser cette technique avec des images de taille 780*580 pixels comme les nôtres car cela représenterait 452 400 pixels à faire analyser par le PCA.\\
-Il devenait alors évident d'abandonner cette représentation pixellique pour une autre plus adapté.\\
-\\
-Après concertation avec mes encadrants, nous avons décider d'utiliser la position des \textit{features} des visages.\\
-Pour cela, j'ai tout d'abord dû rechercher un programme permettant de trouver la position de ces \textit{features} en Matlab. Après en avoir testé plusieurs, j'ai choisi le programme Matlab réalisé par Akshay Asthana dans le cadre de son article \cite{asthana}. Ce programme permet d'extraire les coordonnées des positions de 66 features d'un visage. Il permet aussi d'extraire des données sur l'orientation du visage, même si cela ne nous sera pas utile pour ce projet.\\
+\section{Représenter les données via la position des \textit{features}}
+Vu que je vais utiliser la position des \textit{features} des visages, j'ai tout d'abord dû rechercher un programme permettant de trouver leurs positions en Matlab. Après en avoir testé plusieurs, j'ai choisi le programme Matlab réalisé par Akshay Asthana dans le cadre de son article \cite{asthana}. Ce programme permet d'extraire les coordonnées des positions de 66 features d'un visage. Il permet aussi d'extraire des données sur l'orientation du visage, même si cela ne nous sera pas utile pour ce projet.\\
 Les 66 points du visage trouvés via ce programme se trouve en \autoref{asthana_img}.
 
 \begin{Figure}{asthana_img}{66 features du visage trouvé grâce au programme de A .Asthana}
@@ -1214,31 +1245,323 @@ Ce programme est très polyvalent car il nous permet, si nous le souhaitons, de 
 En plus de ces coordonnées, nous avons également discuté de la possibilité d'utiliser la distance entre ces points plutôt que leurs coordonnées pour représenter ces données. Plus clairement, calculer la distance entre un point et tous les autres pour ensuite récupérer les K distances les plus petites, qui vont donc correspondre en toute logique aux K voisins les plus proches du point choisi au départ.\\
 Cette représentation permettrait de représenter le déplacement des points d'un visage par rapport à ses voisins et non pas seulement leur déplacement dans l'espace.\\
 Après plusieurs tests de construction de l'espace avec ce type de données en changeant la valeur de K, nous sommes arrivés à la conclusion que K=10 était la meilleur solution pour la représentation des données sur l'espace latent.
+\newpage
+Le code Matlab réalisant ces opérations est le suivant: 
+\begin{matlabsource}
+\label{codeDetection}
+bbox_method = 1; % Permet de choisir entre les différents modes de détection 
+% 0: Méthode basée sur les arbres, 1: Détecteur de visage de Matlab (ou détecteur externe), 2: Utilisation de boîtes prédéfinies
+visualize=0; % 1 : visualiser l'image avec les 66 points placés, 0 : ne pas visualiser l'image
+
+%------------------------------------------------%
+% Chargement des images au format numeroEmotion.numeroFrame.png
+index=0; % Indice qui va permettre d'écrire les données dans data
+for j=1:5 % Pour chaque émotion ...
+    for i=1:15 % Pour chaque frame ...
+        data(index+i).name = strcat(num2str(j),'.',num2str(i),'.png');% Récupération du nom
+        data(index+i).img = im2double(imread(strcat(num2str(j),'.',num2str(i),'.png')))% Récupération de l'image
+        data(index+i).points = []; % Va contenir les coordonnées des 66 points
+        data(index+i).pose = []; % Va contenir l'orientation du visage [Pitch;Yaw;Roll]
+    end
+    index=index+15; %Fin des 15 frames d'une émotion donc incrémentation de 15 de l'indice pour ne pas réécrire sur les données précédentes
+end
+%------------------------------------------------%
+
+load('model/DRMF_Model.mat'); % Chargement du modèle permettant la détection   
+data=DRMF(clm_model,data,bbox_method,visualize); % Lancement de la détection des 66 points
+    
+%------------------------------------------------%
+for i=1:size(data,2) % Pour chaque image, toute émotion confondue ...
+    dist = calcKDistance(10,data(i).points); % Calcul des distances des 10 points les plus proches
+    datas(i)= struct('points',data(i).points,'dist',dist); % Ajout à la structure datas les coordonnées et les distances
+end
+
+save pointsAllK10.mat datas; % Sauvegarde de la structure datas dans le fichier pointsAllK10
+disp('DONE');
+\end{matlabsource}
+
+Au final, nous arrivons donc à deux types de représentations différentes : les coordonnées des points et les distances entre les 10 plus proches voisins. Ces données sont sauvegardés dans une structure Matlab que j'ai appelé \textbf{datas} et qui se trouve dans le fichier \textit{pointsAllK10.mat} qui sera chargé via le programme de FGPLVM. Les données à l'intérieur de la structure \textbf{datas} sont séparés en 2 colonnes :  la colonne \textbf{points} correspondant aux coordonnées (x,y) des 66 \textit{features}, et la colonne \textbf{dist} correspondant aux distances de chaque points avec ses 10 plus proches voisins. Cette représentation est illustré en \autoref{datas}.\\
+
+\begin{Figure}{datas}{Structure utilisée pour stocker les données}
+ \pgfimage{images/datas.png}
+\end{Figure}
+
+\section{Utilisation de l'algorithme F-GPLVM (Faster GPLVM) pour créer l'espace latent}
+Là où le programme d'origine utilisait l'algorithme GPLVM développé par Neil Lawrence en 2004, je vais utiliser sa version améliorée, FGPLVM, également développé par Lawrence en 2007.\\
+Ce programme est très volumineux et utilise plus de 15 librairies annexes, également toutes créées par Lawrence. Le programme complet avec toutes les librairies peut être trouvé à cette adresse \cite{gpmaster}.\\
 \\
-Au final, nous arrivons donc à deux types de représentations différentes : les coordonnées des points et les distances entre les 10 plus proches voisins. Ces données sont sauvegardés dans un fichier \textit{.mat} qui sera chargé via le programme de FGPLVM.
+Je vais maintenant vous expliquer son fonctionnement globale (dans le cas où l'on se sert des coordonnées des 66 \textit{features}), sans rentrer dans des détails bien trop compliqués.\\
+Tout d'abord, nous allons charger les données sauvegardées précédemment dans le fichier \textit{pointsAllK10.mat}, via la fonction \textbf{lvmLoadData(nom\_ dataset)}. Cette fonction prend en paramètres le nom des données à charger et va renvoyer 2 choses:
+\begin{itemize}
+	\item Y : correspondra à nos coordonnées des 66 points de chaque image
+	\item lbls : les labels correspondant aux émotions pour les classifier\\
+\end{itemize}
+Le code chargeant les données est le suivant:
+\begin{matlabsource}
+load pointsAllK10.mat; % chargement des données contenues dans le fichier
+N=size(datas,2); % nombres de données (images), ici 75
+L=size(datas(1).points,1);% nombres de points, ici 66
+C=size(datas(1).points,2);% dimension des coordonnées, ici 2
+data =zeros(N,L*C);
+lbls={'joie','degout','tristesse','colere','surprise'}; % labels correspondant aux émotions
+for i=1:N % Pour chaque images...
+	data(i,:)=reshape(datas(i).points,L*C,1);% on redimensionne ses coordonnées 66*2 en 132*1
+end
+Y=data; % taille finale = 75*132
+\end{matlabsource}
 
-\section{Utilisation de l'algorithme F-GPLVM (Faster GPLVM)}
-Là où le programme d'origine utilisait l'algorithme GPLVM développé par Neil Lawrence \cite{lawrence2004} \cite{gplvm_github} en 2004, je vais utiliser sa version améliorée, FGPLVM \cite{fgplvm_github}, également développé par Lawrence en 2007.\\
+Nous allons ensuite créer le modèle de données que le programme utilisera tout au long de la construction de l'espace grâce à ce que nous venons de récupérer. La fonction \textbf{fgplvmCreate(q, d, Y, options)} permet de nous renvoyer le modèle initialisé et prend en paramètres:
+\begin{itemize}
+\item q: la dimension souhaitée de l'espace latent, dans notre cas 2
+\item d: le nombre d'observations (images), ici 75
+\item Y: les données récupérées via \textbf{lvmLoadData()}
+\item options: une structure contenant les options par défaut pour le type d'approximation choisi, ici "ftc"\\
+\end{itemize}
 
+Une fois le modèle créé, nous y ajoutons du dynamisme. Cela va permettre de lisser les courbes obtenues et d'avoir des résultats plus précis. Pour cela il nous faut définir des options supplémentaires, tel que le type de noyau qui va être utilisé.
+
+\begin{matlabsource}
+% Add dynamics model.
+options = gpOptions('ftc');
+options.kern = kernCreate(model.X, {'rbf', 'white'});
+options.kern.comp{1}.inverseWidth = 0.2;
+% This gives signal to noise of 0.1:1e-3 or 100:1.
+options.kern.comp{1}.variance = 0.1^2;
+options.kern.comp{2}.variance = 1e-3^2;
+model = fgplvmAddDynamics(model, 'gp', options);
+\end{matlabsource}
+
+Une fois cela fait, il ne nous reste plus qu'à optimiser le modèle pour obtenir la position finale de nos points dans l'espace latent. Il nous suffit de choisir le nombre d'itération maximal qui va être utilisé pour l'optimisation. Je me suis aperçu, au cours des différents tests que j'ai fait, qu'au dessus de 100 itérations, les différences observées étaient minimes. J'ai donc choisi de bloqué le nombre d'itérations à 100 pour le reste de mon projet.
+\begin{matlabsource}
+% Optimise the model.
+iters = 100;
+display = 1;
+model = fgplvmOptimise(model, display, iters);
+\end{matlabsource}
+
+Je fini ensuite par sauvegarder le modèle obtenu, ainsi que les labels des émotions, dans un fichier \textbf{model.mat} qui va donc contenir toutes les données de mon modèle optimisé permettant de construire l'espace latent.
 
 \section{Représenter et comparer des trajectoires dans l'espace latent}
+Maintenant que nous avons nos données, il ne nous reste plus qu'à les utiliser pour construire l'espace latent.
 
-\section{Migration de Matlab vers Python}
+\paragraph{Construction et affichage de l'espace latent}
+Pour cela, seul l'appel à une fonction est nécessaire : \textit{lvmVisualise(model, YLbls, visualiseFunction, visualiseModify, varargin}. Ses paramètre sont notre modèle, nos labels d'émotions, la fonction de visualisation utilisée et la fonction de modification de la visualisation utilisée. Dans mon cas, j'appelle donc la fonction de cette façon :
+\begin{matlabsource}
+lvmVisualise(model, lbls, ['vector' 'Visualise'], ['vector' 'Modify']);
+\end{matlabsource}
+Cette fonction va donc faire le nécessaire pour créer l'espace latent, avec entre autres le bon dimensionnement des axes. La partie qui nous intéresse se trouve dans le fichier \textbf{lvmTwoDPlot.m} et est la suivante:
+\begin{matlabsource}
+labelNo=1;
+deb=1;
+for i = 1:(size(X, 1)/15)
+    returnVal = [returnVal; plot(X(deb:15*i, 1), X(deb:15*i, 2), symbol{labelNo}, 'linewidth',1)];
+    if labelsString
+        textReturnVal = [textReturnVal; text(X(15*i, 1), X(15*i, 2), ['   ' lbl{i}])];
+    end
+    labelNo = labelNo+1;
+    deb=(15*i)+1;
+end
+\end{matlabsource}
+C'est dans cette boucle que je vais afficher les trajectoires correspondnats aux émotions de la base d'apprentissage.\\
+\textit{size(X, 1)/15} va nous retourner le nombre d'émotions contenu dans notre base d'apprentissage, car chaque émotion se compose de 15 images et donc de 15 points à afficher.\\
+Je stocke ensuite les courbes à tracer dans la variable \textbf{returnVal} grâce à la commande \textit{plot()} qui permet de tracer des courbes en Matlab. Je lui passe comme paramètres les coordonnées en x des 15 points de l'émotion, les coordonnées en y, le symbol avec lequel s'affichera la trajectoire ainsi qu'un paramètre spécifiant l'épaisseur du trait, ici défini à 1.\\
+La variable \textbf{textReturnVal} va me permettre d'afficher le nom de l'émotion à côté de sa courbe, plus précisément à côté de son dernier point, d'où le fait du choix \textit{15*i} correspondant au dernier point de la courbe. Le nom de l'émotion est donc récupéré depuis \textit{lbl} qui contient tous les labels des émotions.\\
+Je fini par incrémenter correctement mes variables pour que je puisse bien parcourir toutes les données présentes dans ma base d'apprentissage.\\
+\\
+Au final, en utilisant les coordonnées des 66 points comme données pris en compte pour la création du modèle, l'espace latent résultant est présenté en \autoref{latent}.\\
+\begin{Figure}{latent}{Espace latent permettant de représenter les émotions.}
+ \pgfimage[width=\textwidth]{images/latent.png}
+\end{Figure}
 
+Maintenant que l'espace est construit, il faut encore que j'arrive à afficher une trajectoire supplémentaire correspondant à des données prises dans une base de tests.
 
-\chapter{Réalisations des modifications}
+\paragraph{Affichage d'une trajectoire à classifier dans l'espace latent}
+Il n'est pas possible de faire passer ces données par le même parcours qu'on suivit celles de l'apprentissage puisqu'il n'est plus question maintenant de construire l'espace mais seulement de projeter des données dessus.\\
+Après avoir passé plusieurs semaines bloqués sur ce point, pour avoir la solution à ce soucis, j'ai demandé conseil à Giuseppe Boccignone. Grâce à son aide précieuse, j'ai pu découvrir exactement la fonction qui résolvait ce problème : \textit{fgplvmOptimisePoint(model, x, y, display, iters)}. Elle prend en paramètre le modèle ayant permis de construire le modèle, des coordonnées d'initialisation x, les données pour lesquels nous souhaitons trouver les coordonnées dans l'espace, un booléen pour l'affichage ou non des itérations, ainsi que le nombre d'itération pour optimiser les valeurs.\\
+La particularité de cette fonction est le fait de devoir lui donner des coordonnées d'initialisation pour obtenir la position des données à optimiser y dans l'espace.\\
+Pour récupérer cette position d'initialisation, j'ai créé la fonction suivante :
+\begin{matlabsource}
+function initXPos = getNearestValue(Ymodel, Y)
+    ytemp = 0;
+    dist = Inf(1);
+    for i=1:size(Ymodel,1)
+        D = sqrt(sum((Ymodel(i,:) - Y) .^ 2));
+        if(D < dist)
+            dist = D;
+            ytemp = i;
+        end
+    end
+    initXPos = ytemp;
+end
+\end{matlabsource}
+Elle prend donc en paramètre les données brutes ayant servi à construire l'espace Ymodel et les données à classifier Y. Je vais donc chercher à laquelle des données d'Ymodel se rapproche le plus notre donnée Y. Je calcule donc simplement la distance euclidienne et à la fin de la fonction je retourne l'indice de la donnée la plus proche.\\
+Cette indice va ensuite me permettre de récupérer, dans le modèle de l'espace, les coordonnée du point correspondnat dans l'espace latent et ces donc ces coordonnées qui vont servir ensuite de point d'initialisation pour la fonction \textit{fgplvmOptimisePoint()}.\\
+En appliquant cette dernière aux 15 données d'une émotion de test prise en entrée, j'obtiens les 15 couples de coordonnées correspondant à leur position dans l'espace latent.\\
+\\
+Pour vérifier le bon fonctionnement du programme, j'ai choisi de reprendre les données correspondant à l'émotion de la joie qui ont servi pour construire l'espace latent. Selon toute logique, les points étant les mêmes, ils devraient se superposer. Le résultat de ce test est en \autoref{test_latent_joie}.\\
+\begin{Figure}{test_latent_joie}{Test: représentation de l'émotion de la joie utilisée lors de la construction de l'espace latent}
+ \pgfimage[width=\textwidth]{images/test_latent_joie.png}
+\end{Figure}
+Représenté par des triangles bleus clairs, nous pouvons nous apercevoir que la superposition avec l'émotion de la joie apprise lors de la construction n'est pas totale. Cependant, et cela est le plus important, la forme de la trajectoire est sensiblement la même. En effet, nous ne souhaitons pas forcément que les points se superposent mais plutôt que les 2 trajectoires aient la même forme dans le même espace.
 
+\paragraph{Classification des trajectoires}
+Je n'ai malheureusement pas eu le temps d'implémenter une solution permettant de comparer 2 trajectoires basé sur leur forme.\\
+Cependant, j'ai tout de même mené plusieurs recherches sur le sujet et trouvé quelques algorithmes pouvant être intéressant.\\
+\\
+Tout d'abord Srivastava et al. présente en 2011 \cite{srivastava2011} une distance entre trajectoires permettant de détecter efficacement des formes similaires mais elle impose à ces dernières d'être de la même longueur. Elle est cependant indépendante de la distance physique entre les 2 trajectoires.\\
+Ensuite, Lin et Su en 2005 \cite{linsu2005} ont créé la distance OWD, One-Way-Distance, qui elle ne se base que sur la forme des trajectoires pour les comparer.\\
+Besse et al. \cite{besse} ont présenté une modification de la distance OWD de Lin et Su. Elle se base sur la distance physique entre les 2 trajectoires, sur leur forme et sur leur "indépendance temporelle".\\
+%J'ai également trouvé l'article de Yanagisawa et al.(pas sûr de celle là, mettre annote dans bibtex \cite{yanagisawa2003}) qui présentent eux aussi une distance entre 2 trajectoires basée sur leur forme.\\
+\\
+Au final, la distance qui m'a paru la plus adaptée pour notre problème est celle introduite par Lin et Su en 2005 : \textbf{OWD}. Vu qu'elle ne se base que sur la forme des trajectoires, elle s'adapte parfaitement à notre classification d'émotion. En effet, les émotions que nous essayons de classifier ne sont pas forcément à la même position que celles apprises lors de la création de l'espace, néanmoins elles sont censées avoir la même forme, ou du moins une forme similaire.
+
+\chapter{Tests et résultats}
+Comme je l'ai dit précédemment je n'ai malheureusement pas eu le temps d'implémenter une fonction permettant de classifier les émotions en fonction de la forme de leur trajectoire.\\
+Cependant, j'ai pris le temps de faire la base de test qui va ensuite permettre de réaliser une matrice de confusion décrivant l'efficacité de mon système de reconnaissance faciale d'émotions.\\
+Ma base de test est définie dans le \autoref{tab:base_test}
+\begin{Table}{tab:base_test}{Données utilisées dans ma base de test}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		  &\textbf{N$^{o}$ sujet} &\textbf{N$^{o}$ session}&\textbf{Émotion} \\\hline
+		1& 1 & 2& dégoût\\\hline
+		2& 3 & 274& dégoût\\\hline
+		3& 6 & 652& dégoût\\\hline
+		4& 7 & 792& dégoût\\\hline
+		5& 14 & 1720& dégoût\\\hline
+		6& 1 & 8& joie\\\hline
+		7& 1 & 12& joie\\\hline
+		8& 6 & 654& joie\\\hline
+		9& 7 & 782& joie\\\hline
+		10& 14 & 1692& joie\\\hline
+		11& 1 & 4& surprise\\\hline
+		12& 1 & 22& surprise\\\hline
+		13& 1 & 24& tristesse\\\hline
+		14& 1 & 32& tristesse\\\hline
+		15& 3 & 262& tristesse\\\hline
+		16& 7 & 790& tristesse\\\hline
+		17& 14 & 1704& tristesse\\\hline
+		18& 14 & 1702& colère\\\hline
+	\end{tabular}
+\end{Table}
+
+J'ai également mesuré le temps total mis pour afficher l'espace latent avec des données de tests. Matlab dispose d'une fonction permettant de mesurer automatiquement ce temps, ainsi que le temps passé dans chacune des fonctions appelées. Les résultats obtenues sont présentés en \autoref{fonctions_time}.\\
+\begin{Figure}{fonctions_time}{Temps total passé dans chaque fonction lors de l'affichage de l'espace latent avec des données de test}
+ \pgfimage[width=\textwidth]{images/fonctions_time.png}
+\end{Figure}
+Le temps total de cette partie de l'application est donc d'environ 3.5 secondes, ce qui est correct. Il manque cependant le temps de récupération des données des \textit{features} du visage ainsi que le temps de comparaison de trajectoires, non implémenté à l'heure actuelle.
+
+\chapter{Notice d'utilisation de mon application}
+Pour que mon projet puisse être repris par la suite pour être amélioré, je vais maintenant présenter un mode d'emploi permettant de l'utiliser.\\
+J'ai découpé ce mode d'emploi en 3 parties : 
+\begin{itemize}
+\item L'extraction des coordonnées des \textit{features} des visages
+\item La génération de l'espace latent grâce aux données de la base d'apprentissage
+\item L'affichage de l'espace latent avec des données de test supplémentaires
+\end{itemize}
+
+\newpage
+\section{Extraction des coordonnées des \textit{features} des visages}
+L'extraction de coordonnées se passe dans le fichier \textit{extractFetauresCoordinates.m}.\\
+\\
+Il vous faut tout d'abord spécifier le type de détecteur de visage que vous souhaitez utiliser via la variable \textbf{bbox\_ method}. Les possibilités sont les suivantes:
+\begin{itemize}
+\item 0: Détecteur de visage basé sur des arbres. Très précis et adapté pour rechercher des visages dans des images chargés mais extrêmement lent.
+\item 1: Détecteur de visage Matlab ou votre propre détecteur de visage. POur appliquer votre propre détecteur de visage, il vous faudra modifier le fichier \textit{External\_ Face\_ Detector.m} se trouvant dans le dossier \textit{features extraction}.
+\item 2: L'utilisation de boîtes précalculées.\\
+\end{itemize}
+Vous devez ensuite renseigner si vous souhaitez ou non visualiser sur chaque image la détection des features avec \textbf{visualize}.\\
+\\
+Une fois ces paramètres choisi, vous devrez spécifier le nombre de différentes images par émotions (\textbf{numberImages}, 15 dans mon cas) ainsi que le nombre d'émotions qui vont être analysé (\textbf{numberEmotions}, 5 dans mon cas).\\
+Également à spécifier, le nombres des K plus proches distances entre chaque points que vous souhaitez calculer. Si vous ne souhaitez pas calculer cela, mettez simplement le paramètre \textbf{computeNearestDistances} à 0.\\
+\\
+Une fois tous les paramètres renseigné, lancer le programme. Lorsqu'il aura fini, le message "DONE" s'affichera et vous pourrez trouver toutes les données qui ont été calculé dans le fichier \textit{coordinates.mat}.
+
+\section{Génération des données de construction l'espace latent}
+La génération des données de construction l'espace latent se passe dans le fichier \textit{genLatentSpace.m}.\\
+\\
+Il vous faut tout d'abord donner le nom du fichier dans lequel les données précédemment récupérées ont été sauvegardé. Si vous n'y avait pas touché dans l'étape précédente, laissez la valeur par défaut de \textbf{coordinates.mat}.\\
+\\
+Vous devez ensuite définir les valeurs de labels des émotions qui vont être apprises à l'intérieur de la variable \textbf{lbls}, en faisant attention à l'ordre de ces labels. Ils doivent être définis entre simples guillemets séparés par des virgules, le tout compris entre accolades.\\
+\\
+Également à définir, le nombre d'itérations que vous souhaitez utiliser pour optimiser les valeurs, via \textbf{iters}. Par défaut, cette valeur est 100.\\
+\\
+Pour finir, il vous faut spécifier, grâce au booléen \textbf{getKDist}, avec quelle donnée vous souhaitez générer l'espace latent. En mettant cette variable à 1, vous génèrerez l'espace avec les K plus proches distances pour chaque points et en la mettant à 0, vous génèrerez l'espace grâce aux coordonnées de chaque points. Par défaut, cette valeur est 0.\\
+\\
+Information importante à préciser: vous ne devez pas changer le nom \textit{model.mat} qui va permettre de sauvegarder ces données. Si jamais vous souhaitez réellement changer ce nom de fichier, vous devrez également aller le changer dans le fichier \textit{FGPLVM/mltools/lvmTwoDPlot}, à la ligne 61.
+
+\newpage
+\section{Affichage de l'espace latent ainsi que des données de test}
+L'affichage de l'espace latent ainsi que des données de test se passe dans le fichier \textit{displayLatentSpace.m}.\\
+\\
+Vous devez tout d'abord renseigner le nom de l'objet dans lequel les données de l'émotion à tester sont sauvegardées. En effet, pour tester une émotion, il faudra également la faire passer par la phase \textit{extractFetauresCoordinates.m}.\\
+Par défaut, cette valeur est \textbf{pointsTest.mat} mais vous devrez bien évidemment la changer par le nom adéquat.\\
+\\
+Le second paramètre à spécifier est \textbf{getKDist} et est similaire à celui se trouvant dans le fichier \textit{genLatentSpace.m}. En le mettant à 1, vous utiliserez les valeurs des K plus proches distances de chaque point pour tester l'émotion de test et en la mettant à 0, vous utiliserez les coordonnées.\\
+Bien évidemment, il faut que cette variable est la même valeur dans \textit{genLatentSpace.m} et \textit{displayLatentSpace.m} pour obtenir des résultats cohérents.
+
+\chapter{Gestion de projet et planning final}
+\section{Méthodologie}
+La méthodologie que j'ai utilisé est la méthodologie agile. Je me suis fixé des objectifs consécutifs à atteindre avec des retours hebdomadaires à mes encadrants.
+
+\section{Gestion de version}
+Pour versionner mon projet, j'ai utilisé Git ainsi qu'un dépôt GitHub public \cite{githubflo}.\\
+J'ai également utilisé un dépôt GitHub pour versionner ce rapport \cite{githubflo2}.
+
+\section{Planning final}
+Je vous avais présenté le planning prévisionnel que j'avais prévu à la fin de la section de recherche de mon projet (cf \autoref{sec:planning}).\\
+Voici donc le planning réel final:
+\begin{Table}{tab:planning}{Planning du projet}
+	\begin{tabular}{|p{5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+		\hline
+		\multicolumn{5}{|c|}{\textbf{Partie Recherche}}\\\hline
+		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Livrable}\\\hline
+		Comparaison 2D VS 3D &16/09/15 &1 semaine &24/09/15 & Compte-rendu\\\hline
+		Architecture &23/09/15 &1 semaine &01/09/15 & Powerpoint\\\hline
+		Étude techniques extraction de \textit{features} &30/09/15 &6 semaines &12/11/15 & Powerpoint\\\hline
+		Étude bases de données &28/10/15 &1 semaine &05/11/15 & Powerpoint\\\hline
+		Étude article/programme Vitale et al. &19/11/15 &7 semaines &07/01/16 & \\\hline
+		Rédaction rapport de recherche &08/10/15 &13 semaines &05/01/16 & Rapport \LaTeX\\\hline
+		Préparation soutenance &05/01/16 &1 semaine &14/01/16 & Powerpoint\\\hline
+		\hline
+		\multicolumn{5}{|c|}{\textbf{Partie Développement)}}\\\hline
+		\textbf{Nom} &\textbf{Date début} &\textbf{Durée} &\textbf{Date Fin} &\textbf{Livrable}\\\hline
+		Identification des modifications &14/01/16 &2 semaines &02/02/16 & \\\hline
+		Rédaction article &20/01/16 &3 semaines &10/02/16 & \\\hline
+		Modification: Changement de la base d'apprentissage &27/01/16 &1 semaine &04/02/16 & \\\hline
+		Modification: Changement de la représentation des données &10/02/16 &3 semaines &02/03/16 & \\\hline
+		Modification: Prise en main FGPLVM &10/02/16 &2 semaines &25/02/16 & \\\hline
+		Modification: Représentation des trajectoires (apprentissage + test) &18/02/16 &4 semaines &23/03/16 & \\\hline
+		Rédaction rapport développement &17/02/16 &5 semaines &23/03/16 & Rapport \LaTeX\\\hline
+		Préparation soutenance &24/03/16 &1 semaine &31/03/16 & Powerpoint\\\hline
+	\end{tabular}
+\end{Table}
 
 \unnumberedchapter{Conclusion}
-Je tiens tout d'abord à remercier mes tuteurs académiques, Mr Mohamed SLIMANE et Mr Donatello CONTE, de m'avoir fait confiance pour la réalisation de ce projet ainsi que pour leur aide et disponibilité tout au long de ce projet.\\
-\\
 Avoir eu l'occasion de passer près de 4 mois à faire de la recherche pour ce projet a été très intéressant.\\
 Faire un état de l'art des différentes techniques et technologies disponibles pour faire de la reconnaissance faciale d'émotions m'a permis de m'ouvrir sur un monde totalement différent de ce que je connaissais jusqu'à présent.\\
-Cette première partie de mon projet de recherche et développement m'a également montré ce que cela pouvait être de faire de la recherche dans le cadre universitaire dans le but de faire de nouvelles découvertes ou de concevoir des applications concrètes pouvant aider au quotidien.\\
+La première partie de mon projet de recherche et développement m'a également montré ce que cela pouvait être de faire de la recherche dans le cadre universitaire dans le but de faire de nouvelles découvertes ou de concevoir des applications concrètes pouvant aider au quotidien.\\
 \\
-Maintenant que ces recherches sont terminées, je vais commencer le développement de l'application.
+J'ai ensuite pu, pendant 3 mois environ, développer mon application en mettant en œuvre certaines des recherches que j'ai pu faire.\\
+Le fait de récupérer un programme existant et de le modifier, en accord avec un des auteurs d'origine, a également été bénéfique. Cela m'a permis de travailler en collaboration avec une personne spécialiste dans ce domaine.\\
+\\
+Contrairement à ce qu'il avait été prévu dans le planning prévisionnel, je n'ai pas pu finir l'application à 100\% .\\
+En effet, à cause d'une difficulté que j'ai pu rencontrer et qui m'a paralysé plusieurs semaines, je n'ai pas eu le temps d'implémenter un algorithme de comparaison de trajectoire basé sur la forme. J'ai cependant pu mener des recherches sur cette partie qui vont, je l'espère, permettre une implémentation rapide et efficace.\\
+\\
+Hormis l'implémentation d'un algorithme de comparaison de trajectoire basé sur la forme, plusieurs points peuvent être améliorés dans ce programme.\\
+Tout d'abord, augmenter la base d'apprentissage et prendre plusieurs set d'images de différentes personnes pour représenter une émotion en faisant la moyenne entre chaque frame correspondantes.\\
+Cela pourrait permettre un apprentissage moins dépendant de l'expression d'un sujet pour une émotion et donc plus performant, en prenant en compte différentes expressions pour représenter la même émotion.\\
+Un second point qui pourrait être amélioré est la normalisation des données. En effet, pour l'instant nous utilisons les coordonnées des \textit{features} des visages ou les K plus proches distances entre ces points. Cependant, ces valeurs sont dépendantes de la position du visage dans l'image et également de la forme du visage de la personne.\\
+Pour remédier à cela et obtenir des valeurs moins dépendantes de la position et de la forme des visages, une normalisation des valeurs peut être effectué, en ramenant toutes les valeurs entre 0 et 1 par exemple.\\
+\\
+Pour finir, je tiens à remercier mes tuteurs académiques, Mr Mohamed SLIMANE et Mr Donatello CONTE, de m'avoir fait confiance pour la réalisation de ce projet ainsi que pour leur aide et disponibilité tout au long de ce projet. Je remercie également Mr Giuseppe Boccignone pour l'aide qu'il a pu m'apporter quand j'en avais besoin.
+
 
 \appendix
+
+\chapter{Article Handicap 2016}
+\label{annexArticle}
+Veuillez trouver ci-après l'article soumis à la conférence Handicap 2016 de l'IFRATH.
+\includepdf[pages={1-6}]{images/une-nouvelle-approche.pdf}
 
 \weeklyreport{17/09/2015}{
 	Découverte de 2 grandes méthodes de description des mouvements du visage existent : le FACS (Facial Action Coding System) mis en place par P. Ekman et w. Friesen en 1978 et le FAPU (Facial Animation Parameter Units) introduit par la norme de codage vidéo MPEG-4.\\
@@ -1343,15 +1666,20 @@ Mais classification peu efficace pour l'instant.
 	Envoi d'un mail à Giuseppe Boccignone pour lui demander des conseils et de l'aide.
 	Rédaction de la partie Développement du rapport
 }
-%\weeklyreport{10/03/2016}{
-%}
-%\weeklyreport{17/03/2016}{
-%}
-%\weeklyreport{24/03/2016}{
-%}
-
-% petite astuce pour tout citer : A NE PAS REPRODUIRE DANS VOTRE RAPPORT
-%\nocite{*}
+\weeklyreport{10/03/2016}{
+	Rédaction du rapport.\\
+	Réception de la réponse de G. Boccignone, tentative d'application de ce qu'il a dit mais sans succès donc renvoi d'un second mail
+}
+\weeklyreport{17/03/2016}{
+	Rédaction du rapport.\\
+	Réception de la seconde réponse de G. Boccignone et ce coup-ci ses conseils nous ont permis d'afficher une trajectoire de test sur l'espace latent comme il faut.\\
+	Recherche d'un algorithme permettant de comparer des trajectoires basé sur leurs formes.\\
+	Création d'une base de test pour tester la précision de notre système.
+}
+\weeklyreport{24/03/2016}{
+	Fin de rédaction du rapport.\\
+	Préparation de la soutenance.
+}
 
 
 \makelastpages

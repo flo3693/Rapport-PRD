@@ -92,11 +92,31 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Identifications des modifications}{}{chapter.8}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Images de notre base d'apprentissage pour l'\IeC {\'e}motion de la joie\relax }}{50}{figure.caption.50}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces 66 features du visage trouv\IeC {\'e} gr\IeC {\^a}ce au programme de A .Asthana\relax }}{51}{figure.caption.51}
+\contentsline {chapter}{\numberline {10}R\IeC {\'e}alisations des \unhbox \voidb@x \hbox {modifications}}{}{chapter.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Images de notre base d'apprentissage pour l'\IeC {\'e}motion de la joie\relax }}{56}{figure.caption.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2}{\ignorespaces 66 features du visage trouv\IeC {\'e} gr\IeC {\^a}ce au programme de A .Asthana\relax }}{57}{figure.caption.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3}{\ignorespaces Structure utilis\IeC {\'e}e pour stocker les donn\IeC {\'e}es\relax }}{57}{figure.caption.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces Espace latent permettant de repr\IeC {\'e}senter les \IeC {\'e}motions.\relax }}{58}{figure.caption.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Test: repr\IeC {\'e}sentation de l'\IeC {\'e}motion de la joie utilis\IeC {\'e}e lors de la construction de l'espace latent\relax }}{58}{figure.caption.56}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Tests et r\IeC {\'e}sultats}{}{chapter.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Temps total pass\IeC {\'e} dans chaque fonction lors de l'affichage de l'espace latent avec des donn\IeC {\'e}es de test\relax }}{60}{figure.caption.59}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

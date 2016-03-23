@@ -56,6 +56,22 @@
       \field{title}{Robust Discriminative Response Map Fitting with Constrained Local Models}
       \field{year}{2013}
     \endentry
+    \entry{besse}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1ed13f15546ff2a5dcfa5d4cfd39a3e5}{Besse}{B\bibinitperiod}{Philippe}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=8267cbac1f40fc38ce9faf238380ed03}{Guillouet}{G\bibinitperiod}{Brendan}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=3bd6e54aa243b866c772c992450f075e}{Loubes}{L\bibinitperiod}{Jean-Michel}{J\bibinithyphendelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=248bbddfd6316b9894ab774bf855f204}{Royer}{R\bibinitperiod}{Francois}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0b5df2223babdfa686ea0b097abee510}
+      \strng{fullhash}{0b5df2223babdfa686ea0b097abee510}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Presentation d'une adaptation de la distance OWD. Celle-ci se base sur la distance physique entre deux trajectoires, la forme des trajectoires (orientation, longueur) et "l'independance temporelle".}
+      \field{title}{Classification non Supervisee de Trajectoires}
+    \endentry
     \entry{mimicry1}{article}{}
       \name{author}{4}{}{%
         {{hash=9eb1d129d6f1e6bf395ace747b8513d8}{Bilakhia}{B\bibinitperiod}{S.}{S\bibinitperiod}{}{}{}{}}%
@@ -223,6 +239,79 @@
       \field{title}{Comprehensive Database for Facial Expression Analysis}
       \field{year}{2000}
     \endentry
+    \entry{gpmaster}{online}{}
+      \name{author}{1}{}{%
+        {{hash=aa520181c7ed14c3803f5ff137fa4b9b}{Lawrence}{L\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \strng{fullhash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Github du programme Matlab realisant le FGPLVM avec toute les librairies annexes}
+      \field{title}{Programme complet (FGPLVM + librairies) realise par N.Lawrence}
+      \field{urlday}{10}
+      \field{urlmonth}{03}
+      \field{urlyear}{2016}
+      \verb{url}
+      \verb https://github.com/SheffieldML/GPmat
+      \endverb
+    \endentry
+    \entry{lawrence2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=aa520181c7ed14c3803f5ff137fa4b9b}{Lawrence}{L\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \strng{fullhash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Papier correspondant au programme Matlab de l'algorithme GPLVM}
+      \field{title}{Gaussian process latent variable models for visualisation of high dimensional data}
+      \field{year}{2004}
+    \endentry
+    \entry{gplvm_github}{online}{}
+      \name{author}{1}{}{%
+        {{hash=aa520181c7ed14c3803f5ff137fa4b9b}{Lawrence}{L\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \strng{fullhash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Depot Gihub du programme Matlab de GPLVM utilise dans le programme d'origine que j'ai ensuite modifie}
+      \field{title}{Github du GPLVM de Neil Lawrence}
+      \field{urlday}{03}
+      \field{urlmonth}{03}
+      \field{urlyear}{2016}
+      \field{year}{2005}
+      \verb{url}
+      \verb https://github.com/lawrennd/gplvm
+      \endverb
+    \endentry
+    \entry{fgplvm_github}{online}{}
+      \name{author}{1}{}{%
+        {{hash=aa520181c7ed14c3803f5ff137fa4b9b}{Lawrence}{L\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \strng{fullhash}{aa520181c7ed14c3803f5ff137fa4b9b}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Depot Gihub du programme Matlab de FGPLVM que j'ai utilise pour mon programme}
+      \field{title}{Github du FGPLVM de Neil Lawrence}
+      \field{urlday}{03}
+      \field{urlmonth}{03}
+      \field{urlyear}{2016}
+      \field{year}{2007}
+      \verb{url}
+      \verb https://github.com/lawrennd/fgplvm
+      \endverb
+    \endentry
     \entry{tagging2}{article}{}
       \name{author}{2}{}{%
         {{hash=60626202d9288aaa05a92e5e6c21920e}{Lichtenauer}{L\bibinitperiod}{Jeroen}{J\bibinitperiod}{}{}{}{}}%
@@ -271,6 +360,22 @@
       \field{journaltitle}{IEEE ICIP}
       \field{title}{An Extended Set of Haar-like Features for Rapid Object Detection}
       \field{year}{2002}
+    \endentry
+    \entry{linsu2005}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1254ad05d179432b1b9acf4791d6b747}{Lin}{L\bibinitperiod}{Bin}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=95661b40fdfa5608116e00c55e9f9182}{Su}{S\bibinitperiod}{Jianwen}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{823a493721bd85fd1a8d41cab3406e83}
+      \strng{fullhash}{823a493721bd85fd1a8d41cab3406e83}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Description d'un distance appelee OWD, One-Way-Distance, qui se base uniquement sur la forme des trajectoires.}
+      \field{journaltitle}{Proceedings of the 13th annual ACM international workshop on Geographic information systems,}
+      \field{title}{Shapes Based Trajectory Queries for Moving Objects}
+      \field{year}{2005}
     \endentry
     \entry{ckplus}{article}{}
       \name{author}{6}{}{%
@@ -485,6 +590,24 @@
       \field{title}{A Multimodal Database for Affect Recognition and Implicit Tagging}
       \field{year}{2012}
     \endentry
+    \entry{srivastava2011}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7385fdb108073d321f619ba849a2ddb6}{Srivastava}{S\bibinitperiod}{Anuj}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=e3c1ee38b926d4c0bb85bb3d09d4923b}{Klassen}{K\bibinitperiod}{Eric}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=4d41c471fcd41742e1a01e2fb4e3a3e7}{Joshi}{J\bibinitperiod}{Shantanu\bibnamedelima H.}{S\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{hash=5b5462afcc3408e024aaa07fff60829b}{Jermyn}{J\bibinitperiod}{Ian\bibnamedelima H.}{I\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{11adda2df49cd828df7bdb2d02ff5704}
+      \strng{fullhash}{11adda2df49cd828df7bdb2d02ff5704}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Presentation d'une distance entre 2 trajectoires qui permet de detecter tres efficacement des formes similaires, mais imposent a celles-ci d'etre de meme longueur et est independante de la distance physique entre les deux trajectoires.}
+      \field{journaltitle}{Issue No.07 - July (2011 vol.33)}
+      \field{title}{Shape analysis of elastic curves in euclidean spaces}
+      \field{year}{2011}
+    \endentry
     \entry{ict_3drfe}{article}{}
       \name{author}{4}{}{%
         {{hash=4587e873eac96496837ae0746e073417}{Stratou}{S\bibinitperiod}{Giota}{G\bibinitperiod}{}{}{}{}}%
@@ -520,6 +643,43 @@
       \field{urlyear}{2015}
       \verb{url}
       \verb http://www.visagetechnologies.com/uploads/2012/08/MPEG-4FBAOverview.pdf
+      \endverb
+    \endentry
+    \entry{githubflo}{online}{}
+      \name{author}{1}{}{%
+        {{hash=40093ab720e6e709f5374031d07b64c5}{Tissier}{T\bibinitperiod}{Florian}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{40093ab720e6e709f5374031d07b64c5}
+      \strng{fullhash}{40093ab720e6e709f5374031d07b64c5}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{GitHub de mon programme realise lors de ce PRD}
+      \field{title}{Github de mon PRD}
+      \field{urlday}{17}
+      \field{urlmonth}{03}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://github.com/flo3693/Prog-PRD
+      \endverb
+    \endentry
+    \entry{githubflo2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=40093ab720e6e709f5374031d07b64c5}{Tissier}{T\bibinitperiod}{Florian}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{40093ab720e6e709f5374031d07b64c5}
+      \strng{fullhash}{40093ab720e6e709f5374031d07b64c5}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{GitHub de mon rapport realise lors de ce PRD}
+      \field{title}{Github de mon rapport de PRD}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://github.com/flo3693/Rapport-PRD
       \endverb
     \endentry
     \entry{mmi1}{article}{}
